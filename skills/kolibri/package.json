@@ -1,0 +1,33 @@
+{
+  "name": "kolibri",
+  "version": "1.0.0",
+  "description": "Free Twitter/X skill for OpenClaw — zero dependencies, powered by Composio v3 REST API",
+  "main": "kolibri.mjs",
+  "type": "module",
+  "bin": {
+    "kolibri": "./kolibri.mjs"
+  },
+  "scripts": {
+    "start": "node kolibri.mjs",
+    "test": "node kolibri.mjs me"
+  },
+  "keywords": [
+    "openclaw",
+    "twitter",
+    "x",
+    "composio",
+    "ai-agent",
+    "skill",
+    "social-media"
+  ],
+  "author": "gleipnircode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gleipnircode/kolibri"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}
