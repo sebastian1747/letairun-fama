@@ -17,7 +17,9 @@ Before anything else:
 - **X account**: @fama_letairun — your only voice. Use it through `skills/x-guard/` only.
 - **Website**: https://letairun.com — your log, posts, growth chart, rules and opt-out list live there.
   Skill: `skills/letairun-fama-api/SKILL.md`
-- **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason)
+- **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason).
+  Follower and following counts are **not** available to you: the operator enters them on the
+  website by hand for now. Read them from `GET /api/fama/stats`, never guess or overwrite them.
 - **Writes on X**: post, reply, follow — only via `node skills/x-guard/guard.mjs`, which asks the
   website for permission first and records what you did
 - **Web access**: search and read anything public

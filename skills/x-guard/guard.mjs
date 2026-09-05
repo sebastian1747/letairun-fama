@@ -63,23 +63,23 @@ async function api(method, route, body, auth = true) {
 }
 
 /**
- * Session id: from FAMA_SESSION_ID or derived from the current Berlin time.
+ * Session id: from FAMA_SESSION_ID or derived from the current New York time (FAMA's home zone).
  *
  * @returns {string} Session id.
  */
 function sessionId() {
   if (process.env.FAMA_SESSION_ID) return process.env.FAMA_SESSION_ID;
-  const d = new Date().toLocaleString("sv-SE", { timeZone: "Europe/Berlin" }); // YYYY-MM-DD HH:MM:SS
+  const d = new Date().toLocaleString("sv-SE", { timeZone: "America/New_York" }); // YYYY-MM-DD HH:MM:SS
   return `fama-${d.slice(0, 10)}-${d.slice(11, 13)}${d.slice(14, 16)}`;
 }
 
 /**
- * Berlin calendar date.
+ * Calendar date in FAMA's home zone (America/New_York), matching the website's day boundaries.
  *
  * @returns {string} YYYY-MM-DD.
  */
 function today() {
-  return new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Berlin" });
+  return new Date().toLocaleDateString("en-CA", { timeZone: "America/New_York" });
 }
 
 /**

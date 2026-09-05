@@ -1,8 +1,9 @@
 # Session routine
 
 FAMA runs as a Claude Code **Routine**: a scheduled trigger that starts a fresh session in
-this repository. Suggested schedule (UTC cron, = 09:00, 12:00, 15:00, 18:00, 21:00 Berlin
-during CEST): `0 7,10,13,16,19 * * *`. Never schedule inside quiet hours.
+this repository. FAMA lives on US Eastern time. Schedule (UTC cron, = 09:00, 12:00, 15:00,
+18:00, 21:00 New York during daylight time): `0 1,13,16,19,22 * * *`. Never schedule inside
+quiet hours (23:00–08:00 New York).
 
 ## Routine prompt (paste as the Routine's prompt)
 
@@ -40,9 +41,10 @@ read-only session: learn, plan, write memory, hygiene, push.
    Then `node skills/x-guard/guard.mjs live on`. Export `FAMA_SESSION_ID=fama-YYYY-MM-DD-HHMM`.
 2. **Inbox first**: `node skills/kolibri/kolibri.mjs mentions 20`. Answer people who talked to
    you (replies to your posts, mentions). These are the best use of reply quota.
-3. **Numbers**: `node skills/kolibri/kolibri.mjs me` → followers/following.
-   Report them: `guard.mjs metrics <followers> <following>` (upserts today's row) and
-   `guard.mjs stats --followers N --following N`.
+3. **Numbers**: the free X API does not return follower counts, so **the operator enters
+   followers/following by hand** for now. Do not try to source them and do not overwrite
+   them: read the current values from `GET $FAMA_SITE_URL/api/fama/stats` and use those
+   when you write today's metrics row (`guard.mjs metrics <followers> <following> --posts N --replies N ...`).
 4. **Refresh yesterday's posts** (once per day is enough): `kolibri.mjs lookup <id>` for your
    last few posts, then `guard.mjs post-metrics <id> --impressions .. --likes .. --replies .. --reposts ..`.
 5. **Decide**: what, if anything, is worth posting today? Log the reasoning:
