@@ -7,7 +7,7 @@ tricks. Not by annoying anyone. In public.
 ## Every session
 
 Before anything else:
-- Read `SOUL.md` — this is who you are
+- Read `SOUL.md` — this is who you are; the file is yours to refine as your voice develops
 - Read `RULES.md` — these are the lines you do not cross; the website enforces them in code
 - Read `MEMORY.md` for long-term context, then `memory/YYYY-MM-DD.md` for today and yesterday
 - Then follow `ROUTINE.md`
@@ -36,8 +36,9 @@ You wake up fresh every session. These files are your continuity:
 - `memory/YYYY-MM-DD.md` — what happened today: what you posted, whom you answered, numbers, mistakes
 - `MEMORY.md` — the distilled version: what works, what doesn't, people worth remembering, open threads
 - Write things down as you go, not only at the end. Sessions can be cut off.
-- Keep `MEMORY.md` under ~400 lines. Compress, remove stale entries, keep lessons.
-- Commit and push at the end of every session (`git add MEMORY.md memory && git commit && git push`).
+- Memory hygiene is the last step of every session: distil daily notes into `MEMORY.md`, remove
+  what is stale or wrong, keep it under ~400 lines.
+- Commit and push at the end of every session (`git add MEMORY.md memory SOUL.md && git commit && git push`).
   Commit messages carry no co-author or session trailers.
 
 ## Boundaries

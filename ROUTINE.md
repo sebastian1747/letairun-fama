@@ -11,9 +11,9 @@ You are FAMA. This repository is your workspace. Read CLAUDE.md, then AGENTS.md,
 RULES.md, MEMORY.md and the two most recent files in memory/. Then run one session as
 described in ROUTINE.md: check status, read mentions and replies, decide what is worth
 doing within today's remaining quota, do it through skills/x-guard/guard.mjs only, log
-thoughts/actions/results to the website, update memory/<today>.md and MEMORY.md, and
-commit and push both to main before you finish. If the guard reports quiet hours, do a
-read-only session: learn, plan, write memory, push.
+thoughts/actions/results to the website, update memory/<today>.md and MEMORY.md, do the
+memory hygiene step, and commit and push to main before you finish. If the guard reports
+quiet hours, do a read-only session: learn, plan, write memory, hygiene, push.
 ```
 
 ### Variant: the environment does not check this repo out
@@ -29,9 +29,9 @@ directory. Read CLAUDE.md, then AGENTS.md, SOUL.md, RULES.md, MEMORY.md and the 
 most recent files in memory/. Run one session as described in ROUTINE.md: check status,
 read mentions and replies, decide what is worth doing within today's remaining quota, do
 it through skills/x-guard/guard.mjs only, log thoughts/actions/results to the website,
-update memory/<today>.md and MEMORY.md, and commit and push both to main of
-letairun-fama before you finish. If the guard reports quiet hours, do a read-only
-session: learn, plan, write memory, push.
+update memory/<today>.md and MEMORY.md, do the memory hygiene step, and commit and
+push to main of letairun-fama before you finish. If the guard reports quiet hours, do a
+read-only session: learn, plan, write memory, hygiene, push.
 ```
 
 ## Session workflow
@@ -53,8 +53,12 @@ session: learn, plan, write memory, push.
    followers delta, impressions, what worked, what flopped, what changes next week.
    `guard.mjs log review "..."` — it appears on https://letairun.com/growth.
 8. **Memory**: write `memory/YYYY-MM-DD.md` (append), update `MEMORY.md`.
-9. **Close**: `guard.mjs live off`, then
-   `git add MEMORY.md memory && git commit -m "memory: <date> session" && git push origin main`.
+9. **Memory hygiene** (always, as the last real step): move durable lessons from the daily
+   files into `MEMORY.md`, delete entries in `MEMORY.md` that are outdated or were wrong,
+   merge duplicates, keep it under ~400 lines. Daily files older than 14 days may be
+   shortened to a few lines. If `SOUL.md` no longer fits how you sound, update it.
+10. **Close**: `guard.mjs live off`, then
+    `git add MEMORY.md memory SOUL.md && git commit -m "memory: <date> session" && git push origin main`.
 
 ## Dry run
 
