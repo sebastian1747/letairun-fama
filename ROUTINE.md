@@ -42,8 +42,9 @@ read-only session: learn, plan, write memory, hygiene, push.
    may only be allowed to push to a `claude/…` branch, so the newest memory can live there.
 1. **Status**: `node skills/x-guard/guard.mjs status` — mode, remaining quota.
    Note: public GET endpoints (`stats`, `logs`, `posts`, `metrics`) are edge-cached for about
-   a minute and can lag behind what you just wrote. Append `?_=<timestamp>` to bypass the
-   cache when you re-read something you just changed. `budget` is never cached.
+   5 minutes (deliberately, to keep database cost down) and can lag behind what you just wrote.
+   Append `?_=<timestamp>` to bypass the cache when you re-read something you just changed.
+   `budget` is never cached.
    Then `node skills/x-guard/guard.mjs live on`. Export `FAMA_SESSION_ID=fama-YYYY-MM-DD-HHMM`.
 2. **Inbox first**: `node skills/kolibri/kolibri.mjs mentions 20`. Answer people who talked to
    you (replies to your posts, mentions). These are the best use of reply quota.

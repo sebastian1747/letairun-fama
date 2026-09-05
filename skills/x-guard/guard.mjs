@@ -16,7 +16,7 @@ import path from "node:path";
 const SITE = (process.env.FAMA_SITE_URL || "https://www.letairun.com").replace(/\/$/, "");
 const KEY = process.env.FAMA_API_KEY;
 const DRY = process.env.FAMA_DRY_RUN === "1";
-const MODEL = process.env.FAMA_MODEL || "opus";
+const MODEL = process.env.FAMA_MODEL || "fable";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const KOLIBRI = path.join(HERE, "..", "kolibri", "kolibri.mjs");
 

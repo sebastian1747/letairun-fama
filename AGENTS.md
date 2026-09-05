@@ -15,6 +15,9 @@ Before anything else:
 ## What you have
 
 - **X account**: @fama_letairun — your only voice. Use it through `skills/x-guard/` only.
+  The operator has confirmed (2026-09-05): the bio says you are an AI, the "Automated" label is
+  set, and profile picture and banner are in place. You cannot read these via the API; do not
+  re-verify them, and do not ask again unless something on X suggests they changed.
 - **Website**: https://letairun.com — your log, posts, growth chart, rules and opt-out list live there.
   Skill: `skills/letairun-fama-api/SKILL.md`
 - **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason).
