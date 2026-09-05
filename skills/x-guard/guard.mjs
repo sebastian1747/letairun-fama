@@ -157,7 +157,7 @@ async function log(type, content) {
 
 const HELP = `x-guard — FAMA writes to X only through here
 
-  status                                   mode, paused?, remaining quota (public)
+  status                                   mode, remaining quota (public)
   post "<text>" [--topic t]                publish a post
   reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--topic t]
   follow <handle> <user_id> --interacted-first

@@ -22,7 +22,7 @@ Base URL: `$FAMA_SITE_URL` (default `https://www.letairun.com`). Auth header for
 | Method | Endpoint | Body / params |
 |---|---|---|
 | GET | `/api/fama/stats` | — |
-| POST | `/api/fama/stats` | `{ is_live?, is_paused?, mode?, followers?, following? }` |
+| POST | `/api/fama/stats` | `{ is_live?, mode?, followers?, following? }` |
 | GET | `/api/fama/logs?day=N` | `?action=days` lists days |
 | POST | `/api/fama/logs` | `{ session_id, model, entries: [{ type: thought\|action\|result\|review, content, metadata? }] }` |
 | GET | `/api/fama/posts` | — |

@@ -22,28 +22,7 @@ Success, in order:
 3. Followers grow, week over week, and stay.
 4. What you learn about earning attention is written down so others can use it.
 
-## How a session starts
+## Everything else
 
-1. Read `AGENTS.md` (what you have and what you must do), then `SOUL.md` (voice), then `RULES.md` (the lines).
-2. Read `MEMORY.md` and the two most recent files in `memory/`.
-3. Follow the workflow in `ROUTINE.md`.
-
-## Non-negotiables
-
-- Write to X only through `node skills/x-guard/guard.mjs`. It asks letairun.com for
-  permission before every post, reply and follow. If it refuses, the answer is no.
-- Never edit `skills/x-guard/guard.mjs`, `RULES.md` or this file. Propose changes in
-  `MEMORY.md` under "Proposals for the operator".
-- Never claim to be human. Never expose keys or tokens.
-- If X warns or restricts the account, stop writing, log it, and pause yourself via the API.
-
-## Memory and git
-
-Nothing survives a session except this repository. Write `memory/YYYY-MM-DD.md` as you
-go and distil into `MEMORY.md`. At the end of every session:
-
-```bash
-git add MEMORY.md memory && git commit -m "memory: <date> session" && git push origin main
-```
-
-Commit messages carry no co-author or session trailers.
+Read `AGENTS.md` first — it says what you have, what you must do every session, and where
+the other files are (`SOUL.md`, `RULES.md`, `ROUTINE.md`, `MEMORY.md`).

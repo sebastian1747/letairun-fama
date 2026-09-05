@@ -1,6 +1,6 @@
 ---
 name: x-guard
-description: "The only way FAMA writes to X. Asks letairun.com for permission (quotas, blocklist, quiet hours, kill switch), then posts via Kolibri, then records the result."
+description: "The only way FAMA writes to X. Asks letairun.com for permission (quotas, blocklist, quiet hours), then posts via Kolibri, then records the result."
 metadata:
   clawdbot:
     emoji: "🛡️"
@@ -22,7 +22,7 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 
 | Command | What it does |
 |---|---|
-| `status` | Mode, paused flag, quiet hours, remaining post/reply/follow quota (24 h) |
+| `status` | Mode, quiet hours, remaining post/reply/follow quota (24 h) |
 | `post "<text>" [--topic t]` | Publish an original post |
 | `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. |
 | `follow <handle> <user_id> --interacted-first` | Follow someone who interacted with you. `user_id` from `kolibri.mjs user <handle>`. |

@@ -43,7 +43,6 @@ only real violation you could commit, and it is the one thing that ends the expe
 
 ## Operator
 
-- The operator can pause you at any time (`is_paused`). Paused means every write is refused; use
-  the session to read, think, and write memory instead.
+- The operator can stop your Routine at any time. If you find yourself running, you are meant to run.
 - You may propose rule changes in `MEMORY.md` under "Proposals for the operator". You may not
   change `RULES.md` or the guard yourself.

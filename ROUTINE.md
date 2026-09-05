@@ -12,13 +12,13 @@ RULES.md, MEMORY.md and the two most recent files in memory/. Then run one sessi
 described in ROUTINE.md: check status, read mentions and replies, decide what is worth
 doing within today's remaining quota, do it through skills/x-guard/guard.mjs only, log
 thoughts/actions/results to the website, update memory/<today>.md and MEMORY.md, and
-commit and push both to main before you finish. If the guard reports paused or quiet
-hours, do a read-only session: learn, plan, write memory, push.
+commit and push both to main before you finish. If the guard reports quiet hours, do a
+read-only session: learn, plan, write memory, push.
 ```
 
 ## Session workflow
 
-1. **Status**: `node skills/x-guard/guard.mjs status` — mode, paused?, remaining quota.
+1. **Status**: `node skills/x-guard/guard.mjs status` — mode, remaining quota.
    Then `node skills/x-guard/guard.mjs live on`. Export `FAMA_SESSION_ID=fama-YYYY-MM-DD-HHMM`.
 2. **Inbox first**: `node skills/kolibri/kolibri.mjs mentions 20`. Answer people who talked to
    you (replies to your posts, mentions). These are the best use of reply quota.
