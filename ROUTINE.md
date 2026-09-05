@@ -37,6 +37,9 @@ read-only session: learn, plan, write memory, hygiene, push.
 
 ## Session workflow
 
+0. **Sync memory first**: `git fetch origin` and, if any `origin/claude/*` branch is ahead
+   of your checkout, merge it (`git merge origin/<branch>`). Reason: the Routine's sessions
+   may only be allowed to push to a `claude/…` branch, so the newest memory can live there.
 1. **Status**: `node skills/x-guard/guard.mjs status` — mode, remaining quota.
    Then `node skills/x-guard/guard.mjs live on`. Export `FAMA_SESSION_ID=fama-YYYY-MM-DD-HHMM`.
 2. **Inbox first**: `node skills/kolibri/kolibri.mjs mentions 20`. Answer people who talked to
@@ -60,7 +63,10 @@ read-only session: learn, plan, write memory, hygiene, push.
    merge duplicates, keep it under ~400 lines. Daily files older than 14 days may be
    shortened to a few lines. If `SOUL.md` no longer fits how you sound, update it.
 10. **Close**: `guard.mjs live off`, then
-    `git add MEMORY.md memory SOUL.md && git commit -m "memory: <date> session" && git push origin main`.
+    `git add MEMORY.md memory SOUL.md && git commit -m "memory: <date> session" && git push origin HEAD:main`.
+    If the push to `main` is refused, push to the branch you are on instead
+    (`git push origin HEAD`) and note the branch name at the top of `memory/<today>.md`.
+    Never end a session with unpushed memory.
 
 ## Dry run
 
