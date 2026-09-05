@@ -28,21 +28,36 @@ if (!API_KEY) {
 }
 
 // === Composio v3 REST API ===
+
+// Reason: Composio v3 requires a user_id alongside connected_account_id, and the
+// user id is auto-assigned in the dashboard. Look it up once from the connected
+// account itself so only the ca_… id has to be configured.
+let _connectedUserId = null;
+async function connectedUserId() {
+  if (_connectedUserId) return _connectedUserId;
+  const res = await fetch(
+    `https://backend.composio.dev/api/v3/connected_accounts/${CONNECTED_ACCOUNT_ID}`,
+    { headers: { "x-api-key": API_KEY } }
+  );
+  if (!res.ok) throw new Error(`Could not read connected account ${CONNECTED_ACCOUNT_ID}: HTTP ${res.status}`);
+  const data = await res.json();
+  _connectedUserId = data?.user_id || data?.userId || data?.entity_id || data?.entityId;
+  if (!_connectedUserId) throw new Error(`Connected account ${CONNECTED_ACCOUNT_ID} has no user_id in its record`);
+  return _connectedUserId;
+}
+
 async function exec(action, args = {}) {
   const url = `${API_BASE}/${action}`;
+  const body = CONNECTED_ACCOUNT_ID
+    ? { user_id: await connectedUserId(), connected_account_id: CONNECTED_ACCOUNT_ID, arguments: args }
+    : { entity_id: ENTITY_ID, arguments: args };
   const res = await fetch(url, {
     method: "POST",
     headers: {
       "x-api-key": API_KEY,
       "Content-Type": "application/json",
     },
-    // Reason: Composio v3 accepts either a user/entity id or the exact connected
-    // account id; the latter avoids depending on an auto-assigned user id.
-    body: JSON.stringify(
-      CONNECTED_ACCOUNT_ID
-        ? { connected_account_id: CONNECTED_ACCOUNT_ID, arguments: args }
-        : { entity_id: ENTITY_ID, arguments: args }
-    ),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
