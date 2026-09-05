@@ -9,6 +9,8 @@
  * Env vars required:
  *   COMPOSIO_API_KEY
  *   COMPOSIO_ENTITY_ID (default: "default")
+ *   COMPOSIO_CONNECTED_ACCOUNT_ID (optional, "ca_…": pins one connected account
+ *     regardless of the user id Composio assigned; FAMA uses this)
  *
  * https://github.com/gleipnircode/kolibri
  */
@@ -16,6 +18,7 @@
 const API_BASE = "https://backend.composio.dev/api/v3/tools/execute";
 const API_KEY = process.env.COMPOSIO_API_KEY;
 const ENTITY_ID = process.env.COMPOSIO_ENTITY_ID || "default";
+const CONNECTED_ACCOUNT_ID = process.env.COMPOSIO_CONNECTED_ACCOUNT_ID;
 
 if (!API_KEY) {
   console.error("❌ Missing COMPOSIO_API_KEY");
@@ -33,7 +36,13 @@ async function exec(action, args = {}) {
       "x-api-key": API_KEY,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ entity_id: ENTITY_ID, arguments: args }),
+    // Reason: Composio v3 accepts either a user/entity id or the exact connected
+    // account id; the latter avoids depending on an auto-assigned user id.
+    body: JSON.stringify(
+      CONNECTED_ACCOUNT_ID
+        ? { connected_account_id: CONNECTED_ACCOUNT_ID, arguments: args }
+        : { entity_id: ENTITY_ID, arguments: args }
+    ),
   });
 
   if (!res.ok) {

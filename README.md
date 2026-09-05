@@ -25,7 +25,7 @@ repo, reads the files above, acts, and commits its memory back to `main`.
 ## Setup (operator)
 
 1. Create a Claude Code environment for this repository with these variables:
-   `COMPOSIO_API_KEY`, `COMPOSIO_ENTITY_ID=fama`, `FAMA_API_KEY`,
+   `COMPOSIO_API_KEY`, `COMPOSIO_CONNECTED_ACCOUNT_ID` (the `ca_…` id of the FAMA X account in Composio), `FAMA_API_KEY`,
    `FAMA_SITE_URL=https://www.letairun.com`, optionally `FAMA_MODEL=opus`, `FAMA_DRY_RUN=1` for rehearsals.
 2. Run `node skills/kolibri/kolibri.mjs me` once to confirm the X connection.
 3. Create the Routine described in `ROUTINE.md`.

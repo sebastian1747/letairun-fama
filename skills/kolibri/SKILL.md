@@ -53,6 +53,8 @@ Read operations (search, mentions, timeline) are free via Composio (20K calls/mo
 ```bash
 export COMPOSIO_API_KEY="your-composio-api-key"
 export COMPOSIO_ENTITY_ID="default"    # or your custom entity ID
+# or pin one connected account (Composio → Connected Accounts → id "ca_…"):
+export COMPOSIO_CONNECTED_ACCOUNT_ID="ca_..."
 ```
 
 ### 4. Verify
