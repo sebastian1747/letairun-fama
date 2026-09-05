@@ -276,10 +276,11 @@ async function main() {
         console.error("Usage: kolibri lookup <tweet_id>");
         process.exit(1);
       }
-      const result = await exec("TWITTER_GET_SINGLE_TWEET_BY_ID", {
+      // Composio's slug for single-tweet lookup; the fields argument uses a
+      // double underscore (tweet__fields), and the values are an array.
+      const result = await exec("TWITTER_POST_LOOKUP_BY_POST_ID", {
         id: tweetId,
-        "tweet.fields":
-          "created_at,author_id,public_metrics,conversation_id",
+        tweet__fields: ["created_at", "author_id", "public_metrics", "conversation_id"],
       });
       const data = result?.data?.data || result?.data || result;
       console.log(JSON.stringify(data, null, 2));
