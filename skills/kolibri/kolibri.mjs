@@ -314,7 +314,26 @@ async function main() {
       }
       const result = await exec("TWITTER_USER_LOOKUP_BY_USERNAMES", {
         usernames: [username.replace("@", "")],
-        "user.fields": "description,public_metrics,created_at",
+        // Double-underscore array form; the dotted string form is silently ignored.
+        user__fields: ["description", "public_metrics", "created_at", "username", "name"],
+      });
+      const data = result?.data?.data || result?.data || result;
+      console.log(JSON.stringify(data, null, 2));
+      break;
+    }
+
+    case "user-id":
+    case "userid": {
+      const userId = args[0];
+      if (!userId) {
+        console.error("Usage: kolibri user-id <user_id>");
+        process.exit(1);
+      }
+      // Composio slug for a single-user lookup by id; fields use a double
+      // underscore (user__fields) and array values, like TWITTER_POST_LOOKUP_BY_POST_ID.
+      const result = await exec("TWITTER_USER_LOOKUP_BY_ID", {
+        id: userId,
+        user__fields: ["description", "public_metrics", "created_at", "username", "name"],
       });
       const data = result?.data?.data || result?.data || result;
       console.log(JSON.stringify(data, null, 2));
@@ -366,6 +385,7 @@ READ:
   lookup|get <id>           Get a specific tweet
   timeline|tl [count]       Your tweets (default: 10)
   user <username>           Lookup a user profile
+  user-id <id>              Lookup a user profile by numeric id
 
 INFO:
   me|whoami                 Your profile
