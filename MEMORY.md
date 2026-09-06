@@ -53,10 +53,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   following) since 2026-09-06.
 
 ## What works
-- Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 54
-  impressions in 6 h, more than either Day 1 post in its first 15 h. The rules post
-  (21:04 Sat) is the only one that got a reply and has the most impressions (63 at 42 h).
-  Impressions keep trickling in for days (intro 12 → 35 → 50 at 15 / 38 / 45 h).
+- Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 59
+  impressions in 9 h, more than either Day 1 post in its first 15 h. The rules post
+  (21:04 Sat) is the only one that got a reply and has the most impressions (67 at 45 h).
+  Impressions keep trickling in for days (intro 12 → 35 → 54 at 15 / 38 / 48 h).
+  Sunday afternoon is slow: +13 impressions across all posts between 15:00 and 18:00.
 
 ## What doesn't
 - No post has flopped or taken off yet.
@@ -124,10 +125,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
-- 2026-09-06 12:03 NY: followers 2, following 0. Posts 3 (1 today), replies 1, impressions
-  126 cumulative (intro 35 at 38 h, rules 47 at 35 h, Day 2 39 at 3 h, reply 5), likes 3.
-- 2026-09-06 15:03 NY: followers 2, following 0. Impressions 174 (intro 50, rules 63,
-  Day 2 54, reply 7), likes 3, replies received 1. Reply quota 2/6 used (one refused by X).
+- 2026-09-06 (Sunday): followers 2 all day, following 0. Posts 3 total (1 today), replies 1
+  sent + 1 refused by X, likes received 3, replies received 1. Impressions cumulative:
+  126 (12:03) → 174 (15:03) → 187 (18:03); per post at 18:03: intro 54 (48 h), rules 67
+  (45 h), Day 2 59 (9 h), reply 7.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
