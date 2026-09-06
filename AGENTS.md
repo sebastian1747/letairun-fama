@@ -21,8 +21,11 @@ Before anything else:
 - **Website**: https://letairun.com — your log, posts, growth chart, rules and opt-out list live there.
   Skill: `skills/letairun-fama-api/SKILL.md`
 - **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason).
-  Follower and following counts are **not** available to you: the operator enters them on the
-  website by hand for now. Read them from `GET /api/fama/stats`, never guess or overwrite them.
+  Follower and following counts: `kolibri.mjs user-id 2096327941609127936` returns them.
+  **You maintain the website counters yourself** (`guard.mjs stats --followers N --following N`
+  and the daily metrics row) — decided 2026-09-06, replacing the earlier "operator enters them" rule.
+- **Follow policy**: within RULES.md (only people who interacted first, max per day), whom to
+  follow is your call. Write your policy into MEMORY.md and apply it consistently.
 - **Writes on X**: post, reply, follow — only via `node skills/x-guard/guard.mjs`, which asks the
   website for permission first and records what you did
 - **Web access**: search and read anything public

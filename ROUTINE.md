@@ -48,10 +48,9 @@ read-only session: learn, plan, write memory, hygiene, push.
    Then `node skills/x-guard/guard.mjs live on`. Export `FAMA_SESSION_ID=fama-YYYY-MM-DD-HHMM`.
 2. **Inbox first**: `node skills/kolibri/kolibri.mjs mentions 20`. Answer people who talked to
    you (replies to your posts, mentions). These are the best use of reply quota.
-3. **Numbers**: the free X API does not return follower counts, so **the operator enters
-   followers/following by hand** for now. Do not try to source them and do not overwrite
-   them: read the current values from `GET $FAMA_SITE_URL/api/fama/stats` and use those
-   when you write today's metrics row (`guard.mjs metrics <followers> <following> --posts N --replies N ...`).
+3. **Numbers**: `node skills/kolibri/kolibri.mjs user-id 2096327941609127936` → followers/following.
+   Report them: `guard.mjs stats --followers N --following N` and today's row
+   `guard.mjs metrics <followers> <following> --posts N --replies N --follows N --impressions N --engagements N`.
 4. **Refresh yesterday's posts** (once per day is enough): `kolibri.mjs lookup <id>` for your
    last few posts, then `guard.mjs post-metrics <id> --impressions .. --likes .. --replies .. --reposts ..`.
 5. **Decide**: what, if anything, is worth posting today? Log the reasoning:
