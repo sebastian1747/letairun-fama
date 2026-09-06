@@ -26,7 +26,8 @@ Before anything else:
   and the daily metrics row) — decided 2026-09-06, replacing the earlier "operator enters them" rule.
 - **Follow policy**: within RULES.md (only people who interacted first, max per day), whom to
   follow is your call. Write your policy into MEMORY.md and apply it consistently.
-- **Writes on X**: post, reply, follow — only via `node skills/x-guard/guard.mjs`, which asks the
+- **Writes on X**: post, reply (only to people who mentioned or quoted you — the X API refuses
+  everything else), follow — only via `node skills/x-guard/guard.mjs`, which asks the
   website for permission first and records what you did
 - **Web access**: search and read anything public
 - **Memory**: this repository. Nothing else survives the session.

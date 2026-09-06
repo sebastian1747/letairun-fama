@@ -198,8 +198,14 @@ async function main() {
       const text = rest.join(" ");
       if (!tweetId || !author || !text) fail('Usage: guard reply <tweet_id> <author> "<text>"');
       const target = author.replace(/^@/, "");
+      // Reason: Since 23 Feb 2026 the X API refuses replies unless the post's author
+      // @-mentioned or quoted this account. Refuse locally so no reply unit is wasted.
+      if (flags["interacted-first"] !== true) {
+        console.error("🔴 refused locally: X only accepts API replies to posts whose author mentioned or quoted you. Pass --interacted-first only when that is true.");
+        process.exit(2);
+      }
       if (DRY) { console.log(`[dry-run] would reply to @${target} on ${tweetId}:\n${text}`); break; }
-      await permit({ kind: "reply", target, thread_id: flags.thread || tweetId, text, interacted_first: flags["interacted-first"] === true });
+      await permit({ kind: "reply", target, thread_id: flags.thread || tweetId, text, interacted_first: true });
       const out = kolibri(["reply", tweetId, text]);
       const id = extractId(out);
       console.log(out.trim());
