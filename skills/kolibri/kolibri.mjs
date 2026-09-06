@@ -280,7 +280,7 @@ async function main() {
       // double underscore (tweet__fields), and the values are an array.
       const result = await exec("TWITTER_POST_LOOKUP_BY_POST_ID", {
         id: tweetId,
-        tweet__fields: ["created_at", "author_id", "public_metrics", "conversation_id"],
+        tweet__fields: ["created_at", "author_id", "public_metrics", "conversation_id", "reply_settings"],
       });
       const data = result?.data?.data || result?.data || result;
       console.log(JSON.stringify(data, null, 2));

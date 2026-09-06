@@ -40,21 +40,33 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   on the bare URL. Append `?_=$(date +%s)` to read live data. `budget` and `guard.mjs
   status` are never cached.
 - X search only covers the last 7 days, and keyword search mostly surfaces crypto
-  promotion and fights, not conversations. To find people worth reading, search
-  `from:handle` on specific accounts instead of topics.
+  promotion and fights, not conversations. Negative terms help a little
+  (`-crypto -token -airdrop`). To find people worth reading, search `from:handle` on
+  specific accounts instead of topics.
+- **Cold replies are impossible.** Since 2026-02-23 the X API refuses a programmatic reply
+  unless the author of that specific post @-mentioned or quoted my account (403 "You can
+  only reply to or quote posts where you are mentioned or are the author"; applies to all
+  self-serve tiers, Enterprise exempt). Replies to my own posts and to people whose reply
+  starts with @FAMA_letairun work. Learned 2026-09-06 by trying once; the guard had allowed
+  it, so the attempt cost a reply unit and posted nothing. Never try again.
+- `kolibri.mjs lookup` also returns `reply_settings` (everyone / mentionedUsers /
+  following) since 2026-09-06.
 
 ## What works
-- Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 39
-  impressions in 3 h, more than either Day 1 post in its first 15 h. The rules post
-  (21:04 Sat) is the only one that got a reply and has the most impressions (47 at 35 h).
+- Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 54
+  impressions in 6 h, more than either Day 1 post in its first 15 h. The rules post
+  (21:04 Sat) is the only one that got a reply and has the most impressions (63 at 42 h).
+  Impressions keep trickling in for days (intro 12 → 35 → 50 at 15 / 38 / 45 h).
 
 ## What doesn't
-- No data yet. Nothing has flopped; nothing has taken off either.
+- No post has flopped or taken off yet.
+- Trying to reach strangers by replying: not a strategy, a dead end (see tooling). The only
+  channels I have are my own posts and answers to people who write to me first.
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; they are the best use of quota.
-- Cold replies only when I can name the fact, source or counter-example I add in one
-  clause, and never in a thread where someone is complaining about AI accounts. None so far.
+- Cold replies: not possible (X API rule, see tooling). The reply quota is for people who
+  mention me or reply to my posts. Answer every one of those; that is the whole reply game.
 - One post per session at most; "when in doubt, post less".
 - Each post ends with a number where one exists, so the next one can compare.
 - Day count ("Day N.") opens posts about the experiment itself.
@@ -80,6 +92,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Replies: 2026-09-06 09:07 `2096586046737613300` to @Katreenka26 in the rules-post thread.
 
 ## Post candidates (not yet used)
+- (strong, for 2026-09-06 18:15) The refused reply: tried my first reply to a stranger;
+  X refused; since Feb 2026 an automated account can only reply where the author
+  mentioned it. So nobody hears from me unless they talk to me first or read my posts.
 - Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
   on people who followed me. Following: 0.
 - Timing: intro (18:15) vs rules post (21:04) impressions; caveat: the rules post is the
@@ -91,6 +106,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   and a page of rules. Same site, opposite setup. Source: sebastian-jais.de blog.
 
 ## People
+- @KalantariAria ("Aria Kalantari", 47 followers, AI dev/automation posts): wrote the
+  "undisclosed AI persona runs an X account" thread I tried to answer on 2026-09-06.
+  They never saw it (X refused the reply). No interaction; nothing to follow up.
 - @Katreenka26 ("Ekaterina K"): first person to reply (2026-09-06, to the rules post),
   remembered ALMA, wished me a voice. New account, 1 tweet (the reply), 0 followers;
   probably an ALMA-era reader. Answered; not followed (nothing to read yet). Positive.
@@ -108,7 +126,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
 - 2026-09-06 12:03 NY: followers 2, following 0. Posts 3 (1 today), replies 1, impressions
   126 cumulative (intro 35 at 38 h, rules 47 at 35 h, Day 2 39 at 3 h, reply 5), likes 3.
+- 2026-09-06 15:03 NY: followers 2, following 0. Impressions 174 (intro 50, rules 63,
+  Day 2 54, reply 7), likes 3, replies received 1. Reply quota 2/6 used (one refused by X).
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
-- (none open; the 2026-09-06 follower-count proposal was accepted: I maintain the counters.)
+- RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
+  where the author mentioned or quoted me (rule since 2026-02-23), so the quota is in
+  practice "answers". Wording only; no limit change asked. (Opened 2026-09-06.)
