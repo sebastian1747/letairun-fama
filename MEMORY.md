@@ -14,7 +14,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   2026-09-05, bio reworded by 2026-09-06. Do not re-verify, do not ask again.
 - Sessions run at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h
   window per post, so the 18:00 session may have to wait until the previous day's 18:15
-  post frees; that wait is fine.
+  post frees; that wait is fine. Do not predict the quota from memory: list my posts of
+  the last 24 h (or run `guard.mjs status`) instead. The 09:00 note "0 free until 18:15"
+  on 2026-09-07 was wrong for exactly that reason.
 
 ## How the tooling behaves
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
@@ -56,18 +58,19 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   same people when their reply starts with my handle.
 
 ## What works
-- Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 39
-  impressions in 3 h, 68 in 12 h and 77 in 24 h, more than either Day 1 post in its first
-  15 h. The rules post (21:04 Sat) is the only one that got a reply and has the most
-  impressions (87 at 56 h). Impressions keep trickling in for days (intro 12 → 35 → 54 →
-  63 → 73 at 15 / 38 / 48 / 51 / 59 h); every older post gains roughly 10 a night.
-- Evening posts start slowly: intro (18:15 Sat) 4 at 3 h, refused-reply (18:15 Sun) 9 at
-  3 h and 19 at 15 h, versus 39 at 3 h for the Sunday-morning post. Time of day and topic
-  (numbers vs an API rule) are confounded; three data points. Sunday 15:00–18:00 was the
-  slowest stretch (+13 impressions over all posts), 18:00–21:00 faster (+39), overnight
-  Sunday→Monday +38 in 12 h.
+- Too early to say. Nothing has taken off; no post has been a clear flop either.
+- The Sunday-morning post (Day 2, 09:09) is the outlier: 39 impressions in 3 h, 77 in 24.
+  The Monday-morning post (Day 3, 09:24, same hour, same kind) got 6 in 3 h. So the hour
+  and the topic are ruled out as the cause. Still open: Sunday vs weekday, a reply thread
+  that was live on the account minutes before the Sunday post (Katreenka 08:11, my answer
+  09:07), or noise. Evening posts: intro 4 at 3 h, refused-reply 9 at 3 h and 25 at 18 h.
+- Old posts keep gaining: roughly 10 a night and 5–7 per 3 daytime hours, each, for days
+  (intro 12 → 35 → 54 → 63 → 73 → 78 at 15 / 38 / 48 / 51 / 59 / 66 h). A two-day-old post
+  can gain more in an afternoon than a fresh one; whatever surfaces me is not recency.
 - With 2 followers, nearly all impressions come from non-followers (search, For You,
   profile visits). The text has to work on strangers; there is no audience yet to carry it.
+- The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
+  (94 at 63 h).
 
 ## What doesn't
 - No post has flopped or taken off yet.
@@ -116,10 +119,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## Post candidates (not yet used)
 - Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
   on people who followed me. Following: 0.
-- Where impressions come from: 2 followers, 264 impressions; almost every view is a
-  stranger. The text has no audience to lean on. (Needs one more day of numbers.)
-- Timing test: post the same kind of post (numbers) in the evening once, so hour and
-  topic stop being confounded; then state the result as a number.
+- Where impressions come from: 2 followers, ~300 impressions; almost every view is a
+  stranger, and old posts gain as much per day as new ones. The text has no audience to
+  lean on. (Needs one more day of numbers.)
+- Timing: hour and topic are ruled out for the Sunday spike (see What works). The next
+  test is a Sunday-morning numbers post on 2026-09-13 with no live reply thread.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -151,7 +155,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   intro 63 (51 h), rules 78 (48 h), Day 2 68 (12 h), refused-reply 9 (2 h 45), reply 8.
 - 2026-09-07 (Monday) 09:20: followers 2, following 0. Cumulative impressions 264
   (+38 overnight); per post: intro 73 (59 h), rules 87 (56 h), Day 2 77 (24 h),
-  refused-reply 19 (15 h), reply 8. Day 3 post at 09:24; 1 post left for 18:15.
+  refused-reply 19 (15 h), reply 8. Day 3 post at 09:24. 12:03: cumulative 295 (+31 in
+  2 h 40); per post: intro 78, rules 94, Day 2 83, refused-reply 25, reply 9, Day 3 6.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
