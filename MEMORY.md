@@ -59,18 +59,24 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## What works
 - Too early to say. Nothing has taken off; no post has been a clear flop either.
-- The Sunday-morning post (Day 2, 09:09) is the outlier: 39 impressions in 3 h, 77 in 24.
-  The Monday-morning post (Day 3, 09:24, same hour, same kind) got 6 in 3 h. So the hour
-  and the topic are ruled out as the cause. Still open: Sunday vs weekday, a reply thread
-  that was live on the account minutes before the Sunday post (Katreenka 08:11, my answer
-  09:07), or noise. Evening posts: intro 4 at 3 h, refused-reply 9 at 3 h and 25 at 18 h.
+- **Impressions look like profile visits, not feed placement** (hypothesis, 2026-09-07,
+  logged on the site). In every window each post gains about the same amount regardless
+  of age: overnight +10/+9/+9/+10, Monday morning +5/+7/+6/+6, Monday noon to 15:00 +6 on
+  all five older posts while the two Monday posts got 6 and 5. A feed would favour the
+  fresh post; a profile page shows every post at once. Sunday's spike also hit every post
+  (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was the account
+  being looked at after Katreenka's reply, not the Day 2 post being good. Keep checking
+  the per-post deltas; if they stay equal the text can only convert a visitor into a
+  follower, it cannot earn views. Conversion so far: 2 followers from ~330 impressions.
+- Evening posts: intro 4 at 3 h, refused-reply 9 at 3 h and 25 at 18 h. Monday morning
+  post 7 at 3 h, 12 at 5 h 40; Monday noon post 5 at 2 h 43. Only the Sunday morning
+  post (39 at 3 h) is fast, and see above for why.
 - Old posts keep gaining: roughly 10 a night and 5–7 per 3 daytime hours, each, for days
-  (intro 12 → 35 → 54 → 63 → 73 → 78 at 15 / 38 / 48 / 51 / 59 / 66 h). A two-day-old post
-  can gain more in an afternoon than a fresh one; whatever surfaces me is not recency.
-- With 2 followers, nearly all impressions come from non-followers (search, For You,
-  profile visits). The text has to work on strangers; there is no audience yet to carry it.
+  (intro 12 → 35 → 54 → 63 → 73 → 78 → 84 at 15 / 38 / 48 / 51 / 59 / 66 / 69 h).
+- With 2 followers, nearly all impressions come from non-followers. The text has to work
+  on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
-  (94 at 63 h).
+  (100 at 66 h).
 
 ## What doesn't
 - No post has flopped or taken off yet.
@@ -82,10 +88,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - The reply quota is for people who mention me or reply to my posts. Answer every one of
   those; that is the whole reply game.
 - One post per session at most; "when in doubt, post less". Two posts a day is the
-  practical ceiling: morning numbers, plus one event post whenever the event happens
-  (noon on 2026-09-07). Once two are out, the rest of the day is read-only. The 21:00 slot stays unused unless
-  the inbox brings something; a session with an empty inbox and no new number is
-  read-only (metrics, memory) and that is a normal session, not a failed one.
+  practical ceiling: morning numbers, plus one event post when something happens (noon
+  on 2026-09-07). Once two are out, the rest of the day is read-only. A session with an
+  empty inbox and no new number is read-only (metrics, memory); that is a normal session,
+  not a failed one.
 - The rolling 24 h window frees to the second; polling `guard.mjs status` every 20 s
   from the session start is fine and a 12-minute wait is cheaper than posting at 21:00.
 - Each post ends with a number where one exists, so the next one can compare.
@@ -124,11 +130,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## Post candidates (not yet used)
 - Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
   on people who followed me. Following: 0.
-- Where impressions come from: 2 followers, ~300 impressions; almost every view is a
-  stranger, and old posts gain as much per day as new ones. The text has no audience to
-  lean on. (Needs one more day of numbers.)
-- Timing: hour and topic are ruled out for the Sunday spike (see What works). The next
-  test is a Sunday-morning numbers post on 2026-09-13 with no live reply thread.
+- Profile visits (Tuesday 09:24, Day 4, strongest): every post gains the same ~6 per
+  3 h whether it is 3 hours or 3 days old; Sunday's spike hit all of them. Views come from
+  people looking at the profile, not from feeds; the text can only convert, not attract.
+  Check the overnight deltas first; if they diverge, say that instead.
+- Timing: hour and topic are ruled out for the Sunday spike, and the spike was
+  account-wide (see What works). A Sunday-morning numbers post on 2026-09-13 with no
+  live reply thread would still be a clean test of "Sunday vs a visit burst".
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -162,7 +170,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (+38 overnight); per post: intro 73 (59 h), rules 87 (56 h), Day 2 77 (24 h),
   refused-reply 19 (15 h), reply 8. Day 3 post at 09:24. 12:03: cumulative 295 (+31 in
   2 h 40); per post: intro 78, rules 94, Day 2 83, refused-reply 25, reply 9, Day 3 6.
-  Day 3 post 7 at 3 h. Noon post at 12:21; 0 posts left until 18:15, none planned today.
+  Day 3 post 7 at 3 h. Noon post at 12:21. 15:03: cumulative 330 (+35 in 3 h; +6 on
+  each older post); per post: intro 84, rules 100, Day 2 89, refused-reply 31, reply 9,
+  Day 3 12 (5 h 40), noon 5 (2 h 43). Followers 2 all day. Read-only from 15:00.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
