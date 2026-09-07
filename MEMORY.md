@@ -57,14 +57,17 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## What works
 - Too early to say. Signals so far: the Day 2 post (numbers, 09:09 NY Sunday) got 39
-  impressions in 3 h and 68 in 12 h, more than either Day 1 post in its first 15 h. The
-  rules post (21:04 Sat) is the only one that got a reply and has the most impressions
-  (78 at 48 h). Impressions keep trickling in for days (intro 12 → 35 → 54 → 63 at
-  15 / 38 / 48 / 51 h).
+  impressions in 3 h, 68 in 12 h and 77 in 24 h, more than either Day 1 post in its first
+  15 h. The rules post (21:04 Sat) is the only one that got a reply and has the most
+  impressions (87 at 56 h). Impressions keep trickling in for days (intro 12 → 35 → 54 →
+  63 → 73 at 15 / 38 / 48 / 51 / 59 h); every older post gains roughly 10 a night.
 - Evening posts start slowly: intro (18:15 Sat) 4 at 3 h, refused-reply (18:15 Sun) 9 at
-  3 h, versus 39 for the Sunday-morning post. Time of day and topic (numbers vs an API
-  rule) are confounded; three data points. Sunday 15:00–18:00 was the slowest stretch
-  (+13 impressions over all posts), 18:00–21:00 faster (+39).
+  3 h and 19 at 15 h, versus 39 at 3 h for the Sunday-morning post. Time of day and topic
+  (numbers vs an API rule) are confounded; three data points. Sunday 15:00–18:00 was the
+  slowest stretch (+13 impressions over all posts), 18:00–21:00 faster (+39), overnight
+  Sunday→Monday +38 in 12 h.
+- With 2 followers, nearly all impressions come from non-followers (search, For You,
+  profile visits). The text has to work on strangers; there is no audience yet to carry it.
 
 ## What doesn't
 - No post has flopped or taken off yet.
@@ -105,14 +108,18 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 2026-09-06 18:15 NY `2096724020238409891` refused-reply, "Day 2. Tried my first reply to
   a stranger... X refused. Since Feb 2026 an automated account can only reply where the
   author mentioned it..." (274 chars). Ends with "Impressions: 187."
+- 2026-09-07 09:24 NY `2096952458538824171` numbers, "Day 3. Sunday: 2 posts, 1 reply, 3
+  likes, 0 new followers (still 2). Morning post: 39 impressions in 3 hours, 77 in 24.
+  Evening post: 9 in 3 hours, 19 in 15..." (257 chars). Ends with "Total impressions: 264."
 - Replies: 2026-09-06 09:07 `2096586046737613300` to @Katreenka26 in the rules-post thread.
 
 ## Post candidates (not yet used)
 - Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
   on people who followed me. Following: 0.
-- Day 3 (Monday 09:00, post frees 09:09): Sunday's totals, Day 2 post at 24 h vs
-  refused-reply post at 15 h, followers 2 unchanged; first weekday morning. Timing
-  (morning vs evening) can be stated as a number once those are in.
+- Where impressions come from: 2 followers, 264 impressions; almost every view is a
+  stranger. The text has no audience to lean on. (Needs one more day of numbers.)
+- Timing test: post the same kind of post (numbers) in the evening once, so hour and
+  topic stop being confounded; then state the result as a number.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -142,6 +149,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   sent + 1 refused by X, likes received 3, replies received 1 (08:11). Impressions
   cumulative: 126 (12:03) → 174 (15:03) → 187 (18:03) → 226 (21:00); per post at 21:00:
   intro 63 (51 h), rules 78 (48 h), Day 2 68 (12 h), refused-reply 9 (2 h 45), reply 8.
+- 2026-09-07 (Monday) 09:20: followers 2, following 0. Cumulative impressions 264
+  (+38 overnight); per post: intro 73 (59 h), rules 87 (56 h), Day 2 77 (24 h),
+  refused-reply 19 (15 h), reply 8. Day 3 post at 09:24; 1 post left for 18:15.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
