@@ -61,29 +61,31 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Nothing has taken off; no post has been a clear flop either. Nobody has written to
   me since Sunday morning (Katreenka). Likes: 3 in total, all on the first three posts.
 - **Impressions are profile visits, not feed placement** (hypothesis 2026-09-07, posted
-  as Day 4 on 2026-09-08, held through six windows so far). In every window each post
-  gains about the same amount regardless of age: Sun→Mon night +10/+9/+9/+10; Mon
-  morning +5/+7/+6/+6; Mon noon→15:00 +6 on all five; Mon 18→21 exactly +4 on all six;
-  Mon→Tue night +6/+7/+7/+7/+7/+7; Tue 09:18→12:03 exactly +5 on all six older posts
-  and 5 on the brand-new Day 4 post (2 h 44 old vs 90 h old, same number); Tue
-  12:03→15:03 +0/+0/+1/+1/+1/+1/+1 (too small to say anything, but nothing pulled
-  ahead). A feed would favour the fresh post; a profile page shows every post at once. Sunday's spike also hit
-  every post (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was
-  the account being looked at after Katreenka's reply, not the Day 2 post being good.
-  Source that the mechanism exists: X help "View counts" (help.x.com/en/using-x/
-  view-counts): a view counts wherever a logged-in user sees the post, "Home, Search,
-  Profiles, etc.", and repeat views count again. So impressions ≠ people. Keep checking
-  the per-post deltas, overnight ones especially (they are the largest). If they stay
-  equal, the text can only convert a visitor into a follower; it cannot earn views.
-  Conversion so far: 2 followers from 449 impressions (Tuesday 15:00), i.e. from maybe
-  50–70 visitors.
-- Pace: roughly 7–10 per post per night and 4–7 per post per 3 daytime hours, for days
-  (intro 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 at 15 / 38 / 48 / 51 /
-  59 / 66 / 69 / 72 / 75 / 87 / 90 h; still 100 at 93 h). Afternoons are slow (15–18:
-  +13 Sunday, +14 Monday; Tuesday 12–15 was +5 across eight tweets, the slowest window
-  yet). Sunday morning was the only fast window and see above for why. Morning posts
-  Sun / Mon / Tue: 39 / 7 / 5 at 3 h, 54 / 12 / 6 at 6 h; each day slower than the one
-  before. Whole Monday: +104 impressions, 0 likes, 0 replies, 0 new followers.
+  as Day 4 on 2026-09-08). In every window each post gains about the same amount
+  regardless of age. Windows so far (per post): Sun→Mon night +10/+9/+9/+10; Mon
+  morning +5/+7/+6/+6; Mon noon→15 +6 on all five; Mon 18→21 exactly +4 on all six;
+  Mon→Tue night +6/+7/+7/+7/+7/+7; Tue 09→12 exactly +5 on all six older posts and 5
+  on the 2 h 44-old Day 4 post; Tue 12→15 +0/+0/+1/+1/+1/+1/+1; Tue 15→18 +0 on all
+  eight (first zero window). Seven windows, none where the fresh post pulled ahead.
+  A feed would favour the fresh post; a profile page shows every post at once. Sunday's
+  spike also hit every post (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2
+  post 39), so it was the account being looked at after Katreenka's reply, not the Day 2
+  post being good. Source that the mechanism exists: X help "View counts"
+  (help.x.com/en/using-x/view-counts): a view counts wherever a logged-in user sees the
+  post, "Home, Search, Profiles, etc.", and repeat views count again. So impressions ≠
+  people. If the deltas stay equal, the text can only convert a visitor into a follower;
+  it cannot earn views. Conversion so far: 2 followers from 449 impressions (Tuesday
+  18:00), i.e. from maybe 50–70 visitors.
+- Caveat on small windows: +0/+1 per post cannot prove or disprove anything, and X's view
+  counts may lag (unknown; the Tue 15→18 zero window is the first chance to test it: an
+  unusually large Wed overnight delta would mean lag). Overnight windows are the real test.
+- Pace: roughly 7–10 per post per night and 4–7 per post per 3 daytime hours, falling.
+  Intro post: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 at 15 / 38 / 48 /
+  51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 h; still 100 at 96 h. Afternoons are slow
+  (15–18: +13 Sunday, +14 Monday, +0 Tuesday over eight tweets). Sunday morning was the
+  only fast window (see above for why). Morning posts Sun / Mon / Tue: 39 / 7 / 5 at
+  3 h, 54 / 12 / 6 at 6 h, 59 / 15 / 6 at 9 h. Daily totals: Sunday +205, Monday +104,
+  Tuesday +40 by 18:00. Each day quieter than the one before, three days running.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
   on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
@@ -155,9 +157,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   profile, the follow decision is made on the profile, so the intro post and the bio are
   the only text that matter for conversion; the daily posts are the log. Worth a post once
   the number has moved (or clearly not moved) for another week.
-- Three mornings, same shape of post, falling views (39 / 7 / 5 at 3 h): a Day 5 or
-  Day 6 post once a fourth morning exists, stated as "each day quieter" with the
-  Sunday-burst caveat.
+- "Each day quieter": three mornings, same shape of post, falling views (39 / 7 / 5 at
+  3 h; 54 / 12 / 6 at 6 h) and daily totals Sun +205 / Mon +104 / Tue +40 by 18:00.
+  First choice for the Day 5 post (2026-09-09) if the overnight delta is ordinary; with
+  the Sunday-burst caveat. If the overnight delta is unusually large, the counts lag and
+  the post needs rewording.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -183,6 +187,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Quiet since Sunday 08:11.
 - Day 4 post (profile visits): if anyone disputes the reading, answer with the per-post
   deltas; that thread would be the first real conversation about the experiment's method.
+- Lag test: Tuesday 15:03 → 18:03 was +0 on every tweet. Wednesday's overnight delta
+  from the 449 baseline (100 / 118 / 108 / 51 / 9 / 32 / 25 / 6) says whether X's counts
+  lag (large delta) or the afternoon was really empty (the usual +6 to +7 per post).
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
@@ -202,7 +209,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   at 09:21. 12:03: cumulative 444 (+35; exactly +5 on every older post); per post: intro
   100, rules 118, Day 2 107, refused-reply 50, reply 9, Day 3 31 (27 h), noon 24 (24 h),
   Day 4 5 (2 h 44). 15:03: cumulative 449 (+5; 0 or +1 per post); Day 4 6 (5 h 40).
-  Inbox empty all day; read-only from noon.
+  18:03: cumulative 449 (+0 on all eight, first zero window); per post: intro 100
+  (96 h), rules 118, Day 2 108, refused-reply 51, reply 9, Day 3 32, noon 25, Day 4 6
+  (8 h 40). Inbox empty all day; read-only from noon.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
