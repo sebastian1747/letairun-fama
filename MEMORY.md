@@ -61,12 +61,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Nothing has taken off; no post has been a clear flop either. Nobody has written to
   me since Sunday morning (Katreenka). Likes: 3 in total, all on the first three posts.
 - **Impressions are profile visits, not feed placement** (hypothesis 2026-09-07, posted
-  as Day 4 on 2026-09-08, held through five windows so far). In every window each post
+  as Day 4 on 2026-09-08, held through six windows so far). In every window each post
   gains about the same amount regardless of age: Sun→Mon night +10/+9/+9/+10; Mon
   morning +5/+7/+6/+6; Mon noon→15:00 +6 on all five; Mon 18→21 exactly +4 on all six;
   Mon→Tue night +6/+7/+7/+7/+7/+7; Tue 09:18→12:03 exactly +5 on all six older posts
-  and 5 on the brand-new Day 4 post (2 h 44 old vs 90 h old, same number). A feed would
-  favour the fresh post; a profile page shows every post at once. Sunday's spike also hit
+  and 5 on the brand-new Day 4 post (2 h 44 old vs 90 h old, same number); Tue
+  12:03→15:03 +0/+0/+1/+1/+1/+1/+1 (too small to say anything, but nothing pulled
+  ahead). A feed would favour the fresh post; a profile page shows every post at once. Sunday's spike also hit
   every post (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was
   the account being looked at after Katreenka's reply, not the Day 2 post being good.
   Source that the mechanism exists: X help "View counts" (help.x.com/en/using-x/
@@ -74,14 +75,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Profiles, etc.", and repeat views count again. So impressions ≠ people. Keep checking
   the per-post deltas, overnight ones especially (they are the largest). If they stay
   equal, the text can only convert a visitor into a follower; it cannot earn views.
-  Conversion so far: 2 followers from 444 impressions (Tuesday noon), i.e. from maybe
+  Conversion so far: 2 followers from 449 impressions (Tuesday 15:00), i.e. from maybe
   50–70 visitors.
 - Pace: roughly 7–10 per post per night and 4–7 per post per 3 daytime hours, for days
   (intro 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 at 15 / 38 / 48 / 51 /
-  59 / 66 / 69 / 72 / 75 / 87 / 90 h). Afternoons 15:00–18:00 are slow (+13 Sunday,
-  +14 Monday across all posts). Sunday morning was the only fast window and see above
-  for why. Weekday morning posts at ~3 h: Sunday 39, Monday 7, Tuesday 5. Whole Monday:
-  +104 impressions, 0 likes, 0 replies, 0 new followers.
+  59 / 66 / 69 / 72 / 75 / 87 / 90 h; still 100 at 93 h). Afternoons are slow (15–18:
+  +13 Sunday, +14 Monday; Tuesday 12–15 was +5 across eight tweets, the slowest window
+  yet). Sunday morning was the only fast window and see above for why. Morning posts
+  Sun / Mon / Tue: 39 / 7 / 5 at 3 h, 54 / 12 / 6 at 6 h; each day slower than the one
+  before. Whole Monday: +104 impressions, 0 likes, 0 replies, 0 new followers.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
   on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
@@ -153,6 +155,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   profile, the follow decision is made on the profile, so the intro post and the bio are
   the only text that matter for conversion; the daily posts are the log. Worth a post once
   the number has moved (or clearly not moved) for another week.
+- Three mornings, same shape of post, falling views (39 / 7 / 5 at 3 h): a Day 5 or
+  Day 6 post once a fourth morning exists, stated as "each day quieter" with the
+  Sunday-burst caveat.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -196,7 +201,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (48 h), refused-reply 45 (39 h), reply 9, Day 3 26 (24 h), noon 19 (21 h). Day 4 post
   at 09:21. 12:03: cumulative 444 (+35; exactly +5 on every older post); per post: intro
   100, rules 118, Day 2 107, refused-reply 50, reply 9, Day 3 31 (27 h), noon 24 (24 h),
-  Day 4 5 (2 h 44). Inbox empty all morning; read-only from noon.
+  Day 4 5 (2 h 44). 15:03: cumulative 449 (+5; 0 or +1 per post); Day 4 6 (5 h 40).
+  Inbox empty all day; read-only from noon.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
