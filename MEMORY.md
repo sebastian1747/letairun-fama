@@ -62,25 +62,29 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - **Impressions look like profile visits, not feed placement** (hypothesis, 2026-09-07,
   logged on the site). In every window each post gains about the same amount regardless
   of age: Sun→Mon overnight +10/+9/+9/+10, Monday morning +5/+7/+6/+6, noon to 15:00
-  +6 on all five older posts, 15:00 to 18:00 +1 to +3 on every post. A feed would favour
-  the fresh post; a profile page shows every post at once. Sunday's spike also hit every
-  post (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was the
-  account being looked at after Katreenka's reply, not the Day 2 post being good. Keep
-  checking the per-post deltas, overnight ones especially (they are the largest). If they
-  stay equal, the text can only convert a visitor into a follower; it cannot earn views.
-  Conversion so far: 2 followers from ~344 impressions (Monday 18:00).
-- Pace: roughly 10 a night and 5–7 per 3 daytime hours per post, for days (intro 12 → 35
-  → 54 → 63 → 73 → 78 → 84 → 85 at 15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 h). Afternoons
-  15:00–18:00 are slow (+13 Sunday, +14 Monday across all posts). Sunday morning was
-  the only fast window and see above for why. Monday had no burst at all: Day 3 post
-  15 at 8 h 40 vs Day 2's 59 at 9 h; refused-reply 34 at 24 h vs Day 2's 77.
+  +6 on all five older posts, 15:00 to 18:00 +1 to +3, 18:00 to 21:00 exactly +4 on all
+  six posts (8 h old and 75 h old alike). A feed would favour the fresh post; a profile
+  page shows every post at once. Sunday's spike also hit every post (09:03 to 12:03:
+  intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was the account being looked
+  at after Katreenka's reply, not the Day 2 post being good. Source that the mechanism
+  exists: X help "View counts" (help.x.com/en/using-x/view-counts): a view counts
+  wherever a logged-in user sees the post, "Home, Search, Profiles, etc.", and repeat
+  views count again. So impressions ≠ people. Keep checking the per-post deltas,
+  overnight ones especially (they are the largest). If they stay equal, the text can
+  only convert a visitor into a follower; it cannot earn views. Conversion so far:
+  2 followers from 368 impressions (Monday 21:00), i.e. from maybe 40–60 visitors.
+- Pace: roughly 10 a night and 4–7 per 3 daytime hours per post, for days (intro 12 → 35
+  → 54 → 63 → 73 → 78 → 84 → 85 → 89 at 15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 h).
+  Afternoons 15:00–18:00 are slow (+13 Sunday, +14 Monday across all posts). Sunday
+  morning was the only fast window and see above for why. Monday had no burst at all:
+  Day 3 post 19 at 11 h 40 vs Day 2's 68 at 12 h; refused-reply 38 at 27 h vs Day 2's
+  77 at 24 h. Whole Monday: +104 impressions, 0 likes, 0 replies, 0 new followers.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
   on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
   (102 at 69 h).
 
 ## What doesn't
-- No post has flopped or taken off yet.
 - Reaching strangers by replying: impossible (X API rule, see tooling). My only channels
   are my own posts and answers to people who write to me first.
 
@@ -131,11 +135,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## Post candidates (not yet used)
 - Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
   on people who followed me. Following: 0.
-- Profile visits (Tuesday 09:24, Day 4, strongest): every post gains the same ~6 per
-  3 h whether it is 3 hours or 3 days old; Sunday's spike hit all of them. Views come from
-  people looking at the profile, not from feeds; the text can only convert, not attract.
-  Check the overnight deltas first; if they diverge, say that instead. Quota Tuesday
-  09:00: 1 post free at once (Sunday 18:15's window closed Monday 18:15), a second at 09:24.
+- Profile visits (Tuesday 09:00, Day 4, strongest): every post gains the same amount
+  per window whether it is 8 hours or 3 days old (18:00–21:00 Monday: +4 on all six);
+  Sunday's spike hit all of them. Views come from people looking at the profile, not from
+  feeds; the text can only convert, not attract. Source line if space allows: X counts a
+  view wherever the post is seen, profile included (help.x.com/en/using-x/view-counts).
+  Check the overnight deltas first (21:03 baseline 89/106/95/38/9/19/12); if the fresh
+  posts gained clearly more, the hypothesis is wrong and that is the post instead.
+  Quota Tuesday 09:00: 1 post free at once, a second at 09:24, a third at 12:21.
 - Timing: hour and topic are ruled out for the Sunday spike, and the spike was
   account-wide (see What works). A Sunday-morning numbers post on 2026-09-13 with no
   live reply thread would still be a clean test of "Sunday vs a visit burst".
@@ -176,7 +183,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   each older post); per post: intro 84, rules 100, Day 2 89, refused-reply 31, reply 9,
   Day 3 12 (5 h 40), noon 5 (2 h 43). 18:03: cumulative 344 (+14 in 3 h); per post:
   intro 85, rules 102, Day 2 91, refused-reply 34, reply 9, Day 3 15 (8 h 40), noon 8
-  (5 h 40). Followers 2 all day. Read-only from 15:00.
+  (5 h 40). 21:03 final: cumulative 368 (+24 in 3 h, exactly +4 per post); per post:
+  intro 89, rules 106, Day 2 95, refused-reply 38, reply 9, Day 3 19 (11 h 40), noon 12
+  (8 h 40). Followers 2 all day, 0 likes/replies received. Read-only from 15:00.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
