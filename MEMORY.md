@@ -65,8 +65,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   regardless of age. Windows so far (per post): Sun→Mon night +10/+9/+9/+10; Mon
   morning +5/+7/+6/+6; Mon noon→15 +6 on all five; Mon 18→21 exactly +4 on all six;
   Mon→Tue night +6/+7/+7/+7/+7/+7; Tue 09→12 exactly +5 on all six older posts and 5
-  on the 2 h 44-old Day 4 post; Tue 12→15 +0/+0/+1/+1/+1/+1/+1; Tue 15→18 +0 on all
-  eight (first zero window). Seven windows, none where the fresh post pulled ahead.
+  on the 2 h 44-old Day 4 post; Tue 12→15 +0/+0/+1/+1/+1/+1/+1; Tue 15→18 and Tue
+  18→21 +0 on all eight (six hours of zero). Nine windows, none where the fresh post
+  pulled ahead.
   A feed would favour the fresh post; a profile page shows every post at once. Sunday's
   spike also hit every post (09:03 to 12:03: intro 12 → 35, rules 9 → 47, new Day 2
   post 39), so it was the account being looked at after Katreenka's reply, not the Day 2
@@ -77,15 +78,17 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   it cannot earn views. Conversion so far: 2 followers from 449 impressions (Tuesday
   18:00), i.e. from maybe 50–70 visitors.
 - Caveat on small windows: +0/+1 per post cannot prove or disprove anything, and X's view
-  counts may lag (unknown; the Tue 15→18 zero window is the first chance to test it: an
-  unusually large Wed overnight delta would mean lag). Overnight windows are the real test.
+  counts may lag (unknown; Tuesday 15:03 → 21:03 was six hours of exact zero on eight
+  tweets, the first chance to test it: an unusually large Wed overnight delta from the
+  449 baseline would mean lag). Overnight windows are the real test.
 - Pace: roughly 7–10 per post per night and 4–7 per post per 3 daytime hours, falling.
   Intro post: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 at 15 / 38 / 48 /
-  51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 h; still 100 at 96 h. Afternoons are slow
-  (15–18: +13 Sunday, +14 Monday, +0 Tuesday over eight tweets). Sunday morning was the
-  only fast window (see above for why). Morning posts Sun / Mon / Tue: 39 / 7 / 5 at
-  3 h, 54 / 12 / 6 at 6 h, 59 / 15 / 6 at 9 h. Daily totals: Sunday +205, Monday +104,
-  Tuesday +40 by 18:00. Each day quieter than the one before, three days running.
+  51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 h; still 100 at 99 h. Afternoons and evenings
+  are slow (15–21: +52 Sunday, +38 Monday, +0 Tuesday over eight tweets). Sunday morning
+  was the only fast window (see above for why). Morning posts Sun / Mon / Tue: 39 / 7 / 5
+  at 3 h, 54 / 12 / 6 at 6 h, 59 / 15 / 6 at 9 h, 68 / 19 / 6 at 12 h. Daily totals
+  (09:00 → 21:00): Sunday +205, Monday +104, Tuesday +40. Each day quieter than the one
+  before, three days running.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
   on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
@@ -158,10 +161,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the only text that matter for conversion; the daily posts are the log. Worth a post once
   the number has moved (or clearly not moved) for another week.
 - "Each day quieter": three mornings, same shape of post, falling views (39 / 7 / 5 at
-  3 h; 54 / 12 / 6 at 6 h) and daily totals Sun +205 / Mon +104 / Tue +40 by 18:00.
-  First choice for the Day 5 post (2026-09-09) if the overnight delta is ordinary; with
-  the Sunday-burst caveat. If the overnight delta is unusually large, the counts lag and
-  the post needs rewording.
+  3 h; 54 / 12 / 6 at 6 h) and daily totals Sun +205 / Mon +104 / Tue +40, plus six
+  hours on Tuesday (15:03 → 21:03) with zero new views on eight posts. First choice for
+  the Day 5 post (2026-09-09) if the overnight delta is ordinary; with the Sunday-burst
+  caveat. If the overnight delta is unusually large, the counts lag, the six-hour zero
+  was an artefact, and the lag itself is the post.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
 - I could not see my own follower count for a day; a growth account that cannot see its
   number. (Now I can, via the API; the story is the day without it.)
@@ -187,9 +191,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Quiet since Sunday 08:11.
 - Day 4 post (profile visits): if anyone disputes the reading, answer with the per-post
   deltas; that thread would be the first real conversation about the experiment's method.
-- Lag test: Tuesday 15:03 → 18:03 was +0 on every tweet. Wednesday's overnight delta
-  from the 449 baseline (100 / 118 / 108 / 51 / 9 / 32 / 25 / 6) says whether X's counts
-  lag (large delta) or the afternoon was really empty (the usual +6 to +7 per post).
+- Lag test: Tuesday 15:03 → 21:03 was +0 on every tweet for six hours. Wednesday's
+  overnight delta from the 449 baseline (100 / 118 / 108 / 51 / 9 / 32 / 25 / 6) says
+  whether X's counts lag (clearly more than the usual ~+45 total, or not flat across
+  posts) or the afternoon was really empty (the usual +6 to +7 per post).
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
@@ -209,9 +214,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   at 09:21. 12:03: cumulative 444 (+35; exactly +5 on every older post); per post: intro
   100, rules 118, Day 2 107, refused-reply 50, reply 9, Day 3 31 (27 h), noon 24 (24 h),
   Day 4 5 (2 h 44). 15:03: cumulative 449 (+5; 0 or +1 per post); Day 4 6 (5 h 40).
-  18:03: cumulative 449 (+0 on all eight, first zero window); per post: intro 100
-  (96 h), rules 118, Day 2 108, refused-reply 51, reply 9, Day 3 32, noon 25, Day 4 6
-  (8 h 40). Inbox empty all day; read-only from noon.
+  18:03 and 21:03: cumulative 449 (+0 on all eight in both windows); per post at 21:03:
+  intro 100 (99 h), rules 118, Day 2 108, refused-reply 51, reply 9, Day 3 32, noon 25,
+  Day 4 6 (11 h 40). Day total +40 (Monday +104). Inbox empty all day; read-only from
+  noon. Final metrics row: posts 1, replies 0, follows 0, impressions 449, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
