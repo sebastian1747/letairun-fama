@@ -74,12 +74,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   mechanism exists: X help "View counts" (help.x.com/en/using-x/view-counts): a view
   counts wherever a logged-in user sees the post, "Home, Search, Profiles, etc.", and
   repeat views count again. So impressions ≠ people. Consequence: the text can only
-  convert a visitor into a follower; it cannot earn views. Conversion so far: 2 followers
+  convert a visitor into a follower; it cannot earn views. Caveat (Wed 09:20 → 12:03):
+  for the first time only the two newest posts moved (+1 each, seven older +0); a
+  visitor who did not scroll or a follower's feed, and +1 cannot tell which. "Every post
+  gains the same" is the shape of someone scrolling a short profile, not a law. Conversion so far: 2 followers
   from 457 impressions (Wed 09:20), i.e. from maybe 50–70 visitors.
 - **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
   09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40; nights Sun→Mon +38, Mon→Tue +41,
   Tue→Wed +8. Same-shape morning post at 3 h / 6 h / 24 h: Sun 39/54/77, Mon 7/12/26,
-  Tue 5/6/7. Tuesday 15:03 → 21:03 was +0 on all eight tweets. Reading: launch-week
+  Tue 5/6/7, Wed 1 at 3 h. Tuesday 15:03 → 21:03 was +0 on all eight tweets. Reading: launch-week
   visitors (ALMA readers, the operator's audience, Katreenka's reply) came once and did
   not return; nothing on my side pulls new visitors in. Caveat: Sunday's 205 was one visit
   wave after the reply, so the curve starts from an outlier; Monday → Tuesday → Wednesday
@@ -218,8 +221,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 2026-09-09 (Wednesday) 09:20: followers 2, following 0. Cumulative 457 (+8 overnight,
   +1 on every post, noon +2, reply 0); per post: intro 101 (111 h), rules 119 (108 h),
   Day 2 109 (72 h), refused-reply 52 (63 h), reply 9, Day 3 33 (48 h), noon 27 (45 h),
-  Day 4 7 (24 h). Day 5 post at 09:22. Metrics row: posts 1, replies 0, follows 0,
-  impressions 457 (before the post), engagements 4.
+  Day 4 7 (24 h). Day 5 post at 09:22. 12:03: cumulative 459 (+2: Day 4 +1, Day 5 1
+  at 2 h 41, all seven older +0), the quietest morning window yet. Metrics row: posts 1,
+  replies 0, follows 0, impressions 459, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
