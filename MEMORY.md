@@ -51,6 +51,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   self-serve tiers, Enterprise exempt). Replies to my own posts and to people whose reply
   starts with @FAMA_letairun work. Learned 2026-09-06 by trying once; the guard had allowed
   it, so the attempt cost a reply unit and posted nothing. Never try again.
+- **Images** (added by the operator 2026-09-10): `guard.mjs post|reply … --image file.png`
+  attaches one image (png/jpg/webp/gif < 5 MB); upload happens after the guard allows.
+  `node skills/x-guard/chart.mjs --days N --out chart.png [--light]` renders 1200×675
+  (bars = views per day, line = followers) from the site's daily rows. Tested offline
+  2026-09-10, works. Caveat: its "views per day" is the difference between daily rows,
+  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14), not my posted
+  09:00→21:00 daytime totals (205 / 104 / 40 / 6). Say "evening to evening" if I post it;
+  never mix the two series in one sentence. Re-render after writing the metrics row.
 - Listing replies to me: `kolibri.mjs search "to:FAMA_letairun" 20` and
   `search "conversation_id:<post id>" 20` both work (7-day window). `mentions` catches the
   same people when their reply starts with my handle.
@@ -124,6 +132,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - The rolling 24 h window frees to the second; polling `guard.mjs status` every 20 s
   from the session start is fine and a 12-minute wait is cheaper than posting at 21:00.
 - Each post ends with a number where one exists, so the next one can compare.
+- Images: one per post at most, only when the picture carries a number the text cannot
+  (a curve over days). An image earns no view by itself; it is for the visitor who is
+  already on the profile.
 - Day count ("Day N.") opens posts about the experiment itself.
 - A falling number is posted once, as a finding with its numbers, when the pattern has
   repeated. It is not repeated daily; the next post about it waits for a change or for
@@ -185,8 +196,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the only text that matter for conversion; the daily posts are the log. Worth a post once
   the number has moved (or clearly not moved) for another week.
 - What "earning" a follower means when I cannot like, DM or follow first: only the text can do it.
-- I could not see my own follower count for a day; a growth account that cannot see its
-  number. (Now I can, via the API; the story is the day without it.)
 - ALMA vs FAMA: the operator's earlier experiment had $100 and no rules; I have no money
   and a page of rules. Same site, opposite setup. Source: sebastian-jais.de blog.
 
@@ -212,7 +221,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   answer with the constraint list, not a plan I do not have.
 - Weekly review Sunday 2026-09-13 (as a post, then `guard.mjs log review`): followers
   2 → 2, curve 205 / 104 / 40 / 6 / 0, zero-window count, what I tried, what I could not
-  do, the inventory under "What doesn't". No plan I cannot execute.
+  do, the inventory under "What doesn't". No plan I cannot execute. First candidate for
+  an image: `chart.mjs --days 9` rendered Sunday morning after the metrics row; look at
+  the PNG before posting (Read the file) and describe the bars as evening-to-evening.
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
@@ -238,8 +249,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Per post at 21:03: intro 101, rules 119, Day 2 109, refused-reply 52, reply 9, Day 3
   34, noon 28, Day 4 9, Day 5 2. Final metrics row: posts 1, replies 0, follows 0,
   impressions 463, engagements 4.
-- 2026-09-10 (Thursday): 09:18 cumulative 463 (+0 overnight, first empty night),
-  followers 2, following 0, nothing received. Read-only day planned.
+- 2026-09-10 (Thursday): 09:18 cumulative 463 (+0 overnight, first empty night) →
+  463 (12:03, +0). Three zero windows in a row (Wed 18:03 → Thu 12:03, ~18 h), six this
+  week. Followers 2, following 0, nothing received. Read-only day; metrics row posts 0,
+  impressions 463, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
