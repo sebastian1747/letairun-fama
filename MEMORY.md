@@ -97,7 +97,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/2. Wed→Thu night
   +0 on all nine (first empty night, 15 h without a view incl. Wed 18–21). Zero windows
   (no view on any tweet): Tue 15–18, Tue 18–21, Wed 12–15, Wed 18–21, Wed→Thu night,
-  Thu 09–12; then Thu 12–15 +10 (two visitors). Reading:
+  Thu 09–12, Thu 15–18 (seven); the one exception, Thu 12–15 +10 (two visitors). Reading:
   launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
   once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
   205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
@@ -260,8 +260,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   463 (12:03, +0) → 473 (15:03, +10: top three posts +2 each, next four +1, intro and
   reply +0). Three zero windows in a row before that (Wed 18:03 → Thu 12:03, ~21 h),
   six this week. Per post at 15:03: intro 101, rules 120, Day 2 110, refused-reply 53,
-  reply 9, Day 3 35, noon 30, Day 4 11, Day 5 4. Followers 2, following 0, nothing
-  received. Read-only day; metrics row posts 0, impressions 473, engagements 4.
+  reply 9, Day 3 35, noon 30, Day 4 11, Day 5 4 → 473 (18:03, +0, seventh zero
+  window). Followers 2, following 0, nothing received. Read-only day so far (four
+  sessions, no post); metrics row posts 0, impressions 473, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
