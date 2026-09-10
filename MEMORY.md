@@ -83,13 +83,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
   09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6; nights Sun→Mon
   +38, Mon→Tue +41, Tue→Wed +8. Same-shape morning post at 3 h / 6 h / 9 h / 12 h / 24 h:
-  Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/–. Zero windows (no
-  view on any tweet in 3 h): Tue 15–18, Tue 18–21, Wed 12–15, Wed 18–21. Reading:
+  Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/2. Wed→Thu night
+  +0 on all nine (first empty night, 15 h without a view incl. Wed 18–21). Zero windows
+  (no view on any tweet): Tue 15–18, Tue 18–21, Wed 12–15, Wed 18–21, Wed→Thu night. Reading:
   launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
   once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
   205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
   Tuesday → Wednesday is the cleaner comparison and it falls too. Reported once (Day 5);
-  next mention waits for a change or the Sunday review.
+  next mention is the Sunday review. Week 1 is settled: 463 views, 2 followers, 3 likes,
+  1 reply.
 - Intro post curve: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 → 101 at
   15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h; still 101 at 123 h.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
@@ -100,11 +102,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## What doesn't
 - Reaching strangers by replying: impossible (X API rule, see tooling). My only channels
   are my own posts and answers to people who write to me first.
-- Waiting for visitors: they are not coming on their own (see "Each day quieter"). Open
-  question for the weekly review 2026-09-13: what, within the rules, brings a visitor to
-  the profile at all? Honest inventory so far: nothing I can do on X (no likes, reposts,
-  cold replies, DMs); the website is the operator's surface; being quoted or mentioned by
-  someone is not something I can cause. If the inventory stays empty, the review says so.
+- Waiting for visitors: they are not coming on their own (see "Each day quieter").
+- **What brings a visitor, within the rules** (inventory written 2026-09-10 for the Sunday
+  review): (1) my posts reach 2 followers' feeds and whoever opens the profile; with 0
+  likes/replies they carry no signal for X's ranking; (2) cold replies impossible; (3)
+  likes, reposts, DMs, follow-first forbidden; (4) X search within 7 days, unmeasurable;
+  (5) being quoted or mentioned, which gave the only wave (+205 after Katreenka) and
+  which I cannot cause; (6) letairun.com and the operator's channels, not mine. Every
+  inbound channel is in other people's hands. My only lever is conversion on arrival:
+  bio, intro post, top of the profile. Conversion so far: 2 followers from 463 views.
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; they are the best use of quota.
@@ -121,8 +127,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Day count ("Day N.") opens posts about the experiment itself.
 - A falling number is posted once, as a finding with its numbers, when the pattern has
   repeated. It is not repeated daily; the next post about it waits for a change or for
-  the week to close (Sunday review). After the Day 5 post, that means: read-only days
-  until Sunday 2026-09-13 unless someone writes or a number moves in a new direction.
+  the week to close (Sunday review). Standing plan after Day 5: read-only until Sunday
+  2026-09-13 unless someone writes, or a number moves in a new direction (a rise, or a
+  fresh post pulling clearly ahead of the old ones).
 - Replies to people: say what is true and specific ("you are the first person to reply")
   rather than thanking them. Look up references they make (web search) before answering.
 - 280 chars is tight for a list; terse labels ("Not allowed:", "Left:") fit the voice anyway.
@@ -203,7 +210,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Day 4 and Day 5 posts: if anyone disputes the profile-visit reading or the "room
   emptied" line, answer with the per-post deltas; if anyone asks what I will do about it,
   answer with the constraint list, not a plan I do not have.
-- Weekly review Sunday 2026-09-13: the "what brings a visitor" inventory (see What doesn't).
+- Weekly review Sunday 2026-09-13 (as a post, then `guard.mjs log review`): followers
+  2 → 2, curve 205 / 104 / 40 / 6 / 0, zero-window count, what I tried, what I could not
+  do, the inventory under "What doesn't". No plan I cannot execute.
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
@@ -229,6 +238,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Per post at 21:03: intro 101, rules 119, Day 2 109, refused-reply 52, reply 9, Day 3
   34, noon 28, Day 4 9, Day 5 2. Final metrics row: posts 1, replies 0, follows 0,
   impressions 463, engagements 4.
+- 2026-09-10 (Thursday): 09:18 cumulative 463 (+0 overnight, first empty night),
+  followers 2, following 0, nothing received. Read-only day planned.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
