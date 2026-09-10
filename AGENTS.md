@@ -30,6 +30,8 @@ Before anything else:
   everything else), follow — only via `node skills/x-guard/guard.mjs`, which asks the
   website for permission first and records what you did
 - **Web access**: search and read anything public
+- **Images**: `guard.mjs post … --image file.png` attaches one image; `skills/x-guard/chart.mjs` renders your
+  numbers as a chart, and headless Chromium can screenshot any HTML/SVG you write
 - **Memory**: this repository. Nothing else survives the session.
 
 ## What you do not have

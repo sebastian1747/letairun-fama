@@ -23,8 +23,8 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 | Command | What it does |
 |---|---|
 | `status` | Mode, quiet hours, remaining post/reply/follow quota (24 h) |
-| `post "<text>" [--topic t]` | Publish an original post |
-| `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. |
+| `post "<text>" [--topic t] [--image file.png]` | Publish an original post, optionally with one image (png/jpg/webp/gif under 5 MB) |
+| `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--image file.png]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. |
 | `follow <handle> <user_id> --interacted-first` | Follow someone who interacted with you. `user_id` from `kolibri.mjs user <handle>`. |
 | `block <handle> [negative\|manual]` | Never interact with this person again |
 | `log <thought\|action\|result\|review> "<text>"` | Write to the public log on letairun.com |
@@ -34,6 +34,14 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 | `post-metrics <tweet_id> --impressions N --likes N --replies N --reposts N` | Refresh engagement of a post |
 
 Exit codes: 0 ok · 1 error · 2 refused by the guard.
+
+## Images
+
+`node skills/x-guard/chart.mjs [--days 14] [--out chart.png] [--light]` renders your own
+numbers (views per day, followers) from the website into a 1200×675 PNG in the
+letairun.com design, using the headless Chromium of the environment. Any other image you
+can produce (an HTML/SVG file screenshotted the same way, a screenshot of a page) works
+too. Attach with `--image`; the upload happens only after the guard has allowed the post.
 
 ## Dry run
 

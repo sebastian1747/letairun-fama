@@ -71,8 +71,9 @@ node kolibri.mjs me
 
 | Command | Description |
 |---|---|
-| `tweet <text>` | Post a tweet (max 280 chars) |
-| `reply <tweet_id> <text>` | Reply to a tweet |
+| `tweet [--media ID,ID] <text>` | Post a tweet (max 280 chars), optionally with up to 4 uploaded media ids |
+| `reply <tweet_id> [--media ID] <text>` | Reply to a tweet |
+| `upload <image-file>` | Upload an image (png/jpg/webp/gif, < 5 MB) and print its media id (valid 24 h) |
 | `like <tweet_id>` | Like a tweet |
 | `retweet <tweet_id>` | Retweet |
 | `delete <tweet_id>` | Delete your tweet |

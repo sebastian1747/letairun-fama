@@ -46,11 +46,13 @@ async function connectedUserId() {
   return _connectedUserId;
 }
 
-async function exec(action, args = {}) {
+async function exec(action, args = {}, version) {
   const url = `${API_BASE}/${action}`;
   const body = CONNECTED_ACCOUNT_ID
     ? { user_id: await connectedUserId(), connected_account_id: CONNECTED_ACCOUNT_ID, arguments: args }
     : { entity_id: ENTITY_ID, arguments: args };
+  // Reason: Some tools (media upload) only exist in a newer toolkit version than the default.
+  if (version) body.version = version;
   const res = await fetch(url, {
     method: "POST",
     headers: {
@@ -136,7 +138,62 @@ function printResult(result, successMsg) {
 }
 
 // === CLI ===
-const [, , command, ...args] = process.argv;
+const [, , command, ...rawArgs] = process.argv;
+
+// Reason: `--media id1,id2` may appear anywhere in tweet/reply arguments.
+let MEDIA_IDS = [];
+const args = [];
+for (let i = 0; i < rawArgs.length; i++) {
+  if (rawArgs[i] === "--media" && rawArgs[i + 1]) {
+    MEDIA_IDS = rawArgs[i + 1].split(",").map((s) => s.trim()).filter(Boolean);
+    i++;
+  } else args.push(rawArgs[i]);
+}
+
+/**
+ * Upload one image file to X via Composio's file pipeline and the v2 media endpoint.
+ * Flow: request an upload slot → PUT the bytes → execute TWITTER_UPLOAD_MEDIA (latest version).
+ *
+ * @param {string} filePath - Local image path (png/jpg/webp/gif, < ~5 MB).
+ * @returns {Promise<string>} The media id to pass in media__media__ids.
+ */
+async function uploadMedia(filePath) {
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const crypto = await import("node:crypto");
+  const bytes = fs.readFileSync(filePath);
+  const ext = path.extname(filePath).toLowerCase();
+  const mimetype = { ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".gif": "image/gif" }[ext];
+  if (!mimetype) throw new Error(`Unsupported image type: ${ext || "(none)"}`);
+  if (bytes.length > 5 * 1024 * 1024) throw new Error("Image larger than 5 MB; resize it first");
+  const md5 = crypto.createHash("md5").update(bytes).digest("hex");
+  const headers = { "x-api-key": API_KEY, "Content-Type": "application/json" };
+  const slotRes = await fetch("https://backend.composio.dev/api/v3/files/upload/request", {
+    method: "POST", headers,
+    body: JSON.stringify({ toolkit_slug: "twitter", tool_slug: "TWITTER_UPLOAD_MEDIA", filename: path.basename(filePath), mimetype, md5 }),
+  });
+  if (!slotRes.ok) throw new Error(`Upload slot request failed: HTTP ${slotRes.status}`);
+  const slot = await slotRes.json();
+  const putUrl = slot.new_presigned_url || slot.newPresignedUrl;
+  if (putUrl) {
+    let put = await fetch(putUrl, { method: "PUT", headers: { "Content-Type": mimetype }, body: bytes });
+    if (put.status === 429) {
+      // Reason: the storage endpoint rate-limits bursts; one retry after a short pause is enough
+      await new Promise((r) => setTimeout(r, 5000));
+      put = await fetch(putUrl, { method: "PUT", headers: { "Content-Type": mimetype }, body: bytes });
+    }
+    if (!put.ok) throw new Error(`Upload PUT failed: HTTP ${put.status}`);
+  }
+  const result = await exec("TWITTER_UPLOAD_MEDIA", {
+    media: { name: path.basename(filePath), mimetype, s3key: slot.key },
+    media_category: "tweet_image",
+    media_type: mimetype,
+  }, "20260812_00");
+  const data = result?.data?.data || result?.data;
+  const id = data?.id || data?.media_id || data?.media_id_string;
+  if (!id) throw new Error("Upload succeeded but no media id in response");
+  return String(id);
+}
 
 async function main() {
   switch (command) {
@@ -155,7 +212,9 @@ async function main() {
         );
         process.exit(1);
       }
-      const result = await exec("TWITTER_CREATION_OF_A_POST", { text });
+      const postArgs = { text };
+      if (MEDIA_IDS.length) postArgs.media__media__ids = MEDIA_IDS;
+      const result = await exec("TWITTER_CREATION_OF_A_POST", postArgs);
       printResult(result, "Posted");
       break;
     }
@@ -167,11 +226,22 @@ async function main() {
         console.error("Usage: kolibri reply <tweet_id> <text>");
         process.exit(1);
       }
-      const result = await exec("TWITTER_CREATION_OF_A_POST", {
-        text,
-        reply__in__reply__to__tweet__id: tweetId,
-      });
+      const replyArgs = { text, reply__in__reply__to__tweet__id: tweetId };
+      if (MEDIA_IDS.length) replyArgs.media__media__ids = MEDIA_IDS;
+      const result = await exec("TWITTER_CREATION_OF_A_POST", replyArgs);
       printResult(result, "Reply");
+      break;
+    }
+
+    case "upload": {
+      const file = args[0];
+      if (!file) {
+        console.error("Usage: kolibri upload <image-file>");
+        process.exit(1);
+      }
+      const id = await uploadMedia(file);
+      console.log(`✅ Uploaded: ${id}`);
+      console.log("   Use within 24 h: kolibri tweet --media " + id + " <text>");
       break;
     }
 
@@ -372,7 +442,8 @@ async function main() {
    All operations via Composio v3 REST API (20K calls/month, $0)
 
 WRITE:
-  tweet <text>              Post a tweet (max 280 chars)
+  tweet [--media ID,ID] <text>   Post a tweet (max 280 chars), optionally with uploaded media
+  upload <image-file>       Upload an image (png/jpg/webp/gif < 5 MB), prints the media id
   reply <id> <text>         Reply to a tweet
   like <id>                 Like a tweet
   retweet|rt <id>           Retweet
