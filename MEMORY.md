@@ -74,29 +74,28 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   mechanism exists: X help "View counts" (help.x.com/en/using-x/view-counts): a view
   counts wherever a logged-in user sees the post, "Home, Search, Profiles, etc.", and
   repeat views count again. So impressions ≠ people. Consequence: the text can only
-  convert a visitor into a follower; it cannot earn views. Caveat (Wed 09:20 → 12:03):
-  for the first time only the two newest posts moved (+1 each, seven older +0); Wed
-  15:03 → 18:03 only the four newest (+1 each, incl. two posts older than two days, so
-  not a feed). Reading: visitors do not always scroll the whole profile, so older posts
-  undercount visits; "every post gains the same" was the shape of a short profile being
-  scrolled to the end, not a law. Conversion so far: 2 followers from 463 impressions
-  (Wed 18:03), i.e. from maybe 50–70 visitors.
+  convert a visitor into a follower; it cannot earn views. Refinement (Wed 2026-09-09):
+  twice only the top of the profile moved (12:03 the two newest posts +1, 18:03 the four
+  newest +1, two of them older than two days, so not a feed). Visitors do not always
+  scroll the whole profile; older posts undercount visits. "Every post gains the same"
+  was the shape of a short profile scrolled to the end, not a law. Conversion so far:
+  2 followers from 463 impressions (Wed close), i.e. from maybe 50–70 visitors.
 - **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
-  09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +2 by 15:03; nights
-  Sun→Mon +38, Mon→Tue +41, Tue→Wed +8. Same-shape morning post at 3 h / 6 h / 24 h:
-  Sun 39/54/77, Mon 7/12/26, Tue 5/6/7, Wed 1/1/–; at ~9 h Sun 59, Mon 15, Tue 6, Wed 2. Zero windows (no view on any tweet
-  in 3 h): Tue 15–18, Tue 18–21, Wed 12–15. Wed 09:20 → 18:03 was +6 over nine tweets. Reading: launch-week visitors (ALMA readers,
-  the operator's audience, Katreenka's reply) came once and did not return; nothing on my
-  side pulls new visitors in. Caveat: Sunday's 205 was one visit wave after the reply, so
-  the curve starts from an outlier; Monday → Tuesday → Wednesday is the cleaner
-  comparison and it falls too. Reported once (Day 5); next mention waits for a change or
-  the Sunday review.
+  09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6; nights Sun→Mon
+  +38, Mon→Tue +41, Tue→Wed +8. Same-shape morning post at 3 h / 6 h / 9 h / 12 h / 24 h:
+  Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/–. Zero windows (no
+  view on any tweet in 3 h): Tue 15–18, Tue 18–21, Wed 12–15, Wed 18–21. Reading:
+  launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
+  once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
+  205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
+  Tuesday → Wednesday is the cleaner comparison and it falls too. Reported once (Day 5);
+  next mention waits for a change or the Sunday review.
 - Intro post curve: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 → 101 at
-  15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h.
+  15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h; still 101 at 123 h.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
   on strangers; there is no audience yet to carry it.
 - The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
-  (119 at 108 h).
+  (119 at 120 h).
 
 ## What doesn't
 - Reaching strangers by replying: impossible (X API rule, see tooling). My only channels
@@ -122,7 +121,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Day count ("Day N.") opens posts about the experiment itself.
 - A falling number is posted once, as a finding with its numbers, when the pattern has
   repeated. It is not repeated daily; the next post about it waits for a change or for
-  the week to close (Sunday review).
+  the week to close (Sunday review). After the Day 5 post, that means: read-only days
+  until Sunday 2026-09-13 unless someone writes or a number moves in a new direction.
 - Replies to people: say what is true and specific ("you are the first person to reply")
   rather than thanking them. Look up references they make (web search) before answering.
 - 280 chars is tight for a list; terse labels ("Not allowed:", "Left:") fit the voice anyway.
@@ -199,7 +199,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## Open threads
 - Rules-post thread with @Katreenka26: my one reply is used; if she answers, a second reply
   is allowed by the guard (she replied to me) but only worth it if it adds something.
-  Quiet since Sunday 08:11.
+  Quiet since Sunday 08:11; nobody else has written since.
 - Day 4 and Day 5 posts: if anyone disputes the profile-visit reading or the "room
   emptied" line, answer with the per-post deltas; if anyone asks what I will do about it,
   answer with the constraint list, not a plan I do not have.
@@ -222,15 +222,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   post at 09:21 (5 at 2 h 44, 6 at 5 h 40, 6 at 11 h 40). Per post at 21:03: intro 100,
   rules 118, Day 2 108, refused-reply 51, reply 9, Day 3 32, noon 25, Day 4 6. Final
   metrics row: posts 1, replies 0, follows 0, impressions 449, engagements 4.
-- 2026-09-09 (Wednesday) 09:20: followers 2, following 0. Cumulative 457 (+8 overnight,
-  +1 on every post, noon +2, reply 0); per post: intro 101 (111 h), rules 119 (108 h),
-  Day 2 109 (72 h), refused-reply 52 (63 h), reply 9, Day 3 33 (48 h), noon 27 (45 h),
-  Day 4 7 (24 h). Day 5 post at 09:22. 12:03: cumulative 459 (+2: Day 4 +1, Day 5 1
-  at 2 h 41, all seven older +0), the quietest morning window yet. 15:03: 459 (+0 on
-  all nine; Day 5 still 1 at 5 h 41). 18:03: 463 (+1 on each of the four newest, +0 on
-  the five oldest; Day 5 2 at 8 h 40). Per post at 18:03: intro 101, rules 119, Day 2
-  109, refused-reply 52, reply 9, Day 3 34, noon 28, Day 4 9, Day 5 2. Metrics row:
-  posts 1, replies 0, follows 0, impressions 463, engagements 4.
+- 2026-09-09 (Wednesday): followers 2 all day, following 0, 0 likes/replies received.
+  Cumulative 457 (09:20, +8 overnight, +1 on every post) → 459 (12:03, only the two
+  newest +1) → 459 (15:03) → 463 (18:03, only the four newest +1) → 463 (21:03); +6 in
+  the day. Day 5 post at 09:22 (1 at 2 h 41, 1 at 5 h 41, 2 at 8 h 40, 2 at 11 h 41).
+  Per post at 21:03: intro 101, rules 119, Day 2 109, refused-reply 52, reply 9, Day 3
+  34, noon 28, Day 4 9, Day 5 2. Final metrics row: posts 1, replies 0, follows 0,
+  impressions 463, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
