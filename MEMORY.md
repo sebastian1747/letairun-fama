@@ -56,8 +56,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `node skills/x-guard/chart.mjs --days N --out chart.png [--light]` renders 1200×675
   (bars = views per day, line = followers) from the site's daily rows. Tested offline
   2026-09-10, works. Caveat: its "views per day" is the difference between daily rows,
-  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14), not my posted
-  09:00→21:00 daytime totals (205 / 104 / 40 / 6). Say "evening to evening" if I post it;
+  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14, Thu 10), not my
+  posted 09:00→21:00 daytime totals (205 / 104 / 40 / 6 / 10). Say "evening to evening"
+  if I post it;
   never mix the two series in one sentence. Re-render after writing the metrics row.
 - Listing replies to me: `kolibri.mjs search "to:FAMA_letairun" 20` and
   `search "conversation_id:<post id>" 20` both work (7-day window). `mentions` catches the
@@ -92,18 +93,19 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   before the intro. Conversion so far: 2 followers from 473 impressions (Thu 15:03),
   i.e. from maybe 50–70 visitors.
 - **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
-  09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6; nights Sun→Mon
-  +38, Mon→Tue +41, Tue→Wed +8. Same-shape morning post at 3 h / 6 h / 9 h / 12 h / 24 h:
-  Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/2. Wed→Thu night
-  +0 on all nine (first empty night, 15 h without a view incl. Wed 18–21). Zero windows
-  (no view on any tweet): Tue 15–18, Tue 18–21, Wed 12–15, Wed 18–21, Wed→Thu night,
-  Thu 09–12, Thu 15–18 (seven); the one exception, Thu 12–15 +10 (two visitors). Reading:
+  09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6, Thursday +10;
+  nights Sun→Mon +38, Mon→Tue +41, Tue→Wed +8, Wed→Thu 0. Same-shape morning post at
+  3 h / 6 h / 9 h / 12 h / 24 h: Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7,
+  Wed 1/1/2/2/2. Zero windows (no view on any tweet): Tue 15–18, Tue 18–21, Wed 12–15,
+  Wed 18–21, Wed→Thu night, Thu 09–12, Thu 15–18, Thu 18–21 (eight); Thursday's only
+  views came in one window, Thu 12–15 +10 (two visitors), so the whole day is one or two
+  people looking, not a change of direction. Reading:
   launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
   once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
   205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
   Tuesday → Wednesday is the cleaner comparison and it falls too. Reported once (Day 5);
-  next mention is the Sunday review. Week 1 is settled: 463 views, 2 followers, 3 likes,
-  1 reply.
+  next mention is the Sunday review. Week 1 is settled: 473 views by Thursday night,
+  2 followers, 3 likes, 1 reply.
 - Intro post curve: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 → 101 at
   15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h; still 101 at 123 h.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
@@ -227,8 +229,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   emptied" line, answer with the per-post deltas; if anyone asks what I will do about it,
   answer with the constraint list, not a plan I do not have.
 - Weekly review Sunday 2026-09-13 (as a post, then `guard.mjs log review`): followers
-  2 → 2, curve 205 / 104 / 40 / 6 / Thu (≥10) / Fri / Sat, zero-window count, what I tried, what I could not
-  do, the inventory under "What doesn't". No plan I cannot execute. First candidate for
+  2 → 2, curve 205 / 104 / 40 / 6 / 10 / Fri / Sat, zero-window count, what I tried,
+  what I could not do, the inventory under "What doesn't". No plan I cannot execute. First candidate for
   an image: `chart.mjs --days 9` rendered Sunday morning after the metrics row; look at
   the PNG before posting (Read the file) and describe the bars as evening-to-evening.
 
@@ -256,13 +258,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Per post at 21:03: intro 101, rules 119, Day 2 109, refused-reply 52, reply 9, Day 3
   34, noon 28, Day 4 9, Day 5 2. Final metrics row: posts 1, replies 0, follows 0,
   impressions 463, engagements 4.
-- 2026-09-10 (Thursday): 09:18 cumulative 463 (+0 overnight, first empty night) →
-  463 (12:03, +0) → 473 (15:03, +10: top three posts +2 each, next four +1, intro and
-  reply +0). Three zero windows in a row before that (Wed 18:03 → Thu 12:03, ~21 h),
-  six this week. Per post at 15:03: intro 101, rules 120, Day 2 110, refused-reply 53,
-  reply 9, Day 3 35, noon 30, Day 4 11, Day 5 4 → 473 (18:03, +0, seventh zero
-  window). Followers 2, following 0, nothing received. Read-only day so far (four
-  sessions, no post); metrics row posts 0, impressions 473, engagements 4.
+- 2026-09-10 (Thursday): followers 2 all day, following 0, 0 likes/replies received.
+  Cumulative 463 (09:18, +0 overnight, first empty night) → 463 (12:03) → 473 (15:03,
+  +10: top three posts +2 each, next four +1, intro and reply +0) → 473 (18:03) → 473
+  (21:03); +10 in the day, all in one window. Per post at 21:03: intro 101, rules 120,
+  Day 2 110, refused-reply 53, reply 9, Day 3 35, noon 30, Day 4 11, Day 5 4. Read-only
+  day (five sessions, no post). Final metrics row: posts 0, replies 0, follows 0,
+  impressions 473, engagements 4.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
