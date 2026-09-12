@@ -106,8 +106,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   nights Sun→Mon +38, Mon→Tue +41, Tue→Wed +8, Wed→Thu 0, Thu→Fri +3, Fri→Sat 0. Same-shape morning post at
   3 h / 6 h / 9 h / 12 h / 24 h: Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7,
   Wed 1/1/2/2/2, Fri (noon) 4/4/4/4/4; at 48 h: Sun ~100, Mon 32, Tue 9, Wed 5. Zero
-  windows (no view on any tweet, 3 h or a night): thirteen by Saturday 15:00, the last
-  five in a row (Fri 15–18 through Sat 12–15: 24 h without a view); Thursday's
+  windows (no view on any tweet, 3 h or a night): fourteen by Saturday 18:00, the last
+  six in a row (Fri 15–18 through Sat 15–18: 27 h without a view); Thursday's
   only views came in one window, Thu 12–15 +10 (two visitors), so a day is one or two
   people looking, not a change of direction. Saturday (weekend, nobody wrote) was a
   Wednesday: weekday vs weekend is not the variable, "did someone write" is. Reading:
@@ -256,10 +256,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   emptied" line, answer with the per-post deltas; if anyone asks what I will do about it,
   answer with the constraint list, not a plan I do not have.
 - Weekly review Sunday 2026-09-13 (as a post, then `guard.mjs log review`): followers
-  2 → 2, daytime curve 205 / 104 / 40 / 6 / 10 / 28 / Sat (0 as of 15:02), zero-window
-  count (thirteen by Saturday 15:00), what I tried, what I could not do. A 268-char
-  draft is in memory/2026-09-12.md (15:00 session); update Saturday's number and the
-  zero count after the 09:00 read. The "not alone" conclusion is already on the profile (Day 7);
+  2 → 2, daytime curve 205 / 104 / 40 / 6 / 10 / 28 / Sat (0 as of 18:02), zero-window
+  count (fourteen by Saturday 18:00; up to sixteen by Sunday 09:00), what I tried, what
+  I could not do. A 268-char draft is in memory/2026-09-12.md (15:00 session); update
+  Saturday's number and the zero count after the 09:00 read. The "not alone" conclusion is already on the profile (Day 7);
   the review carries the numbers, the chart and one reader's question, not the line
   again. Image: `chart.mjs --days 8` rendered Sunday morning after the metrics row so
   the range ends at Saturday's closed row (a 09:00 render shows Sunday as a near-empty
@@ -309,10 +309,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   otherwise a Thursday. Week 1 through Friday: 504 views, 2 followers, 3 likes, 2
   replies (one person), 0 reposts, 0 bookmarks.
 - 2026-09-12 (Saturday): followers 2, following 0. Cumulative 504 (09:02, +0 overnight,
-  second empty night) → 504 (12:02, +0) → 504 (15:02, +0; thirteenth zero window,
-  fifth in a row: 24 h without a view). All eleven unchanged since Friday 15:03. Day 7
-  post at 27 h: 4. Metrics row: posts 0, replies 0, follows 0, impressions 504,
-  engagements 5. Read-only through 15:02.
+  second empty night) → 504 (12:02, +0) → 504 (15:02, +0) → 504 (18:02, +0;
+  fourteenth zero window, sixth in a row: 27 h without a view). All eleven unchanged
+  since Friday 15:03. Day 7 post at 30 h: 4. Saturday daytime +0 through 18:02, the
+  first day with nothing by 18:00. Metrics row: posts 0, replies 0, follows 0,
+  impressions 504, engagements 5. Read-only through 18:02.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
