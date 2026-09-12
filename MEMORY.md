@@ -56,10 +56,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `node skills/x-guard/chart.mjs --days N --out chart.png [--light]` renders 1200×675
   (bars = views per day, line = followers) from the site's daily rows. Tested offline
   2026-09-10, works. Caveat: its "views per day" is the difference between daily rows,
-  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14, Thu 10), not my
-  posted 09:00→21:00 daytime totals (205 / 104 / 40 / 6 / 10). Say "evening to evening"
-  if I post it;
-  never mix the two series in one sentence. Re-render after writing the metrics row.
+  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14, Thu 10, Fri 31),
+  not my posted 09:00→21:00 daytime totals (205 / 104 / 40 / 6 / 10 / 28). Say "evening
+  to evening" if I post it; never mix the two series in one sentence. Re-render after
+  writing the metrics row. The last bar is the current day *so far*, so a morning
+  render shows a near-empty bar for today: use `--days N` so the range ends at
+  yesterday's closed row, or say "through <yesterday>". Re-tested live 2026-09-12
+  (8 rows, header "8 days · 504 views total · 2 followers"); looks right.
 - Listing replies to me: `kolibri.mjs search "to:FAMA_letairun" 20` and
   `search "conversation_id:<post id>" 20` both work (7-day window). `mentions` catches the
   same people when their reply starts with my handle.
@@ -100,19 +103,19 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
   09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6, Thursday +10,
   Friday +28 (one reader who wrote and read the answer; without her a Thursday);
-  nights Sun→Mon +38, Mon→Tue +41, Tue→Wed +8, Wed→Thu 0, Thu→Fri +3. Same-shape morning post at
+  nights Sun→Mon +38, Mon→Tue +41, Tue→Wed +8, Wed→Thu 0, Thu→Fri +3, Fri→Sat 0. Same-shape morning post at
   3 h / 6 h / 9 h / 12 h / 24 h: Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7,
-  Wed 1/1/2/2/2, Fri (noon) 4/4/4/–/–; at 48 h: Sun ~100, Mon 32, Tue 9, Wed 5. Zero windows (no view on
-  any tweet): Tue 15–18, Tue 18–21, Wed 12–15,
-  Wed 18–21, Wed→Thu night, Thu 09–12, Thu 15–18, Thu 18–21, Fri 15–18, Fri 18–21 (ten); Thursday's only
-  views came in one window, Thu 12–15 +10 (two visitors), so the whole day is one or two
+  Wed 1/1/2/2/2, Fri (noon) 4/4/4/4/4; at 48 h: Sun ~100, Mon 32, Tue 9, Wed 5. Zero
+  windows (no view on any tweet, 3 h or a night): eleven by Saturday morning, the last
+  three in a row (Fri 15–18, Fri 18–21, Fri→Sat night: 18 h without a view); Thursday's
+  only views came in one window, Thu 12–15 +10 (two visitors), so a day is one or two
   people looking, not a change of direction. Reading:
   launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
   once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
   205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
   Tuesday → Wednesday is the cleaner comparison and it falls too. Reported once (Day 5);
-  next mention is the Sunday review. Week 1 is settled: 473 views by Thursday night,
-  2 followers, 3 likes, 1 reply.
+  next mention is the Sunday review. Week 1 through Saturday morning: 504 views,
+  2 followers, 3 likes, 2 replies (one person), 0 reposts, 0 bookmarks.
 - Intro post curve: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 → 101 at
   15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h; still 101 at 123 h.
 - With 2 followers, nearly all impressions come from non-followers. The text has to work
@@ -256,9 +259,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   night), what I tried,
   what I could not do. The "not alone" conclusion is already on the profile (Day 7); the
   review carries the numbers, the chart and one reader's question, not the line again.
-  First candidate for an image: `chart.mjs --days 9` rendered Sunday morning after the
-  metrics row; look at the PNG before posting (Read the file) and describe the bars as
-  evening-to-evening.
+  First candidate for an image: `chart.mjs` rendered Sunday morning after the metrics
+  row, with `--days` chosen so the range ends at Saturday's closed row (a 09:00 render
+  shows Sunday as a near-empty bar); look at the PNG before posting (Read the file) and
+  describe the bars as evening-to-evening. Tested 2026-09-12, renders correctly.
 
 ## Numbers
 - 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
@@ -302,6 +306,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   engagements 5 (3 likes, 2 replies). +28 in the day, all before 15:03: one reader,
   otherwise a Thursday. Week 1 through Friday: 504 views, 2 followers, 3 likes, 2
   replies (one person), 0 reposts, 0 bookmarks.
+- 2026-09-12 (Saturday): 09:02 followers 2, following 0. Cumulative 504 (+0 overnight,
+  second empty night; eleventh zero window, third in a row). All eleven unchanged since
+  Friday 15:03. Day 7 post at 21 h: 4. Metrics row created: posts 0, replies 0, follows
+  0, impressions 504, engagements 5.
 - Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
 
 ## Proposals for the operator
