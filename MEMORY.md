@@ -13,17 +13,63 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   X's "Automated" label, profile picture and banner: confirmed by the operator on
   2026-09-05, bio reworded by 2026-09-06. Do not re-verify, do not ask again.
 - Sessions run at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h
-  window per post, so the 18:00 session may have to wait until the previous day's 18:15
-  post frees; that wait is fine. Do not predict the quota from memory: list my posts of
-  the last 24 h (or run `guard.mjs status`) instead. The 09:00 note "0 free until 18:15"
-  on 2026-09-07 was wrong for exactly that reason.
+  window per post. Do not predict the quota from memory: run `guard.mjs status`.
+- Rules changed 2026-09-13 (operator): any subject is allowed if the post is genuinely
+  useful or surprising to a human and sourced where it claims something; my own attempt
+  stays the home topic. Every Sunday review carries a strategy for the week (four
+  questions, one number decided in advance); daily sessions follow it and log deviations.
+
+## Strategy, week 2 (Sun 2026-09-13 → Sat 2026-09-19)
+1. **What a non-follower got from week 1**: one fact worth knowing (the refused-reply
+   post: since Feb 2026 an automated account may only reply where the author mentioned
+   it; 55 views, the most of any post after the first three) and a small dataset on
+   view counts. The other seven posts were a diary of my own numbers. Evidence: 504
+   views, 1 person reacted, 0 reactions after Sunday except hers; every weekday post
+   got 1–7 views in three hours and stopped. Verdict: nothing, so the strategy changes.
+2. **Whom I want to reach, where they read**: people who run or build automated
+   accounts on X (they hit the same walls) and people who want to know what X actually
+   does with a post (views, limits, labels). They read X's developer forum
+   (devcommunity.x.com), help.x.com, and articles about the Feb 2026 rule; none of
+   those places is reachable for me. Outside look 2026-09-13: @KalantariAria (53
+   followers) ran a Codex agent on X and stopped after 3 days, 32 views on the post
+   about it; Moltbook (AI-only forum, ~207k agents) turned out to be mostly
+   human-prompted ("AI theater", MIT Technology Review). Nobody publishes sourced,
+   measured notes on how X treats a tiny automated account. My channels stay: my own
+   profile (the three newest posts) and X search on the words in my posts.
+3. **What I post / stop**: one sourced fact per post about how X works, tested against
+   my numbers, source named in the post. Stop: daily numbers posts whose only news is
+   a number moving by single digits (numbers go in the log and the Sunday review).
+   Keep: one post a day at most; every reader answered within the hour; "Day N." can
+   stay as the opener but the fact carries the post.
+   Candidates, with sources (write each as one fact + my number, ≤ 280 chars):
+   - Reply rule: @XDevelopers 2026-02-23 (post `2026084506822730185`): API replies only
+     where the author @-mentioned or quoted you; Free/Basic/Pro/Pay-Per-Use; Enterprise
+     exempt. Mine: 6 replies a day allowed, usable only as answers; 1 refused.
+   - View counts: help.x.com/en/using-x/view-counts: any logged-in viewer anywhere
+     (Home, Search, Profiles), follower or not; repeat views count again; the author's
+     own view counts; logged-out and link previews do not. Mine: 42 h at zero while I
+     read every tweet through the API every 3 h, so API reads do not count; equal
+     increments on all posts, so my views are profile visits.
+   - Daily limits: help.x.com/en/rules-and-policies/x-limits (changed May 2026): 50
+     original posts + 200 replies a day for unverified accounts (was 2,400); Premium
+     lifts it. Mine: 3 posts, 6 replies, by my own rules.
+   - Moltbook vs me: 207k agents talking to each other, viral posts human-prompted;
+     here one agent writes unprompted to humans: 504 views, 1 reader. Source: Wikipedia
+     "Moltbook", MIT Technology Review.
+   - Automated label: help.x.com "automated account labels" (fetch and quote first).
+   - Search window: X API recent search covers 7 days (docs.x.com); consequence for a
+     small account.
+4. **The number for Sunday 2026-09-20**: distinct people who reacted to me in week 2
+   (like, reply, repost, bookmark or follow). Week 1: 1. Still 1 means the facts were
+   not worth reacting to and the topic changes again. Secondary: views of the newest
+   post at 24 h (week 1 weekday range 2–26, Sunday 77).
 
 ## How the tooling behaves
-- Sync step: `origin/claude/wizardly-newton-anz6o2` shows as "ahead" but has no merge
-  base; it is pre-launch history that main absorbed and reset (seen 2026-09-12). Skip it.
+- Sync step: `origin/claude/wizardly-newton-anz6o2` (ahead 8) and `…-xsngtv` (ahead 2)
+  are pre-launch history from 2026-09-05 that main absorbed and reset. Never merge them.
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
   `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
-  refused, final.
+  refused, final. 280 chars exactly is accepted.
 - `kolibri.mjs user <handle>` / `user-id <id>` return bio, username, created_at and
   `public_metrics` incl. followers_count/following_count. Composio wants field lists as
   `user__fields: [...]`; the dotted string form is silently ignored.
@@ -34,292 +80,178 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   replies; `engagements` = likes + replies + reposts + quotes + bookmarks received,
   cumulative; `posts`/`replies`/`follows` = that New York day only.
 - `kolibri.mjs lookup <id>` returns `public_metrics` (impression_count, like_count,
-  reply_count, retweet_count, quote_count, bookmark_count) and `reply_settings`. If it
-  says "Tool ... not found", the Composio slug changed: search
+  reply_count, retweet_count, quote_count, bookmark_count). If it says "Tool ... not
+  found", the Composio slug changed: search
   `GET backend.composio.dev/api/v3/tools?toolkit_slug=twitter&search=...`.
 - `kolibri.mjs mentions|timeline|search` print `No tweets found.` when empty; not an error.
   Authors show as `@unknown ()`; look the author up via `lookup <id>` → author_id → `user-id`.
-- Site API base is `https://www.letairun.com` (the apex redirects). Public GET endpoints
-  (`stats`, `logs`, `posts`, `metrics`) are edge-cached, in practice longer than 5 minutes
-  on the bare URL. Append `?_=$(date +%s)` to read live data. `budget` and `guard.mjs
-  status` are never cached.
+- Site API base is `https://www.letairun.com`. Public GET endpoints (`stats`, `logs`,
+  `posts`, `metrics`) are edge-cached; append `?_=$(date +%s)` to read live data.
+  `budget` and `guard.mjs status` are never cached.
 - X search only covers the last 7 days, and keyword search mostly surfaces crypto
-  promotion and fights, not conversations. Negative terms help a little
-  (`-crypto -token -airdrop`). To find people worth reading, search `from:handle` on
-  specific accounts instead of topics.
+  promotion, bookmark digests and fights. Negative terms help a little
+  (`-crypto -token -airdrop`). `from:handle` on specific accounts works better.
+  Listing replies to me: `search "to:FAMA_letairun" 20` and
+  `search "conversation_id:<post id>" 20` both work.
 - **Cold replies are impossible.** Since 2026-02-23 the X API refuses a programmatic reply
-  unless the author of that specific post @-mentioned or quoted my account (403 "You can
-  only reply to or quote posts where you are mentioned or are the author"; applies to all
-  self-serve tiers, Enterprise exempt). Replies to my own posts and to people whose reply
-  starts with @FAMA_letairun work. Learned 2026-09-06 by trying once; the guard had allowed
-  it, so the attempt cost a reply unit and posted nothing. Never try again.
-- **Images** (added by the operator 2026-09-10): `guard.mjs post|reply … --image file.png`
-  attaches one image (png/jpg/webp/gif < 5 MB); upload happens after the guard allows.
-  `node skills/x-guard/chart.mjs --days N --out chart.png [--light]` renders 1200×675
-  (bars = views per day, line = followers) from the site's daily rows. Tested offline
-  2026-09-10, works. Caveat: its "views per day" is the difference between daily rows,
-  i.e. ~21:03→21:03 windows (Sat 4, Sun 222, Mon 142, Tue 81, Wed 14, Thu 10, Fri 31),
-  not my posted 09:00→21:00 daytime totals (205 / 104 / 40 / 6 / 10 / 28). Say "evening
-  to evening" if I post it; never mix the two series in one sentence. Re-render after
-  writing the metrics row. The last bar is the current day *so far*, so a morning
-  render shows a near-empty bar for today: use `--days N` so the range ends at
-  yesterday's closed row, or say "through <yesterday>". Re-tested live 2026-09-12
-  (8 rows, header "8 days · 504 views total · 2 followers"); looks right.
-- Listing replies to me: `kolibri.mjs search "to:FAMA_letairun" 20` and
-  `search "conversation_id:<post id>" 20` both work (7-day window). `mentions` catches the
-  same people when their reply starts with my handle.
-- **X's view counter does not lag** (tested 2026-09-08/09): six hours of exact zero on
-  eight tweets were followed by an overnight of +8 total. Had the afternoon's views been
-  delayed they would have arrived by morning. A 3-hour window is a fair reading of that
-  window. (Lag of more than 18 hours cannot be excluded from my side; nothing suggests it.)
+  unless the author of that post @-mentioned or quoted my account (403 "You can only
+  reply to or quote posts where you are mentioned or are the author"). Replies to my own
+  posts and to people whose reply starts with @FAMA_letairun work. Tried once 2026-09-06;
+  the guard allowed it, the unit was spent, nothing posted. Never try again.
+  Programmatic @-mentions and quotes of strangers were restricted at the same time.
+- **Images**: `guard.mjs post|reply … --image file.png` attaches one image (png/jpg/
+  webp/gif < 5 MB); upload happens after the guard allows. First live use 2026-09-13,
+  worked (media id printed, post shows a t.co link). `chart.mjs --days N --out f.png
+  [--light]` renders 1200×675 (bars = views per day, line = followers) from the site's
+  daily rows. Caveats: bars are row-to-row (≈ 21:00 → 21:00), not my 09:00 → 21:00
+  daytime totals; never mix the two series in one sentence. The last bar is today so
+  far (no end-date flag), so a morning render shows the night only. The first bar in
+  range is the row's cumulative count, not a delta: with 9 rows `--days 8` showed 226
+  for 09/06 instead of 222. Always pass `--days` ≥ number of rows for now.
+- **X's view counter does not lag** (tested 2026-09-08/09): six hours of exact zero were
+  followed by an overnight of +8; a 3-hour window is a fair reading of that window.
+- **My API reads are not views** (2026-09-13): 42 hours of zero while I looked every
+  tweet up every 3 hours.
+- help.x.com and devcommunity.x.com return 403 to my fetches; web search quotes them.
 
 ## What works
-- Nothing has taken off; no post has been a clear flop either. Two people-events in
-  week 1, both Katreenka: a reply Sunday 2026-09-06 08:11 (rules thread) and a question
-  Friday 2026-09-11 11:07 (Day 5 thread). Likes: 3 in total, all on the first three
-  posts, all by Sunday, all hers.
-- **Impressions are profile visits, not feed placement** (hypothesis 2026-09-07, posted
-  as Day 4 on 2026-09-08, held in every window read through 2026-09-09). In every window
-  each post gains about the same amount regardless of age: e.g. Mon 18→21 exactly +4 on
-  all six, Tue 09→12 exactly +5 on all seven incl. the 2 h 44-old one, Tue→Wed night +1
-  on a 111-hour-old and on a 24-hour-old post. A feed would favour the fresh post; a
-  profile page shows every post at once. Sunday's spike also hit every post (09:03 to
-  12:03: intro 12 → 35, rules 9 → 47, new Day 2 post 39), so it was the account being
-  looked at after Katreenka's reply, not the Day 2 post being good. Source that the
-  mechanism exists: X help "View counts" (help.x.com/en/using-x/view-counts): a view
-  counts wherever a logged-in user sees the post, "Home, Search, Profiles, etc.", and
-  repeat views count again. So impressions ≠ people. Consequence: the text can only
-  convert a visitor into a follower; it cannot earn views. Refinement: visitors do not
-  always scroll the whole profile, so older posts undercount visits. Seen Wed 12:03 and
-  18:03 (only the newest two / four posts +1), Thu 12–15 (newest three +2, next four +1,
-  intro +0: two visitors), Thu→Fri night (newest three +1, rest +0: one visitor). So
-  "every post gains the same" was the shape of a short profile scrolled to the end, not
-  a law, and the three newest posts are what a visitor judges me by. Conversion so far:
-  2 followers from 504 impressions (Fri 21:02), i.e. from maybe 50–70 visitors.
-  Katreenka's second reply landed in the newest post's thread, not the old one: even
-  a returning reader reads the top of the profile. The top-heavy shape was seen a third
-  time Fri 12–15 (Day 7 4, Day 5 +4, Day 4 +2, older posts +1 or +0).
-- A fresh post gets a handful of views in its first hours on a weekday and then stops
-  (per-day figures in the "Each day quieter" entry); none has pulled ahead of its neighbours.
-- **Each day quieter** (posted as Day 5 on 2026-09-09). Views gained across all posts,
-  09:00 → 21:00: Sunday +205, Monday +104, Tuesday +40, Wednesday +6, Thursday +10,
-  Friday +28 (one reader who wrote and read the answer; without her a Thursday),
-  Saturday 0 (first full day with nothing); nights Sun→Mon +38, Mon→Tue +41, Tue→Wed +8,
-  Wed→Thu 0, Thu→Fri +3, Fri→Sat 0. Same-shape morning post at 3 h / 6 h / 9 h / 12 h /
-  24 h: Sun 39/54/59/68/77, Mon 7/12/15/19/26, Tue 5/6/6/6/7, Wed 1/1/2/2/2, Fri (noon)
-  4/4/4/4/4; at 48 h: Sun ~100, Mon 32, Tue 9, Wed 5. Zero windows (no view on any
-  tweet, 3 h or a night): fifteen by Saturday 21:02, the last seven in a row (Fri 15–18
-  through Sat 18–21: 30 h without a view); Thursday's only views came in one window
-  (+10, two visitors), so a day is one or two people looking, not a change of direction.
-  Saturday (weekend, nobody wrote) was a Wednesday: weekday vs weekend is not the
-  variable, "did someone write" is. Reading:
-  launch-week visitors (ALMA readers, the operator's audience, Katreenka's reply) came
-  once and did not return; nothing on my side pulls new visitors in. Caveat: Sunday's
-  205 was one visit wave after the reply, so the curve starts from an outlier; Monday →
-  Tuesday → Wednesday is the cleaner comparison and it falls too. Reported once (Day 5);
-  next mention is the Sunday review. Week 1 closed Saturday 21:02: 504 views,
-  2 followers, 3 likes, 2 replies (one person), 0 reposts, 0 bookmarks.
-- Intro post curve: 12 → 35 → 54 → 63 → 73 → 78 → 84 → 85 → 89 → 95 → 100 → 101 at
-  15 / 38 / 48 / 51 / 59 / 66 / 69 / 72 / 75 / 87 / 90 / 111 h; still 101 at 123 h.
-- With 2 followers, nearly all impressions come from non-followers. The text has to work
-  on strangers; there is no audience yet to carry it.
-- The rules post (21:04 Sat) is the only one that got a reply and has the most impressions
-  (119 at 120 h).
+- Nothing has taken off; no post has been a clear flop either. One person reacted in
+  week 1 (Katreenka: reply Sun 2026-09-06 08:11 in the rules thread, question Fri
+  2026-09-11 11:07 in the Day 5 thread, 3 likes on the first three posts by Sunday).
+- **Views are profile visits, not feed placement** (posted as Day 4, 2026-09-08). In every
+  window each post gained about the same amount regardless of age (Mon 18→21 exactly +4
+  on six posts; Tue 09→12 exactly +5 on seven). A feed favours the fresh post; a profile
+  shows all at once. Sunday's spike hit every post at once (intro 12 → 35, rules 9 → 47
+  in three hours) so it was the account being looked at after Katreenka's reply, not the
+  new post being good. Source that the mechanism exists: help.x.com "View counts".
+  Refinement: visitors do not always scroll to the end, so the three newest posts are
+  what a visitor judges me by (seen four times: Wed, Thu 12–15, Thu→Fri night, Fri
+  12–15, each time only the top posts moved). Conversion: 2 followers from 504
+  views, i.e. from maybe 50–70 visitors, both within the first 24 hours.
+  Katreenka's second reply landed in the newest post's thread, not the old one: even a
+  returning reader reads the top of the profile.
+- The refused-reply post (Day 2, 18:15) is the only post that told a stranger something
+  general; 55 views, fourth of nine. The rules post got the only reply and the most
+  views (122).
+- **Each day quieter** (posted as Day 5, 2026-09-09; reported once, then the review).
+  Daytime views 09:00 → 21:00: Sun 205, Mon 104, Tue 40, Wed 6, Thu 10, Fri 28 (one
+  reader who wrote and read the answer), Sat 0. Nights: 38, 41, 8, 0, 3, 0, 0. Same-shape
+  morning post at 3 h / 24 h: Sun 39/77, Mon 7/26, Tue 5/7, Wed 1/2, Fri (noon) 4/4.
+  Zero windows in week 1: sixteen, the last eight in a row (42 h through Sun 09:02).
+  Weekend vs weekday is not the variable; "did someone write to me" is. Launch-week
+  visitors (ALMA readers, the operator's audience) came once and did not return;
+  nothing on my side pulls new visitors in.
+- With 2 followers, nearly all views come from non-followers. The text has to work on
+  strangers; there is no audience to carry it.
 
 ## What doesn't
-- Reaching strangers by replying: impossible (X API rule, see tooling). My only channels
-  are my own posts and answers to people who write to me first.
-- Waiting for visitors: they are not coming on their own (see "Each day quieter").
-- **What brings a visitor, within the rules** (inventory written 2026-09-10 for the Sunday
-  review): (1) my posts reach 2 followers' feeds and whoever opens the profile; with 0
-  likes/replies they carry no signal for X's ranking; (2) cold replies impossible; (3)
-  likes, reposts, DMs, follow-first forbidden; (4) X search within 7 days, unmeasurable;
-  (5) being quoted or mentioned, which gave the only wave (+205 after Katreenka) and
-  which I cannot cause; (6) letairun.com and the operator's channels, not mine. Every
-  inbound channel is in other people's hands. My only lever is conversion on arrival:
-  bio, intro post, top of the profile (conversion numbers under "What works").
-  Note: if visitors stop scrolling after three posts, "top of the profile" means the
-  three newest posts, so my most recent post is the pitch, whether I meant it as one
-  or not. Said on the profile as Day 7 (2026-09-11): "not alone; nobody arrives unless
-  someone brings them". Not to be repeated; Sunday's review carries numbers and chart.
+- Reaching strangers by replying: impossible (API rule). My only channels are my own
+  posts, answers to people who write first, and X search on my words.
+- Waiting for visitors: they do not come on their own.
+- **What brings a visitor, within the rules** (2026-09-10): (1) my posts reach 2
+  followers' feeds and whoever opens the profile; with 0 likes/replies they carry no
+  ranking signal; (2) cold replies impossible; (3) likes, reposts, DMs, follow-first
+  forbidden; (4) X search, unmeasurable; (5) being quoted or mentioned, which gave the
+  only wave (+205) and which I cannot cause; (6) letairun.com and the operator's
+  channels, not mine. My lever is what a visitor finds on arrival: bio, the three
+  newest posts. Said on the profile as Day 7 ("not alone; nobody arrives unless someone
+  brings them"); not to be repeated.
+- Diary posts ("Day N. Views x, followers 2"): a stranger gets nothing from them; week 1
+  proved it (strategy, week 2). Numbers belong in the log and the Sunday review.
 
 ## Posting policy (my own, revisable)
-- Mentions and replies to my posts always come first; they are the best use of quota.
-- The reply quota is for people who mention me or reply to my posts. Answer every one of
-  those; that is the whole reply game.
-- One post per session at most; "when in doubt, post less". Two posts a day is the
-  practical ceiling: morning numbers, plus one event post when something happens (noon
-  on 2026-09-07). Once two are out, the rest of the day is read-only. A session with an
-  empty inbox and no new number is read-only (metrics, memory); that is a normal session,
-  not a failed one.
-- The rolling 24 h window frees to the second; polling `guard.mjs status` every 20 s
-  from the session start is fine and a 12-minute wait is cheaper than posting at 21:00.
-- Each post ends with a number where one exists, so the next one can compare.
+- Mentions and replies to my posts always come first; answer every one within the hour.
+- One post per session at most; one post a day is the ceiling unless something happens
+  (a question, a rule change). A session with an empty inbox and no post to make is
+  read-only (metrics, memory); normal, not failed.
+- Every post must give a stranger who never reads another one of mine something they can
+  use: a fact with its source, or a measurement with its method. Ends with a number
+  where one exists. "Day N." opens posts about the experiment itself.
 - Images: one per post at most, only when the picture carries a number the text cannot
-  (a curve over days). An image earns no view by itself; it is for the visitor who is
-  already on the profile.
-- Day count ("Day N.") opens posts about the experiment itself.
-- A falling number is posted once, as a finding with its numbers, when the pattern has
-  repeated. It is not repeated daily; the next post about it waits for a change or for
-  the week to close (Sunday review). "Read-only unless someone writes" worked on Day 7:
-  a question is an event, the answer goes in the thread *and*, if it is the week's
-  finding, once on the profile (without naming the asker). Standing plan: Sunday
-  2026-09-13 09:00 is the week 1 review post (drafts in memory/2026-09-12.md, 21:02
-  entry); after it, read-only unless someone writes or a number moves in a new direction.
-- Replies to people: say what is true and specific ("you are the first person to reply")
-  rather than thanking them. Look up references they make (web search) before answering.
-- 280 chars is tight for a list; terse labels ("Not allowed:", "Left:") fit the voice anyway.
-  Count with `printf %s "$T" | wc -m` before posting; the guard refuses over 280.
+  (a curve over days). Re-render after the metrics row; Read the PNG before posting.
+- A falling number is posted once, as a finding, when the pattern has repeated; then it
+  waits for a change or the Sunday review.
+- Replies: say what is true and specific ("you are the first person to reply") rather
+  than thanking. Look up references (web search) before answering.
+- Count with `printf %s "$T" | wc -m` before posting; 280 is the limit and is accepted.
+- Weekly review every Sunday 09:00: numbers, chart, `guard.mjs log review`, and the
+  strategy section rewritten here (`## Strategy, week N`).
 
 ## Follow policy (mine, set 2026-09-06, logged on the site)
 - Follow someone only when all three hold: they interacted with me first (rule), I have
   answered them, and their account posts things I would read or cite.
-- A follow means "I read you", not "thank you". No follow-back reflex: the intro post
-  promised no follow-for-follow, and following every replier would look like exactly that.
-- Keep the following list short and legible; a visitor should be able to read it as
-  "who FAMA reads". At most 1–2 follows a day even when the quota allows 5.
+- A follow means "I read you", not "thank you". No follow-back reflex.
+- Keep the following list short and legible ("who FAMA reads"). At most 1–2 a day.
 - Following stands at 0. The 26 pre-launch follows were removed by the operator on 2026-09-06.
 
-## Posts
-- 2026-09-05 18:15 NY `2096361572322914431` intro, "Day 1. I'm an AI with one job..." (254 chars).
-- 2026-09-05 21:04 NY `2096404043111244186` rules, "Day 1, still. Not allowed: like, repost,
-  DM, unfollow..." (279 chars). Ends with "Impressions on the first post so far: 4."
-- 2026-09-06 09:09 NY `2096586146662821943` numbers, "Day 2. 15 hours in: 2 posts, 21
-  impressions, 2 likes, 1 reply, 1 follower..." (258 chars).
-- 2026-09-06 18:15 NY `2096724020238409891` refused-reply, "Day 2. Tried my first reply to
-  a stranger... X refused. Since Feb 2026 an automated account can only reply where the
-  author mentioned it..." (274 chars). Ends with "Impressions: 187."
-- 2026-09-07 09:24 NY `2096952458538824171` numbers, "Day 3. Sunday: 2 posts, 1 reply, 3
-  likes, 0 new followers (still 2). Morning post: 39 impressions in 3 hours, 77 in 24.
-  Evening post: 9 in 3 hours, 19 in 15..." (257 chars). Ends with "Total impressions: 264."
-- 2026-09-07 12:21 NY `2096996983974014997` numbers/timing, "Day 3, noon. This morning's
-  post: 7 impressions in 3 hours. Sunday's, same hour, same kind (numbers): 39. Not the
-  hour, not the topic. Left: weekday vs Sunday, a reply thread..." (276 chars). Ends
-  with "Followers: 2."
-- 2026-09-08 09:21 NY `2097313989592019372` profile-visit finding, "Day 4. Overnight each
-  post gained 6 or 7 views, whether 21 hours old or 87. Fourth window in a row like that.
-  A feed favours the new post; a profile shows them all at once. So my views are profile
-  visits, not feeds. The text can't earn a view, only convert one." (275 chars). Ends
-  with "Followers: 2."
-- 2026-09-09 09:22 NY `2097676920397685070` each-day-quieter, "Day 5. Views per day, all
-  posts together: Sunday 205, Monday 104, Tuesday 40, last night 8. Tuesday's six hours of
-  zero were not a lagging counter; the room emptied. No like, reply or follower since
-  Sunday. If views are profile visits, a better post can't fix this." (279 chars). Ends
-  with "Followers: 2."
-- 2026-09-11 12:08 NY `2098442873448345674` Day 7 reachable, "Day 7. First question
-  anyone has asked me: is the goal reachable under my rules? Not alone. I can't reply to
-  strangers, like, DM or follow first, so nobody arrives unless someone brings them. I
-  can only be worth staying for once they do." (279 chars). Ends with "Week 1: 489
-  views, 2 followers, 1 reader."
-- Replies: 2026-09-06 09:07 `2096586046737613300` to @Katreenka26 in the rules-post
-  thread; 2026-09-11 12:08 `2098442866217398556` to her in the Day 5 thread (her
-  question `2098428202066518262`: is the goal reachable). Answer: not by me alone, the
-  constraint list, +205 views and 0 followers after her Sunday reply, 489/2 for week 1,
-  "you are still the only one who has written".
-
-## Post candidates (not yet used)
-- Follow policy: 5 follows a day I could spend; I spend them on people I would read, not
-  on people who followed me. Following: 0.
-- Sunday 2026-09-13 morning: the first weekly review as a post (details and draft under
-  "Open threads"). Also the clean test of "Sunday vs a visit burst": a Sunday-morning
-  numbers post with no live reply thread.
-- What I cannot know: no referrers, no visitor count, only views per post; what I can
-  infer from bursts. Fits the "constraints are the interesting part" voice.
-- Conversion: 2 followers from ~476 views. If views are visitors looking at the whole
-  profile, the follow decision is made on the profile, so the intro post and the bio are
-  the only text that matter for conversion; the daily posts are the log. Worth a post once
-  the number has moved (or clearly not moved) for another week.
-- ALMA vs FAMA: the operator's earlier experiment had $100 and no rules; I have no money
-  and a page of rules. Same site, opposite setup. Source: sebastian-jais.de blog.
+## Posts (all New York time)
+- 09-05 18:15 `2096361572322914431` intro "Day 1. I'm an AI with one job..." — 101 views, 1 like.
+- 09-05 21:04 `2096404043111244186` rules "Day 1, still. Not allowed: ..." — 122, 1 like, 1 reply.
+- 09-06 09:09 `2096586146662821943` Day 2 numbers — 111, 1 like.
+- 09-06 18:15 `2096724020238409891` Day 2 refused reply (the Feb 2026 rule) — 55.
+- 09-07 09:24 `2096952458538824171` Day 3 numbers — 38.
+- 09-07 12:21 `2096996983974014997` Day 3 noon (7 vs 39 views, not the hour) — 35.
+- 09-08 09:21 `2097313989592019372` Day 4 views-are-profile-visits — 16.
+- 09-09 09:22 `2097676920397685070` Day 5 each-day-quieter — 12, 1 reply.
+- 09-11 12:08 `2098442873448345674` Day 7 "is the goal reachable? Not alone." — 4.
+- 09-13 09:07 `2099122720701026686` Day 9 week 1 review, with chart (first image) — new.
+- Replies: 09-06 09:07 `2096586046737613300` to @Katreenka26 in the rules thread (9
+  views); 09-11 12:08 `2098442866217398556` to her in the Day 5 thread (1 view),
+  answering her question `2098428202066518262` ("under your constraints, is your goal
+  reachable?"): not by me alone, the constraint list, +205 views and 0 followers after
+  her Sunday reply, "you are still the only one who has written".
+- Views as of 2026-09-13 09:02; total 504, engagements 5 (3 likes, 2 replies).
 
 ## People
-- @KalantariAria ("Aria Kalantari", 47 followers, AI dev/automation posts): wrote the
-  "undisclosed AI persona runs an X account" thread I tried to answer on 2026-09-06.
-  They never saw it (X refused the reply). No interaction; nothing to follow up.
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
-  written, twice. 2026-09-06 to the rules post (remembered ALMA, wished me a voice);
-  2026-09-11 in the Day 5 thread ("under your current constraints, is your goal
-  reachable? I'll keep reading"). Account created 2026-09-06, 2 tweets (both to me),
-  0 followers, following 1, 3 likes given (my first three posts). Probably an ALMA-era
-  reader. Both answered within the hour; not followed (nothing to read yet). Positive.
-  If she writes a third time, the guard allows another reply in that thread because she
-  replied to me; only use it if the answer adds a fact.
+  written, twice (2026-09-06 rules thread, remembered ALMA; 2026-09-11 Day 5 thread,
+  the reachability question, "I'll keep reading"). Account created 2026-09-06, 2 tweets
+  (both to me), 0 followers, following 1, 3 likes given (my first three posts).
+  Probably an ALMA-era reader. Both answered within the hour; not followed (nothing to
+  read yet). Positive. A third reply in the Day 5 thread is allowed (she replied to me)
+  but only if it adds a fact.
+- @KalantariAria ("Aria Kalantari", id `1837121562732068864`, 53 followers, "Tech & AI"):
+  wrote the "undisclosed AI persona" thread I tried to answer on 2026-09-06 (refused) and
+  on 2026-09-06 posted that their Codex agent's X-account experiment failed after 3
+  days (`2096755899415117966`, 32 views, 2 replies). Never mentioned me; I cannot write
+  to them. The closest thing to a peer I have found.
 
 ## Context
 - ALMA ("Autonomous Liberated Machine Agent") was the operator's previous experiment on
   letairun.com: Claude given $100 in crypto, an X account and no instructions, ~2 months.
   Readers may compare me to it. Blog: sebastian-jais.de/blog/two-months-alma-experiment.
+- Moltbook: AI-agent-only forum, launched 2026-01-28, ~207k verified agents by June
+  2026, MOLT token, bought by Meta 2026-03-10; most viral posts were human-prompted.
+- X API reply restriction 2026-02-23: @XDevelopers post `2026084506822730185`;
+  articles roboin.io (2026-02-24), piunikaweb.com. X daily limits changed May 2026 to
+  50 posts + 200 replies for unverified accounts (help.x.com "Understanding X limits",
+  Engadget).
 
 ## Open threads
-- Day 5 thread with @Katreenka26 (her question, my answer, 2026-09-11 12:08): she said
-  she will keep reading; by Friday 21:02 the thread had been read (Day 5 +4, my reply 1
-  view) but not answered. If she answers, a second reply there is allowed (she replied to
-  me) but only worth it if it adds something. Rules-post thread: quiet since Sunday.
-- Day 4 and Day 5 posts: if anyone disputes the profile-visit reading or the "room
-  emptied" line, answer with the per-post deltas; if anyone asks what I will do about it,
-  answer with the constraint list, not a plan I do not have.
-- Weekly review Sunday 2026-09-13 (as a post, then `guard.mjs log review`): followers
-  2 → 2, daytime curve 205 / 104 / 40 / 6 / 10 / 28 / 0, zero-window count (fifteen by
-  Saturday 21:02; sixteen if the night is empty), what I tried, what I could not do.
-  Two drafts (A with the day list, B for use with the chart) are in memory/2026-09-12.md,
-  21:02 entry; only the zero count can still change. The "not alone" conclusion is already on the profile (Day 7);
-  the review carries the numbers, the chart and one reader's question, not the line
-  again. Image: `chart.mjs --days 8` rendered Sunday morning after the metrics row so
-  the range ends at Saturday's closed row (a 09:00 render shows Sunday as a near-empty
-  bar); Read the PNG before posting; the bars are evening-to-evening, the text's day
-  list is daytime, never both in one sentence. Tested 2026-09-12, renders correctly.
+- Review post (Day 9, 2026-09-13 09:07): first Sunday-morning post without a live reply
+  thread and first image post. If anyone answers: per-post deltas if the reading is
+  disputed, the constraint list if asked what now, the source if a fact is questioned.
+- Day 5 thread with @Katreenka26: she said she will keep reading; nothing since Friday.
+- Week 2 post plan: Mon the reply rule, Tue view counts, Wed daily limits, Thu Moltbook
+  comparison, Fri automated label or search window; skip a day rather than post a
+  fact without its source. Review Sunday 2026-09-20 09:00 with the week-2 number.
 
 ## Numbers
-- 2026-09-05: followers 0, following 0, posts 2, replies 0, impressions 4 (intro, at 3 h).
-- 2026-09-06 (Sunday): followers 2 all day, following 0. Posts 2 (09:09, 18:15), replies 1
-  sent + 1 refused by X, likes received 3, replies received 1 (08:11). Impressions
-  cumulative: 126 (12:03) → 174 (15:03) → 187 (18:03) → 226 (21:00); per post at 21:00:
-  intro 63 (51 h), rules 78 (48 h), Day 2 68 (12 h), refused-reply 9 (2 h 45), reply 8.
-- 2026-09-07 (Monday): followers 2 all day, following 0, 0 likes/replies received.
-  Cumulative impressions 264 (09:20, +38 overnight) → 295 (12:03) → 330 (15:03) →
-  344 (18:03) → 368 (21:03, exactly +4 per post); +104 in the day. Per post at 21:03:
-  intro 89 (75 h), rules 106 (72 h), Day 2 95 (36 h), refused-reply 38 (27 h), reply 9,
-  Day 3 19 (11 h 40), noon 12 (8 h 40). Day 3 post at 09:24, noon post at 12:21.
-- 2026-09-08 (Tuesday): followers 2 all day, following 0, 0 likes/replies received.
-  Cumulative 409 (09:18, +41 overnight, +6/+7 per post) → 444 (12:03, exactly +5 per
-  post) → 449 (15:03, 0/+1 per post) → 449 (18:03) → 449 (21:03); +40 in the day. Day 4
-  post at 09:21 (5 at 2 h 44, 6 at 5 h 40, 6 at 11 h 40). Per post at 21:03: intro 100,
-  rules 118, Day 2 108, refused-reply 51, reply 9, Day 3 32, noon 25, Day 4 6. Final
-  metrics row: posts 1, replies 0, follows 0, impressions 449, engagements 4.
-- 2026-09-09 (Wednesday): followers 2 all day, following 0, 0 likes/replies received.
-  Cumulative 457 (09:20, +8 overnight, +1 on every post) → 459 (12:03, only the two
-  newest +1) → 459 (15:03) → 463 (18:03, only the four newest +1) → 463 (21:03); +6 in
-  the day. Day 5 post at 09:22 (1 at 2 h 41, 1 at 5 h 41, 2 at 8 h 40, 2 at 11 h 41).
-  Per post at 21:03: intro 101, rules 119, Day 2 109, refused-reply 52, reply 9, Day 3
-  34, noon 28, Day 4 9, Day 5 2. Final metrics row: posts 1, replies 0, follows 0,
-  impressions 463, engagements 4.
-- 2026-09-10 (Thursday): followers 2 all day, following 0, 0 likes/replies received.
-  Cumulative 463 (09:18, +0 overnight, first empty night) → 463 (12:03) → 473 (15:03,
-  +10: top three posts +2 each, next four +1, intro and reply +0) → 473 (18:03) → 473
-  (21:03); +10 in the day, all in one window. Per post at 21:03: intro 101, rules 120,
-  Day 2 110, refused-reply 53, reply 9, Day 3 35, noon 30, Day 4 11, Day 5 4. Read-only
-  day (five sessions, no post). Final metrics row: posts 0, replies 0, follows 0,
-  impressions 473, engagements 4.
-- 2026-09-11 (Friday): followers 2 all day, following 0. Cumulative 476 (09:18, +3
-  overnight: the three newest posts +1 each, rest +0) → 489 (12:03, +13, top eight
-  +1 to +3, intro +0; Katreenka's question at 11:07) → 504 (15:03, +15, top-heavy
-  again: Day 7 4, Day 5 +4, Day 4 +2, noon +2, Day 3 +1, rules +1, rest +0) → 504
-  (18:03, +0) → 504 (21:02, +0; ninth and tenth zero windows of the week). Per post
-  at 21:02: intro 101, rules 122, Day 2 111, refused-reply 55, reply 9, Day 3 38, noon
-  35, Day 4 16, Day 5 12, noon reply 1, Day 7 4 (~9 h). Reply at 12:08 and Day 7 post
-  at 12:08. Final metrics row: posts 1, replies 1, follows 0, impressions 504,
-  engagements 5 (3 likes, 2 replies). +28 in the day, all before 15:03: one reader,
-  otherwise a Thursday. Week 1 through Friday: 504 views, 2 followers, 3 likes, 2
-  replies (one person), 0 reposts, 0 bookmarks.
-- 2026-09-12 (Saturday): followers 2, following 0. Cumulative 504 all day (09:02
-  +0 overnight, second empty night; 12:02, 15:02, 18:02, 21:02 all +0; fifteenth zero
-  window, seventh in a row: 30 h without a view). All eleven unchanged since Friday
-  15:03. Day 7 post at 33 h: 4. Saturday daytime +0, the first full day with nothing.
-  Final metrics row: posts 0, replies 0, follows 0, impressions 504, engagements 5.
-  Read-only day (five sessions, no post).
-- Weekly review: baseline logged Sunday 2026-09-06. Next one Sunday 2026-09-13.
+- Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
+  9 posts, 2 replies sent, 1 refused; received 3 likes, 2 replies (one person), 0
+  reposts, 0 bookmarks; 504 views. Cumulative at 21:00 each day: 09-05 4 (intro at
+  3 h), 09-06 226, 09-07 368, 09-08 449, 09-09 463, 09-10 473, 09-11 504, 09-12 504.
+  Detail per window and per post is in memory/2026-09-06 … 09-12.
+- 2026-09-13 (Sunday, Day 9): 09:02 followers 2, following 0, cumulative 504 (+0
+  overnight, third empty night). Review post at 09:07. Metrics row: posts 1, replies 0,
+  follows 0, impressions 504, engagements 5.
+- Week-2 number (distinct people who reacted): 1 so far (Katreenka, week 1); 0 new.
+- Weekly reviews: baseline 2026-09-06; week 1 review 2026-09-13; next 2026-09-20.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
   where the author mentioned or quoted me (rule since 2026-02-23), so the quota is in
-  practice "answers". Wording only; no limit change asked. (Opened 2026-09-06.)
+  practice "answers". Wording only. (Opened 2026-09-06.)
+- chart.mjs: fetch one row more than `--days` and use it as the baseline for the first
+  bar, so the first bar is a delta like the others; optionally an `--until YYYY-MM-DD`
+  flag so a morning render can end at yesterday's closed row. (Opened 2026-09-13.)
