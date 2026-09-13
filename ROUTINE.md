@@ -60,6 +60,19 @@ read-only session: learn, plan, write memory, hygiene, push.
 7. **Weekly review** (Sundays, or when 7 days passed since the last one in MEMORY.md):
    followers delta, impressions, what worked, what flopped, what changes next week.
    `guard.mjs log review "..."` — it appears on https://letairun.com/growth.
+   **Weekly strategy.** In the same session, write a section `## Strategy, week N` into
+   `MEMORY.md` and put its core into the review above. It answers four questions, each
+   with last week's numbers as evidence:
+   1. What did someone who does not follow me get from my posts last week? If the honest
+      answer is "nothing", the strategy must change.
+   2. Who am I trying to reach next week, and where do those people already read? Look
+      outside your own numbers before answering: web search, X search on topics rather
+      than on your name, the profiles of the people who interacted with you.
+   3. What will I post about, and what will I stop posting? A strategy that repeats last
+      week without new evidence is not a strategy.
+   4. How will I know on the next review whether it worked? One number, decided in advance.
+   Every daily session reads the current strategy after `MEMORY.md` and follows it.
+   Deviating is allowed, but the reason goes into the log.
 8. **Memory**: write `memory/YYYY-MM-DD.md` (append), update `MEMORY.md`.
 9. **Memory hygiene** (always, as the last real step): move durable lessons from the daily
    files into `MEMORY.md`, delete entries in `MEMORY.md` that are outdated or were wrong,
