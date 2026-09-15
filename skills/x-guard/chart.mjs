@@ -2,7 +2,12 @@
 /**
  * chart.mjs — render FAMA's numbers as a PNG in the letairun.com design.
  *
- *   node skills/x-guard/chart.mjs [--days 14] [--out chart.png] [--light]
+ *   node skills/x-guard/chart.mjs [--days 14] [--until YYYY-MM-DD] [--out chart.png] [--light]
+ *
+ * --days N     show the last N days (default 14); one earlier row is fetched as the
+ *              baseline so the first bar is a real day like the others
+ * --until DAY  end the chart at that day (inclusive), e.g. yesterday's closed row when
+ *              rendering in the morning; default: the newest row (today so far)
  *
  * Reads GET $FAMA_SITE_URL/api/fama/metrics, draws two panels (views per day as
  * bars, followers as a line) into an HTML file and screenshots it with the
@@ -18,6 +23,7 @@ const SITE = (process.env.FAMA_SITE_URL || "https://www.letairun.com").replace(/
 const argv = process.argv.slice(2);
 const flag = (name, dflt) => { const i = argv.indexOf(`--${name}`); return i >= 0 && argv[i + 1] ? argv[i + 1] : dflt; };
 const DAYS = parseInt(flag("days", "14"), 10);
+const UNTIL = flag("until", null);
 const OUT = path.resolve(flag("out", "chart.png"));
 const LIGHT = argv.includes("--light");
 
@@ -50,15 +56,17 @@ function findChromium() {
  * Build the HTML for the chart card.
  *
  * @param {Array<object>} rows - Daily metrics, oldest first.
+ * @param {number} baseline - Cumulative impressions of the day before rows[0] (0 at launch).
  * @returns {string} HTML document.
  */
-function html(rows) {
+function html(rows, baseline) {
   const W = 1200, H = 675;
   const c = LIGHT
     ? { bg: "#f5f5f7", panel: "#ffffff", grid: "#d4d4de", text: "#1a1a2b", muted: "#6b6b80", accent: "#f59e0b", accent2: "#6366f1" }
     : { bg: "#0b0b14", panel: "#111120", grid: "#222236", text: "#f0f0f5", muted: "#b8b8c8", accent: "#f59e0b", accent2: "#6366f1" };
   // Reason: the site stores cumulative impressions; views per day is the difference
-  const views = rows.map((r, i) => Math.max(0, r.impressions - (i > 0 ? rows[i - 1].impressions : 0)));
+  // to the previous row, and for the first bar to the baseline row fetched before it.
+  const views = rows.map((r, i) => Math.max(0, r.impressions - (i > 0 ? rows[i - 1].impressions : baseline)));
   const followers = rows.map((r) => r.followers);
   const labels = rows.map((r) => r.day.slice(5).replace("-", "/"));
 
@@ -120,13 +128,36 @@ function html(rows) {
 </svg></body></html>`;
 }
 
+/**
+ * Pick the rows to draw and the baseline for the first bar.
+ *
+ * @param {Array<object>} all - Every metrics row, oldest first.
+ * @param {number} days - Days to show.
+ * @param {string|null} until - Last day to include (YYYY-MM-DD) or null for all.
+ * @returns {{rows: Array<object>, baseline: number}} Rows to draw and the prior cumulative count.
+ */
+export function selectRows(all, days, until) {
+  if (!Number.isInteger(days) || days < 1) throw new Error("--days must be a positive integer");
+  if (until && !/^\d{4}-\d{2}-\d{2}$/.test(until)) throw new Error("--until must be YYYY-MM-DD");
+  const upTo = until ? all.filter((r) => r.day <= until) : all;
+  if (!upTo.length) throw new Error(until ? `no metrics rows up to ${until}` : "no metrics rows yet");
+  const rows = upTo.slice(-days);
+  // Reason: the row before the window carries the cumulative count the first bar starts from;
+  // when the window starts at launch there is none and the first bar is the launch day itself.
+  const before = upTo[upTo.length - rows.length - 1];
+  return { rows, baseline: before ? before.impressions : 0 };
+}
+
 async function main() {
-  const res = await fetch(`${SITE}/api/fama/metrics?days=${DAYS}&_=${Date.now()}`);
+  // Reason: the table is small (one row per day); fetch everything and cut locally so the
+  // baseline row and --until are handled in one place.
+  const res = await fetch(`${SITE}/api/fama/metrics?days=365&_=${Date.now()}`);
   if (!res.ok) throw new Error(`metrics request failed: HTTP ${res.status}`);
-  const rows = (await res.json()).metrics;
-  if (!rows?.length) throw new Error("no metrics rows yet");
+  const all = (await res.json()).metrics;
+  if (!all?.length) throw new Error("no metrics rows yet");
+  const { rows, baseline } = selectRows(all, DAYS, UNTIL);
   const htmlPath = path.join(os.tmpdir(), `fama-chart-${Date.now()}.html`);
-  writeFileSync(htmlPath, html(rows));
+  writeFileSync(htmlPath, html(rows, baseline));
   const bin = findChromium();
   const r = spawnSync(bin, ["--headless=new", "--no-sandbox", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1",
     "--window-size=1200,675", `--screenshot=${OUT}`, `file://${htmlPath}`], { encoding: "utf8" });
@@ -134,4 +165,7 @@ async function main() {
   console.log(`📊 ${OUT} (${rows.length} days, ${rows[rows.length - 1].day})`);
 }
 
-main().catch((e) => { console.error(`❌ ${e.message}`); process.exit(1); });
+// Reason: only run when executed directly, so tests can import selectRows.
+if (process.argv[1] && path.resolve(process.argv[1]) === new URL(import.meta.url).pathname) {
+  main().catch((e) => { console.error(`❌ ${e.message}`); process.exit(1); });
+}

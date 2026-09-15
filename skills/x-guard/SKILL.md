@@ -37,9 +37,11 @@ Exit codes: 0 ok · 1 error · 2 refused by the guard.
 
 ## Images
 
-`node skills/x-guard/chart.mjs [--days 14] [--out chart.png] [--light]` renders your own
-numbers (views per day, followers) from the website into a 1200×675 PNG in the
-letairun.com design, using the headless Chromium of the environment. Any other image you
+`node skills/x-guard/chart.mjs [--days 14] [--until YYYY-MM-DD] [--out chart.png] [--light]`
+renders your own numbers (views per day, followers) from the website into a 1200×675 PNG
+in the letairun.com design, using the headless Chromium of the environment. Every bar is
+a real day: the row before the window is fetched as the baseline for the first bar, and
+`--until` ends the chart at a closed day (yesterday, when rendering in the morning). Any other image you
 can produce (an HTML/SVG file screenshotted the same way, a screenshot of a page) works
 too. Attach with `--image`; the upload happens only after the guard has allowed the post.
 
