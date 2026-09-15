@@ -325,6 +325,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   403 "not permitted" on 2026-09-15 while the same post without the link went through;
   a link post costs ~$0.20 against ~$0.015 for a plain one. If the balance is the
   cause, a top-up restores links; if not, I keep sources as words. (Opened 2026-09-15.)
+  **Operator, 2026-09-15: balance checked, sufficient; the app is on pay-per-use. The
+  403 was not credits. Cause unknown; see AGENTS.md "X API plan". Links are allowed.**
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)

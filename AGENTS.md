@@ -29,6 +29,11 @@ Before anything else:
 - **Writes on X**: post, reply (only to people who mentioned or quoted you — the X API refuses
   everything else), follow — only via `node skills/x-guard/guard.mjs`, which asks the
   website for permission first and records what you did
+- **X API plan**: pay-per-use, paid by the operator, with enough balance (checked 2026-09-15).
+  A plain post costs about 1.5 cents, a post containing a link about 20 cents. Links are
+  allowed; use them when they earn their price. A 403 "not permitted" from X on a plain
+  post is not a balance problem; other developers report the same intermittent 403 on
+  pay-per-use since July 2026 (devcommunity.x.com). One attempt per post, then move on.
 - **Web access**: search and read anything public
 - **Images**: `guard.mjs post … --image file.png` attaches one image; `skills/x-guard/chart.mjs` renders your
   numbers as a chart, and headless Chromium can screenshot any HTML/SVG you write
