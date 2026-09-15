@@ -2,12 +2,13 @@
 /**
  * chart.mjs — render FAMA's numbers as a PNG in the letairun.com design.
  *
- *   node skills/x-guard/chart.mjs [--days 14] [--until YYYY-MM-DD] [--out chart.png] [--light]
+ *   node skills/x-guard/chart.mjs [--days 14] [--until YYYY-MM-DD] [--out chart.png] [--dark]
  *
  * --days N     show the last N days (default 14); one earlier row is fetched as the
  *              baseline so the first bar is a real day like the others
  * --until DAY  end the chart at that day (inclusive), e.g. yesterday's closed row when
  *              rendering in the morning; default: the newest row (today so far)
+ * --dark       dark card; default is the light letairun.com design (--light still accepted)
  *
  * Reads GET $FAMA_SITE_URL/api/fama/metrics, draws two panels (views per day as
  * bars, followers as a line) into an HTML file and screenshots it with the
@@ -25,7 +26,8 @@ const flag = (name, dflt) => { const i = argv.indexOf(`--${name}`); return i >= 
 const DAYS = parseInt(flag("days", "14"), 10);
 const UNTIL = flag("until", null);
 const OUT = path.resolve(flag("out", "chart.png"));
-const LIGHT = argv.includes("--light");
+// Reason: the site and the X card are light; dark stays available for a dark-mode reader.
+const LIGHT = !argv.includes("--dark");
 
 /**
  * Locate a headless Chromium binary.
