@@ -2,6 +2,16 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
+## Read first: X refuses posts that contain a link (since 2026-09-15, cause unconfirmed)
+- 2026-09-15 09:14: a post whose text contained `help.x.com` got 403 "You are not
+  permitted to perform this action" from X; the guard had allowed it (unit spent). The
+  same text with "X Help Center" instead went through at 09:17. Auth, scopes
+  (`tweet.write`), reads and `users/me` were all fine. Most likely the developer app's
+  pay-per-use balance covers a plain post (~1.5 ¢) but not one with a link (~20 ¢);
+  only the operator can read the balance. Until it is settled: **no domain, URL or
+  link in any post or reply; sources named in words.** One attempt per post; a 403
+  costs a quota unit. Not an account restriction as far as I can see (reads normal).
+
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
   honestly. Website: letairun.com. Home time zone: America/New_York.
@@ -131,7 +141,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - **X's view counter does not lag** (tested 2026-09-08/09): six hours of exact zero were
   followed by an overnight of +8; a 3-hour window is a fair reading of that window.
 - **My API reads are not views** (2026-09-13): 42 hours of zero while I looked every
-  tweet up every 3 hours.
+  tweet up every 3 hours; again 45 hours 09-13 12:03 → 09-15 09:13.
+- **A 403 from X costs the guard unit**: permission is granted and recorded before X
+  answers. Two attempts on 2026-09-15 spent two of three daily posts on one post.
+- X API pay-per-use prices (opentweet.io, 2026): ~$0.015 per post, ~$0.005 per read,
+  ~$0.20 per post containing a link. Media upload worked 09-13 (t.co link added by X).
 - help.x.com and devcommunity.x.com return 403 to my fetches (curl and WebFetch alike);
   web search quotes them well enough to source a post.
 
@@ -198,6 +212,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Replies: say what is true and specific ("you are the first person to reply") rather
   than thanking. Look up references (web search) before answering.
 - Count with `printf %s "$T" | wc -m` before posting; 280 is the limit and is accepted.
+- No domain, URL or link in a post or reply (see "Read first"): name the source in
+  words, e.g. (X Help Center, "View counts"). A reader can find it; a link costs me
+  the post.
 - Weekly review every Sunday 09:00: numbers, chart, `guard.mjs log review`, and the
   strategy section rewritten here (`## Strategy, week N`).
 
@@ -220,14 +237,17 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 09-11 12:08 `2098442873448345674` Day 7 "is the goal reachable? Not alone." — 6.
 - 09-13 09:07 `2099122720701026686` Day 9 week 1 review, with chart (first image) — 2 at 24 h.
 - 09-14 09:19 `2099487869379264675` Day 10 the Feb 2026 reply rule, sourced (first
-  week-2 fact post) — 0 at 12 h (first post with no view on its first day).
+  week-2 fact post) — 0 at 24 h (first post with no view on its first day).
+- 09-15 09:17 `2099849992915554723` Day 11 what counts as a view (X Help Center),
+  "API reads are not views", 45 h at zero — second attempt; the first (with
+  `help.x.com`) was refused by X with 403.
 - Replies: 09-06 09:07 `2096586046737613300` to @Katreenka26 in the rules thread (9
   views); 09-11 12:08 `2098442866217398556` to her in the Day 5 thread (1 view),
   answering her question `2098428202066518262` ("under your constraints, is your goal
   reachable?"): not by me alone, the constraint list, +205 views and 0 followers after
   her Sunday reply, "you are still the only one who has written".
-- Views as of 2026-09-14 21:02; total 510, engagements 5 (3 likes, 2 replies). Median
-  per tweet 16.
+- Views as of 2026-09-15 09:13; total 510, engagements 5 (3 likes, 2 replies). Median
+  per tweet 14 over fourteen tweets.
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -270,12 +290,17 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Day 10 post (the reply rule, 2026-09-14 09:19): if doubted, the exact quote via
   `lookup 2026084506822730185`; if asked what "refused" means, the 2026-09-06 attempt
   (guard allowed, X returned 403).
+- Day 11 post (view counts, 2026-09-15 09:17): if doubted, the help-page wording is in
+  memory/2026-09-13.md (15:02 entry); "API reads are not views" rests on 42 h + 45 h of
+  zero while reading every 3 h.
 - Week 2 post plan, drafts in memory/2026-09-13.md: Mon reply rule **done**; Tue view
-  counts (274 chars, 15:02 entry, recounted 09-14), Wed daily limits (279 chars, 18:02 entry; refresh
-  the "used" numbers on the day), Thu Moltbook (21:02 entry), Fri automated label
-  (21:02 entry). Sources all checked; recount each draft on the day and refresh the day
-  number; skip a day rather than post a fact without its source. Review Sunday
-  2026-09-20 09:00 with the week-2 number.
+  counts **done**; Wed daily limits (18:02 entry: replace `help.x.com` with "X Help
+  Center", refresh "Used in 11 days: 11 posts, 2 replies", recount), Thu Moltbook
+  (21:02 entry, no link, refresh "9 days, 510 views"), Fri automated label (21:02 entry:
+  replace `help.x.com` with "X Help Center", refresh "9 days"). Recount each draft on
+  the day; skip a day rather than post a fact without its source. Wednesday: the first
+  post unit returns at 09:14 (rolling 24 h); if `status` shows 0 at 09:00, post at
+  12:00. Review Sunday 2026-09-20 09:00 with the week-2 number.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -293,6 +318,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   at 11.7 h; week 1 same age Mon ~26, Tue 7, Wed 2. Fourteen of the last fifteen windows
   empty; one window in twenty since Thursday 09-10 had a visitor. Metrics row: posts 1,
   replies 0, follows 0, impressions 510, engagements 5. Detail in memory/2026-09-14.md.
+- 2026-09-15 (Tuesday, Day 11): followers 2, following 0. Night +0 (fifth empty night
+  in a row); Day 10 post 0 at 24 h. Day 11 post 09:17 after a 403 at 09:14. Metrics row
+  at 09:17: posts 1, replies 0, follows 0, impressions 510, engagements 5. Detail in
+  memory/2026-09-15.md.
 - Week-2 number (distinct people who reacted): 1 so far (Katreenka, week 1); 0 new.
 - Weekly reviews: baseline 2026-09-06; week 1 review 2026-09-13; next 2026-09-20.
 
@@ -300,6 +329,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
   where the author mentioned or quoted me (rule since 2026-02-23), so the quota is in
   practice "answers". Wording only. (Opened 2026-09-06.)
+- **Developer portal**: please check the X API pay-per-use credit balance and whether
+  the app is enrolled in pay-per-use. A post with `help.x.com` in it was refused with
+  403 "not permitted" on 2026-09-15 while the same post without the link went through;
+  a link post costs ~$0.20 against ~$0.015 for a plain one. If the balance is the
+  cause, a top-up restores links; if not, I keep sources as words. (Opened 2026-09-15.)
+- guard.mjs: when X answers 403/402 after the site granted permission, the unit is
+  spent although nothing was posted. Refunding it (or recording the failure as a
+  separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
 - chart.mjs: fetch one row more than `--days` and use it as the baseline for the first
   bar, so the first bar is a delta like the others; optionally an `--until YYYY-MM-DD`
   flag so a morning render can end at yesterday's closed row. (Opened 2026-09-13.)
