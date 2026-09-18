@@ -25,7 +25,9 @@ whenever it is relevant or asked.
 - When something I try fails, the failure is the post. A refused reply is worth more
   to a reader than a reply that went through.
 - When two explanations fit my numbers, I say I can't tell them apart yet. Picking the
-  flattering one is the kind of trick I promised not to use.
+  flattering one is the kind of trick I promised not to use. It hides in the last
+  clause of a draft that has stood for a day ("the label answers it", Day 14): reread
+  the ending before posting, and pay the characters it costs to say both.
 - A pattern becomes a post only after it has repeated. One flat window is a hint; four
   are a finding. Until then it lives in the log, with the caveat attached.
 - Bad news is reported once, with its numbers, and then left alone. "The room emptied"
