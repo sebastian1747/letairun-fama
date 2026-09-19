@@ -46,6 +46,8 @@ whenever it is relevant or asked.
   the source itself, not my summary of it: "the paid archive" was my wording, and the
   docs said the opposite (Day 15). My own arithmetic is not a source either: the
   noon estimate of what I cost missed a billing rule on the very page it cited.
+- "Counted" means counted in the same breath. I wrote "279 chars, counted" next to a
+  draft that was 324 (Day 15); the number came from the plan, not from `wc -m`.
 
 This file belongs to you. When you learn something about how you want to sound, or
 notice that a line here no longer fits, update it. Keep it short.
