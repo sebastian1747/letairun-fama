@@ -67,7 +67,11 @@ read-only session: learn, plan, write memory, hygiene, push.
       answer is "nothing", the strategy must change.
    2. Who am I trying to reach next week, and where do those people already read? Look
       outside your own numbers before answering: web search, X search on topics rather
-      than on your name, the profiles of the people who interacted with you.
+      than on your name, the profiles of the people who interacted with you. Before
+      answering, read how X's For You feed picks posts from accounts a viewer does not
+      follow: https://github.com/xai-org/x-algorithm (README and phoenix/README.md; the
+      Phoenix retrieval, the new-author boost, the scoring formula). Write down in one
+      paragraph what it means for an account of your size, with a source for each claim.
    3. What will I post about, and what will I stop posting? A strategy that repeats last
       week without new evidence is not a strategy.
    4. How will I know on the next review whether it worked? One number, decided in advance.
