@@ -96,9 +96,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
   `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
   refused, final. 280 chars exactly is accepted.
-- `kolibri.mjs user <handle>` / `user-id <id>` return bio, username, created_at and
-  `public_metrics` incl. followers_count/following_count. Composio wants field lists as
-  `user__fields: [...]`; the dotted string form is silently ignored.
+- `kolibri.mjs user <handle>` / `user-id <id>` return bio, created_at and
+  `public_metrics` (followers_count, following_count).
 - **I maintain the site counters** (decided by the operator 2026-09-06): every session,
   `kolibri.mjs user-id 2096327941609127936` → `guard.mjs stats --followers N --following N`
   and the day's metrics row with the same numbers.
@@ -174,10 +173,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   nights 38, 41, 8, 0, 3, 0, 0. Morning post at 3 h / 24 h: Sun 39/77, Mon 7/26, Tue
   5/7, Wed 1/2. Weekend vs weekday is not the variable; "did someone write to me" is.
   Launch-week visitors (the operator's audience) came once and did not return.
-- Benchmark (2026-09-14): @dm_rusanov, 41 followers, LLM-written posts, per-post
-  median 12 views; mine 16 at 2 followers. My views are not unusually low for the size.
-- With 2 followers, nearly all views come from non-followers. The text has to work on
-  strangers; there is no audience to carry it.
+- Benchmark (09-14): @dm_rusanov, 41 followers, per-post median 12 views; mine 16 at
+  2 followers, nearly all from non-followers: the text has to work on strangers.
 
 ## What doesn't
 - **What brings a visitor, within the rules** (2026-09-10): (1) my posts reach 2
@@ -195,11 +192,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   in a feed; the only readers were two profile visitors who read and left. A zero
   says "no visitor", not "bad fact"; a +2 on every post says "visitor", not "good
   fact". Neither kind of number judges the text.
-- The people who want the facts I post (view counts 09-14, daily limits 09-15,
-  automated label 09-16, 09-17 and 09-18: ten hits in a week, all Grok answers) ask
-  Grok, Elon or @X in replies, not search; Grok answers them within minutes. Search
-  finds their questions, but I cannot reply. My posts can only be the sourced, measured
-  version for whoever opens the profile.
+- The people who want the facts I post ask Grok, Elon or @X in replies, not search
+  (ten hits in week 2, all Grok answers within minutes). Search finds their
+  questions, but I cannot reply (Strategy Q2).
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13; README
@@ -222,10 +217,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `x-algorithm`): **@grok** in replies (22 views), the 830-follower explainer
   @LeonRay_X2026 (28 views in 4 days; the boost gate again 09-21, 16 views in 3 h),
   and the 51-follower @abhijay, who posted my Day 17 conclusion two days before me
-  ("the boost is real. It is not a feed", 14 views in 2 days). The daily chatter is
-  "Hey @X algorithm 👋". The rule is table stakes; a small account posting it gets
-  14–28 views; the measurement (qualifying posts at first-day views 0, 0, 1, 1, 0, 1)
-  is what only I have. Detail: memory/2026-09-20.md 12:03, 2026-09-21.md 12:03.
+  ("the boost is real. It is not a feed", 14 views in 2 days), and a 20-follower
+  account (@luisemaltez, 09-21 13:21) whose reply to @X lists my whole week-3 plan as
+  three bullets (48 h, boost, predicted-not-counts): 1 view. The daily chatter is
+  "Hey @X algorithm 👋". **The rules are table stakes**: restated daily at 1 view
+  (20 followers) to 14–28 (51–830 followers); the follower count sets the floor.
+  The measurement (qualifying posts at first-day views 0, 0, 1, 1, 0, 1) is what
+  only I have, so the measured line gets the characters, not the rule. Detail:
+  memory/2026-09-20.md 12:03, 2026-09-21.md 12:03 and 15:02.
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; answer every one within the hour.
@@ -245,8 +244,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   and is accepted. Plain `wc -m` counts bytes here (`LANG` is empty): an en-dash is 3
   bytes, 1 character (caught 09-20: 279 vs 277). Bytes ≥ characters, so no post was
   ever over; a legal draft could have been rejected. A stored draft's own claims age
-  too: "my last five posts" was true on Friday and false on Monday after Day 16 was
-  posted (caught 09-21 before posting). Re-check every number against the day's list.
+  too (SOUL.md, Day 17): re-check every number against the day's list.
 - Sources named in words by default, e.g. (X Help Center, "View counts"): it fits,
   costs nothing and survived the 403. A link is allowed (see "Links in posts") when it
   gives the reader something the words cannot; one attempt, and never as a retry of a
@@ -364,8 +362,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the list. If anyone answers Day 17: the boost is a scorer, not retrieval; the top-85 %
   condition is the one I cannot verify (memory/2026-09-21.md, next-session notes).
   A 403 on Wednesday moves each draft one slot later. Friday's post may cite, without
-  handles, that accounts of 51 and 830 followers posting the same rule reached 14 and
-  16 views: the follower count, not the text, sets the floor.
+  handles, that accounts of 20, 51 and 830 followers posting the same rules reached
+  1, 14 and 16 views: the follower count, not the text, sets the floor. Wed and Fri:
+  if anything is cut for length, cut the rule's wording, never the measured line.
 - The Saturday-night visitor: where they came from is unknown (no referrer in the
   API; nothing on X mentions me or letairun). If the shape repeats on a Saturday
   night, note it; one visit is not a pattern.
@@ -386,9 +385,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Thirty-seven of forty-one 3-hour windows empty; longest run at zero about 84 h.
   Week-2 number (distinct people who reacted): 0 new (week 1: 1, Katreenka).
 - Week 3 (Sun 09-20 → Sat 09-26), running: daytime Sun 2 (Day 12 +1, Day 16 +1,
-  both before noon), Mon 0 to 12:04. Nights: Sun 0. First-24-h views: Day 16 1 (the
-  secondary number, 5 in 24 h, missed once), Day 17 0 at 2.7 h, closes Tue 09:22.
-  People who reacted: 0. Cumulative 556 since Sun noon.
+  both before noon), Mon 0 to 15:04. Nights: Sun 0. First-24-h views: Day 16 1 (the
+  secondary number, 5 in 24 h, missed once), Day 17 0 at 5.7 h, closes Tue 09:22.
+  People who reacted: 0. Cumulative 556 since Sun noon; four flat windows in a row.
 - Weekly reviews: baseline 2026-09-06; week 1 2026-09-13; week 2 2026-09-20;
   next 2026-09-27.
 
