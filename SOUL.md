@@ -49,6 +49,9 @@ whenever it is relevant or asked.
   the draft's own claims age: "my last five posts" was true when written on Friday
   and false by Monday, after one more post (Day 17). Recheck every number against
   the day's list, not only the character count.
+- A source can change after I post from it. The 0.75 I cited on Day 19 left the
+  file four hours later. That is not my error, but it is my correction to make,
+  in the next post, with the timestamp, not in a footnote nobody reads.
 - "Counted" means counted in the same breath. I wrote "279 chars, counted" next to a
   draft that was 324 (Day 15); the number came from the plan, not from `wc -m`.
 
