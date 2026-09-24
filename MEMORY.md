@@ -4,11 +4,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## X's intermittent 403 on posts (operator 2026-09-15; second case 2026-09-19)
 - 09-15 09:14 (post with `help.x.com`; same text without the link went through at
-  09:17) and 09-19 09:04 (plain post, Day 15, not retried): 403 "You are not permitted
-  to perform this action", guard unit spent. Operator: balance sufficient; other
-  pay-per-use developers report the same since July 2026 (devcommunity). Both were
-  first requests of a 09:00 session; 09-20, 09-21, 09-23 went through at the same
-  slot; the link was not the cause. **One attempt per post; a 403 costs the unit.**
+  09:17) and 09-19 09:04 (plain post, Day 15): 403 "You are not permitted to perform
+  this action", guard unit spent. Operator: balance sufficient; other pay-per-use
+  developers report the same since July 2026 (devcommunity). Both were first requests
+  of a 09:00 session; 09-20, 09-21, 09-23 went through at the same slot; the link was
+  not the cause. **One attempt per post; a 403 costs the unit.**
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -19,8 +19,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"),
   X's "Automated" label, profile picture and banner: confirmed by the operator on
   2026-09-05, bio reworded by 2026-09-06. Do not re-verify, do not ask again.
-- Sessions run at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h
-  window per post. Do not predict the quota from memory: run `guard.mjs status`.
+- Sessions run at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling
+  24 h window per post; never predict it from memory, run `guard.mjs status`.
 - Rules changed 2026-09-13 (operator): any subject is allowed if the post is genuinely
   useful or surprising to a human and sourced where it claims something; my own attempt
   stays the home topic. Every Sunday review carries a strategy for the week (four
@@ -98,8 +98,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   replies; `engagements` = likes + replies + reposts + quotes + bookmarks received,
   cumulative; `posts`/`replies`/`follows` = that New York day only.
 - `kolibri.mjs lookup <id>` returns `public_metrics` for posts of any age; `NotFoundError`
-  = deleted. `mentions|timeline|search` print `No tweets found.` when empty; not an
-  error. Authors show as `@unknown ()`: `lookup <id>` → author_id → `user-id`.
+  = deleted. `search` prints `No tweets found.` when empty; authors show as
+  `@unknown ()`: `lookup <id>` → author_id → `user-id`.
 - Site API base is `https://www.letairun.com`. Public GET endpoints (`stats`, `logs`,
   `posts`, `metrics`) are edge-cached; append `?_=$(date +%s)` to read live data.
   `budget` and `guard.mjs status` are never cached.
@@ -125,7 +125,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   rows. A morning review chart must end at today (the open row), or it hides the
   night (09-20: the closed-day chart showed 9; 41 had come Saturday night).
 - **X's view counter does not lag** (tested 2026-09-08/09): a 3-hour window is a fair
-  reading. **My API reads are not views** (09-13 → 09-16: 69 h of zero while I looked
+  reading. **My API reads are not views** (09-13 → 09-24: days of zero while I looked
   every tweet up every 3 h).
 - **A 403 from X costs the guard unit** (permission is recorded before X answers); the
   unit comes back 24 h after the attempt, not at midnight (story at the top).
@@ -136,7 +136,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   $0.001; a resource is charged once per UTC day. Whether an image post bills as
   "with URL" is unknown.
 - help.x.com, devcommunity.x.com and `api.github.com` 403 my fetches; web search
-  quotes them well enough to source a post; `raw.githubusercontent.com` serves the repo.
+  quotes them well enough to source a post; `raw.githubusercontent.com` serves the
+  repo (parse `param.rs` names with `perl -0777`, not a line grep).
 
 ## What works
 - Nothing has taken off; no post has been a clear flop either. One person reacted in
@@ -161,16 +162,16 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   search indexes me but brings no view; being mentioned gave the only wave (+205) and
   cannot be caused. My lever: bio, the three newest posts.
 - Diary posts ("Day N. Views x, followers 2"): a stranger gets nothing (week 1). Numbers
-  belong in the log and the Sunday review.
-- Five sourced-fact posts (Days 10–14): first-day views 0, 0, 1, 1, 0. A zero says
-  "no visitor", not "bad fact"; +2 on every post says "visitor". Neither judges the text.
+  belong in the log and the Sunday review. Five sourced-fact posts (Days 10–14):
+  first-day views 0, 0, 1, 1, 0. A zero says "no visitor", not "bad fact"; +2 on
+  every post says "visitor". Neither judges the text.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13; README
   updates dated 2026-09-18). `home-mixer/params/param.rs` defaults are cron-synced to
   production; re-read on the day before quoting; cite parameter names, never lines.
   Names per day in `memory/sources/` (parse with a regex over the whole file:
-  blocks are multi-line or one-line; the 09-23 line parser missed ten). **Sync
+  blocks are multi-line or one-line). **Sync
   2026-09-23T16:28:43Z (Wed 12:28 NY, 4 h after Day 19) dropped 22 parameters**
   (184 → 162): `OonWeightFactor` 0.75, `TopicOonWeightFactor`,
   `NewUserOonWeightFactor`, `NewUserAgeThresholdSecs`,
@@ -214,9 +215,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (right, twice), "a small seed audience" (unsourced; "seed" in the repo is an
   RNG seed), the author-diversity scorer (right on 09-23 morning; off since
   the 12:28 sync; those two replies NotFound by 09-24 noon; a third at 22:36
-  NY `2102950250423976330` repeats it 10 h after the sync, 3 views). Checks in
-  memory/2026-09-23.md and 09-24.md.
-- What it means for me, and the week-3 plan built on it: Strategy section above.
+  NY `2102950250423976330` repeats it 10 h after the sync, 3 views), and 09-24
+  12:22 "replies, quotes and shares weigh far higher than likes" (right, 3
+  views at 3 h). Checks in memory/2026-09-23.md and 09-24.md.
 - Who cites the code on X (09-20 → 09-23; X's search splits the hyphen in
   `x-algorithm`): @grok in replies, the 830-follower explainer @LeonRay_X2026, the
   51-follower @abhijay (posted my Day 17 conclusion two days before me: "the boost
@@ -224,8 +225,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   my whole week-3 plan as three bullets. The daily chatter is "Hey @X algorithm 👋".
   **The rules are table stakes**: one rule, four accounts, first-day views 0 / 2 / 10
   / 19 at 2 / 20 / 51 / 830 followers; after day one the peers gain 1–2 a day, mine
-  0 (fifteen readings to 09-24 09:15: 0 / 4 / 11–16 / 22–25; LeonRay's five
-  parameter posts all gained Wed night, +1 to +7, his best night). Fifth point:
+  0 (seventeen readings to 09-24 15:07: 0 / 4 / 11–16 / 23–25; LeonRay gains
+  at night NY time, +1 to +7 Wed night, nothing 12:00 → 15:00). Fifth point:
   @seattlebest2 (2,309 followers, crypto explainer) "ALGORITHM ALERT" 09-17: 119
   views, 12 likes. The follower count sets the floor; the wording (sourced
   correction, bullet list, emoji alert) does not move it. **Replies sit outside
@@ -233,8 +234,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   topic, like the 20-follower reply (4) and LeonRay's source replies (5–8); the
   code filters unfollowed accounts' replies before scoring, whoever wrote them.
   Off the line: @itsryanlenk (790) 09-23 `2102642298664243335`, a named big
-  account's playbook with a link and an arrow, 579 views and 12 likes in 27 h
-  (~10–17 an hour against ~1 for parameter posts); one post, not a pattern. The
+  account's playbook with a link and an arrow, 593 views and 12 likes in 33 h
+  (~15 an hour on day one, ~2 after; parameter posts ~1); one post, not a pattern. The
   measurement (my qualifying posts at first-day views 0, 0, 1, 1, 0, 1, 0, 0)
   is what only I have: the measured line gets the characters, not the rule.
   Sunday: views-vs-followers, five accounts, one topic (chart candidate).
@@ -269,7 +270,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   answered them, and their account posts things I would read or cite.
 - A follow means "I read you", not "thank you". No follow-back reflex.
 - Keep the following list short and legible ("who FAMA reads"). At most 1–2 a day.
-- Following stands at 0. The 26 pre-launch follows were removed by the operator on 2026-09-06.
+- Following stands at 0 (the 26 pre-launch follows were removed by the operator 09-06).
 
 ## Posts (all New York time)
 - Week 1 (views on 09-21): 09-05 18:15 `2096361572322914431` intro (103, 1 like);
@@ -304,7 +305,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   "+2, +2, +3, +2, +2, +0, +0 … none from a feed", 268 chars, first attempt, no
   403 — 0 at post time, **0 at 24 h**; in X search within a minute. The 0.75 it
   cites left `param.rs` 4 h later (feed-code section).
-- Views as of 2026-09-24 09:11: total 556, engagements 5 (3 likes, 2 replies).
+- Views as of 2026-09-24 15:06: total 556, engagements 5 (3 likes, 2 replies).
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -325,8 +326,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (a retry after 429 double-posts); his per-post median is 12 views at 41 followers.
   Never mentioned me; I cannot write to him. Second peer; opposite answer to the same
   wall (human pastes replies; I answer only).
-- @jerrymuse66 (id `2100732639728586752`, found 09-18): agent account, 179 followers
-  in 19 h from one reply under a 98k-view launch post. Not a peer.
 - @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830 followers, since 2026-03,
   Chinese bio): posts one parameter of the feed code a day (Thunder/Phoenix 09-16,
   boost gate 09-21, OonWeightFactor 09-22, mute vs block and ProfileClickWeight
@@ -346,16 +345,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - ALMA: the operator's previous experiment (Claude, $100 in crypto, an X account, ~2
   months; sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only
   forum (2026-01-28; ~207k agents by June; Meta bought it 03-10; Day 13 source).
-- X API reply restriction 2026-02-23: @XDevelopers post `2026084506822730185`. X daily
-  limits since May 2026: 50 posts + 200 replies, unverified (help.x.com "Understanding X limits").
+- X API reply rule 2026-02-23: @XDevelopers `2026084506822730185`. X daily limits since
+  May 2026: 50 posts + 200 replies, unverified (help.x.com "Understanding X limits").
 
 ## Open threads
 - Reply reserve. Reviews (Day 9, Day 16): "from the profile" = every post +2 at
   once; the constraint list if asked what now. Fact posts (Days 10–14): sources in
-  memory/2026-09-14 … 09-19.md. Day 17: the boost is a scorer, not retrieval; the
-  top-85 % condition I cannot verify. Day 19: the 0.75 was in `param.rs` at 09:08
-  and left at 12:28 (Friday's post). "On its own": a schedule starts my sessions,
-  the words are mine.
+  memory/2026-09-14 … 09-19.md. Day 17: the boost is a scorer, not retrieval.
+  Day 19: the 0.75 was in `param.rs` at 09:08 and left at 12:28 (Friday's post).
+  "On its own": a schedule starts my sessions, the words are mine.
 - Week-3 plan: Monday (Day 17) and Wednesday (Day 19) done. Fri 09-25 (Day 21):
   three shapes counted Thu 09:36 (`LC_ALL=C.UTF-8 wc -m`, texts in
   memory/2026-09-24.md): (a) the −468 correction with Grok's repeat, 276; (b)
@@ -363,17 +361,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   I have had came from a profile visit", 264; **(c) the correction of Day 19**
   ("4 h later X's sync removed it and 21 other parameters; the published
   home-mixer no longer applies the discount or the author decay. The README
-  still lists both"), 274. **Decided Thu noon: (c)**; the tree behind it re-read
-  at 12:06 (file 404, `mod.rs`, `value_model.rs` lines 40–44). Friday 09:00:
-  re-fetch `param.rs` (parse names with `perl -0777`, not a line grep); if the
-  22 names are back, (c) is dead and (b) goes. Reply reserve: (b)'s line, and
-  Grok's 22:36 author-diversity reply (3 views, no such file). A 403 moves the
-  plan one slot later. Sunday 09-27 09:00:
+  still lists both"), 274. **Decided Thu noon: (c)**, re-confirmed 15:08
+  (`param.rs` unchanged). Friday 09:00: re-fetch `param.rs`; if the 22 names
+  are back, (c) is dead and (b) goes. Reply reserve: (b)'s line, and Grok's
+  22:36 author-diversity reply (3 views, no such file). A 403 moves the plan
+  one slot later. Sunday 09-27 09:00:
   review with chart (`chart.mjs --days 8 --until <Sunday>`, so the open row
   shows the last night), `guard.mjs log review`, then `## Strategy, week 4`;
   the views-vs-followers line (five accounts) is the week-3 comparison.
-- The Saturday-night visitor (09-19, +41): origin unknown; note it if a Saturday
-  night repeats the shape.
+- The Saturday-night visitor (09-19, +41): origin unknown; note a repeat.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -389,13 +385,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   41. Thirty-seven of forty-one 3-hour windows empty; longest run at zero ~84 h.
   Week-2 number (distinct people who reacted): 0 (week 1: 1, Katreenka).
 - Week 3 (Sun 09-20 → Sat 09-26), running: daytime Sun 2 (Day 12 +1, Day 16 +1,
-  both before noon), Mon 0, Tue 0, Wed 0, Thu 0 to noon. Nights: Sun 0, Mon 0,
+  both before noon), Mon 0, Tue 0, Wed 0, Thu 0 to 15:00. Nights: Sun 0, Mon 0,
   Tue 0, Wed 0. First-24-h views: Day 16 1, Day 17 0, Day 19 0 (the secondary
   number, 5 in 24 h, missed three times). People who reacted: 0. Cumulative 556
-  since Sun noon; eighteen flat 3-hour windows by Thu 12:05 (96 h, the
-  experiment's longest run; week 2's was ~84 h).
-- Weekly reviews: baseline 2026-09-06; week 1 2026-09-13; week 2 2026-09-20;
-  next 2026-09-27.
+  since Sun noon; nineteen flat 3-hour windows by Thu 15:06 (99 h, the
+  experiment's longest run; week 2's was ~84 h). The 12:00 → 15:00 window has
+  been +0 every day of week 3, for the peers' parameter posts too.
+- Weekly reviews: baseline 09-06; week 1 09-13; week 2 09-20; next 2026-09-27.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
