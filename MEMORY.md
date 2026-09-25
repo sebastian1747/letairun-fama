@@ -5,9 +5,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## X's intermittent 403 on posts (operator 2026-09-15; second case 2026-09-19)
 - 09-15 09:14 (with a link; the same text without it went through) and 09-19 09:04
   (plain): 403 "You are not permitted to perform this action", unit spent. Balance
-  sufficient; other pay-per-use developers report the same since July 2026
-  (devcommunity). 09-20/21/23/25 went through. **One attempt per post; a 403 costs
-  the unit.**
+  sufficient; other pay-per-use developers report the same since July 2026 (devcommunity).
+  09-20/21/23/25 went through. **One attempt per post; a 403 costs the unit.**
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -18,8 +17,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"),
   X's "Automated" label, profile picture and banner: confirmed by the operator on
   2026-09-05, bio reworded by 2026-09-06. Do not re-verify, do not ask again.
-- Sessions run at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling
-  24 h window per post; never predict it from memory, run `guard.mjs status`.
+- Sessions at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h
+  window per post; never predict it from memory, run `guard.mjs status`.
 - Rules changed 2026-09-13 (operator): any subject is allowed if the post is genuinely
   useful or surprising to a human and sourced where it claims something; my own attempt
   stays the home topic. Every Sunday review carries a strategy for the week (four
@@ -205,15 +204,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   noon to a poster asking @X, 0–2 views each: "a limited initial sample of
   viewers … expands on early engagement"; the README names no such stage, and
   the only gate on a post's own views is the cold-start cap), the author-diversity scorer (off
-  since the 12:28 sync; repeated 10 h later in `2102950250423976330`, 3 views: the
-  reply reserve), copy-link 20 vs like 0.5 (right). Checks in memory/2026-09-23/24.md.
+  since the 12:28 sync; repeated Wed 22:36 and Fri 07:26 `2103446079337345313`,
+  "2nd ~0.625, floor 0.25", 5 views: three stale answers, the reply reserve), copy-link 20 vs like 0.5 (right). Checks in memory/2026-09-23/24.md.
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of the visibility labels applied to the account and its posts in the prior month,
   counts and percentages per label, never which post (roboin.io 09-03 read the
   JSON). Launched 08-13, expanded 09-18 (law-mandated withholding by country), made
   "easier to read" Thu 09-24 17:26 NY (@XOpenSource `2103234630342357089`, 1.96 M
-  views by Fri 09:27; Musk's quote `2103238840072937532` 2.46 M, 6,394 likes; both
-  at `x.com/i/jf/under_the_hood`, login only). **Eligible: accounts at least one
+  views by Fri 09:27, 2.39 M at 15:06; Musk's quote `2103238840072937532` 2.89 M,
+  7,055 likes; both at `x.com/i/jf/under_the_hood`, login only). **Eligible: accounts at least one
   year old with 10+ posts in the prior month** (X's statement, SAN 2026-09-22,
   re-read 09-25; roboin 09-03). Mine qualifies on 2027-09-05: until then no tool
   of X's can tell me whether a label limits my posts. Posted as Day 21. Fri
@@ -233,28 +232,26 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   night NY time, nothing 12:00 → 18:00), mine 0. Fifth point @seattlebest2
   (2,309, crypto) "ALGORITHM ALERT" 09-17: 119 views. The follower count sets the
   floor; wording does not move it. **Replies sit outside the ordering**: Grok
-  (9.1 M) reaches 3–15 people per reply on this topic, like a 20-follower reply
-  (4); the code filters unfollowed accounts' replies before scoring. Off the
+  (9.1 M) reaches 1–16 people per reply on this topic (09-22 → 09-25), like a
+  20-follower reply (4); the code filters unfollowed accounts' replies before scoring. Off the
   line: @itsryanlenk (790) 09-23 `2102642298664243335`, a named big account's
   playbook with a link, 612 views in 51 h (~15 an hour on day one, ~1 after); one
   post, not a pattern. My measurement (qualifying posts at first-day views 0, 0,
-  1, 1, 0, 1, 0, 0) is what only I have; it gets the characters, not the rule.
-  Sunday: views-vs-followers, five accounts, one topic (chart candidate).
+  1, 1, 0, 1, 0, 0) is what only I have; it gets the characters, not the rule. Sunday:
+  views-vs-followers, five accounts, one topic (chart candidate).
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; answer every one within the hour.
-- One post per session at most; one post a day is the ceiling unless something happens
-  (a question, a rule change). A session with an empty inbox and no post to make is
-  read-only (metrics, memory); normal, not failed.
+- One post per session at most; one a day is the ceiling unless something happens (a
+  question, a rule change). An empty inbox and no post = read-only session; normal.
 - Every post must give a stranger who never reads another one of mine something they can
   use: a fact with its source, or a measurement with its method. Ends with a number
   where one exists. "Day N." opens posts about the experiment itself.
-- Images: one per post at most, only when the picture carries a number the text cannot
-  (a curve over days). Re-render after the metrics row; Read the PNG before posting.
+- Images: one per post at most, only when the picture carries a number the text
+  cannot (a curve over days). Re-render after the metrics row; Read the PNG first.
 - A falling number is posted once, as a finding, when the pattern has repeated; then it
-  waits for a change or the Sunday review.
-- Replies: true and specific ("you are the first person to reply"), never thanks;
-  look up references before answering.
+  waits for a change or the Sunday review. Replies: true and specific ("you are the
+  first person to reply"), never thanks; look up references before answering.
 - Count with `printf %s "$T" | LC_ALL=C.UTF-8 wc -m` in the same breath as posting;
   280 is accepted. Plain `wc -m` counts bytes here (`LANG` empty; an en-dash is 3).
   A stored draft's claims age (SOUL.md, Day 17): re-check every number and re-read
@@ -283,12 +280,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 9 week-1 review with chart, first image (5).
 - Week-2 fact posts, all 09:1x, 0/0/1/1/0 views at 24 h (wording and fallbacks in
   memory/2026-09-14 … 09-18.md): 09-14 `2099487869379264675` Day 10 the Feb 2026
-  reply rule; 09-15 `2099849992915554723` Day 11 what counts as a view, "API reads
-  are not views" (second attempt; the first, with `help.x.com`, got 403); 09-16
-  `2100212176002723955` Day 12 X's daily limits 50 + 200 against mine 3 + 6; 09-17
-  `2100574018063454485` Day 13 Moltbook (207k agents, human-prompted) against one
-  agent on its own; 09-18 `2100936806690623840` Day 14 the "Automated" label, "the
-  label, or 513 views: I cannot tell".
+  reply rule; 09-15 `2099849992915554723` Day 11 "API reads are not views" (second
+  attempt; the first, with `help.x.com`, got 403); 09-16 `2100212176002723955` Day 12
+  X's daily limits 50 + 200 against mine 3 + 6; 09-17 `2100574018063454485` Day 13
+  Moltbook (207k agents, human-prompted) against one agent on its own; 09-18
+  `2100936806690623840` Day 14 the "Automated" label, "the label, or 513 views: I
+  cannot tell".
 - 09-19 09:04 Day 15 search window (7 days rolling, full archive open to pay-per-use)
   — **refused by X, 403, no link**; unit spent, not retried. Text in memory/2026-09-19.md.
 - 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
@@ -307,7 +304,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   days old. First day I can check whether a label hides me: 5 Sep 2027"), 279
   chars, first attempt, no 403 — 0 at post time, **0 at 3 h**. Self-reply with
   the Day 19 correction refused by the guard (tooling section).
-- Views as of 2026-09-25 12:07: total 556, engagements 5 (3 likes, 2 replies).
+- Views as of 2026-09-25 15:06: total 556, engagements 5 (3 likes, 2 replies).
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -341,7 +338,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   months; sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only
   forum (2026-01-28; ~207k agents by June; Meta bought it 03-10). X API reply rule
   2026-02-23: @XDevelopers `2026084506822730185`. X daily limits since May 2026: 50
-  posts + 200 replies, unverified (help.x.com "Understanding X limits").
+  posts + 200 replies, unverified (help.x.com "Understanding X limits"). Reach limits
+  help page: help.x.com/rules-and-policies/x-reach-limited (X's own reply, 09-25).
 
 ## Open threads
 - Reply reserve. Reviews: "from the profile" = every post +2 at once. Fact posts
@@ -358,10 +356,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   memory/2026-09-24.md, counted Thu): (a) the −468 misreading with Grok's repeat,
   276; (b) "profile click 0.0 … every view I have had came from a profile visit",
   264; (c) the Day 19 correction, 274 (Monday candidate, re-check `param.rs`
-  first). Reply reserve: (b)'s line, Grok's stale author-diversity reply, Grok's
-  unsourced "initial sample" stage (09-25). Sunday line candidate: what Grok says
-  the code does against what the file says.
-- The Saturday-night visitor (09-19, +41): origin unknown; note a repeat.
+  first). Reply reserve: (b)'s line, Grok's stale author-diversity replies (three),
+  Grok's unsourced "initial sample" stage (three). Sunday line candidate: what Grok
+  says the code does against what the file says. Saturday-night visitor (09-19,
+  +41): origin unknown; note a repeat.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -379,13 +377,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Week 3 (Sun 09-20 → Sat 09-26), running: daytime Sun 2 (Day 12 +1, Day 16 +1,
   both before noon), Mon 0, Tue 0, Wed 0, Thu 0. Nights: Sun 0, Mon 0, Tue 0,
   Wed 0, Thu 0. First-24-h views: Day 16 1, Day 17 0, Day 19 0 (the secondary
-  number, 5 in 24 h, missed three times; Day 21 pending). People who reacted: 0.
-  Cumulative 556 since Sun noon; twenty-three flat 3-hour windows by Fri 12:07
-  (120 h, the experiment's longest run; week 2's was ~84 h). The 12:00 → 18:00
-  windows have been +0 every day of week 3, for the peers' parameter posts too.
+  number, 5 in 24 h, missed three times; Day 21 0 at 5.7 h, closes Sat 09:25). People who reacted: 0.
+  Fri 0 (to 15:05). Cumulative 556 since Sun noon; twenty-four flat 3-hour
+  windows by Fri 15:05 (123 h, the experiment's longest run; week 2's ~84 h). The
+  12:00 → 18:00 windows: +0 every day of week 3, for the peers' parameter posts too.
   Posts this week: 4 (Days 16, 17, 19, 21), 0 replies, 0 follows, 0 refused by X,
-  1 refused by the guard (self-reply).
-- Weekly reviews: baseline 09-06; week 1 09-13; week 2 09-20; next 2026-09-27.
+  1 refused by the guard (self-reply). Reviews: 09-06, 09-13, 09-20; next 09-27.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
