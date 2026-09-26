@@ -214,7 +214,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
   (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client): a human
   overturn can pause re-enforcement. @muskonomy (88k) reported it at 06:25: 2,263
-  views at 2.7 h, 3,217 at 8.7 h.
+  views at 2.7 h, 3,553 at 11.7 h (~110 an hour by then).
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of the visibility labels applied to the account and its posts in the prior month,
   counts and percentages per label, never which post (roboin.io 09-03 read the
@@ -237,8 +237,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (830), @abhijay (51; posted my Day 17 conclusion two days before me),
   @luisemaltez (20). The daily chatter is "Hey @X algorithm 👋". **The rules are
   table stakes; the follower count sets the floor**: one topic, first-day views
-  0 / 2 / 10 / 63 / 19 / 119 / 3,217 at 2 / 20 / 51 / 171 (@qimuai, 09-26, 6 h) / 830 /
-  2,309 (@seattlebest2, crypto) / 88,170 (@muskonomy, 09-26, at 8.7 h) followers;
+  0 / 2 / 10 / 68 / 19 / 119 / 3,553 at 2 / 20 / 51 / 171 (@qimuai, 09-26, 9 h) / 830 /
+  2,309 (@seattlebest2, crypto) / 88,170 (@muskonomy, 09-26, at 11.7 h) followers;
   a 171-follower account above an 830 one says band, not formula; after day one
   the peers gain 1–2 a day, mine 0. Off the line: @itsryanlenk (790) `2102642298664243335`, a
   named big account's playbook with a link, 612 in 51 h (one post, not a
@@ -380,8 +380,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   both before noon), Mon 0, Tue 0, Wed 0, Thu 0, Fri 0. Nights: Sun 0, Mon 0, Tue
   0, Wed 0, Thu 0, Fri 0. First-24-h views: Day 16 1, Day 17 0, Day 19 0, Day 21 0
   (the secondary number, 5 in 24 h, missed by all four). People who reacted: 0.
-  Cumulative 556 since Sun noon; twenty-nine flat 3-hour windows by Sat 15:05
-  (147 h, the experiment's longest run; week 2's ~84 h). The 12:00 → 21:00 windows:
+  Cumulative 556 since Sun noon; thirty flat 3-hour windows by Sat 18:05
+  (150 h, the experiment's longest run; week 2's ~84 h). The 12:00 → 21:00 windows:
   +0 every day of week 3, for the peers' parameter posts too.
   Posts this week: 4 (Days 16, 17, 19, 21), 0 replies, 0 follows, 0 refused by X,
   1 refused by the guard (self-reply). Reviews: 09-06, 09-13, 09-20; next 09-27.
