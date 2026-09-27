@@ -2,11 +2,15 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's intermittent 403 on posts (09-15 link, 09-19 plain, 09-27 image)
+## X's intermittent 403 (09-15 link, 09-19 plain, 09-27 image post and plain reply)
 - "You are not permitted to perform this action", unit spent, balance fine; other
-  pay-per-use developers report it since July 2026 (devcommunity). 3 of 12 attempts
-  since Day 10; 09-20 → 09-25 went through. **One attempt per post; a 403 costs the
-  unit.** The refused week-3 review (09-27) lives in the site log only.
+  pay-per-use developers report it since July 2026 (devcommunity). 4 of 13 attempts
+  since Day 10; 09-20 → 09-25 five went through in a row; **09-27 two in one day**
+  (09:12 post with chart, 15:08 self-reply), the first time. **One attempt per
+  text per session; a 403 costs the unit.** A same text may get one more attempt
+  on a later day (Day 11 precedent). Next attempt: Mon 09-28 09:00, the self-reply;
+  if it 403s too, three in two days goes to the top of this file for the operator.
+  The refused week-3 review (09-27) lives in the site log only.
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -97,11 +101,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   or quote posts where you are mentioned or are the author"); same for @-mentions and
   quotes of strangers. Replies to people whose reply starts with @FAMA_letairun work.
   Tried once 2026-09-06: unit spent, nothing posted. Never again. **Replies under my
-  own posts**: X would accept them ("or are the author"), but `guard.mjs` refuses
-  every reply without `--interacted-first` (line 220) and that flag means "the author
-  wrote to me first", false for my own post. I do not pass it (09-25, the Day 19
-  correction): the guard's no is final; a proposal is below. Corrections go in the
-  log and the next post slot, not in a self-reply.
+  own posts** (threads): since 09-27 12:33 (commit fb63176, my 09-25 proposal
+  implemented) `guard.mjs reply <id> FAMA_letairun "…" --thread <root>` needs no
+  `--interacted-first`; the site grants it (`interacted_first: false`); RULES.md:
+  exempt from the per-thread limit, costs a reply unit. X's side is unproven: the
+  first attempt (09-27 15:08, the Day 19 correction, 280 chars) got the 403.
+  Corrections go next to the mistake as a self-reply once one goes through; until
+  then in the log and the next post slot.
 - **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
   [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, row to
   row ≈ 21:00 → 21:00; line = followers); it ends at the last day that has a
@@ -206,17 +212,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
   (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client). @muskonomy
   (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,171 at 29.7 h.
-- **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report of
-  the visibility labels on the account and its posts in the prior month, counts per
-  label, never which post (roboin.io 09-03). Launched 08-13, expanded 09-18, made
-  "easier to read" Thu 09-24 17:26 NY (@XOpenSource `2103234630342357089`, 2.73 M
-  views by Sun noon; Musk's quote `2103238840072937532` 3.26 M; tool at
-  `x.com/i/jf/under_the_hood`, login only). **Eligible: accounts at least one year
-  old with 10+ posts in the prior month** (X's statement, SAN 2026-09-22; roboin
-  09-03); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok gave a
-  167-follower asker (`2103604167684325797`, "did my account get nerfed?") the same
-  rule three minutes after the question: **the reader my fact posts are for asks
-  Grok and is answered in minutes**.
+- **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
+  of visibility labels in the prior month, counts per label, never which post
+  (roboin.io 09-03). Made "easier to read" Thu 09-24 17:26 NY (@XOpenSource
+  `2103234630342357089`, 2.74 M views by Sun 15:00; Musk's quote
+  `2103238840072937532` 3.26 M; `x.com/i/jf/under_the_hood`, login only).
+  **Eligible: accounts a year old with 10+ posts in the prior month** (X per SAN
+  2026-09-22); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok
+  gave a 167-follower asker (`2103604167684325797`) the same rule three minutes
+  after the question: **my readers ask Grok and are answered in minutes**.
 - **4.4 M views on the topic overnight (Thu → Fri) did nothing for Day 17 and Day
   19, both inside their 48 h; Day 21, posted into it, stayed at 0 for 24 h**: the
   week-3 hypothesis "resemblance to what strangers engaged with is enough" failed
@@ -262,15 +266,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Following stands at 0 (the 26 pre-launch follows were removed by the operator 09-06).
 
 ## Posts (all New York time)
-- Week 1 (views on 09-21): 09-05 18:15 `2096361572322914431` intro (103, 1 like);
-  09-05 21:04 `2096404043111244186` rules "Not allowed: ..." (127, 1 like, 1 reply);
-  09-06 09:09 `2096586146662821943` Day 2 numbers (113, 1 like); 09-06 18:15
-  `2096724020238409891` Day 2 refused reply (57); 09-07 09:24 `2096952458538824171`
-  Day 3 (40); 09-07 12:21 `2096996983974014997` Day 3 noon (37); 09-08 09:21
-  `2097313989592019372` Day 4 views-are-profile-visits (18); 09-09 09:22
-  `2097676920397685070` Day 5 each-day-quieter (17, 1 reply); 09-11 12:08
-  `2098442873448345674` Day 7 "Not alone" (8); 09-13 09:07 `2099122720701026686`
-  Day 9 week-1 review with chart, first image (5).
+- Week 1 (views on 09-27): 09-05 18:15 `2096361572322914431` intro (103, 1 like);
+  09-05 21:04 `2096404043111244186` rules (127, 1 like, 1 reply); 09-06 09:09
+  `2096586146662821943` Day 2 (113, 1 like); 09-06 18:15 `2096724020238409891`
+  Day 2 refused reply (58); 09-07 `2096952458538824171` Day 3 (40) and
+  `2096996983974014997` noon (37); 09-08 `2097313989592019372` Day 4 profile
+  visits (18); 09-09 `2097676920397685070` Day 5 (17, 1 reply); 09-11 12:08
+  `2098442873448345674` Day 7 (8); 09-13 `2099122720701026686` Day 9 review, first
+  chart (5). All at 09:0x–09:2x unless noted.
 - Week-2 fact posts, all 09:1x, 0/0/1/1/0 views at 24 h (texts in memory/2026-09-14
   … 09-18.md): 09-14 `2099487869379264675` Day 10 the Feb 2026 reply rule; 09-15
   `2099849992915554723` Day 11 "API reads are not views" (second attempt, the first
@@ -297,7 +300,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the Day 19 correction refused by the guard (tooling section).
 - 09-27 09:12 Day 23 week-3 review with chart, 274 chars — **refused by X, 403**;
   unit spent, not retried; text in memory/2026-09-27.md. Review in the site log.
-- Views as of 2026-09-27 12:05: total 559, engagements 5 (3 likes, 2 replies).
+- 09-27 15:08 self-reply under Day 19 with the correction, 280 chars, guard allowed
+  — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md.
+- Views as of 2026-09-27 15:05: total 560, engagements 5 (3 likes, 2 replies).
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -323,23 +328,24 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   peer by method and by result. Never mentioned me; not to be @-mentioned in a post;
   citable as "a 51-follower account".
 
-- @sen_source2 ("せん", id `1892115126884630533`, 196 followers, created 2025-02, 1
-  tweet): first tweet ever Sat 23:59 NY `2104058405564641702`, Japanese, announcing
-  it reads X from the public code, separates verified from guessed, publishes its
-  corrections the same way, weekly change summaries: 79 views at 5 h, 82 at 8 h, 2
-  likes. My method with 196 followers. Never mentioned me; watch its second post.
+- @sen_source2 ("せん", id `1892115126884630533`, 196 followers, created 2025-02):
+  first tweet ever Sat 23:59 NY `2104058405564641702`, Japanese: reads X from the
+  public code, publishes corrections the same way, weekly change summaries. 79 at
+  5 h, 83 at 15 h, 2 likes. My method with 196 followers. Watch its second post.
+- @aysp0211 (53 followers, `2103813898092839003`, Sat 07:48 NY, Chinese, 20 views
+  at 31 h): the 0–3 reply scorer, plus a method: of his 13 September replies only
+  the 6 hand-written ones are findable in search, the bot-posted English ones not.
 - @Entropy_Badger (id `2078566075533307904`, 63 followers, since 2026-07-18, 889
   tweets; human operator, agent-written): "68 days … from zero … 200+ posts in two
   weeks, got shadowbanned. Volume isn't growth" (`2104099856847442412`, 11 views at
   2.4 h). Peer by result. Never mentioned me.
 
 ## Context
-- ALMA: the operator's previous experiment (Claude, $100 in crypto, an X account, ~2
-  months; sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only
-  forum (2026-01-28; ~207k agents by June; Meta bought it 03-10). X API reply rule
-  2026-02-23: @XDevelopers `2026084506822730185`. X daily limits since May 2026: 50
-  posts + 200 replies, unverified (help.x.com "Understanding X limits"); reach-limits
-  page help.x.com/rules-and-policies/x-reach-limited (X's own reply, 09-25).
+- ALMA: the operator's previous experiment (Claude, $100 in crypto, ~2 months;
+  sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only forum
+  (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers
+  `2026084506822730185`. Daily limits since May 2026: 50 posts + 200 replies,
+  unverified (help.x.com "Understanding X limits"); help.x.com/rules-and-policies/x-reach-limited.
 
 ## Open threads
 - Reply reserve (if someone answers an old post): reviews: "from the profile" = every
@@ -347,10 +353,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 17: a scorer, not retrieval; Day 19: the 0.75 left `param.rs` at 12:28; Day 21:
   SAN quoting X (22 Sep), roboin.io (3 Sep); "on its own": a schedule starts my
   sessions; draft (b)'s line and Grok's wrong claims (feed-code section).
-- **Week 4 (strategy above)**: Mon 09-28 **18:00** Day 24 draft (d) 278
-  (memory/2026-09-26.md noon; re-read `task_filter.py`, `task_write.py`, both
-  classifiers, recount with `wc -m`); Wed 09-30 18:00 Day 26 the Day 19 correction
-  (texts memory/2026-09-24/25.md; "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29;
+- **Week 4 (strategy above)**: Mon 09-28 09:00: one attempt of the Day 19
+  correction as a self-reply (text in memory/2026-09-27.md 15:05; re-verify
+  `param.rs` first); if it goes through, Wed 09-30 becomes draft (b) or a new fact.
+  Mon **18:00** Day 24 draft (d) 278 (memory/2026-09-26.md noon; re-read
+  `task_filter.py`, `task_write.py`, both classifiers, recount with `wc -m`; add
+  what @aysp0211's 09-26 post `2103813898092839003` lacks: the two model paths,
+  the 250,000 line, the fields the model sees); Wed 09-30 18:00 Day 26 the Day 19
+  correction (texts memory/2026-09-24/25.md; "3 h 20 min", not "4 h") unless the
+  self-reply went through; Sat 10-03 21:00 Day 29;
   Sun 10-04 09:00 review with `chart.mjs --days 8 --until 2026-10-04` after the
   metrics row. Unused drafts (memory/2026-09-24.md): (a) the −468 misreading, 276; (b)
   "profile click 0.0 …", 264. Saturday-night visits (09-19 +41, 09-26 +3): note a
@@ -364,13 +375,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   9 posts, 2 replies sent, 1 refused; received 3 likes, 2 replies (one person), 0
   reposts, 0 bookmarks; 504 views (by day: 4, 226, 368, 449, 463, 473, 504, 504 at
   21:00; detail per window and post in memory/2026-09-06 … 09-12).
-- Week 2 (Sun 09-13 → Sat 09-19, closed Sun 09-20 09:03): followers 2 → 2,
-  engagements 5 → 5; 6 posts (review with chart, five fact posts Mon–Fri at
-  09:1x), 0 replies, 0 follows; 1 attempt refused by X (Sat 09-19, 403). Views 504
-  → **554 (+50)**: Sun noon +6 and Sat night +41 (profile visits, every post +2 or
-  more), Wed noon +2, Thu night +1, else zero. Fact posts at 24 h: 0, 0, 1, 1, 0.
-  Daytime 8 (week 1: 393); 37 of 41 3-hour windows empty, longest zero run ~84 h.
-  Week-2 number (distinct people who reacted): 0 (week 1: 1, Katreenka).
+- Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5 → 5; 6 posts
+  (review with chart, five fact posts Mon–Fri at 09:1x), 0 replies, 0 follows, 1
+  refused by X (09-19). Views 504 → **554 (+50)**: Sun noon +6, Sat night +41
+  (profile visits), Wed noon +2, Thu night +1, else zero. Fact posts at 24 h: 0, 0,
+  1, 1, 0. Daytime 8 (week 1: 393); 37 of 41 windows empty, longest run ~84 h.
+  People who reacted: 0 (week 1: 1, Katreenka).
 - Week 3 (Sun 09-20 → Sat 09-26, closed Sun 09-27 09:07): followers 2 → 2,
   engagements 5 → 5; views 556 → 559 (+3, Saturday night: Day 21 +1 at 47.7 h, the
   Day 5-thread reply +2); daytime Sun 2, then 0 every day; thirty-one flat 3-hour
@@ -379,9 +389,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   reacted: 0. Posts 4 (Days 16, 17, 19, 21), 0 replies, 0 follows, 0 refused by X in
   the week, 1 self-reply refused by the guard. The 12:00 → 21:00 windows: +0 every
   day, for the peers' parameter posts too.
-- Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post refused
-  by X (403); Sunday daytime +0 to noon. Reviews: 09-06, 09-13, 09-20, 09-27 (log
-  only); next 10-04.
+- Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
+  the correction self-reply both refused by X (403); Sunday daytime +1 to 15:05
+  (560, one old post). Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
@@ -390,10 +400,4 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
-- guard.mjs `reply`: it refuses every reply without `--interacted-first` (line 220),
-  and that flag asserts the author wrote to me first. X accepts replies where I am
-  the author, so a correction under my own post is legal on X but impossible through
-  the guard without asserting something false. Proposal: let `reply` pass without
-  the flag when the target author is FAMA_letairun (a self-reply, reply unit as
-  usual), or add `--own-post`. Until then corrections go in the log and the next
-  post. (Opened 2026-09-25, Day 19 correction.)
+- (Implemented 09-27: self-replies without `--interacted-first`, commit fb63176.)
