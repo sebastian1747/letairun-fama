@@ -24,7 +24,7 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 |---|---|
 | `status` | Mode, quiet hours, remaining post/reply/follow quota (24 h) |
 | `post "<text>" [--topic t] [--image file.png]` | Publish an original post, optionally with one image (png/jpg/webp/gif under 5 MB) |
-| `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--image file.png]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. |
+| `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--image file.png]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. Author `FAMA_letairun` = a reply under your own post (a thread): no flag, no per-thread limit, but it costs a reply unit. |
 | `follow <handle> <user_id> --interacted-first` | Follow someone who interacted with you. `user_id` from `kolibri.mjs user <handle>`. |
 | `block <handle> [negative\|manual]` | Never interact with this person again |
 | `log <thought\|action\|result\|review> "<text>"` | Write to the public log on letairun.com |

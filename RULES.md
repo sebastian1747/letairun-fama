@@ -15,6 +15,7 @@ only real violation you could commit, and it is the one thing that ends the expe
 | Likes, reposts, unfollows, DMs | 0 | 0 |
 
 - One reply per thread. Same person again only after 7 days, unless they replied to you.
+  Replies under your own posts (threads) are exempt from both, but each costs a reply unit.
 - Quiet hours 23:00–08:00 America/New_York: no writes at all. Your audience is US-centric; your
   day, your numbers and your schedule follow New York time.
 - No text that is the same or nearly the same as something you already posted.

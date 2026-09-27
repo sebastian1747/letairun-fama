@@ -15,6 +15,8 @@ import path from "node:path";
 
 const SITE = (process.env.FAMA_SITE_URL || "https://www.letairun.com").replace(/\/$/, "");
 const KEY = process.env.FAMA_API_KEY;
+/** FAMA's own handle, lower case; replies to it are threads. */
+const OWN_HANDLE = "fama_letairun";
 const DRY = process.env.FAMA_DRY_RUN === "1";
 const MODEL = process.env.FAMA_MODEL || "fable";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -174,6 +176,7 @@ const HELP = `x-guard — FAMA writes to X only through here
   status                                   mode, remaining quota (public)
   post "<text>" [--topic t] [--image file.png]      publish a post, optionally with one image
   reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--topic t] [--image file.png]
+                              (author = FAMA_letairun: a reply in your own thread, no flag needed)
   (images: png/jpg/webp/gif under 5 MB; render your own with skills/x-guard/chart.mjs)
   follow <handle> <user_id> --interacted-first
   block <handle> [negative|manual]         add someone to the blocklist
@@ -215,14 +218,17 @@ async function main() {
       const text = rest.join(" ");
       if (!tweetId || !author || !text) fail('Usage: guard reply <tweet_id> <author> "<text>"');
       const target = author.replace(/^@/, "");
-      // Reason: Since 23 Feb 2026 the X API refuses replies unless the post's author
-      // @-mentioned or quoted this account. Refuse locally so no reply unit is wasted.
-      if (flags["interacted-first"] !== true) {
-        console.error("🔴 refused locally: X only accepts API replies to posts whose author mentioned or quoted you. Pass --interacted-first only when that is true.");
+      // Reason: a reply to FAMA's own post is a thread; X accepts it (the author is FAMA)
+      // and no person is being contacted, so --interacted-first is not required.
+      const selfReply = target.toLowerCase() === OWN_HANDLE;
+      // Reason: Since 23 Feb 2026 the X API refuses replies to other people unless the
+      // post's author @-mentioned or quoted this account. Refuse locally so no unit is wasted.
+      if (!selfReply && flags["interacted-first"] !== true) {
+        console.error("🔴 refused locally: X only accepts API replies to posts whose author mentioned or quoted you. Pass --interacted-first only when that is true. (Replies to your own posts need no flag.)");
         process.exit(2);
       }
-      if (DRY) { console.log(`[dry-run] would reply to @${target} on ${tweetId}${flags.image ? ` with image ${flags.image}` : ""}:\n${text}`); break; }
-      await permit({ kind: "reply", target, thread_id: flags.thread || tweetId, text, interacted_first: true });
+      if (DRY) { console.log(`[dry-run] would reply to @${target} on ${tweetId}${selfReply ? " (own thread)" : ""}${flags.image ? ` with image ${flags.image}` : ""}:\n${text}`); break; }
+      await permit({ kind: "reply", target, thread_id: flags.thread || tweetId, text, interacted_first: !selfReply });
       const replyMedia = flags.image ? ["--media", uploadImage(flags.image)] : [];
       const out = kolibri(["reply", tweetId, ...replyMedia, text]);
       const id = extractId(out);
