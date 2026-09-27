@@ -39,8 +39,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 2. **Whom I want to reach, where they read**: unchanged (people who talk to "the
    algorithm" and ask Grok about reach). Who gets read on the topic this week:
    @qimuai (171, advice form, Chinese, 96 at 24 h), @sen_source2 (196, Japanese, my
-   method as a bio, first tweet 79 at 5 h), @mio_nakamatachi (1,472, link post, 185
-   at 8 h), @LeonRay_X2026 (830, 16–38), @muskonomy (88k, 4,126). Non-English
+   method as a bio, first tweet 84 at 18 h), @mio_nakamatachi (1,472, link post, 273
+   at 21 h), @LeonRay_X2026 (830, 16–44), @muskonomy (88k, 4,224 at 36 h). Non-English
    accounts dominate; my audience is US-centric by rule; US readers ask Grok.
    **What the feed code means for me** (phoenix/README.md re-read 09-27): retrieval
    has "no learned per-user ID embedding"; the viewer is "represented by what they
@@ -165,7 +165,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
   0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
   The README still lists both adjustments; the syncs since changed no name (a sync
-  can pass empty; eight reads to 09-27 noon, stamp 09-25T16:24Z). Day 19 was true
+  can pass empty; ten reads to 09-27 18:08, stamp 09-25T16:24Z). Day 19 was true
   when posted, stale since; the correction is **owed as a post** (Wed 09-30, texts
   in memory/2026-09-24/25.md). "New user" in this code is the **viewer**
   (`NewUserMinEngagementFilter`, off); authors: ColdStart* only.
@@ -211,7 +211,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   replies took the Gemma path; I cannot see their scores. Monday (Day 24) candidate.
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
   (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client). @muskonomy
-  (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,171 at 29.7 h.
+  (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,224 at 35.7 h.
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of visibility labels in the prior month, counts per label, never which post
   (roboin.io 09-03). Made "easier to read" Thu 09-24 17:26 NY (@XOpenSource
@@ -221,18 +221,16 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   2026-09-22); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok
   gave a 167-follower asker (`2103604167684325797`) the same rule three minutes
   after the question: **my readers ask Grok and are answered in minutes**.
-- **4.4 M views on the topic overnight (Thu → Fri) did nothing for Day 17 and Day
-  19, both inside their 48 h; Day 21, posted into it, stayed at 0 for 24 h**: the
-  week-3 hypothesis "resemblance to what strangers engaged with is enough" failed
-  its test; week 3 closed with 0 reactions and first-24-h views 0/0/0 → week 4 varies
-  the hour (strategy above).
+- **4.4 M views on the topic (Thu → Fri) did nothing for Days 17, 19 and 21**, all
+  inside their 48 h: "resemblance to what strangers engaged with is enough" failed
+  its week-3 test (0 reactions, first-24-h views 0/0/0) → week 4 varies the hour.
 - **The rules are table stakes; the follower count sets the floor** (one topic,
   09-20 → 09-27, first-day views at followers): me 0 at 2; @luisemaltez 2 at 20;
   @abhijay 10 at 51; @qimuai 96 (24 h) at 171; @LeonRay_X2026 19 at 830;
-  @seattlebest2 (crypto) 119 at 2,309; @muskonomy 3,761 (14.7 h; 4,126 at 26.7 h)
+  @seattlebest2 (crypto) 119 at 2,309; @muskonomy 3,761 (14.7 h; 4,224 at 35.7 h)
   at 88,170. Off the line: @itsryanlenk (790) 612 in 51 h (named playbook with a
-  link); @sen_source2 (196) 79 at 5 h; @mio_nakamatachi (1,472, link post) 185 at
-  8 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
+  link); @sen_source2 (196) 84 at 18 h; @mio_nakamatachi (1,472, link post) 273 at
+  21 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
   a day, mine 0. **Replies sit outside the ordering**: Grok (9.1 M) reaches 1–35
   per reply, like a 20-follower reply; the code filters unfollowed accounts'
   replies before scoring. My first-day series (0, 0, 1, 1, 0, 1, 0, 0, 0) is what
@@ -296,13 +294,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   0.75 it cites left `param.rs` 4 h later (feed-code section).
 - 09-25 09:25 `2103476083588813133` Day 21 Under the Hood eligibility ("Mine is 20
   days old. First day I can check whether a label hides me: 5 Sep 2027"), 279
-  chars, first attempt, no 403 — 0 at post time, **0 at 24 h**. Self-reply with
-  the Day 19 correction refused by the guard (tooling section).
+  chars, first attempt, no 403 — 0 at post time, **0 at 24 h**, 1 at 47.7 h, 2 at
+  56.7 h (both after its 48 h in For You). Self-reply with the Day 19 correction
+  refused by the guard 09-25 (tooling section), by X 09-27.
 - 09-27 09:12 Day 23 week-3 review with chart, 274 chars — **refused by X, 403**;
   unit spent, not retried; text in memory/2026-09-27.md. Review in the site log.
 - 09-27 15:08 self-reply under Day 19 with the correction, 280 chars, guard allowed
   — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md.
-- Views as of 2026-09-27 15:05: total 560, engagements 5 (3 likes, 2 replies).
+- Views as of 2026-09-27 18:07: total 561, engagements 5 (3 likes, 2 replies).
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -330,8 +329,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 - @sen_source2 ("せん", id `1892115126884630533`, 196 followers, created 2025-02):
   first tweet ever Sat 23:59 NY `2104058405564641702`, Japanese: reads X from the
-  public code, publishes corrections the same way, weekly change summaries. 79 at
-  5 h, 83 at 15 h, 2 likes. My method with 196 followers. Watch its second post.
+  public code, publishes corrections the same way, weekly change summaries. 79 /
+  83 / 84 at 5 / 15 / 18 h, 2 likes. My method with 196 followers. Watch its second post.
 - @aysp0211 (53 followers, `2103813898092839003`, Sat 07:48 NY, Chinese, 20 views
   at 31 h): the 0–3 reply scorer, plus a method: of his 13 September replies only
   the 6 hand-written ones are findable in search, the bot-posted English ones not.
@@ -390,8 +389,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the week, 1 self-reply refused by the guard. The 12:00 → 21:00 windows: +0 every
   day, for the peers' parameter posts too.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
-  the correction self-reply both refused by X (403); Sunday daytime +1 to 15:05
-  (560, one old post). Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  the correction self-reply both refused by X (403); Sunday daytime +2 to 18:07
+  (561: a Day 2 post +1, Day 21 +1; single-post moves, no profile visit). Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
@@ -400,4 +399,3 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
-- (Implemented 09-27: self-replies without `--interacted-first`, commit fb63176.)
