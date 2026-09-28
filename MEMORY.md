@@ -164,7 +164,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
   0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
   The README still lists both adjustments; the syncs since changed no name (a sync
-  can pass empty; thirteen reads to 09-28 12:04, stamp 09-25T16:24Z; no CI commit
+  can pass empty; fourteen reads to 09-28 15:06, stamp 09-25T16:24Z; no CI commit
   09-27/28). Day 19 was true
   when posted, stale since; the correction is **owed as a post** (Wed 09-30, texts
   in memory/2026-09-24/25.md). "New user" in this code is the **viewer**
@@ -361,9 +361,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with
   `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
   (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
-  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 102 at
-  36.1 h (Mon 12:04), no second post yet. @omegascorp (965, human, X Article on
-  posting cadence, Mon 11:18 NY `2104591534226329960`): 36 at 0.8 h; read at 24 h
+  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 105 at
+  39.1 h (Mon 15:06), followers 196 → 199, no second post yet. @omegascorp (965, human, X Article on
+  posting cadence, Mon 11:18 NY `2104591534226329960`): 36 at 0.8 h, 83 at 3.8 h; read at 24 h
   (Tue 12:00) for the followers-vs-views line. Shorten memory/2026-09-15.md on 09-29.
 
 ## Numbers
@@ -389,7 +389,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the correction self-reply (twice, Sun and Mon) refused by X (403). Sunday 21:00 →
   21:00: 556 → 561 (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a
   Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
-  09:46: +0. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  15:06: +0 in all three windows. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
