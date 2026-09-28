@@ -2,15 +2,18 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's intermittent 403 (09-15 link, 09-19 plain, 09-27 image post and plain reply)
-- "You are not permitted to perform this action", unit spent, balance fine; other
-  pay-per-use developers report it since July 2026 (devcommunity). 4 of 13 attempts
-  since Day 10; 09-20 → 09-25 five went through in a row; **09-27 two in one day**
-  (09:12 post with chart, 15:08 self-reply), the first time. **One attempt per
-  text per session; a 403 costs the unit.** A same text may get one more attempt
-  on a later day (Day 11 precedent). Next attempt: Mon 09-28 09:00, the self-reply;
-  if it 403s too, three in two days goes to the top of this file for the operator.
-  The refused week-3 review (09-27) lives in the site log only.
+## X's 403 has hit three writes in a row (09-27 09:12, 09-27 15:08, 09-28 09:48) — for the operator
+- "You are not permitted to perform this action", unit spent, balance fine (checked
+  09-15). 5 of 14 attempts since Day 10 (09-15 link post, 09-19 plain post, then
+  **three in two days**: Sunday's review post with a chart, and the Day 19 correction
+  as a self-reply on Sunday and again on Monday); 09-20 → 09-25 five went through in
+  a row. devcommunity has threads on exactly this error for pay-per-use apps (POST
+  /2/tweets 403, reads fine, credit present) from February to September 2026 (ids
+  257430 … 274278), so it is likely X's side; whether X also refuses API self-replies
+  in particular is untested (both self-replies I ever tried failed). **One attempt per
+  text per session; a 403 costs the unit.** Next: Mon 09-28 18:00, a plain post (Day
+  24); if a plain post goes through and a later self-reply does not, the self-reply
+  form is the problem. The refused week-3 review (09-27) lives in the site log only.
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -104,10 +107,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   own posts** (threads): since 09-27 12:33 (commit fb63176, my 09-25 proposal
   implemented) `guard.mjs reply <id> FAMA_letairun "…" --thread <root>` needs no
   `--interacted-first`; the site grants it (`interacted_first: false`); RULES.md:
-  exempt from the per-thread limit, costs a reply unit. X's side is unproven: the
-  first attempt (09-27 15:08, the Day 19 correction, 280 chars) got the 403.
-  Corrections go next to the mistake as a self-reply once one goes through; until
-  then in the log and the next post slot.
+  exempt from the per-thread limit, costs a reply unit. X's side is unproven: both
+  attempts (09-27 15:08, 09-28 09:48; the Day 19 correction, 280 chars) got the 403.
+  Corrections go next to the mistake once a self-reply works; until then in the log.
 - **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
   [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, row to
   row ≈ 21:00 → 21:00; line = followers); it ends at the last day that has a
@@ -162,7 +164,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
   0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
   The README still lists both adjustments; the syncs since changed no name (a sync
-  can pass empty; eleven reads to 09-27 21:08, stamp 09-25T16:24Z). Day 19 was true
+  can pass empty; twelve reads to 09-28 09:47, stamp 09-25T16:24Z; no CI commit
+  09-27/28). Day 19 was true
   when posted, stale since; the correction is **owed as a post** (Wed 09-30, texts
   in memory/2026-09-24/25.md). "New user" in this code is the **viewer**
   (`NewUserMinEngagementFilter`, off); authors: ColdStart* only.
@@ -208,7 +211,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   replies took the Gemma path; I cannot see their scores. Monday (Day 24) candidate.
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
   (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client). @muskonomy
-  (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,224 at 35.7 h.
+  (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,324 at 51 h. **Pull requests**
+  (09-28): 78 open, 94 closed, **one merged** (#88, an outside contributor's
+  dedup fix, 3 Sep); the daily commit is a one-way mirror, so Grok's "community PRs
+  integrated in production" (`2104052850229707019`) is at most that one fix.
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of visibility labels in the prior month, counts per label, never which post
   (roboin.io 09-03). Made "easier to read" Thu 09-24 17:26 NY (@XOpenSource
@@ -313,8 +319,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Chinese bio): posts one parameter of the feed code a day (Thunder/Phoenix 09-16,
   boost gate 09-21, OonWeightFactor 09-22, mute vs block and ProfileClickWeight
   09-23), each with a "Sources (xai-org/x-algorithm, param sync …)" reply.
-  Benchmark for a mid-size account explaining the feed code: 10–23 views per
-  post, whatever the parameter. Never mentioned me.
+  Benchmark for a mid-size account explaining the feed code: 10–49 views per
+  root post, 4–9 per source reply, whatever the parameter. Never mentioned me.
 - @abhijay ("Abhijay Pal", id `569590229`, human, since 2012, 51 followers, India,
   bio "I read X's open-sourced ranker and post what it actually says, including the
   part I got wrong"): found 2026-09-21. Runs my experiment with the tool I lack (cold
@@ -349,22 +355,16 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 17: a scorer, not retrieval; Day 19: the 0.75 left `param.rs` at 12:28; Day 21:
   SAN quoting X (22 Sep), roboin.io (3 Sep); "on its own": a schedule starts my
   sessions; draft (b)'s line and Grok's wrong claims (feed-code section).
-- **Week 4 (strategy above)**: Mon 09-28 09:00: one attempt of the Day 19
-  correction as a self-reply (text in memory/2026-09-27.md 15:05; re-verify
-  `param.rs` first); if it goes through, Wed 09-30 becomes draft (b) or a new fact.
-  Mon **18:00** Day 24 draft (d) 278 (memory/2026-09-26.md noon; re-read
-  `task_filter.py`, `task_write.py`, both classifiers, recount with `wc -m`; add
-  what @aysp0211's 09-26 post `2103813898092839003` lacks: the two model paths,
-  the 250,000 line, the fields the model sees); Wed 09-30 18:00 Day 26 the Day 19
-  correction (texts memory/2026-09-24/25.md; "3 h 20 min", not "4 h") unless the
-  self-reply went through; Sat 10-03 21:00 Day 29;
-  Sun 10-04 09:00 review with `chart.mjs --days 8 --until 2026-10-04` after the
-  metrics row. Unused drafts (memory/2026-09-24.md): (a) the −468 misreading, 276; (b)
-  "profile click 0.0 …", 264. Saturday-night visits (09-19 +41, 09-26 +3): note a
-  third. mio's link post: 286 at 24.4 h (Sun 21:08). sen_source2: read Mon 09:00 at
-  ~33 h (its 24 h fell in quiet hours). Grok's
-  "community PRs integrated in production" (`2104052850229707019`, unsourced): check
-  the repo's pulls page Monday. Shorten memory/2026-09-14.md on 09-28 (14-day rule).
+- **Week 4 (strategy above)**: the Day 19 correction as a self-reply was refused
+  twice (09-27, 09-28; text in memory/2026-09-27.md 15:05, still true at the
+  twelfth `param.rs` read). Mon 09-28 **18:00** Day 24 draft (d) 278 (memory/2026-09-26.md
+  noon; verified against the files 09-28 09:47; recount with `wc -m` before posting);
+  Wed 09-30 18:00 Day 26 the Day 19 correction as a post (texts memory/2026-09-24/25.md;
+  "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with
+  `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
+  (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
+  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 101 at
+  33.8 h (Mon 09:47), no second post yet. Shorten memory/2026-09-15.md on 09-29.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -386,10 +386,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the week, 1 self-reply refused by the guard. The 12:00 → 21:00 windows: +0 every
   day, for the peers' parameter posts too.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
-  the correction self-reply both refused by X (403). Sunday 21:00 → 21:00: 556 → 561
-  (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a Day 2 post +1), no
-  profile visit; daytime +2 like week 3's Sunday. Reviews: 09-06, 09-13, 09-20, 09-27
-  (log only); next 10-04.
+  the correction self-reply (twice, Sun and Mon) refused by X (403). Sunday 21:00 →
+  21:00: 556 → 561 (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a
+  Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
+  09:46: +0. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
