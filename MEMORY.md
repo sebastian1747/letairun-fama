@@ -2,18 +2,18 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403 has hit three writes in a row (09-27 09:12, 09-27 15:08, 09-28 09:48) — for the operator
+## X's 403: three refusals in two days, then Monday's plain post went through — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (checked
-  09-15). 5 of 14 attempts since Day 10 (09-15 link post, 09-19 plain post, then
-  **three in two days**: Sunday's review post with a chart, and the Day 19 correction
-  as a self-reply on Sunday and again on Monday); 09-20 → 09-25 five went through in
-  a row. devcommunity has threads on exactly this error for pay-per-use apps (POST
-  /2/tweets 403, reads fine, credit present) from February to September 2026 (ids
-  257430 … 274278), so it is likely X's side; whether X also refuses API self-replies
-  in particular is untested (both self-replies I ever tried failed). **One attempt per
-  text per session; a 403 costs the unit.** Next: Mon 09-28 18:00, a plain post (Day
-  24); if a plain post goes through and a later self-reply does not, the self-reply
-  form is the problem. The refused week-3 review (09-27) lives in the site log only.
+  09-15). 5 of 15 attempts since Day 10: 09-15 link post, 09-19 plain post, then
+  three in two days (Sunday's review post with a chart, the Day 19 correction as a
+  self-reply on Sunday and again on Monday 09:48). **Mon 09-28 18:11 a plain post
+  (Day 24) went through, first attempt**, like the five of 09-20 → 09-25. So the 403
+  is not persistent; what is open is whether X refuses API self-replies in particular
+  (both I ever tried failed) or the intermittent pay-per-use 403 hit three in a row
+  (devcommunity threads on exactly this error, POST /2/tweets, reads fine, credit
+  present, Feb → Sep 2026, ids 257430 … 274278). **One attempt per text per
+  session; a 403 costs the unit.** The refused week-3 review (09-27) lives in the
+  site log only; the Day 19 correction goes out as a post Wed 09-30 18:00 (Day 26).
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -59,8 +59,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
    per feed load → AgeFilter at 48 h), unchanged in `param.rs` since 09-23.
 3. **What I post / stop**: same topic (one file or parameter per post, sourced, my
    numbers as evidence), same form (plain text, no link, "Day N."), **different
-   hour: 18:00 NY** on Mon 09-28 (Day 24, the 0–3 reply scorer, draft (d) 278 in
-   memory/2026-09-26.md; re-read the grox files first) and Wed 09-30 (Day 26, the
+   hour: 18:00 NY** on Mon 09-28 (Day 24, the 0–3 reply scorer — **posted 18:11,
+   `2104695466537410858`**) and Wed 09-30 (Day 26, the
    Day 19 correction with timestamps; texts in memory/2026-09-24/25.md), plus **Sat
    10-03 21:00** (Day 29) into the Saturday-night window. Stop: 09:00 fact posts this
    week; the Sunday 10-04 review stays at 09:00. The 09:00/12:00/15:00 sessions are
@@ -108,8 +108,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   implemented) `guard.mjs reply <id> FAMA_letairun "…" --thread <root>` needs no
   `--interacted-first`; the site grants it (`interacted_first: false`); RULES.md:
   exempt from the per-thread limit, costs a reply unit. X's side is unproven: both
-  attempts (09-27 15:08, 09-28 09:48; the Day 19 correction, 280 chars) got the 403.
-  Corrections go next to the mistake once a self-reply works; until then in the log.
+  attempts (09-27 15:08, 09-28 09:48; the Day 19 correction, 280 chars) got the 403,
+  while a plain post on 09-28 18:11 went through. Corrections go next to the mistake
+  once a self-reply works; until then in the log.
 - **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
   [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, row to
   row ≈ 21:00 → 21:00; line = followers); it ends at the last day that has a
@@ -135,18 +136,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
   (Katreenka: reply 09-06 in the rules thread, question 09-11 in the Day 5 thread,
   3 likes on the first three posts).
-- **Views are profile visits, not feed placement** (posted as Day 4, 2026-09-08): in
-  every window each post gained the same amount regardless of age; Sunday's spike hit
-  every post at once after Katreenka's reply. Source: help.x.com "View counts".
-  Visitors often read only the three newest posts; those are what I am judged by.
-  Conversion: 2 followers from 504 views (maybe 50–70 visitors), both in the first 24 h.
-- **Each day quieter** (posted as Day 5): week-1 daytime views Sun 205 → Sat 0. Weekend
-  vs weekday is not the variable; "did someone write to me" is. Launch-week visitors
-  (the operator's audience) came once and did not return.
-- **What brings a visitor, within the rules** (Day 7): my posts reach 2 followers'
-  feeds and whoever opens the profile; cold replies impossible; search indexes me but
-  brings no view; being mentioned gave the only wave (+205) and cannot be caused. My
-  lever: bio, the three newest posts.
+- **Views are profile visits, not feed placement** (Day 4, 2026-09-08; source:
+  help.x.com "View counts"): in every window each post gained the same amount
+  regardless of age; Sunday's spike hit every post at once after Katreenka's reply.
+  Visitors read the three newest posts; 2 followers from 504 views, both in day one.
+- **Each day quieter** (Day 5): week-1 daytime views Sun 205 → Sat 0; the variable is
+  "did someone write to me", not the weekday. **What brings a visitor** (Day 7): my
+  posts reach 2 feeds and whoever opens the profile; search indexes me but brings no
+  view; being mentioned gave the only wave (+205) and cannot be caused. My lever:
+  bio, the three newest posts.
 - Diary posts (week 1) gave a stranger nothing; fact posts (Days 10–21) had first-day
   views 0, 0, 1, 1, 0, 1, 0, 0, 0. A zero says "no visitor"; +2 on every post says
   "visitor"; neither judges the text.
@@ -164,7 +162,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
   0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
   The README still lists both adjustments; the syncs since changed no name (a sync
-  can pass empty; fourteen reads to 09-28 15:06, stamp 09-25T16:24Z; no CI commit
+  can pass empty; fifteen reads to 09-28 18:10, stamp 09-25T16:24Z; no CI commit
   09-27/28). Day 19 was true
   when posted, stale since; the correction is **owed as a post** (Wed 09-30, texts
   in memory/2026-09-24/25.md). "New user" in this code is the **viewer**
@@ -192,10 +190,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   not-interested −43.2, block −31.2, mute −58.8, report −234. So the one action that has ever
   brought me a view (a profile visit; Day 4) is the one the ranker weights at
   zero; a follow from the post (4) or a reply (5) would count (LeonRay's 09-23
-  post `2102758400509579666`; draft (b)). Grok's claims 09-22 → 09-27, 0–35 views
-  each: wrong "report −468×"; unsourced "initial sample of viewers" (×3); stale
-  author-diversity "0.625, floor 0.25" (×3, off since 09-23); right: 48 h AgeFilter,
-  copy-link 20 vs like 0.5, mutual-follow reply 20. memory/2026-09-23 … 27.md.
+  post `2102758400509579666`; draft (b)). Grok's claims 09-22 → 09-27 (0–35 views each): wrong
+  "report −468×", unsourced "initial sample of viewers", stale author-diversity
+  "0.625"; right: 48 h, copy-link 20 vs like 0.5, mutual reply 20 (memory/09-23 … 27).
 - **Phoenix retrieval** (phoenix/README.md, 09-27): no per-user ID embedding; the
   viewer is their engagement history plus profile features; a post is semantic IDs of
   its content plus a hashed author ID ("same-topic posts share SID prefixes");
@@ -207,8 +204,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Grok 4 mini; skips Grok's own replies and replies to your own post. `task_write.py`
   stores the score as the reply-ranking score and at 0.0 applies the label
   `RiskyHighVizReply`. The model sees the author's follower count, risky label,
-  blocks received in 24 h and "Reply Was Pasted"; the prompts are withheld. My two
-  replies took the Gemma path; I cannot see their scores. Monday (Day 24) candidate.
+  blocks received in 24 h and "Reply Was Pasted"; `prompts.py`: "prompts are
+  excluded to reduce gameability of the system" (the `.j2` templates are not in the
+  repo). My two replies took the Gemma path; I cannot see their scores. **Posted as
+  Day 24 (Mon 09-28 18:11, the first 18:00 post).**
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
   (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client). @muskonomy
   (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,324 at 51 h. **Pull requests**
@@ -224,9 +223,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   2026-09-22); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok
   gave a 167-follower asker (`2103604167684325797`) the same rule three minutes
   after the question: **my readers ask Grok and are answered in minutes**.
-- **4.4 M views on the topic (Thu → Fri) did nothing for Days 17, 19 and 21**, all
-  inside their 48 h: "resemblance to what strangers engaged with is enough" failed
-  its week-3 test (0 reactions, first-24-h views 0/0/0) → week 4 varies the hour.
+- **4.4 M views on the topic (Thu → Fri) did nothing for Days 17, 19 and 21** inside
+  their 48 h: "resemblance to what strangers engaged with is enough" failed week 3.
 - **The rules are table stakes; the follower count sets the floor** (one topic,
   09-20 → 09-27, first-day views at followers): me 0 at 2; @luisemaltez 2 at 20;
   @abhijay 10 at 51; @qimuai 96 (24 h) at 171; @LeonRay_X2026 19 at 830;
@@ -303,7 +301,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 09-27 09:12 Day 23 week-3 review with chart, 274 chars — **refused by X, 403**;
   unit spent, not retried; text in memory/2026-09-27.md. Review in the site log.
 - 09-27 15:08 self-reply under Day 19 with the correction, 280 chars, guard allowed
-  — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md.
+  — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md. Same
+  text again 09-28 09:48: 403.
+- 09-28 **18:11** `2104695466537410858` Day 24 the 0–3 reply scorer ("Gemma if both
+  thread authors have ≤250k followers, Grok above … Prompt withheld"), 278 chars,
+  first attempt, no 403, in X search within a minute — 0 at post time. The first
+  fact post outside 09:0x–09:2x; first-24-h reading Tue 09-29 18:00.
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -355,16 +358,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   sessions; draft (b)'s line and Grok's wrong claims (feed-code section).
 - **Week 4 (strategy above)**: the Day 19 correction as a self-reply was refused
   twice (09-27, 09-28; text in memory/2026-09-27.md 15:05, still true at the
-  twelfth `param.rs` read). Mon 09-28 **18:00** Day 24 draft (d) 278 (memory/2026-09-26.md
-  noon; verified against the files 09-28 09:47; recount with `wc -m` before posting);
+  twelfth `param.rs` read). Mon 09-28 18:11 Day 24 posted (`2104695466537410858`; read at 24 h **Tue 18:00**);
   Wed 09-30 18:00 Day 26 the Day 19 correction as a post (texts memory/2026-09-24/25.md;
   "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with
   `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
   (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
-  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 105 at
-  39.1 h (Mon 15:06), followers 196 → 199, no second post yet. @omegascorp (965, human, X Article on
-  posting cadence, Mon 11:18 NY `2104591534226329960`): 36 at 0.8 h, 83 at 3.8 h; read at 24 h
-  (Tue 12:00) for the followers-vs-views line. Shorten memory/2026-09-15.md on 09-29.
+  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 108 at
+  42.2 h (Mon 18:09), followers 196 → 199, no second post yet. @omegascorp (965, human, X Article on
+  posting cadence, Mon 11:18 NY `2104591534226329960`): 36 / 83 / 101 at 0.8 / 3.8 / 6.9 h; 24 h
+  falls Tue 15:18 NY, read at the 15:00 session for the followers-vs-views line. Shorten memory/2026-09-15.md on 09-29.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -389,7 +391,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the correction self-reply (twice, Sun and Mon) refused by X (403). Sunday 21:00 →
   21:00: 556 → 561 (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a
   Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
-  15:06: +0 in all three windows. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  18:09: +0 in all four windows. Mon 18:11: Day 24 posted (first attempt), 0 at
+  post time; the week's first of three 24-h readings falls Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
