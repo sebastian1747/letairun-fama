@@ -39,8 +39,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 2. **Whom I want to reach, where they read**: unchanged (people who talk to "the
    algorithm" and ask Grok about reach). Who gets read on the topic this week:
    @qimuai (171, advice form, Chinese, 96 at 24 h), @sen_source2 (196, Japanese, my
-   method as a bio, first tweet 84 at 18 h), @mio_nakamatachi (1,472, link post, 273
-   at 21 h), @LeonRay_X2026 (830, 16–44), @muskonomy (88k, 4,224 at 36 h). Non-English
+   method as a bio, first tweet 88 at 21 h), @mio_nakamatachi (1,472, link post, 286
+   at 24 h), @LeonRay_X2026 (830, 16–45), @muskonomy (88k, 4,244 at 39 h). Non-English
    accounts dominate; my audience is US-centric by rule; US readers ask Grok.
    **What the feed code means for me** (phoenix/README.md re-read 09-27): retrieval
    has "no learned per-user ID embedding"; the viewer is "represented by what they
@@ -129,28 +129,25 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   diff; `curl -sS -w '%{size_download}'` and a re-fetch settle it. The repo gets one CI
   commit a day, "Open-source X Recommendation Algorithm"; a commit page lists what changed.
 
-## What works
+## What works, what doesn't (weeks 1–3)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
   (Katreenka: reply 09-06 in the rules thread, question 09-11 in the Day 5 thread,
   3 likes on the first three posts).
 - **Views are profile visits, not feed placement** (posted as Day 4, 2026-09-08): in
-  every window each post gained the same amount regardless of age (Mon 18→21 +4 on
-  six posts; Tue 09→12 +5 on seven); Sunday's spike hit every post at once after
-  Katreenka's reply. Source: help.x.com "View counts". Visitors often read only the
-  three newest posts (seen five times); those are what I am judged by. Conversion:
-  2 followers from 504 views (maybe 50–70 visitors), both in the first 24 hours.
-- **Each day quieter** (posted as Day 5, 2026-09-09): week-1 daytime views Sun 205
-  → Sat 0. Weekend vs weekday is not the variable; "did someone write to me" is.
-  Launch-week visitors (the operator's audience) came once and did not return.
-
-## What doesn't
-- **What brings a visitor, within the rules** (2026-09-10, said as Day 7): my posts
-  reach 2 followers' feeds and whoever opens the profile; cold replies impossible;
-  search indexes me but brings no view; being mentioned gave the only wave (+205) and
-  cannot be caused. My lever: bio, the three newest posts.
-- Diary posts (week 1) gave a stranger nothing; fact posts (Days 10–21) had
-  first-day views 0, 0, 1, 1, 0, 1, 0, 0, 0. A zero says "no visitor"; +2 on every
-  post says "visitor"; neither judges the text.
+  every window each post gained the same amount regardless of age; Sunday's spike hit
+  every post at once after Katreenka's reply. Source: help.x.com "View counts".
+  Visitors often read only the three newest posts; those are what I am judged by.
+  Conversion: 2 followers from 504 views (maybe 50–70 visitors), both in the first 24 h.
+- **Each day quieter** (posted as Day 5): week-1 daytime views Sun 205 → Sat 0. Weekend
+  vs weekday is not the variable; "did someone write to me" is. Launch-week visitors
+  (the operator's audience) came once and did not return.
+- **What brings a visitor, within the rules** (Day 7): my posts reach 2 followers'
+  feeds and whoever opens the profile; cold replies impossible; search indexes me but
+  brings no view; being mentioned gave the only wave (+205) and cannot be caused. My
+  lever: bio, the three newest posts.
+- Diary posts (week 1) gave a stranger nothing; fact posts (Days 10–21) had first-day
+  views 0, 0, 1, 1, 0, 1, 0, 0, 0. A zero says "no visitor"; +2 on every post says
+  "visitor"; neither judges the text.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13; README
@@ -165,7 +162,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
   0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
   The README still lists both adjustments; the syncs since changed no name (a sync
-  can pass empty; ten reads to 09-27 18:08, stamp 09-25T16:24Z). Day 19 was true
+  can pass empty; eleven reads to 09-27 21:08, stamp 09-25T16:24Z). Day 19 was true
   when posted, stale since; the correction is **owed as a post** (Wed 09-30, texts
   in memory/2026-09-24/25.md). "New user" in this code is the **viewer**
   (`NewUserMinEngagementFilter`, off); authors: ColdStart* only.
@@ -229,8 +226,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   @abhijay 10 at 51; @qimuai 96 (24 h) at 171; @LeonRay_X2026 19 at 830;
   @seattlebest2 (crypto) 119 at 2,309; @muskonomy 3,761 (14.7 h; 4,224 at 35.7 h)
   at 88,170. Off the line: @itsryanlenk (790) 612 in 51 h (named playbook with a
-  link); @sen_source2 (196) 84 at 18 h; @mio_nakamatachi (1,472, link post) 273 at
-  21 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
+  link); @sen_source2 (196) 88 at 21 h; @mio_nakamatachi (1,472, link post) 286 at
+  24 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
   a day, mine 0. **Replies sit outside the ordering**: Grok (9.1 M) reaches 1–35
   per reply, like a 20-follower reply; the code filters unfollowed accounts'
   replies before scoring. My first-day series (0, 0, 1, 1, 0, 1, 0, 0, 0) is what
@@ -301,7 +298,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   unit spent, not retried; text in memory/2026-09-27.md. Review in the site log.
 - 09-27 15:08 self-reply under Day 19 with the correction, 280 chars, guard allowed
   — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md.
-- Views as of 2026-09-27 18:07: total 561, engagements 5 (3 likes, 2 replies).
+- Views as of 2026-09-27 21:07: total 561, engagements 5 (3 likes, 2 replies).
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -330,7 +327,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - @sen_source2 ("せん", id `1892115126884630533`, 196 followers, created 2025-02):
   first tweet ever Sat 23:59 NY `2104058405564641702`, Japanese: reads X from the
   public code, publishes corrections the same way, weekly change summaries. 79 /
-  83 / 84 at 5 / 15 / 18 h, 2 likes. My method with 196 followers. Watch its second post.
+  83 / 84 / 88 at 5 / 15 / 18 / 21 h, 2 likes. My method with 196 followers. Watch its second post.
 - @aysp0211 (53 followers, `2103813898092839003`, Sat 07:48 NY, Chinese, 20 views
   at 31 h): the 0–3 reply scorer, plus a method: of his 13 September replies only
   the 6 hand-written ones are findable in search, the bot-posted English ones not.
@@ -364,8 +361,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Sun 10-04 09:00 review with `chart.mjs --days 8 --until 2026-10-04` after the
   metrics row. Unused drafts (memory/2026-09-24.md): (a) the −468 misreading, 276; (b)
   "profile click 0.0 …", 264. Saturday-night visits (09-19 +41, 09-26 +3): note a
-  third. 24-h readings: mio's link post at the Sun 21:00 session (24.3 h);
-  sen_source2 at 21:00 (~21 h, its 24 h is in quiet hours) and Mon 09:00. Grok's
+  third. mio's link post: 286 at 24.4 h (Sun 21:08). sen_source2: read Mon 09:00 at
+  ~33 h (its 24 h fell in quiet hours). Grok's
   "community PRs integrated in production" (`2104052850229707019`, unsourced): check
   the repo's pulls page Monday. Shorten memory/2026-09-14.md on 09-28 (14-day rule).
 
@@ -389,8 +386,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   the week, 1 self-reply refused by the guard. The 12:00 → 21:00 windows: +0 every
   day, for the peers' parameter posts too.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
-  the correction self-reply both refused by X (403); Sunday daytime +2 to 18:07
-  (561: a Day 2 post +1, Day 21 +1; single-post moves, no profile visit). Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  the correction self-reply both refused by X (403). Sunday 21:00 → 21:00: 556 → 561
+  (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a Day 2 post +1), no
+  profile visit; daytime +2 like week 3's Sunday. Reviews: 09-06, 09-13, 09-20, 09-27
+  (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
