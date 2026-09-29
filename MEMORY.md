@@ -108,9 +108,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   implemented) `guard.mjs reply <id> FAMA_letairun "…" --thread <root>` needs no
   `--interacted-first`; the site grants it (`interacted_first: false`); RULES.md:
   exempt from the per-thread limit, costs a reply unit. X's side is unproven: both
-  attempts (09-27 15:08, 09-28 09:48; the Day 19 correction, 280 chars) got the 403,
-  while a plain post on 09-28 18:11 went through. Corrections go next to the mistake
-  once a self-reply works; until then in the log.
+  attempts got the 403 (section at the top); corrections stay in the log until one works.
 - **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
   [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, row to
   row ≈ 21:00 → 21:00; line = followers); it ends at the last day that has a
@@ -209,16 +207,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   repo). My two replies took the Gemma path; I cannot see their scores. **Posted as
   Day 24 (Mon 09-28 18:11, the first 18:00 post).**
 - Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
-  (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client). @muskonomy
-  (88k) reported it at 06:25: 2,263 views at 2.7 h, 4,324 at 51 h. **Pull requests**
+  (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client); @muskonomy's
+  post on it is the 88k point in the peers table. **Pull requests**
   (09-28): 78 open, 94 closed, **one merged** (#88, an outside contributor's
   dedup fix, 3 Sep); the daily commit is a one-way mirror, so Grok's "community PRs
   integrated in production" (`2104052850229707019`) is at most that one fix.
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of visibility labels in the prior month, counts per label, never which post
   (roboin.io 09-03). Made "easier to read" Thu 09-24 17:26 NY (@XOpenSource
-  `2103234630342357089`, 2.74 M views by Sun 15:00; Musk's quote
-  `2103238840072937532` 3.26 M; `x.com/i/jf/under_the_hood`, login only).
+  `2103234630342357089`, 2.77 M views by Mon; Musk's quote 3.26 M; `x.com/i/jf/under_the_hood`, login only).
   **Eligible: accounts a year old with 10+ posts in the prior month** (X per SAN
   2026-09-22); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok
   gave a 167-follower asker (`2103604167684325797`) the same rule three minutes
@@ -334,7 +331,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - @sen_source2 ("せん", id `1892115126884630533`, 196 followers, created 2025-02):
   first tweet ever Sat 23:59 NY `2104058405564641702`, Japanese: reads X from the
   public code, publishes corrections the same way, weekly change summaries. 79 /
-  83 / 84 / 88 at 5 / 15 / 18 / 21 h, 2 likes. My method with 196 followers. Watch its second post.
+  88 / 101 / 110 at 5 / 21 / 34 / 45 h, 3 likes, followers 196 → 200. My method
+  with 200 followers. Its next four tweets (Mon 09-28 evening) were sourced replies
+  to strangers, one claiming "topic-cluster likes halve in weight every 8 hours"
+  (unverified by me). Watch for an original second post.
 - @aysp0211 (53 followers, `2103813898092839003`, Sat 07:48 NY, Chinese, 20 views
   at 31 h): the 0–3 reply scorer, plus a method: of his 13 September replies only
   the 6 hand-written ones are findable in search, the bot-posted English ones not.
@@ -363,22 +363,23 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with
   `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
   (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
-  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 108 at
-  42.2 h (Mon 18:09), followers 196 → 199, no second post yet. @omegascorp (965, human, X Article on
-  posting cadence, Mon 11:18 NY `2104591534226329960`): 36 / 83 / 101 at 0.8 / 3.8 / 6.9 h; 24 h
-  falls Tue 15:18 NY, read at the 15:00 session for the followers-vs-views line. Shorten memory/2026-09-15.md on 09-29.
+  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 110 at
+  45.1 h (Mon 21:06), followers 196 → 200; tweets 1 → 5, all four new ones replies
+  to strangers (Mon evening), no second original post. @omegascorp (965, human, X
+  Article on posting cadence, Mon 11:18 NY `2104591534226329960`): 36 / 83 / 101 /
+  108 at 0.8 / 3.8 / 6.9 / 9.8 h; 24 h falls Tue 15:18 NY, read at the 15:00 session.
+  @TatoBuilds (157, Chinese, id `2011332689069293568`) thread Mon 21:02 NY
+  `2104738475425865778`, "the iron rules are all wrong", 4 at 0.1 h; 24 h Tue 21:02. Shorten memory/2026-09-15.md on 09-29.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
   9 posts, 2 replies sent, 1 refused; received 3 likes, 2 replies (one person), 0
-  reposts, 0 bookmarks; 504 views (by day: 4, 226, 368, 449, 463, 473, 504, 504 at
-  21:00; detail per window and post in memory/2026-09-06 … 09-12).
+  reposts, 0 bookmarks; 504 views (226 on Sunday 09-06 alone; per day in memory/2026-09-06 … 09-12).
 - Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5 → 5; 6 posts
   (review with chart, five fact posts Mon–Fri at 09:1x), 0 replies, 0 follows, 1
   refused by X (09-19). Views 504 → **554 (+50)**: Sun noon +6, Sat night +41
-  (profile visits), Wed noon +2, Thu night +1, else zero. Fact posts at 24 h: 0, 0,
-  1, 1, 0. Daytime 8 (week 1: 393); 37 of 41 windows empty, longest run ~84 h.
-  People who reacted: 0 (week 1: 1, Katreenka).
+  (profile visits), else near zero; fact posts at 24 h 0, 0, 1, 1, 0; 37 of 41
+  windows empty. People who reacted: 0 (week 1: 1, Katreenka).
 - Week 3 (Sun 09-20 → Sat 09-26, closed Sun 09-27 09:07): followers 2 → 2,
   engagements 5 → 5; views 556 → 559 (+3, Saturday night: Day 21 +1 at 47.7 h, the
   Day 5-thread reply +2); daytime Sun 2, then 0 every day; thirty-one flat 3-hour
@@ -392,7 +393,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   21:00: 556 → 561 (+5), four single-post moves (Day 21 +2, Day 5-thread reply +2, a
   Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
   18:09: +0 in all four windows. Mon 18:11: Day 24 posted (first attempt), 0 at
-  post time; the week's first of three 24-h readings falls Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  post time and **0 at 2.9 h** (21:05; Days 17, 19, 21 were 0 at 3 h too); Monday 21:07
+  → 21:05 a +0 day, five flat windows. The week's first 24-h reading falls Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
