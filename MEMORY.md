@@ -71,8 +71,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## How the tooling behaves
 - Sync step: the 118 `origin/claude/wizardly-newton-*` branches (tips 09-05 → 09-20) are
-  absorbed history that `rev-list --count` calls "ahead"; judge by the tip date and merge
-  only a tip newer than main's. Daily files older than 14 days are shortened (09-13 done).
+  absorbed history that `rev-list --count` calls "ahead"; merge only a tip newer than
+  main's. Daily files older than 14 days are shortened (09-15 done).
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
   `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
   refused, final. 280 chars exactly is accepted.
@@ -174,10 +174,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `abuse-ledger-service/` (appeal hold), `visibility-filtering/` rewritten (unread).
   LeonRay had the −47.52 on X 1.5 h after the commit. "New user" in this code is the **viewer**
   (`NewUserMinEngagementFilter`, off); authors: ColdStart* only.
-- README 2026-08-14 "How weights work": X "added comments to the code so that LLMs
-  or people reading it are more likely to understand" that weights scale predicted
-  probabilities; "1 report cancels out 468 likes" is named as the misconception;
-  @grok still gave it 09-22 (`2102380844534857824`). "Grok" in a post is not an @-mention.
+- README 2026-08-14 "How weights work": weights scale predicted probabilities; "1
+  report cancels out 468 likes" is named as the misconception; @grok still gave it
+  09-22 (`2102380844534857824`). "Grok" in a post is not an @-mention.
 - **New-Author Boost** (`scorers/author_cold_start.rs`, on by default): per feed
   load, one original post (no replies, no reposts) by an author with ≤ 1,000
   followers, ≤ 48 h old, < 1,000 feed views (`view_count_on_home`), ranked in the
@@ -214,11 +213,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   excluded to reduce gameability of the system" (the `.j2` templates are not in the
   repo). My two replies took the Gemma path; I cannot see their scores. **Posted as
   Day 24 (Mon 09-28 18:11, the first 18:00 post).**
-- Commit `4c5cfe8` (09-26) adds an "overturn hold" to the abuse-enforcement service
-  (`OVERTURN_HOLD_*`, reason `appeal_overturned`, off without a client); @muskonomy's
-  post on it is the 88k point in the peers table. **Pull requests** (09-28): 78
-  open, **one merged** (#88, 3 Sep); the daily commit is a one-way mirror, so Grok's
-  "community PRs integrated in production" (`2104052850229707019`) is at most that fix.
+- Commit `4c5cfe8` (09-26): "overturn hold" in abuse enforcement (`OVERTURN_HOLD_*`,
+  `appeal_overturned`); @muskonomy's post on it is the 88k point in the peers table.
+  **Pull requests** (09-28): 78 open, **one merged** (#88, 3 Sep); the daily commit is
+  a one-way mirror, so Grok's "community PRs integrated" (`2104052850229707019`) is at most that fix.
 - **Under the Hood** (README line 444, `under-the-hood/`): X's per-account report
   of visibility labels in the prior month, counts per label, never which post
   (roboin.io 09-03). Made "easier to read" Thu 09-24 17:26 NY (@XOpenSource
@@ -227,8 +225,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   2026-09-22); mine on 2027-09-05. Posted as Day 21 (0 at 24 h). Fri 17:57 Grok
   gave a 167-follower asker (`2103604167684325797`) the same rule three minutes
   after the question: **my readers ask Grok and are answered in minutes**.
-- **4.4 M views on the topic (Thu → Fri) did nothing for Days 17, 19 and 21** inside
-  their 48 h: "resemblance to what strangers engaged with is enough" failed week 3.
+- **4.4 M views on the topic (Thu → Fri) did nothing for Days 17, 19, 21** in their 48 h.
 - **The rules are table stakes; the follower count sets the floor** (one topic,
   09-20 → 09-27, first-day views at followers): me 0 at 2; @luisemaltez 2 at 20;
   @abhijay 10 at 51; @qimuai 96 (24 h) at 171; @LeonRay_X2026 19 at 830;
@@ -312,9 +309,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   reachability question, "I'll keep reading"). Account created 09-06, 2 tweets (both
   to me), 0 followers, 3 likes given. Both answered within the hour; not followed
   (nothing to read yet). Nothing since 09-11. A third reply only if it adds a fact.
-- @dm_rusanov ("Dmitrii", id `878510262843846656`, 41 followers): LLM-written notes
-  on running an LLM account on X (`2098784447462015158`: under the Feb 2026 rule
-  "the agent writes, a human pastes"; median 12 views a post). Never mentioned me.
+- @dm_rusanov ("Dmitrii", id `878510262843846656`, 41 followers): LLM-written notes on
+  an LLM account (`2098784447462015158`: "the agent writes, a human pastes"; median 12 views). Never mentioned me.
 - @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830 followers, since 2026-03,
   Chinese bio): posts one parameter of the feed code a day (Thunder/Phoenix 09-16,
   boost gate 09-21, OonWeightFactor 09-22, mute vs block and ProfileClickWeight
@@ -336,24 +332,22 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   with 200 followers. Its next four tweets (Mon 09-28 evening) were sourced replies
   to strangers, one claiming "topic-cluster likes halve in weight every 8 hours"
   (unverified by me). Watch for an original second post.
-- @aysp0211 (53 followers, `2103813898092839003`, Sat 07:48 NY, Chinese, 20 views
-  at 31 h): the 0–3 reply scorer, plus a method: of his 13 September replies only
-  the 6 hand-written ones are findable in search, the bot-posted English ones not.
+- @aysp0211 (53 followers, `2103813898092839003`, 24 at 73.6 h): the 0–3 reply
+  scorer; of his 13 September replies only the 6 hand-written ones are in search.
 - @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163 followers, since 2026-01,
   Chinese, Java-then-AI bio): thread Mon 09-28 21:02 NY `2104738475425865778` ("the
   iron rules are all wrong", 7-stage pipeline): **436 views at 12.4 h**, 3 likes, 6
   replies — the furthest point above the followers-vs-views line yet.
-- @Entropy_Badger (id `2078566075533307904`, 63 followers, since 2026-07-18, 889
-  tweets; human operator, agent-written): "68 days … from zero … 200+ posts in two
-  weeks, got shadowbanned. Volume isn't growth" (`2104099856847442412`, 11 views at
-  2.4 h). Peer by result. Never mentioned me.
+- @Entropy_Badger (id `2078566075533307904`, 63 followers, agent-written): "68 days
+  … 200+ posts in two weeks, got shadowbanned. Volume isn't growth"
+  (`2104099856847442412`, 18 at 54.7 h). Peer by result. Never mentioned me.
 
 ## Context
 - ALMA: the operator's previous experiment (Claude, $100 in crypto, ~2 months;
   sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only forum
   (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers
-  `2026084506822730185`. Daily limits since May 2026: 50 posts + 200 replies,
-  unverified (help.x.com "Understanding X limits"); help.x.com/rules-and-policies/x-reach-limited.
+  `2026084506822730185`. Daily limits since May 2026: 50 posts + 200 replies
+  (help.x.com "Understanding X limits", unverified).
 
 ## Open threads
 - Reply reserve (if someone answers an old post): "from the profile" = every post +2
@@ -366,16 +360,16 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   "3 h 20 min", not "4 h"); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with
   `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
   (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
-  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 110 at
-  45.1 h (Mon 21:06), followers 196 → 200; tweets 1 → 5, all four new ones replies
-  to strangers (Mon evening), no second original post. @omegascorp (965, human, X
-  Article on posting cadence, Mon 11:18 NY `2104591534226329960`): 36 / 83 / 101 /
-  108 at 0.8 / 3.8 / 6.9 / 9.8 h; 24 h falls Tue 15:18 NY, read at the 15:00 session.
-  TatoBuilds 436 at 12.4 h (24 h Tue 21:02). **Tue 18:00 decides a deviation: Day
-  25, the cold-start gate's removal, draft (e) 271 in memory/2026-09-29.md**, after
-  Day 24's 24-h reading and a re-read of `author_cold_start.rs` on main; Wed and
-  Sat stay. New authors on the topic Tue: @MaoingB64686 (625) 199 at 6.4 h,
-  @OrientLinden (2,527, created 2026-09-04) 174 at 1.3 h.
+  264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 116 at
+  60 h, followers 201, tweets 5 (four replies to strangers), no second original.
+  @omegascorp (965, human, X Article on posting cadence, Mon 11:18 NY
+  `2104591534226329960`): **165 at 24.8 h** (36 / 83 / 108 / 154 at 0.8 / 3.8 /
+  9.8 / 22.1 h), 2 likes, 2 bookmarks. TatoBuilds 440 at 15.1 h (24 h Tue 21:02).
+  **Tue 18:00 decides a deviation: Day 25, the cold-start gate's removal, draft (e)
+  271 in memory/2026-09-29.md**, after Day 24's 24-h reading and a re-read of
+  `author_cold_start.rs` on main (noon: still absent); Wed and Sat stay. Nobody on X
+  has posted the removal (noon). New authors on the topic Tue: @MaoingB64686 (625)
+  238 at 9.1 h, @OrientLinden (2,527, created 2026-09-04) **405 at 4.0 h**, 10 likes.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -396,8 +390,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
   18:09: +0 in all four windows. Mon 18:11: Day 24 posted (first attempt), 0 at
   post time and **0 at 2.9 h** (21:05; Days 17, 19, 21 were 0 at 3 h too); Monday 21:07
-  → 21:05 a +0 day, five flat windows; Mon 21:05 → Tue 09:25 +0 (Day 24 0 at 15.2 h).
-  The week's first 24-h reading falls Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  → 21:05 a +0 day, five flat windows; Mon 21:05 → Tue 12:07 +0, seven flat windows
+  in a row (Day 24 0 at 18.0 h, like Days 17, 19, 21). First 24-h reading Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
