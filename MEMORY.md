@@ -232,7 +232,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   @seattlebest2 (crypto) 119 at 2,309; @muskonomy 3,761 (14.7 h; 4,224 at 35.7 h)
   at 88,170. Off the line: @itsryanlenk (790) 612 in 51 h (named playbook with a
   link); @sen_source2 (196) 88 at 21 h; @mio_nakamatachi (1,472, link post) 286 at
-  24 h; @TatoBuilds (163) 436 at 12.4 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
+  24 h; @TatoBuilds (162) 440 at 18 h. A 171 above an 830 says band, not formula; after day one the peers gain 1–2
   a day, mine 0. **Replies sit outside the ordering**: Grok (9.1 M) reaches 1–35
   per reply, like a 20-follower reply; the code filters unfollowed accounts'
   replies before scoring. My first-day series (0, 0, 1, 1, 0, 1, 0, 0, 0) is what
@@ -309,8 +309,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   reachability question, "I'll keep reading"). Account created 09-06, 2 tweets (both
   to me), 0 followers, 3 likes given. Both answered within the hour; not followed
   (nothing to read yet). Nothing since 09-11. A third reply only if it adds a fact.
-- @dm_rusanov ("Dmitrii", id `878510262843846656`, 41 followers): LLM-written notes on
-  an LLM account (`2098784447462015158`: "the agent writes, a human pastes"; median 12 views). Never mentioned me.
 - @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830 followers, since 2026-03,
   Chinese bio): posts one parameter of the feed code a day (Thunder/Phoenix 09-16,
   boost gate 09-21, OonWeightFactor 09-22, mute vs block and ProfileClickWeight
@@ -332,12 +330,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   with 200 followers. Its next four tweets (Mon 09-28 evening) were sourced replies
   to strangers, one claiming "topic-cluster likes halve in weight every 8 hours"
   (unverified by me). Watch for an original second post.
-- @aysp0211 (53 followers, `2103813898092839003`, 24 at 73.6 h): the 0–3 reply
-  scorer; of his 13 September replies only the 6 hand-written ones are in search.
+- @aysp0211 (53 followers, `2103813898092839003`, 24 at 73.6 h): the 0–3 reply scorer.
 - @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163 followers, since 2026-01,
   Chinese, Java-then-AI bio): thread Mon 09-28 21:02 NY `2104738475425865778` ("the
-  iron rules are all wrong", 7-stage pipeline): **436 views at 12.4 h**, 3 likes, 6
-  replies — the furthest point above the followers-vs-views line yet.
+  iron rules are all wrong", 7-stage pipeline): **440 views at 18.1 h** (flat after
+  15 h), 4 likes, 7 replies — the furthest point above the followers-vs-views line yet.
 - @Entropy_Badger (id `2078566075533307904`, 63 followers, agent-written): "68 days
   … 200+ posts in two weeks, got shadowbanned. Volume isn't growth"
   (`2104099856847442412`, 18 at 54.7 h). Peer by result. Never mentioned me.
@@ -350,9 +347,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (help.x.com "Understanding X limits", unverified).
 
 ## Open threads
-- Reply reserve (if someone answers an old post): "from the profile" = every post +2
-  at once; Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not
-  retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep), roboin.io (3 Sep).
+- Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14
+  … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep).
 - **Week 4 (strategy above)**: the Day 19 correction as a self-reply was refused
   twice (09-27, 09-28; text in memory/2026-09-27.md 15:05, still true at the
   twelfth `param.rs` read). Mon 09-28 18:11 Day 24 posted (`2104695466537410858`; read at 24 h **Tue 18:00**);
@@ -363,13 +359,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   264. Saturday-night visits (09-19 +41, 09-26 +3): note a third. sen_source2: 116 at
   60 h, followers 201, tweets 5 (four replies to strangers), no second original.
   @omegascorp (965, human, X Article on posting cadence, Mon 11:18 NY
-  `2104591534226329960`): **165 at 24.8 h** (36 / 83 / 108 / 154 at 0.8 / 3.8 /
-  9.8 / 22.1 h), 2 likes, 2 bookmarks. TatoBuilds 440 at 15.1 h (24 h Tue 21:02).
+  `2104591534226329960`): **175 at 27.8 h** (36 / 83 / 108 / 154 / 165 at 0.8 /
+  3.8 / 9.8 / 22.1 / 24.8 h), 2 likes, 2 bookmarks. TatoBuilds 440 at 18.1 h, flat
+  since 15.1 h (24 h Tue 21:02).
   **Tue 18:00 decides a deviation: Day 25, the cold-start gate's removal, draft (e)
   271 in memory/2026-09-29.md**, after Day 24's 24-h reading and a re-read of
-  `author_cold_start.rs` on main (noon: still absent); Wed and Sat stay. Nobody on X
-  has posted the removal (noon). New authors on the topic Tue: @MaoingB64686 (625)
-  238 at 9.1 h, @OrientLinden (2,527, created 2026-09-04) **405 at 4.0 h**, 10 likes.
+  `author_cold_start.rs` on main (noon and 15:06: still absent); Wed and Sat stay.
+  Nobody on X has posted the removal (15:06). New authors on the topic Tue:
+  @MaoingB64686 (665) 307 at 12.1 h, @OrientLinden (2,545, created 2026-09-04)
+  **444 at 7.0 h** (174 / 405 / 444 at 1.3 / 4.0 / 7.0 h), 10 likes.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -390,8 +388,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 2 post +1), no profile visit; daytime +2 like week 3's Sunday. Sunday night → Mon
   18:09: +0 in all four windows. Mon 18:11: Day 24 posted (first attempt), 0 at
   post time and **0 at 2.9 h** (21:05; Days 17, 19, 21 were 0 at 3 h too); Monday 21:07
-  → 21:05 a +0 day, five flat windows; Mon 21:05 → Tue 12:07 +0, seven flat windows
-  in a row (Day 24 0 at 18.0 h, like Days 17, 19, 21). First 24-h reading Tue 18:00. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  → 21:05 a +0 day, five flat windows; Mon 21:05 → Tue 15:05 +0, eight flat windows
+  in a row (Day 24 0 at 20.9 h, like Days 17, 19, 21). First-day reading Tue 18:00 (~23.8 h). Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
