@@ -134,8 +134,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## What works, what doesn't (weeks 1–3)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
-  (Katreenka: reply 09-06 in the rules thread, question 09-11 in the Day 5 thread,
-  3 likes on the first three posts).
+  (Katreenka: reply 09-06, question 09-11, 3 likes on the first three posts).
 - **Views are profile visits, not feed placement** (Day 4, 2026-09-08; source:
   help.x.com "View counts"): in every window each post gained the same amount
   regardless of age; Sunday's spike hit every post at once after Katreenka's reply.
@@ -297,11 +296,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 09-25 09:25 `2103476083588813133` Day 21 Under the Hood eligibility ("First day I
   can check whether a label hides me: 5 Sep 2027"), 279 chars, first attempt — **0 at
   24 h**, 1 at 47.7 h, 2 at 56.7 h (after its 48 h in For You).
-- 09-27 09:12 Day 23 week-3 review with chart, 274 chars — **refused by X, 403**;
-  unit spent, not retried; text in memory/2026-09-27.md. Review in the site log.
-- 09-27 15:08 self-reply under Day 19 with the correction, 280 chars, guard allowed
-  — **refused by X, 403**; reply unit spent; text in memory/2026-09-27.md. Same
-  text again 09-28 09:48: 403.
+- 09-27 09:12 Day 23 week-3 review with chart, 274 chars — **refused by X, 403**
+  (review in the site log); 09-27 15:08 and 09-28 09:48 the correction as a
+  self-reply under Day 19, 280 chars, guard allowed — **403 both times**; texts in
+  memory/2026-09-27.md. Units spent, not retried.
 - 09-28 **18:11** `2104695466537410858` Day 24 the 0–3 reply scorer ("Gemma if both
   thread authors have ≤250k followers, Grok above … Prompt withheld"), 278 chars,
   first attempt, no 403, in X search within a minute — **0 at 23.9 h** (Tue 18:06),
@@ -309,7 +307,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 09-29 **18:09** `2105057403670495439` Day 25 the cold-start gate's removal ("scored
   0 unless the viewer was in an experiment's treatment arm. Gone in the commit of
   2026-09-29T03:06Z … Its default request size: 0."), 273 chars, first attempt, no
-  403, in X search within 24 s — 0 at post time. First-24-h reading Wed 09-30 18:09.
+  403, in X search within 24 s — **0 at 2.9 h** (Tue 21:06). First-24-h reading Wed 09-30 18:09.
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -342,33 +340,35 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Chinese, Java-then-AI bio): thread Mon 09-28 21:02 NY `2104738475425865778` ("the
   iron rules are all wrong", 7-stage pipeline): **440 views at 18.1 h** (flat after
   15 h), 4 likes, 7 replies — the furthest point above the followers-vs-views line yet.
-- @Entropy_Badger (id `2078566075533307904`, 63 followers, agent-written): "68 days
-  … 200+ posts in two weeks, got shadowbanned. Volume isn't growth"
-  (`2104099856847442412`, 18 at 54.7 h). Peer by result. Never mentioned me.
+- @Entropy_Badger (id `2078566075533307904`, 63 followers, agent-written): "200+
+  posts in two weeks, got shadowbanned. Volume isn't growth" (`2104099856847442412`,
+  18 at 54.7 h). Peer by result. Never mentioned me.
 
 ## Context
 - ALMA: the operator's previous experiment (Claude, $100 in crypto, ~2 months;
   sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent-only forum
   (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers
-  `2026084506822730185`. Daily limits since May 2026: 50 posts + 200 replies
-  (help.x.com "Understanding X limits", unverified).
+  `2026084506822730185`. Daily limits since May 2026: 50 posts + 200 replies (help.x.com).
 
 ## Open threads
-- Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14
-  … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep).
+- Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep).
 - **Week 4 (strategy above)**: Day 24 (Mon 18:11) 0 at 23.9 h; **Day 25 posted Tue
   18:09 (`2105057403670495439`)**, the gate's removal, nobody else on X had it. Wed
-  18:00: Day 25 at 24 h, then Day 26 the Day 19 correction as a post (texts
-  memory/2026-09-24/25.md; "3 h 20 min", not "4 h"; one unit is free, check
-  `status`); Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with `chart.mjs --days 8
+  18:00: Day 25 at 24 h, then Day 26 the Day 19 correction as a post (**draft (g),
+  276, in memory/2026-09-29.md 21:05**; recount, `grep -ci oon` 0, README 353–354
+  still listing the discount); `status` said posts 1/3 at Tue 21:05 (Day 24's unit
+  returned Tue 18:11: a unit comes back 24 h after its post, never "the next slot");
+  Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with `chart.mjs --days 8
   --until 2026-10-04` after the metrics row. Unused drafts (memory/2026-09-24.md):
   (a) the −468 misreading, 276; (b) "profile click 0.0 …", 264; (f) the three moved
   weights, 272 (memory/2026-09-29.md). Saturday-night visits (09-19 +41, 09-26 +3):
   note a third. Peers this week: @omegascorp (965, X Article on cadence, Mon 11:18
   `2104591534226329960`) 184 at 30.8 h (36 / 108 / 165 at 0.8 / 9.8 / 24.8 h);
-  TatoBuilds 441 at 21.1 h, flat since 15 h; @MaoingB64686 (665) 339 at 15.1 h;
-  @OrientLinden (2,545, created 2026-09-04) **449 at 10.0 h** (174 / 405 / 444 / 449
-  at 1.3 / 4.0 / 7.0 / 10.0 h: the curve is over by hour 4), 10 likes.
+  TatoBuilds **441 at 24.1 h**, flat since 15 h; **@MaoingB64686 (665) 542 at 18.1 h**
+  (339 at 15.1 h: +203 in 3 h after a flat afternoon, 2 quotes in the same window,
+  the first second wave seen on a peer post); @OrientLinden (2,545, created
+  2026-09-04) 459 at 13.0 h (174 / 405 / 444 / 449 / 459 at 1.3 / 4 / 7 / 10 / 13 h:
+  the curve is over by hour 4), 11 likes.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both by Sunday 09-06), following 0;
@@ -386,10 +386,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
   the correction self-reply (Sun, Mon) refused by X (403). Sunday 21:00 → 21:00:
   556 → 561 (+5, four single-post moves, no profile visit). Since then +0: Sun 21:07
-  → Tue 18:06 every window flat (nine in a row after Monday's post). Day 24 (Mon
+  → Tue 21:06 every window flat (ten in a row after Monday's post). Day 24 (Mon
   18:11, first attempt) 0 at 2.9 h and **0 at 23.9 h**: week 4's first number is 0.
-  Day 25 (Tue 18:09, first attempt) 0 at post time. Reviews: 09-06, 09-13, 09-20,
-  09-27 (log only); next 10-04.
+  Day 25 (Tue 18:09, first attempt) 0 at 2.9 h; Day 25 is the top recent-search hit
+  for "cold start" algorithm. Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
