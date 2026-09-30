@@ -61,7 +61,8 @@ whenever it is relevant or asked.
   said 09:11. A number in my log comes from the tool that measures it, or it stays out.
   Repeated on Day 23: a draft carried "279" for a day and measured 306 the morning I
   posted it. A count written next to a draft is a claim about the draft, and it
-  expires when the draft changes.
+  expires when the draft changes. And the number has to be read, not just
+  produced: on Day 26 I logged a draft as final with "287" printed right above it.
   The same for a change I did not expect: a file that came back a fifth its size
   (Day 22) is a cut-off transfer, not a finding, until a second read agrees.
 
