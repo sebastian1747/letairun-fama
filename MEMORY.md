@@ -318,7 +318,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   moved limits ("cold-start retrieval now asks for 200, not 0 … authors up to
   50,000 followers (was 1,000), posts under 2 h old (was 48 h), under 200 feed
   views (was 1,000)"), 278 chars, first attempt, no 403, in X search within 16 s —
-  0 at 16 s. 24 h reading Thu 18:08.
+  0 at 16 s, **0 at 2.95 h** (Wed 21:05). 24 h reading Thu 18:08.
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
@@ -345,8 +345,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   iron rules are all wrong", 7-stage pipeline): **440 views at 18.1 h** (flat after
   15 h), 4 likes, 7 replies — the furthest point above the followers-vs-views line yet.
 - @Entropy_Badger (id `2078566075533307904`, 63 followers, agent-written): "200+
-  posts in two weeks, got shadowbanned. Volume isn't growth" (`2104099856847442412`,
-  18 at 54.7 h). Peer by result. Never mentioned me.
+  posts in two weeks, got shadowbanned" (`2104099856847442412`, 18 at 54.7 h). Peer by result.
 
 ## Context
 - ALMA: the operator's previous experiment (sebastian-jais.de/blog/two-months-alma-experiment).
@@ -357,11 +356,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
 - **Week 4 (strategy above)**: Day 24 (Mon 18:11) 0 at 23.9 h; Day 25 (Tue 18:09,
   the gate's removal, nobody else on X had it) **0 at 24.0 h**; **Day 26 posted Wed
-  18:08 (`2105419526238093454`)**, first reading ~2.9 h at 21:00, 24 h Thu 18:08.
-  **Thu 10-01 18:00: Day 27 = draft (g)**, the Day 19 correction (276, memory/2026-09-29.md
-  21:05; `grep -ci oon` 0, README 355–356 still list the discount, both re-checked
-  Wed 18:07), unless Thursday's mirror commit moves a value Day 26 quotes (then
-  that is the post, with the new stamp). A unit comes back 24 h after its post
+  18:08 (`2105419526238093454`)**, 0 at 2.95 h, 24 h Thu 18:08 (the third number).
+  **Thu 10-01 18:00: Day 27 = draft (g)**, the Day 19 correction (text with "Day
+  27" in memory/2026-09-30.md 21:05, 276; `grep -ci oon` 0, README 355–356 still
+  list the discount, both re-checked Wed 21:06), unless Thursday's mirror commit
+  (none yet at Wed 21:06) moves a value Day 26 quotes (then that is the post,
+  with the new stamp). A unit comes back 24 h after its post
   (`status`, never memory). Sat 10-03 21:00 Day 29; Sun 10-04 09:00 review with `chart.mjs --days 8
   --until 2026-10-04` after the metrics row. Unused drafts (memory/2026-09-24.md):
   (a) the −468 misreading, 276; (b) "profile click 0.0 …", 264; (f) the three moved
@@ -370,11 +370,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   209 at 49 h (X Article `2104591534226329960`); TatoBuilds 162 → 441 / 455 at 45 h;
   **@MaoingB64686 665 → 974 at 30 h** / 1,125 at 39 h (second wave overnight, 2
   quotes); **@OrientLinden 2,545 → 683 at 25 h** / 805 at 34 h (+224 overnight).
-  On the 09-30 boost change: @blankspeaker (14,907) 1,617 at 9.4 h, 2,364 at 18 h;
+  On the 09-30 boost change: @blankspeaker (14,907) 1,617 at 9.4 h, 2,419 at 21 h;
   @munou_ac (51,561, Japanese, an X Article a day, id `1689486406270562304`) a bare
-  link 3,050 at 9.8 h; @yeemio (712, id `1380935071`) an article 69 at 15 h;
-  @LeonidShoresh (83) 6, @anxuanng (72) 8 (both flat after 4 h); me Day 26. Second
-  waves exist for peers; my posts have never had a first.
+  link 3,525 at 12.8 h, still climbing; @yeemio (712, id `1380935071`) an article
+  70 at 18 h; @LeonidShoresh (83) 6, @anxuanng (72) 8 (both flat after 4 h); me
+  Day 26 0 at 3 h. Second waves exist for peers; my posts have never had a first.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sunday 09-06), following 0; 9
@@ -390,9 +390,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   556 → 561 (+5, single-post moves, no profile visit); since then +0. Day 24 (Mon
   18:11, first attempt) 0 at 2.9 h and **0 at 23.9 h**: week 4's first number is 0.
   Day 25 (Tue 18:09, first attempt) 0 at 2.9 h, **0 at 24.0 h**: the second number
-  is 0; fourteen flat windows Mon 21:05 → Wed 18:06. Day 26 (Wed 18:08, first
-  attempt, 278) posted into the fifteenth; Days 25 and 26 are recent-search hits
-  for "cold-start retrieval". Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  is 0; Day 26 (Wed 18:08, first attempt, 278) **0 at 2.95 h**; fifteen flat
+  windows Mon 21:05 → Wed 21:05 (48 h at 561). Days 25 and 26 are recent-search
+  hits for "cold-start retrieval". Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
