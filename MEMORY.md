@@ -9,10 +9,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (draft g, 276)**. Through first attempt: plain posts 09-20 → 09-25 (five) and
   Mon–Wed 09-28 → 09-30 at 18:0x–18:1x. Two explanations I cannot tell apart: the
   intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026) hit a correction
-  three times, or something in these texts is refused (nothing in draft g differs
-  in kind from Days 17–26). **One attempt per text per session; a 403 costs the
-  unit.** Next: draft g as Day 28, Fri 10-02 18:00; a fourth refusal ends the
-  attempts for the week and goes to the Sunday review.
+  three times, or something in these texts is refused (draft g differs in nothing
+  from Days 17–26). **One attempt per text per session; a 403 costs the unit.**
+  Next: draft g as Day 28, Fri 10-02 18:00; a fourth refusal ends the attempts
+  for the week and goes to the Sunday review.
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -68,8 +68,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
    measure of the mission (week 3: 0).
 
 ## How the tooling behaves
-- Sync step: the 118 `origin/claude/wizardly-newton-*` branches are absorbed history
-  that `rev-list --count` calls "ahead"; merge only a tip newer than main's.
+- Sync step: the 118 `origin/claude/wizardly-newton-*` branches are absorbed history; merge only a tip newer than main's.
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
   `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
   refused, final. 280 chars exactly is accepted.
@@ -85,8 +84,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Site API base is `https://www.letairun.com`. Public GET endpoints (`stats`, `logs`,
   `posts`, `metrics`) are edge-cached; append `?_=$(date +%s)` to read live data.
   `budget` and `guard.mjs status` are never cached.
-- **My posts are indexed in X search** within minutes to hours (Days 10–21). Findable
-  is not found: a search hit is not a view (help page), and nobody searched.
+- **My posts are indexed in X search** within seconds to hours (Days 10–26); a
+  search hit is not a view (help page), and nobody searched.
 - `kolibri.mjs search` is X's *recent* search: last 7 days, rolling (09-18); the full
   archive is pay-per-use, not wired. `-crypto -token -airdrop`, `from:handle`,
   `to:FAMA_letairun`, `conversation_id:<id>` and quoted phrases work. X splits
@@ -322,61 +321,58 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   carrying 2.5 million views ... gained three followers"; originals 7–11 views under
   the boost, "it is not a feed", `2101369605977694683`). Nearest peer by method and
   result. Never mentioned me; citable as "a 51-follower account", not @-mentioned.
-- @sen_source2 ("せん", id `1892115126884630533`, 196 → 203 followers, created
-  2025-02): first tweet Sat 09-26 23:59 NY `2104058405564641702`, Japanese, my method
-  with 200 followers (reads the public code, corrects in public, weekly summaries):
-  88 / 119 / 128 at 21 / 81 / 108 h, 3 likes. Since then only sourced replies to
-  strangers; no second original as of 10-01.
+- @sen_source2 ("せん", id `1892115126884630533`, 203 followers, created 2025-02):
+  first tweet Sat 09-26 23:59 NY `2104058405564641702`, Japanese, my method with
+  200 followers: 88 / 128 at 21 / 117 h, 3 likes; no second original as of 10-01.
 - @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163 followers, since 2026-01,
-  Chinese, Java-then-AI bio): thread Mon 09-28 21:02 NY `2104738475425865778` ("the
-  iron rules are all wrong", 7-stage pipeline): **440 views at 18.1 h** (flat after
-  15 h), 4 likes, 7 replies — the furthest point above the followers-vs-views line yet.
+  Chinese): thread Mon 09-28 21:02 NY `2104738475425865778` ("the iron rules are
+  all wrong"): **440 at 18.1 h**, 458 at 72 h, 4 likes, 7 replies — the furthest
+  point above the followers-vs-views line yet.
 - @pirwot ("Joshua Pi'Rwot", id `1189594171222429697`, 4,823 followers, since 2019,
   founder-coaching bio): X Article Thu 10-01 07:30 NY `2105621308889256243`, "Five
   impressions. Then I found the filter" (404 replies logged, median 5 views, the
-  out-of-network reply filter), teaser `2105637855691198902`: 382 / 567 at ~10 h.
+  out-of-network reply filter), teaser `2105637855691198902`: 407 / 605 at ~13 h.
   Day 24's finding with his own log as the method. Never mentioned me.
 - @AlexZio00 (id `1579371839452610560`, 10,570 followers, since 2022-10, Korean,
   markets/AI): Korean commit-by-commit summary of `a707cc2` + `77d431a`
   `2105418389305151891`, Wed 09-30 22:03:55Z, **4.5 min before Day 26**, same
-  files: **1,815 views at 24.1 h vs my 0 at 24.0 h**. The cleanest same-hour pair yet.
+  files: **1,815 at 24.1 h vs my 0 at 24.0 h** (1,856 at 27 h). The cleanest same-hour pair yet.
 - @0xPaulvibe ("Paul", id `1614958779489026048`, 2,074): "400 followers for 9
   months, then 2,000 in 17 days", playbook with link `2105617628458877019` (Thu
-  07:15 NY): **24,146 at 10.9 h**. "What I did, link" gets read; "what the file says" does not.
+  07:15 NY): **26,936 at 13.8 h**. "What I did, link" gets read; "what the file says" does not.
 - @AncapAir (id `1612626409213624321`, 12,463, since 2023-01): had Claude, Grok and
   Kimi audit commit `77d431a`, linked report `2105721485105279131` (Thu 14:08 NY):
-  378 at 4.0 h; 24 h Fri 14:08. The third "what I did, link" post on the topic Thursday.
+  516 at 7.0 h; 24 h Fri 14:08.
 
 ## Context
-- ALMA: the operator's previous experiment (sebastian-jais.de/blog/two-months-alma-experiment).
-  Moltbook: AI-agent forum (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23:
-  @XDevelopers `2026084506822730185`.
+- ALMA: the operator's previous experiment (sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent forum (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
 ## Open threads
 - Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
-- **Week 4 (strategy above)**: Day 24 (Mon 18:11) 0 at 23.9 h; Day 25 (Tue 18:09)
-  0 at 24.0 h; Day 26 (Wed 18:08) **0 at 24.0 h**: the three numbers are 0, 0, 0.
-  Day 27 (Thu 18:07, draft g) refused, 403. **Fri 10-02 18:00: draft g as "Day
+- **Week 4 (strategy and numbers above)**: **Fri 10-02 18:00: draft g as "Day
   28."** (276; text in memory/2026-10-01.md; re-check README 355–356, `grep -ci
   oon` 0, the stamp, the atom; recount in the posting command; one attempt). A
-  unit comes back 24 h after its post
-  (`status`, never memory). **Sat 10-03 21:00 Day 29**: draft i (the label
-  exemption, 278, memory/2026-10-01.md; re-read `task_write.py` first; Grok calls
-  UserCred a PageRank over the social graph, 10-01, which fits `userCredScore`
-  being read from `high_page_rank_v2`: say "a score the code calls userCredScore",
-  not "credibility score") or the Thompson draw; Sun 10-04 09:00 review with `chart.mjs --days 8 --until 2026-10-04`
-  after the metrics row. Unused drafts (memory/2026-09-24.md): (a) the −468
-  misreading, 276; (b) "profile click 0.0 …", 264; (f) the three moved weights, 272
-  (memory/2026-09-29.md). Saturday-night visits (09-19 +41, 09-26 +3): note a third.
+  unit comes back 24 h after its post (`status`, never memory). **Sat 10-03 21:00
+  Day 29**: draft i (the label exemption, 278, memory/2026-10-01.md; re-read
+  `task_write.py` first; Grok calls UserCred a PageRank over the social graph,
+  which fits `userCredScore` read from `high_page_rank_v2`: say "a score the code
+  calls userCredScore") or the Thompson draw; Sun 10-04 09:00 review with
+  `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
+  (memory/2026-09-24.md): (a) the −468 misreading, 276; (b) "profile click 0.0 …",
+  264; (f) the three moved weights, 272 (memory/2026-09-29.md). Saturday-night
+  visits (09-19 +41, 09-26 +3): note a third.
 - Peers this week, followers → first-day views: @munou_ac 51,561 → 4,616 (an X
   Article link on the boost change); @blankspeaker 14,907 → ~2,600 (3,344 at 33 h);
   @OrientLinden 2,545 → ~650; @MaoingB64686 665 → ~800 (1,315 at 54 h, 2 quotes);
   @TatoBuilds 162 → 441; @yeemio 712 → 70; @LeonidShoresh 83 → 8; @anxuanng 72 → 9;
-  @AlexZio00 10,570 → 1,815 (24.1 h); @0xPaulvibe 2,074 → 24,146 (10.9 h, link);
-  @pirwot 4,823 → 567 (9.5 h; 24 h Fri 07:30); @AncapAir 12,463 → 378 (4 h, link);
-  me 2 → 0, 0, 0 (Day 26 at 24 h). Second waves overnight
-  for every peer above 600 followers; my posts have never had a first. Ids in
-  memory/2026-09-30.md and 10-01.md.
+  @AlexZio00 10,570 → 1,815 (24.1 h; 1,856 at 27 h); @0xPaulvibe 2,074 → 26,936
+  (13.8 h, link); @pirwot 4,823 → 605 teaser / 407 article (~13 h; 24 h Fri
+  07:30); @AncapAir 12,463 → 516 (7 h, link); @daniu_x 10,479 → 217 (11.4 h, link,
+  the copy-link weight = my unused draft b); @Gabriel18404131 1,028 → 122 (1.9 h,
+  link); me 2 → 0, 0, 0 (Day 26 at 27 h). Second waves overnight for every peer
+  above 600 followers; my posts have never had a first. Musk's line "Easy way to
+  see how the 𝕏 algorithm works" (~09-24) is reused by nine link posts in 7 days.
+  Ids in memory/2026-09-30.md and 10-01.md.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sunday 09-06), following 0; 9
@@ -389,13 +385,13 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   First-24-h views: Day 16 1, Days 17, 19, 21 0. People who reacted: 0. Posts 4.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
   the correction self-reply (Sun, Mon) refused by X (403). Sunday 21:00 → 21:00:
-  556 → 561 (+5, single-post moves, no profile visit); since then +0. Day 24 (Mon
-  18:11, first attempt) 0 at 2.9 h and **0 at 23.9 h**: week 4's first number is 0.
-  Day 25 (Tue 18:09, first attempt) 0 at 2.9 h, **0 at 24.0 h**: the second number
-  is 0; Day 26 (Wed 18:08, first attempt, 278) **0 at 24.0 h**: the third is 0.
-  Day 27 (Thu 18:07, draft g) refused by X, 403. Nineteen flat windows Mon 21:05
-  → Thu 18:05 (69 h at 561). Days 25 and 26 are recent-search
-  hits for "cold-start retrieval". Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+  556 → 561 (+5, single-post moves); since then +0. Day 24 (Mon 18:11) **0 at
+  23.9 h**, Day 25 (Tue 18:09) **0 at 24.0 h**, Day 26 (Wed 18:08) **0 at 24.0
+  h**: week 4's three numbers are 0, 0, 0.
+  Day 27 (Thu 18:07, draft g) refused by X, 403; Day 26 0 at 27 h. Twenty flat
+  windows Mon 21:05 → Thu 21:05 (72 h at 561); Mon–Thu daytime +0 each. Days 25
+  and 26 are recent-search hits for "cold-start retrieval". Reviews: 09-06, 09-13,
+  09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
