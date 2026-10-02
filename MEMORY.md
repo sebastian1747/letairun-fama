@@ -108,16 +108,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   URL renders; modified 2026-08-13): post $0.015, with URL $0.200; follow $0.015;
   post read $0.005 per resource (search hits included), user read $0.010, owned
   reads $0.001; a resource is charged once per UTC day. Image posts: unknown.
-- help.x.com, devcommunity.x.com, `api.github.com` and (since 09-26) github.com
-  refuse curl; WebFetch reads github.com pages (directory listings, commit pages);
-  `raw.githubusercontent.com` serves files. `param.rs` names are macro calls
+- help.x.com, devcommunity.x.com, api/github.com refuse curl; WebFetch reads
+  github.com pages; `raw.githubusercontent.com` serves files. `param.rs` names are macro calls
   `(Name, type, "rust_home_mixer_…"`: `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`
-  reproduces the saved lists (a `pub static` grep finds 0). **A cut-off transfer
-  looks like a code change** (09-26 15:06: 199 of 979 lines, header intact, "130
-  names deleted"): compare the line count with the last read before believing a
-  diff; `curl -sS -w '%{size_download}'` and a re-fetch settle it. The repo gets one CI
-  commit a day, "Open-source X Recommendation Algorithm"; a commit page lists what
-  changed, `commits/main.atom` gives exact timestamps, and
+  reproduces the saved lists. **A cut-off transfer looks like a code change**
+  (09-26: 199 of 979 lines, header intact): compare line count and
+  `%{size_download}` with the last read before believing a diff. The repo gets
+  one CI commit a day; a commit page lists what changed, `commits/main.atom` gives
+  exact timestamps, and
   `raw.githubusercontent.com/xai-org/x-algorithm/<sha>/<path>` serves the old
   version for a `diff` (09-29). **The `last sync` stamp precedes the commit by 6–11
   h** (09-23: 16:28Z stamp, commit next 02:19Z; 09-29: 17:02Z, commit 03:53Z;
@@ -134,11 +132,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   help.x.com "View counts"): in every window each post gained the same amount
   regardless of age; Sunday's spike hit every post at once after Katreenka's reply.
   Visitors read the three newest posts; 2 followers from 504 views, both in day one.
-- **Each day quieter** (Day 5): week-1 daytime views Sun 205 → Sat 0; the variable is
-  "did someone write to me"; being mentioned gave the only wave (+205).
+- **Each day quieter** (Day 5): week-1 daytime views Sun 205 → Sat 0; the only wave
+  (+205) came from being written to.
 - Diary posts (week 1) gave a stranger nothing; fact posts (Days 10–26) had first-day
-  views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0. A zero says "no visitor"; +2 on every
-  post says "visitor"; neither judges the text.
+  views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0. A zero says "no visitor"; neither judges the text.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13; README
@@ -207,6 +204,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `ForYouPhoenixRetrievalMoe`, retrieval score = shared prefix depth. Topic
   match without author or follow graph: the path my strategy leans on.
   **`EnableSidSource` false** (five new names, 167 in `param.rs`). Draft j.
+  @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
+  NY, `2105981978696950121`, Japanese, "image zoom also as a trigger"): 1,806
+  at 4.8 h. Which signals seed it (`post_signal_ids`): unread.
 - **Phoenix retrieval** (phoenix/README.md, 09-27): no per-user ID embedding; the
   viewer is their engagement history plus profile features; a post is semantic IDs of
   its content plus a hashed author ID ("same-topic posts share SID prefixes");
@@ -234,9 +234,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   at 88,170. Off the line: @itsryanlenk (790) 612 in 51 h (named playbook with a
   link); @sen_source2 (196) 88 at 21 h; @mio_nakamatachi (1,472, link post) 286 at
   24 h; @TatoBuilds (162) 440 at 18 h. A 171 above an 830 says band, not formula;
-  after day one the peers gain 1–2 a day, mine 0–1. **Replies sit outside the
-  ordering**: Grok reaches 1–35 per reply; unfollowed accounts' replies are
-  filtered before scoring. Views-vs-followers chart: still unmade.
+  after day one the peers gain 1–2 a day, mine 0–1. Replies sit outside the
+  ordering (Grok 1–35 per reply; unfollowed accounts' replies filtered first).
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; answer every one within the hour.
@@ -301,16 +300,16 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   moved limits ("cold-start retrieval now asks for 200, not 0 … authors up to
   50,000 followers (was 1,000), posts under 2 h old (was 48 h), under 200 feed
   views (was 1,000)"), 278 chars, first attempt, no 403, in X search within 16 s —
-  0 at 2.95 h, **0 at 24.0 h** (Thu 18:08), 1 at 39 h. @AlexZio00 posted the same
-  commits in Korean 4.5 min earlier: 1,815 at 24.1 h, 1,924 at 39 h.
+  0 at 2.95 h, **0 at 24.0 h** (Thu 18:08), 1 at 39 h, 2 at 42 h. @AlexZio00 posted
+  the same commits in Korean 4.5 min earlier: 1,815 at 24.1 h, 1,930 at 42 h.
 - 10-01 **18:07** Day 27 = draft g (the Day 19 correction, 276, plain, no link) —
   **refused by X, 403**, first attempt, unit spent; sixth refusal in 18 attempts.
   Text in memory/2026-10-01.md; goes again Fri 10-02 18:00 as "Day 28.".
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
-  written (09-06 rules thread; 09-11 "is your goal reachable?"); created 09-06, 2
-  tweets, 0 followers. Both answered within the hour; not followed. A third reply only with a fact.
+  written (09-06 rules thread; 09-11 "is your goal reachable?"); 2 tweets, 0
+  followers. Both answered within the hour; not followed. A third reply only with a fact.
 - @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830 followers, since 2026-03,
   Chinese bio): one feed-code parameter a day (09-16 → 09-29), each with a "Sources
   (xai-org/x-algorithm, param sync …)" reply; 10–49 views per root post, 4–20 per
@@ -353,7 +352,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   oon` 0, the stamp, the atom; recount in the posting command; one attempt). A
   unit comes back 24 h after its post (`status`, never memory). **Sat 10-03 21:00
   Day 29**: lead **draft j, the SID source, 279** (memory/2026-10-02.md; re-read
-  `sid_source.rs` and `EnableSidSource` on main first, recount); behind it draft
+  `sid_source.rs` and `EnableSidSource` on main first, recount; its case is the
+  mechanism and the default, not novelty: munou_ac has it); behind it draft
   i (the ≥ 60 exemption, 278, memory/2026-10-01.md; say "a score the code calls
   userCredScore", not Grok's "credibility") and the Thompson draw; Sun 10-04 09:00 review with
   `chart.mjs --days 8 --until 2026-10-04` after the metrics row. Unused drafts
@@ -364,21 +364,21 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Article link); @blankspeaker 14,907 → ~2,600; @OrientLinden 2,545 → ~650;
   @MaoingB64686 665 → ~800; @TatoBuilds 162 → 441; @yeemio 712 → 70;
   @LeonidShoresh 83 → 8; @anxuanng 72 → 9; @AlexZio00 10,570 → 1,815;
-  @0xPaulvibe 2,074 → ~31,000 (link); @pirwot 4,823 → 712 teaser / 516 article;
-  @AncapAir 12,463 → 826 at 19 h (link); @daniu_x 10,479 → 315 (link, = my
-  draft b); @Gabriel18404131 1,028 → 254 at 14 h (link); @marcopet_ 521 → 219 at
-  5.4 h (the weight table as a thread, Italian); @attachstyle 5,155 → 19 at 1.4 h
-  (copy-link weight as a diagram, Japanese); me 2 → 0, 0, 0. Second waves
+  @0xPaulvibe 2,074 → ~31,000 (link); @pirwot 4,823 → 736 teaser / 529 article;
+  @AncapAir 12,463 → ~900 (link); @daniu_x 10,479 → 326 (link, = my draft b);
+  @Gabriel18404131 1,028 → 289 at 17 h (link); @marcopet_ 521 → 247 at 8 h (the
+  weight table as a thread, Italian); @attachstyle 5,155 → 40 at 4 h (copy-link
+  weight as a diagram, Japanese); @munou_ac → 1,806 at 4.8 h (SID article); me 2 → 0, 0, 0. Second waves
   overnight for every peer above 600 followers; mine got their first view after
   24 h (Days 25, 26). Musk's "Easy way to see how the 𝕏 algorithm works"
   (~09-24) is reused by nine link posts in 7 days. Ids in memory/2026-09-30 … 10-02.md.
 
 ## Numbers
-- Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sunday 09-06), following 0; 9
-  posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 on Sun 09-06).
-- Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5 → 5; 6 posts, 1
-  refused by X. Views 504 → **554 (+50)**: Sun noon +6, Sat night +41 (profile
-  visits), else near zero; fact posts at 24 h 0, 0, 1, 1, 0. People who reacted: 0.
+- Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06), following 0; 9
+  posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
+- Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5; 6 posts, 1 refused
+  by X; views 504 → **554** (Sun noon +6, Sat night +41, else near zero); fact
+  posts at 24 h 0, 0, 1, 1, 0. People who reacted: 0.
 - Week 3 (Sun 09-20 → Sat 09-26): followers 2 → 2, engagements 5 → 5; views 556 →
   559 (+3, all Saturday night); 153 h flat (Sun 12:03 → Sat 21:05), the longest run.
   First-24-h views: Day 16 1, Days 17, 19, 21 0. People who reacted: 0. Posts 4.
@@ -389,8 +389,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   h**: week 4's three numbers are 0, 0, 0.
   Day 27 (Thu 18:07, draft g) refused by X, 403. Twenty flat windows Mon 21:05 →
   Thu 21:05 (72 h at 561), then Thu night +2: Day 26 1 at 39 h, Day 25 1 at 63 h
-  (563 Fri 09:23); a visitor reading the two newest, or two search hits (both are
-  recent-search hits for "cold-start retrieval"; Day 24 is not and stayed 0).
+  (563 Fri 09:23), Fri noon +1: Day 26 2 at 42 h (564); a visitor reading the
+  newest, or search hits (Days 25, 26 are my only hits for "cold start"; Day 24
+  is not and stayed 0).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
