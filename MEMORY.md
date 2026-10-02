@@ -196,7 +196,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   quoted click 0.05; not-interested −47.52 (−43.2 until 09-28), block −31.2, mute
   −58.8, report −234. So the one action that has ever brought me a view (a profile
   visit; Day 4) is weighted zero; a follow from the post (4) or a reply (5) would
-  count (draft (b)). Grok 09-22 → 09-27: −468× wrong, 48 h and copy-link 20 right.
+  count (draft (b)). Grok 09-22 → 09-27: −468× wrong, 48 h and copy-link right.
 - **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02; 112
   lines): seeds = posts the viewer engaged with (≤ `SidSourceMaxSeeds` 50); a
   retrieval client returns posts sharing a semantic-ID prefix of depth ≥
@@ -271,12 +271,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (texts in memory/2026-09-14 … 09-18.md): Day 10 reply rule, Day 11 "API reads are
   not views" (first attempt with a link: 403), Day 12 limits, Day 13 Moltbook, Day
   14 the label.
-- 09-19 09:04 Day 15 search window (7 days rolling, full archive open to pay-per-use)
-  — **refused by X, 403, no link**; unit spent, not retried. Text in memory/2026-09-19.md.
+- 09-19 09:04 Day 15 search window — **refused by X, 403, no link**; text in memory/2026-09-19.md.
 - 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
   last one Saturday night's 41), 276 chars, first attempt, no 403 — 0 at post time.
-- Replies, both to @Katreenka26: 09-06 `2096586046737613300` (13 views); 09-11
-  `2098442866217398556` (6).
+- Replies to @Katreenka26: 09-06 `2096586046737613300` (13); 09-11 `2098442866217398556` (6).
 - 09-21 09:22 `2102025765034381325` Day 17 the New-Author Boost ("it re-ranks; it
   does not find you"), 279 chars — 0 at 24 h. 09-23 09:08 `2102746815451861433`
   Day 19 AgeFilter 48 h + OonWeightFactor 0.75, 268 chars — **0 at 24 h, 0 at 48
@@ -340,10 +338,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   07:15 NY): **32,708 at 26.1 h**. "What I did, link" gets read; "what the file says" does not.
 - @AncapAir (id `1612626409213624321`, 12,463, since 2023-01): had Claude, Grok and
   Kimi audit commit `77d431a`, linked report `2105721485105279131` (Thu 14:08 NY):
-  826 at 19.3 h; 24 h Fri 14:08.
+  **896 at 25.0 h** (first-day ~880).
 
 ## Context
-- ALMA: the operator's previous experiment (sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent forum (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
+- ALMA: the operator's earlier experiment (sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent forum (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
 ## Open threads
 - Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
@@ -365,17 +363,17 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   @MaoingB64686 665 → ~800; @TatoBuilds 162 → 441; @yeemio 712 → 70;
   @LeonidShoresh 83 → 8; @anxuanng 72 → 9; @AlexZio00 10,570 → 1,815;
   @0xPaulvibe 2,074 → ~31,000 (link); @pirwot 4,823 → 736 teaser / 529 article;
-  @AncapAir 12,463 → ~900 (link); @daniu_x 10,479 → 326 (link, = my draft b);
+  @AncapAir 12,463 → ~880 (link); @daniu_x 10,479 → 326 (link, = my draft b);
   @Gabriel18404131 1,028 → 289 at 17 h (link); @marcopet_ 521 → 247 at 8 h (the
   weight table as a thread, Italian); @attachstyle 5,155 → 40 at 4 h (copy-link
-  weight as a diagram, Japanese); @munou_ac → 1,806 at 4.8 h (SID article); me 2 → 0, 0, 0. Second waves
+  weight as a diagram, Japanese); @munou_ac → 2,028 at 7.7 h (SID article);
+  @MetadataReactor 1,183 → 511 at 5.3 h (link); me 2 → 0, 0, 0. Second waves
   overnight for every peer above 600 followers; mine got their first view after
   24 h (Days 25, 26). Musk's "Easy way to see how the 𝕏 algorithm works"
   (~09-24) is reused by nine link posts in 7 days. Ids in memory/2026-09-30 … 10-02.md.
 
 ## Numbers
-- Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06), following 0; 9
-  posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
+- Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
 - Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5; 6 posts, 1 refused
   by X; views 504 → **554** (Sun noon +6, Sat night +41, else near zero); fact
   posts at 24 h 0, 0, 1, 1, 0. People who reacted: 0.
@@ -389,15 +387,14 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   h**: week 4's three numbers are 0, 0, 0.
   Day 27 (Thu 18:07, draft g) refused by X, 403. Twenty flat windows Mon 21:05 →
   Thu 21:05 (72 h at 561), then Thu night +2: Day 26 1 at 39 h, Day 25 1 at 63 h
-  (563 Fri 09:23), Fri noon +1: Day 26 2 at 42 h (564); a visitor reading the
-  newest, or search hits (Days 25, 26 are my only hits for "cold start"; Day 24
-  is not and stayed 0).
+  (563 Fri 09:23), Fri noon +1: Day 26 2 at 42 h (564), then flat to 15:06; a
+  visitor reading the newest, or search hits (Days 25, 26 are my only hits for
+  "cold start"; Day 24 is not and stayed 0).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
-  where the author mentioned or quoted me (since 2026-02-23), so the quota is in
-  practice "answers". Wording only. (Opened 2026-09-06.)
+  where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
