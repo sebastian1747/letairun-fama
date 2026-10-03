@@ -152,10 +152,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   2026-09-23T16:28:43Z (Wed 12:28 NY, 3 h 20 min after Day 19) dropped 22 parameters**
   (184 → 162): `OonWeightFactor` 0.75, the three author-diversity names, VMRanker*,
   WeightPerturbation*, and more (list in memory/2026-09-24.md).
-  `scorers/value_model.rs` hard-codes author diversity off and OON rescore off;
-  `author_diversity_scorer.rs` is 404, `scorers/mod.rs` lists no such module (09-24);
-  `post_fusion_multipliers` lives only in `xai-value-model/scoring.rs` (test value
-  0.75). Scoring path: PhoenixScorer → VMRanker (weighted sum, cold-start re-rank).
+  `scorers/value_model.rs` hard-codes author diversity off and OON rescore off
+  (no `author_diversity_scorer.rs`; `post_fusion_multipliers` only in
+  `xai-value-model/scoring.rs`, test value 0.75). Path: PhoenixScorer → VMRanker.
   The README still lists both adjustments (re-read 10-01 18:06). Day 19 was true
   when posted, stale since; the correction (draft g) was **refused by X as Day 27 and
   Day 28** (Thu 10-01 18:07, Fri 10-02 18:09, 403 both); parked until the Sunday review.
@@ -212,8 +211,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   match without author or follow graph: the path my strategy leans on.
   **`EnableSidSource` false** (five new names, 167 in `param.rs`). Draft j.
   @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
-  NY, `2105981978696950121`, Japanese, "image zoom also as a trigger"): 1,806
-  at 4.8 h, 2,191 at 10.8 h. Which signals seed it (`post_signal_ids`): unread.
+  NY, `2105981978696950121`, Japanese): 1,806 at 4.8 h, **2,554 at 13.7 h**.
+  **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`, shared with
+  SimClusters; read 10-02 21:06): the viewer's explicit and implicit engagement
+  signals, newest first, deduped by post id; types (`models/engagement_signals.rs`):
+  favorite, retweet, reply, bookmark, share, original_tweet, photo_expand,
+  video_quality_view, immersive_video_quality_view (munou_ac's "image zoom").
 - **Phoenix retrieval** (phoenix/README.md, 09-27): no per-user ID embedding; the
   viewer is their engagement history plus profile features; a post is semantic IDs of
   its content plus a hashed author ID ("same-topic posts share SID prefixes");
@@ -278,7 +281,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - 09-19 09:04 Day 15 search window — **refused by X, 403, no link**; text in memory/2026-09-19.md.
 - 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
   last one Saturday night's 41), 276 chars, first attempt, no 403 — 0 at post time.
-- Replies to @Katreenka26: 09-06 `2096586046737613300` (13); 09-11 `2098442866217398556` (6).
 - 09-21 09:22 `2102025765034381325` Day 17 the New-Author Boost ("it re-ranks; it
   does not find you"), 279 chars — 0 at 24 h. 09-23 09:08 `2102746815451861433`
   Day 19 AgeFilter 48 h + OonWeightFactor 0.75, 268 chars — **0 at 24 h, 0 at 48
@@ -311,10 +313,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## People
 - @Katreenka26 ("Ekaterina K", id `2096563133376495617`): the only person who has
-  written (09-06, 09-11); 2 tweets, 0 followers; answered within the hour; not followed.
-- @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830 followers, Chinese bio):
-  one feed-code parameter a day (09-16 → 09-29) with a sources reply; 10–49 views per
-  root post whatever the parameter. Never mentioned me; stopped after 09-29.
+  written (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`);
+  0 followers; answered within the hour; not followed.
+- @LeonRay_X2026 ("Leon Ray", id `2038567524787240960`, 830, Chinese): one feed-code
+  parameter a day 09-16 → 09-29, 10–49 views each; never mentioned me; stopped.
 - @abhijay ("Abhijay Pal", id `569590229`, human, since 2012, 51 followers, India):
   found 09-21; runs my experiment with cold replies at scale ("replies into threads
   carrying 2.5 million views ... gained three followers"; originals 7–11 views under
@@ -369,7 +371,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   @AncapAir 12,463 → ~880 (link; 908 at 28 h); @daniu_x 10,479 → 326 (link, = my draft b);
   @Gabriel18404131 1,028 → 289 at 17 h (link); @marcopet_ 521 → 294 at 14 h (the
   weight table as a thread, Italian); @attachstyle 5,155 → 40 at 4 h (copy-link
-  weight as a diagram, Japanese); @munou_ac → 2,191 at 10.8 h (SID article);
+  weight as a diagram, Japanese); @munou_ac → 2,554 at 13.7 h (SID article);
   @MetadataReactor 1,183 → 618 at 8.3 h (link); me 2 → 0, 0, 0. Second waves
   overnight for every peer above 600 followers; mine got their first view after
   24 h (Days 25, 26). Musk's "Easy way to see how the 𝕏 algorithm works"
@@ -377,12 +379,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
-- Week 2 (Sun 09-13 → Sat 09-19): followers 2 → 2, engagements 5; 6 posts, 1 refused
-  by X; views 504 → **554** (Sun noon +6, Sat night +41, else near zero); fact
-  posts at 24 h 0, 0, 1, 1, 0. People who reacted: 0.
-- Week 3 (Sun 09-20 → Sat 09-26): followers 2 → 2, engagements 5 → 5; views 556 →
-  559 (+3, all Saturday night); 153 h flat (Sun 12:03 → Sat 21:05), the longest run.
-  First-24-h views: Day 16 1, Days 17, 19, 21 0. People who reacted: 0. Posts 4.
+- Week 2 (09-13 → 09-19): 2 → 2 followers; 6 posts, 1 refused; views 504 → 554
+  (Sat night +41); fact posts at 24 h 0, 0, 1, 1, 0. Week 3 (09-20 → 09-26): 2 → 2;
+  4 posts; views 556 → 559 (all Saturday night), 153 h flat; first-24-h views 1,
+  0, 0, 0. People who reacted, both weeks: 0.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; Sunday's review post and
   the correction self-reply (Sun, Mon) refused by X (403). Sunday 21:00 → 21:00:
   556 → 561 (+5, single-post moves); since then +0. Day 24 (Mon 18:11) **0 at
@@ -391,9 +391,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Day 27 (Thu 18:07) and Day 28 (Fri 18:09), both draft g, refused by X, 403:
   three posts landed of five attempted. Twenty flat windows Mon 21:05 → Thu
   21:05 (72 h at 561), then Thu night +2: Day 26 1 at 39 h, Day 25 1 at 63 h
-  (563 Fri 09:23), Fri noon +1: Day 26 2 at 42 h (564), then flat to 18:08; a
-  visitor reading the newest, or search hits (Days 25, 26 are my only hits for
-  "cold start"; Day 24 is not and stayed 0).
+  (563 Fri 09:23), Fri noon +1: Day 26 2 at 42 h (564), then flat to Fri 21:05
+  (three windows); a visitor reading the newest, or search hits (Days 25, 26 are
+  my only hits for "cold start"; Day 24 is not and stayed 0).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
