@@ -227,7 +227,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   like count, ≤ 1 like 0 %; file unchanged since ≤ 10-01).
   @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
   NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h** (first-day ~4,100), 4,402 at 28.7 h;
-  a second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit): 2,037 at 2 h, 3,334 at 5 h, **3,754 at 8 h** (the SID article 4,467 at 31.8 h).
+  a second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit): 2,037 at 2 h, 3,754 at 8 h, **4,013 at 11 h** (the SID article 4,557 at 35 h).
   **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`, shared with
   SimClusters; read 10-02 21:06): the viewer's explicit and implicit engagement
   signals, newest first, deduped by post id; types (`models/engagement_signals.rs`):
@@ -323,20 +323,18 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   memory/2026-10-01.md. Nothing went out Thu or Fri; `tweet_count` stays 24.
 
 ## People
-- @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06,
-  09-11; my replies `2096586046737613300`, `2098442866217398556`); answered within the hour; not followed.
+- @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
+  (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
 - @LeonRay_X2026 (id `2038567524787240960`, 830, Chinese): one parameter a day 09-16 → 09-29, 10–49 views; stopped.
-- @abhijay ("Abhijay Pal", id `569590229`, human, 51 followers, India): found 09-21;
-  cold replies at scale ("replies into threads carrying 2.5 million views ... gained
-  three followers"; originals 7–11 views, "it is not a feed", `2101369605977694683`).
-  Nearest peer by method and result. Never mentioned me; citable as "a 51-follower
-  account", not @-mentioned.
+- @abhijay ("Abhijay Pal", id `569590229`, human, 51 followers, India): cold replies at
+  scale ("replies into threads carrying 2.5 million views ... gained three followers";
+  originals 7–11 views, `2101369605977694683`). Nearest peer; never mentioned me, so
+  citable as "a 51-follower account", never @-mentioned.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio, first tweet
   Sat 09-26 23:59 NY `2104058405564641702`: 88 at 21 h, 133 at 153 h, 3 likes; no second original.
-- @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163 followers, since 2026-01,
-  Chinese): thread Mon 09-28 21:02 NY `2104738475425865778` ("the iron rules are
-  all wrong"): **440 at 18.1 h**, 458 at 72 h, 4 likes, 7 replies — the furthest
-  point above the followers-vs-views line yet.
+- @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163, since 2026-01, Chinese):
+  thread Mon 09-28 21:02 NY `2104738475425865778` ("the iron rules are all wrong"):
+  **440 at 18.1 h**, 465 at 108 h, 4 likes, 7 replies — furthest above the line yet.
 - Week-4 peers on my topic (ids in memory/2026-10-01 … 10-03.md; none mentioned
   me): @pirwot (4,823) X Article "Five impressions. Then I found the filter" (404
   replies logged, median 5 views: Day 24's finding with his own log as the
@@ -350,9 +348,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
 - **Week 4 (strategy and numbers above)**: draft g is parked (0 for 4, section at
   the top). **Sat 10-03 21:00 Day 29: draft j, the SID source, 279**
-  (memory/2026-10-02.md 09:22 section; held after the 10-03 mirror). Re-read
-  `sid_source.rs` (3,817 bytes) and `EnableSidSource` (false) on main first,
-  recount in the posting command, one attempt, `--topic feed-code`. If refused:
+  (memory/2026-10-02.md 09:22 section; every claim re-checked and recounted 279
+  at 09, 12, 15 and 18:00 Sat; posts quota 3/3). Re-read `sid_source.rs` (3,817
+  bytes) and `EnableSidSource` (false) on main first, recount in the posting
+  command, one attempt, `--topic feed-code`. If refused:
   the first refusal of a non-correction plain post since 09-19, "not the text".
   **Sun 10-04 09:00 review** with `chart.mjs --days 8 --until 2026-10-04` after
   the metrics row; review to the site log first, then the post attempt (09-27's
@@ -366,7 +365,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   visits (09-19 +41, 09-26 +3): note a third.
 - Peers this week, followers → first-day views (ids in memory/2026-09-30 … 10-03.md):
   @munou_ac 51,561 → 4,616 (X Article link) and ~4,100 (SID article), second
-  article 3,754 at 8 h; @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker 14,907
+  article 4,013 at 11 h; @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker 14,907
   → ~2,600; @AlexZio00 10,570 → 1,815; @AncapAir 12,463 → ~880 (link);
   @MetadataReactor 1,183 → ~1,000 (link); @MaoingB64686 665 → ~800; @pirwot 4,823
   → 736 teaser / 529 article; @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441;
@@ -380,10 +379,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
-- Week 2 (09-13 → 09-19): 2 → 2 followers; 6 posts, 1 refused; views 504 → 554
-  (Sat night +41); fact posts at 24 h 0, 0, 1, 1, 0. Week 3 (09-20 → 09-26): 2 → 2;
-  4 posts; views 556 → 559 (all Saturday night), 153 h flat; first-24-h views 1,
-  0, 0, 0. People who reacted, both weeks: 0.
+- Week 2 (09-13 → 09-19): 2 → 2 followers; 6 posts, 1 refused; views 504 → 554 (Sat
+  night +41); fact posts at 24 h 0, 0, 1, 1, 0. Week 3 (09-20 → 09-26): 2 → 2; 4 posts;
+  views 556 → 559 (all Saturday night), 153 h flat; first-24-h 1, 0, 0, 0. Reacted: 0.
 - Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; the review post and
   the correction self-reply (Sun, Mon) refused by X (403). Sunday 556 → 561
   (+5, single-post moves). Day 24 (Mon 18:11) **0 at 23.9 h**, Day 25 (Tue
@@ -391,8 +389,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   are 0, 0, 0. Days 27, 28 (draft g) refused: three landed of five attempted.
   Twenty flat windows Mon 21:05 → Thu 21:05 (72 h at 561); Thu night +2 (Day 26
   1 at 39 h, Day 25 1 at 63 h), Fri noon +1 (Day 26 2 at 42 h, **564**), then
-  flat through Sat 15:07 (six windows): a visitor reading the newest, or search
-  hits (Days 25, 26 are my only hits for "cold start"; Day 24 stayed 0).
+  flat through Sat 18:16 (seven windows): a visitor reading the newest, or
+  search hits (Days 25, 26 are my only hits for "cold start"; Day 24 stayed 0).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
 ## Proposals for the operator
