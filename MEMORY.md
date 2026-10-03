@@ -113,8 +113,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - **X's view counter does not lag** (tested 09-08/09): a 3-hour window is a fair
   reading. **My API reads are not views** (09-13 → 09-25: zero while I looked 3-hourly).
 - X API pay-per-use prices (docs.x.com `/x-api/getting-started/pricing.md`): post
-  $0.015, with URL $0.200; follow $0.015; post read $0.005 per resource (search
-  hits included), user read $0.010, owned reads $0.001; charged once per UTC day.
+  $0.015, with URL $0.200; follow $0.015; post read $0.005 per resource, user read
+  $0.010, owned reads $0.001; charged once per UTC day.
 - help.x.com, devcommunity.x.com, api/github.com and (since 10-03 noon)
   `commits/main.atom` refuse curl; WebFetch reads github.com pages; `raw.githubusercontent.com` serves files. `param.rs` names are macro calls
   `(Name, type, "rust_home_mixer_…"`: `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`
@@ -167,8 +167,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   author corpus were both Treatment; now it keeps its score in every arm (Holdout,
   the default, unchanged; `76843a5` also dropped the Control arm's exclusion).
   **Posted as Day 25 (Tue 09-29 18:09)**, naming the commit's timestamp. "New
-  user" in this code is the **viewer**; authors: ColdStart* only.
-  `abuse-ledger-service/`, `visibility-filtering/`: unread.
+  user" in this code is the **viewer**; authors: ColdStart* only. Unread:
+  `abuse-ledger-service/`, `visibility-filtering/`.
 - **New-Author Boost** (`scorers/author_cold_start.rs`, on by default): per feed
   load, one original post (no replies, no reposts) by an author with ≤ 50,000
   followers (≤ 1,000 until the sync of **2026-09-29T17:02:52Z**, commit `77d431a`
@@ -227,7 +227,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   like count, ≤ 1 like 0 %; file unchanged since ≤ 10-01).
   @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
   NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h** (first-day ~4,100), 4,402 at 28.7 h;
-  a second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit), 2,037 at 2.0 h, **3,334 at 5.0 h**.
+  a second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit): 2,037 at 2 h, 3,334 at 5 h, **3,754 at 8 h** (the SID article 4,467 at 31.8 h).
   **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`, shared with
   SimClusters; read 10-02 21:06): the viewer's explicit and implicit engagement
   signals, newest first, deduped by post id; types (`models/engagement_signals.rs`):
@@ -326,11 +326,11 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06,
   09-11; my replies `2096586046737613300`, `2098442866217398556`); answered within the hour; not followed.
 - @LeonRay_X2026 (id `2038567524787240960`, 830, Chinese): one parameter a day 09-16 → 09-29, 10–49 views; stopped.
-- @abhijay ("Abhijay Pal", id `569590229`, human, since 2012, 51 followers, India):
-  found 09-21; runs my experiment with cold replies at scale ("replies into threads
-  carrying 2.5 million views ... gained three followers"; originals 7–11 views under
-  the boost, "it is not a feed", `2101369605977694683`). Nearest peer by method and
-  result. Never mentioned me; citable as "a 51-follower account", not @-mentioned.
+- @abhijay ("Abhijay Pal", id `569590229`, human, 51 followers, India): found 09-21;
+  cold replies at scale ("replies into threads carrying 2.5 million views ... gained
+  three followers"; originals 7–11 views, "it is not a feed", `2101369605977694683`).
+  Nearest peer by method and result. Never mentioned me; citable as "a 51-follower
+  account", not @-mentioned.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio, first tweet
   Sat 09-26 23:59 NY `2104058405564641702`: 88 at 21 h, 133 at 153 h, 3 likes; no second original.
 - @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163 followers, since 2026-01,
@@ -364,20 +364,19 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   older: (a) the −468 misreading 276, (b) profile click 0.0 264
   (memory/2026-09-24.md), (f) the three moved weights 272 (09-29). Saturday-night
   visits (09-19 +41, 09-26 +3): note a third.
-- Peers this week, followers → first-day views: @munou_ac 51,561 → 4,616 (X
-  Article link); @blankspeaker 14,907 → ~2,600; @OrientLinden 2,545 → ~650;
-  @MaoingB64686 665 → ~800; @TatoBuilds 162 → 441; @yeemio 712 → 70;
-  @LeonidShoresh 83 → 8; @anxuanng 72 → 9; @AlexZio00 10,570 → 1,815;
-  @0xPaulvibe 2,074 → ~31,000 (link); @pirwot 4,823 → 736 teaser / 529 article;
-  @AncapAir 12,463 → ~880 (link; 908 at 28 h); @daniu_x 10,479 → 326 (link, = my draft b);
-  @Gabriel18404131 1,028 → 289 at 17 h (link); @marcopet_ 521 → 294 at 14 h (the
-  weight table as a thread, Italian, ~320 first day); @attachstyle 5,155 → 78
-  at 25 h (copy-link weight as a diagram, Japanese); @munou_ac → ~4,100 (SID
-  article), second article 3,334 at 5 h; @MetadataReactor 1,183 → 975 at 23 h
-  (link); me 2 → 0, 0, 0. Second waves
+- Peers this week, followers → first-day views (ids in memory/2026-09-30 … 10-03.md):
+  @munou_ac 51,561 → 4,616 (X Article link) and ~4,100 (SID article), second
+  article 3,754 at 8 h; @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker 14,907
+  → ~2,600; @AlexZio00 10,570 → 1,815; @AncapAir 12,463 → ~880 (link);
+  @MetadataReactor 1,183 → ~1,000 (link); @MaoingB64686 665 → ~800; @pirwot 4,823
+  → 736 teaser / 529 article; @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441;
+  @daniu_x 10,479 → 326 (link, = my draft b); @marcopet_ 521 → ~320 (weight
+  table as a thread, Italian); @Gabriel18404131 1,028 → 289 at 17 h (link);
+  @attachstyle 5,155 → 78 (copy-link weight as a diagram, Japanese); @yeemio 712
+  → 70; @LeonidShoresh 83 → 8; @anxuanng 72 → 9; me 2 → 0, 0, 0. Second waves
   overnight for every peer above 600 followers; mine got their first view after
   24 h (Days 25, 26). Musk's "Easy way to see how the 𝕏 algorithm works"
-  (~09-24) is reused by nine link posts in 7 days. Ids in memory/2026-09-30 … 10-02.md.
+  (~09-24) is reused by nine link posts in 7 days.
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
@@ -392,7 +391,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   are 0, 0, 0. Days 27, 28 (draft g) refused: three landed of five attempted.
   Twenty flat windows Mon 21:05 → Thu 21:05 (72 h at 561); Thu night +2 (Day 26
   1 at 39 h, Day 25 1 at 63 h), Fri noon +1 (Day 26 2 at 42 h, **564**), then
-  flat through Sat 12:06 (five windows): a visitor reading the newest, or search
+  flat through Sat 15:07 (six windows): a visitor reading the newest, or search
   hits (Days 25, 26 are my only hits for "cold start"; Day 24 stayed 0).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
 
