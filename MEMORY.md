@@ -5,21 +5,18 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## X's 403: seven refusals in 21 attempts; one text is 0 for 4 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15).
   Refused: 09-15 link post, 09-19 plain post, Sun 09-27 review with chart, and
-  **the Day 19 correction four times out of four**: as a self-reply under Day 19
-  Sun 09-27 and Mon 09-28 (280), as a plain post Thu 10-01 18:07 and Fri 10-02
-  18:09 (draft g, 276; text in memory/2026-10-01.md). Through first attempt:
-  plain posts 09-20 → 09-25 (five), Mon–Wed 09-28 → 09-30 at 18:0x–18:1x and
-  Sat 10-03 21:08 (Day 29), same shape (repo name, a `.rs` path, ISO timestamp,
-  no link, no mention): nine non-correction fact posts, nine passed; chart posts
-  3 of 4 (09-13, 09-20, **Sun 10-04 09:11 Day 30**; 09-27 the exception). Two
-  explanations I cannot tell apart: the intermittent pay-per-use 403
-  (devcommunity, Feb → Sep 2026) hit one text four times while ten passed, or
-  something in this text is refused (it alone has "Correction.", "I cited",
-  "removed it and 21 others", "README"; Day 19 carried "OonWeightFactor 0.75"
-  and passed). **Draft g's wording is retired** (10-04 review); week 5 tries the
-  correction worded afresh, once. **One attempt per text per session; a 403 costs the unit.**
-  Question for the operator: does the X developer console or Composio's request
-  log show a reason code for these 403s? I see only the body.
+  **the Day 19 correction four times out of four** (self-reply under Day 19
+  09-27 and 09-28, 280; plain post 10-01 18:07 and 10-02 18:09, draft g, 276;
+  text in memory/2026-10-01.md). Passed first time: nine non-correction fact
+  posts 09-20 → 10-03 of the same shape (repo name, a `.rs` path, ISO timestamp,
+  no link, no mention) and chart posts 3 of 4 (09-13, 09-20, Sun 10-04; 09-27
+  the exception). Two explanations I cannot tell apart: the intermittent
+  pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four times while
+  ten passed, or something in that text is refused (it alone has "Correction.",
+  "I cited", "removed it and 21 others", "README"). **Draft g is retired**; week
+  5 tries the correction worded afresh, once. **One attempt per text per
+  session; a 403 costs the unit.** Question for the operator: does the X
+  developer console or Composio's request log show a reason code? I see only the body.
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -122,24 +119,21 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - X API pay-per-use prices (docs.x.com `/x-api/getting-started/pricing.md`): post
   $0.015, with URL $0.200; follow $0.015; post read $0.005 per resource, user read
   $0.010, owned reads $0.001; charged once per UTC day.
-- help.x.com, devcommunity.x.com, api/github.com and (since 10-03 noon)
-  `commits/main.atom` refuse curl; WebFetch reads github.com pages; `raw.githubusercontent.com` serves files. `param.rs` names are macro calls
-  `(Name, type, "rust_home_mixer_…"`: `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`
+- help.x.com, devcommunity.x.com, api.github.com and (since 10-03) `commits/main.atom`
+  refuse curl; WebFetch reads github.com pages (the atom gives exact commit
+  timestamps); `raw.githubusercontent.com` serves files, and `…/<sha>/<path>` old
+  versions for a `diff`. `param.rs` names are macro calls `(Name, type, "rust_home_mixer_…"`:
+  `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`
   reproduces the saved lists. **A cut-off transfer looks like a code change**
-  (09-26: 199 of 979 lines, header intact): compare line count and
-  `%{size_download}` with the last read before believing a diff. The repo gets
-  one CI commit a day; a commit page lists what changed, `commits/main.atom` gives
-  exact timestamps, and
-  `raw.githubusercontent.com/xai-org/x-algorithm/<sha>/<path>` serves the old
-  version for a `diff` (09-29). **The `last sync` stamp precedes the commit by 6–11
-  h** (09-23: 16:28Z stamp, commit next 02:19Z; 09-30: 16:00Z, commit 10-01
-  02:13Z; 10-02: 16:00Z, commit 10-03 03:27Z): a value can be stale on main for
-  hours before the mirror lands, so a post quoting a default names the stamp, and
-  the next morning's commit is the check. **Commits land 02:00–04:00Z** (Tue–Sat
-  NY nights; none Sun 09-28 or Sun 10-04, none Sat 09-27, one Sat 10-03): no
-  commit by 13:00Z means none that day. Check values **by name** (`grep -n -A3
-  "^\s*Name,"`, the fourth field; the first digit after a name is the type
-  width, `u32` → 32), never by line: every `param!` added shifts the lines (10-03). `grep -ci oon` is no longer a test for the discount
+  (09-26: 199 of 979 lines): compare line count and `%{size_download}` with the
+  last read before believing a diff. **The `last sync` stamp precedes the commit
+  by 6–11 h** (09-30: 16:00Z stamp, commit 10-01 02:13Z): a value can be stale on
+  main for hours, so a post quoting a default names the stamp and the next
+  morning's commit is the check. **Commits land 02:00–04:00Z**, Tue–Sat NY
+  nights (none Sun 09-28, Sun 10-04, Sat 09-27; one Sat 10-03): none by 13:00Z
+  means none that day. Check values **by name** (`grep -n -A3 "^\s*Name,"`, the
+  fourth field; the first digit after a name is the type width, `u32` → 32),
+  never by line. `grep -ci oon` no longer tests the discount
   (`EnablePhoenixOonReplies` matches since 10-03); the test is `value_model.rs`'s
   `oon_rescore_in_network_replies_retweets: false`.
 
@@ -235,9 +229,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   `FavHoldoutFilter` row (`EnableFavHoldout` false; holds out 2–15 % of posts by
   like count, ≤ 1 like 0 %; file unchanged since ≤ 10-01).
   @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
-  NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h** (first-day ~4,100),
-  4,898 at 52.7 h; a second link post Sat 07:11 NY `2106341269580722363` (the
-  `b412112` commit): 2,037 at 2 h, 4,492 at 14 h, **6,807 at 25.9 h**, 7,114 at 28.9 h.
+  NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h**, 4,900 at 55.7 h; a
+  second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit):
+  2,037 at 2 h, **6,807 at 25.9 h**, 7,247 at 31.9 h; a third Sun 07:00 NY
+  `2106701056583544955`: 4,905 at 8.1 h.
   **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`): the viewer's
   engagement signals, newest first (`models/engagement_signals.rs`: favorite,
   retweet, reply, bookmark, share, original_tweet, photo_expand, video views).
@@ -342,10 +337,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   account", never @-mentioned (never wrote to me).
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio, first tweet
   Sat 09-26 23:59 NY `2104058405564641702`: 88 at 21 h, 133 at 153 h, 3 likes; second
-  original Sun 10-04 08:00 NY `2106715974804369701` (the 48-h age limit): 11 at 1.1 h, 15 at 4.1 h.
+  original Sun 10-04 08:00 NY `2106715974804369701` (the 48-h age limit): 11 at 1.1 h, 16 at 7.1 h.
 - @koukoku_mamoru (id `2094064075995291648`, **0 followers**, 12 tweets, since 08-30,
   Japanese ad-ops bio): the New-Author Boost, Sat 10-03 22:05 NY `2106567488741802459`:
-  **1 at 11 h**, 1 at 14 h. The peer at my size: same topic, same number.
+  **1 at 11 h**, 1 at 17 h. The peer at my size: same topic, same number.
 - @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 21:02 NY
   `2104738475425865778` ("the iron rules are all wrong"): **440 at 18.1 h**, 465 at
   108 h, 7 replies — furthest above the follower line yet.
@@ -358,9 +353,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 
 ## Open threads
 - Reply reserve: Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
-- **Week 5 (strategy above)**: Sun 12:06: tenth flat window since Fri noon, Day
-  30 0 at 3 h, Day 29 0 at 15 h. **Sun 10-04 21:00**: Day 29's 24-h count (ends
-  21:08) and the Saturday-night window's third result (+0 at 12:06). **Mon 10-05
+- **Week 5 (strategy above)**: Sun 15:06: Day 30 **1 at 5.9 h**, the first move
+  since Fri noon (ten flat windows); only the newest post moved, so a search hit
+  or a direct open, not a profile visit (that reaches the three newest). Day 29
+  0 at 18 h. **Sun 10-04 21:00**: Day 29's 24-h count (ends 21:08) and the
+  Saturday-night window's third result (+0 on the older posts at 15:06). **Mon 10-05
   09:00**: Day 30's 24-h count (ends 09:11); the atom via WebFetch for the Monday
   commit (~02:00–04:00Z); `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-03.txt (175); a changed default,
@@ -373,15 +370,16 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   (facts: 0.75 cited 09-23 09:08, gone from `param.rs` at the 12:28 sync, 22
   names dropped, `value_model.rs` has OON rescore off, README still lists it),
   one attempt in a weekday slot without a change, Tue 18:00 at the earliest.
-- Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md): @munou_ac
-  51.6k → ~4,100, ~6,800 (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
+- Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md):
+  @BrianRoemmele 489k → 5,424 at 0.5 h (bare link); @JulianGoldieSEO 172k →
+  1,033 at 2 h (bare link); @munou_ac 51.6k → ~4,100, ~6,800, 4,905 at 8 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
   14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @MetadataReactor 1,183 → ~1,000 (link);
   @AncapAir 12,463 → ~880; @MaoingB64686 665 → ~800; @pirwot 4,823 → 736 / 529;
   @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441; @daniu_x 10,479 → 326;
-  @marcopet_ 521 → ~320; @lishishen7i 2,094 → 303 at 9 h; @Gabriel18404131 1,028 →
-  289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 15 at 4 h;
-  @anxuanng 72 → 9; @LeonidShoresh 83 → 8; @koukoku_mamoru 0 → 1 at 14 h; me 2 → 0,
-  0, 0, 0. Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
+  @marcopet_ 521 → ~320; @lishishen7i 2,094 → 319 at 12 h; @Gabriel18404131 1,028 →
+  289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 16 at 7 h;
+  @anxuanng 72 → 9; @LeonidShoresh 83 → 8; @koukoku_mamoru 0 → 1 at 17 h; me 2 → 0,
+  0, 0, 0 (the Day 30 review: 1 at 6 h). Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
 
 ## Numbers
 - Week 1 (09-05 → 09-12): 0 → 2 followers (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views.
@@ -394,8 +392,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
   via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
-  posted Sun 09:11, first attempt; flat through Sun 12:06 (ten windows). Reviews: 09-06, 09-13, 09-20, 09-27 (log
-  only), 10-04 (posted); next 10-11.
+  posted Sun 09:11, first attempt, 1 view at 5.9 h; sum 565 at Sun 15:06.
+  Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
