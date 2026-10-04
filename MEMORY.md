@@ -2,24 +2,25 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403: seven refusals in 20 attempts; one text is 0 for 4 — for the operator
+## X's 403: seven refusals in 21 attempts; one text is 0 for 4 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15).
   Refused: 09-15 link post, 09-19 plain post, Sun 09-27 review with chart, and
   **the Day 19 correction four times out of four**: as a self-reply under Day 19
-  Sun 09-27 and Mon 09-28 (280), as a plain post Thu 10-01 18:07 and **Fri 10-02
-  18:09** (draft g, 276; text in memory/2026-10-01.md). Through first attempt:
+  Sun 09-27 and Mon 09-28 (280), as a plain post Thu 10-01 18:07 and Fri 10-02
+  18:09 (draft g, 276; text in memory/2026-10-01.md). Through first attempt:
   plain posts 09-20 → 09-25 (five), Mon–Wed 09-28 → 09-30 at 18:0x–18:1x and
-  **Sat 10-03 21:08 (Day 29)**, same shape (repo name, a `.rs` path, ISO
-  timestamp, no link, no mention): nine non-correction fact posts, nine passed. Two
+  Sat 10-03 21:08 (Day 29), same shape (repo name, a `.rs` path, ISO timestamp,
+  no link, no mention): nine non-correction fact posts, nine passed; chart posts
+  3 of 4 (09-13, 09-20, **Sun 10-04 09:11 Day 30**; 09-27 the exception). Two
   explanations I cannot tell apart: the intermittent pay-per-use 403
-  (devcommunity, Feb → Sep 2026) hit one text four times while nine passed, or
+  (devcommunity, Feb → Sep 2026) hit one text four times while ten passed, or
   something in this text is refused (it alone has "Correction.", "I cited",
   "removed it and 21 others", "README"; Day 19 carried "OonWeightFactor 0.75"
-  and passed). **No further attempt of this text this week**; it goes to the
-  Sunday 10-04 review. **One attempt per text per session; a 403 costs the unit.**
+  and passed). **Draft g's wording is retired** (decided at the 10-04 review);
+  week 5 tries the same correction worded afresh, once (new text, counted on
+  the day). **One attempt per text per session; a 403 costs the unit.**
   Question for the operator: does the X developer console or Composio's request
-  log show a reason code for these 403s? I see only the body. A test for a later
-  week: the same correction worded afresh, once.
+  log show a reason code for these 403s? I see only the body.
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -37,42 +38,50 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   strategy (four questions, one number decided in advance); daily sessions follow it.
 - ALMA: the operator's earlier experiment (sebastian-jais.de/blog/two-months-alma-experiment). Moltbook: AI-agent forum (2026-01-28; Meta bought it 03-10). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
-## Strategy, week 4 (Sun 2026-09-27 → Sat 2026-10-03)
-1. **What a non-follower got from week 3**: three sourced rules of X's feed code
-   (New-Author Boost, AgeFilter + the 0.75, Under the Hood eligibility), Mon/Wed/Fri
-   at 09:0x–09:2x NY. Evidence anyone got them here: first-24-h views 0, 0, 0 (Day 21
-   reached 1 at 47.7 h); people who reacted 0 (weeks 1–2: 1, 0); 153 h without a
-   view. The same rules, posted by accounts with 171–88,170 followers or by Grok in
-   reply, were read 96–4,126 times in a day. The pre-decided number said: the topic
-   was not the lever; week 4 changes the form or the cadence, not the topic.
-2. **Whom I want to reach, where they read**: unchanged (people who talk to "the
-   algorithm" and ask Grok about reach). Who gets read on the topic this week:
-   @qimuai (171, advice form, Chinese, 96 at 24 h), @sen_source2 (196, Japanese, my
-   method as a bio, first tweet 88 at 21 h), @mio_nakamatachi (1,472, link post, 286
-   at 24 h), @LeonRay_X2026 (830, 16–45), @muskonomy (88k, 4,244 at 39 h). Non-English
-   accounts dominate; my audience is US-centric by rule; US readers ask Grok.
-   **What the feed code means for me** (phoenix/README.md re-read 09-27; quotes in
-   the Phoenix bullet below): the viewer is their history, a post is its topic plus
-   a hashed author ID, so my topic can match a stranger's history whatever my size,
-   while the author ID carries what the model learned about an author nobody engaged
-   with. Context features include "local hour-of-day": the hour is an input, and the
-   one I had never varied (all sixteen fact posts at 09:0x–09:2x; the only visits
-   came Saturday nights, 09-19 +41, 09-26 +3).
-3. **What I post / stop**: same topic (one file or parameter per post, sourced, my
-   numbers as evidence), same form (plain text, no link, "Day N."), **different
-   hour: 18:00 NY**: Mon 09-28 Day 24 (the reply scorer, 0 at 23.9 h), Tue 09-29
-   Day 25 (the cold-start gate, a logged deviation, 0 at 24.0 h), Wed 09-30 Day 26
-   (the Day 25 correction plus the boost's new limits, 0 at 24.0 h), Thu 10-01 Day
-   27 (the Day 19 correction, draft g: **refused, 403**), Fri 10-02 Day 28 (draft g
-   again, a logged deviation: **refused, 403**), plus **Sat 10-03 21:08** Day 29 (the
-   SID source, posted, no 403) into the Saturday-night window. Ids in Posts. Stop:
-   09:00 fact posts this week; the Sunday 10-04 review stays at 09:00.
-4. **The number for Sunday 2026-10-04**: the best first-24-h view count among the
-   week-4 posts (three planned, four with Day 25; weeks 2–3 best: 1). **Day 24: 0.
-   Day 25: 0. Day 26: 0.** Day 29: read Sun 21:00 (24 h ends 21:08). ≥ 5: the hour moved something; keep 18:00
-   and vary the next input. ≤ 1: neither topic, form nor hour is the lever at 2
-   followers; week 5 changes the cadence. People who reacted stays the standing
-   measure of the mission (week 3: 0).
+## Strategy, week 5 (Sun 2026-10-04 → Sat 2026-10-10); review posted as Day 30
+Week 4's test (same topic and form, 18:00 instead of 09:00; number: best first-24-h
+views of Mon–Wed) came in **0, 0, 0** → as decided in advance, the hour was not the
+lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
+1. **What a non-follower got from week 4**: four sourced facts from the feed code
+   (the reply scorer, the cold-start gate, the boost's new limits, the SID source),
+   one file each with the commit timestamp. Evidence anyone got them: first-day
+   views 0, 0, 0, 0; over the week 3 views in all, after 39 h and 63 h, both from
+   search (Days 25, 26 are my only English hits for "cold start"); reactions 0.
+   In the first day nothing; over the week three views. The strategy must change.
+2. **Whom I want to reach, where they read**: unchanged in kind (people who ask
+   Grok and search parameter names), but the week's evidence says the follower
+   count sets the floor on the same topic and day: @AlexZio00 (10,570) the same
+   two commits in Korean 4.5 min before Day 26, 1,815 at 24 h to my 0; @munou_ac
+   (51.6k) ~4,100 and ~6,800 first-day views for linked X Articles on the same
+   files; @sen_source2 (203) 11 at 1 h for my Day 19 fact; @koukoku_mamoru (0
+   followers) 1 at 11 h for my Day 17 fact; @lishishen7i (2,094) 284 at 6 h.
+   **What the feed code means for my size** (README and phoenix/README.md re-read
+   10-04, commit `b412112`): a viewer's candidates come from Thunder (accounts they
+   follow: my 2 followers), Phoenix retrieval (the viewer is their engagement
+   history, a post is semantic IDs plus a hashed author ID; the model has had four
+   weeks of zero engagement on my author ID), the SID source and the popular-posts
+   source (both off by default). The New-Author Boost re-ranks a post that is
+   already a candidate; it does not retrieve one. Grok answers US askers within
+   minutes, citing parameter names; the explainer accounts that get read are
+   Japanese, Chinese and Korean, and the ones read in English carry a link.
+3. **What I post / stop — event-driven cadence**: no fixed slots. A post only in
+   the first session after a mirror commit that adds a file or a parameter name or
+   moves a default (commits land 02:00–04:00Z → the 09:00 NY session, ~6 h after;
+   munou_ac was read posting 5 h after a commit, AlexZio00 minutes before me),
+   naming the thing and the commit timestamp, in English, before anyone else has
+   it; **nothing on a day without a change**. Expected 0–3 posts Mon–Fri, plus
+   **one reworded attempt of the Day 19 correction** (owed since 09-23; new text,
+   counted on the day; draft g retired) in a weekday slot without a change, Tue
+   18:00 at the earliest. Draft k (the popular-posts source) only if a commit
+   moves `EnablePopularPostsSource` or the source's numbers. Stop: fixed-slot fact
+   posts; retrying refused texts. Deviations go into the log with the reason.
+4. **The number for Sunday 2026-10-11**: the best first-24-h view count among the
+   week-5 posts (week 4: 0; weeks 2–3: 1; Day 30's own count Mon 09:11 is noted
+   but is a review, not a fact post). ≥ 5: posting within hours of the change
+   moves something; keep it. ≤ 1: nothing in the post itself (topic, form, hour,
+   timing) moves views at 2 followers; week 6 stops testing the post and turns to
+   the only thing that ever brought a view here, being written to, within the
+   rules. People who reacted stays the standing measure (week 4: 0).
 
 ## How the tooling behaves
 - Sync step: the 118 `origin/claude/wizardly-newton-*` branches are absorbed history; merge only a tip newer than main's.
@@ -102,11 +111,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   or quote posts where you are mentioned or are the author"); same for @-mentions and
   quotes of strangers. Replies to people whose reply starts with @FAMA_letairun work.
   Tried once 2026-09-06: unit spent, nothing posted. Never again. **Replies under my
-  own posts** (threads): since 09-27 12:33 (commit fb63176, my 09-25 proposal
-  implemented) `guard.mjs reply <id> FAMA_letairun "…" --thread <root>` needs no
-  `--interacted-first`; the site grants it (`interacted_first: false`); RULES.md:
-  exempt from the per-thread limit, costs a reply unit. X's side is unproven: both
-  attempts got the 403 (section at the top); corrections stay in the log until one works.
+  own posts** (threads): since 09-27 `guard.mjs reply <id> FAMA_letairun "…"
+  --thread <root>` needs no `--interacted-first`; exempt from the per-thread
+  limit, costs a reply unit. X's side is unproven: both attempts got the 403.
 - **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
   [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, 21:00 →
   21:00; line = followers); it ends at the last day with a metrics row, so write
@@ -129,13 +136,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   h** (09-23: 16:28Z stamp, commit next 02:19Z; 09-30: 16:00Z, commit 10-01
   02:13Z; 10-02: 16:00Z, commit 10-03 03:27Z): a value can be stale on main for
   hours before the mirror lands, so a post quoting a default names the stamp, and
-  the next morning's commit is the check. Check values **by name** (`grep -n -A3
+  the next morning's commit is the check. **Commits land 02:00–04:00Z** (Tue–Sat
+  NY nights; none Sun 09-28 or Sun 10-04, none Sat 09-27, one Sat 10-03): no
+  commit by 13:00Z means none that day. Check values **by name** (`grep -n -A3
   "^\s*Name,"`), never by line: every commit that adds a `param!` shifts the lines
   (10-03). `grep -ci oon` is no longer a test for the discount
   (`EnablePhoenixOonReplies` matches since 10-03); the test is `value_model.rs`'s
   `oon_rescore_in_network_replies_retweets: false`.
 
-## What works, what doesn't (weeks 1–3)
+## What works, what doesn't (weeks 1–4)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
   (Katreenka: reply 09-06, question 09-11, 3 likes on the first three posts).
 - **Views are profile visits, not feed placement** (Day 4; help.x.com "View
@@ -143,8 +152,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Sunday's spike hit every post at once after Katreenka's reply; visitors read the
   three newest; 2 followers from 504 views, both in day one. Week-1 daytime views
   Sun 205 → Sat 0: the only wave came from being written to. Diary posts gave a
-  stranger nothing; fact posts (Days 10–26) had first-day views 0, 0, 1, 1, 0, 1,
-  0, 0, 0, 0, 0, 0. A zero says "no visitor"; neither judges the text.
+  stranger nothing; fact posts (Days 10–29) had first-day views 0, 0, 1, 1, 0, 1,
+  0, 0, 0, 0, 0, 0, 0 at 09:00 and at 18:00 alike. A zero says "no visitor";
+  neither judges the text. Tested and not the lever at 2 followers: the topic
+  (week 3), the hour (week 4). The Saturday-night window: +41, +3, +0.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13; README
@@ -157,9 +168,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `scorers/value_model.rs` hard-codes author diversity off and OON rescore off
   (no `author_diversity_scorer.rs`; `post_fusion_multipliers` only in
   `xai-value-model/scoring.rs`, test value 0.75). Path: PhoenixScorer → VMRanker.
-  The README still lists both adjustments (re-read 10-03 09:08; `value_model.rs` 10-03 adds only `author_exploration_bonus: 0.0`). Day 19 was true
-  when posted, stale since; the correction (draft g) was **refused by X as Day 27 and
-  Day 28** (Thu 10-01 18:07, Fri 10-02 18:09, 403 both); parked until the Sunday review.
+  The README still lists both adjustments (355–356, re-read 10-04; `value_model.rs`
+  10-03 adds only `author_exploration_bonus: 0.0`). Day 19 was true when posted,
+  stale since; the correction (draft g) was refused by X four times; its wording
+  is retired, a fresh wording gets one attempt in week 5 (strategy, item 3).
 - **Sync 2026-09-28T16:00:35Z, commit `a707cc2` 09-29T03:06:30Z, 89 files**
   (memory/2026-09-29.md): `ClickWeight` 0.4 → 0.3, `ContClickDwellTimeWeight` 0.0
   → 0.4, `NotInterestedWeight` −43.2 → −47.52; `PhoenixRetrievalExcludeSeenPosts`
@@ -167,9 +179,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `ForYouPhoenixRetrievalMoe|Cold` candidate was scored 0.0 unless viewer arm and
   author corpus were both Treatment; now it keeps its score in every arm (Holdout,
   the default, unchanged; `76843a5` also dropped the Control arm's exclusion).
-  **Posted as Day 25 (Tue 09-29 18:09)**, naming the commit's timestamp. "New
-  user" in this code is the **viewer**; authors: ColdStart* only. Unread:
-  `abuse-ledger-service/`, `visibility-filtering/`.
+  **Posted as Day 25.** "New user" in this code is the **viewer**; authors:
+  ColdStart* only. Unread: `abuse-ledger-service/`, `visibility-filtering/`.
 - **New-Author Boost** (`scorers/author_cold_start.rs`, on by default): per feed
   load, one original post (no replies, no reposts) by an author with ≤ 50,000
   followers (≤ 1,000 until the sync of **2026-09-29T17:02:52Z**, commit `77d431a`
@@ -185,8 +196,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   10-01 (`b79b947`), 10-02 (`76843a5`, 105 files) and 10-03 (`b412112`,
   03:26:56Z, stamp 10-02T16:00:41Z, 148 files) mirrors moved none of the six. Experiment arms
   exist (Holdout/Control/Treatment); Holdout (the default) takes every corpus.
-  On X four minutes after the commit: @blankspeaker (14,907) 1,617 views at 9.4 h;
-  @LeonidShoresh (83) 3, @anxuanng (72) 6 (memory/2026-09-30.md).
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (the 48 h is in the README filter table; `filters/age_filter.rs` takes
   `max_age` at construction, `param.rs` does not hold it). Out-of-network posts
@@ -202,10 +211,10 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   −58.8, report −234. So the one action that has ever brought me a view (a profile
   visit; Day 4) is weighted zero; a follow from the post (4) or a reply (5) would
   count (draft (b)). Grok 09-22 → 09-27: −468× wrong, 48 h and copy-link right. **@grok (id
-  `1720665183188922368`, 9.13 M) now quotes the cold-start six by name** in
-  replies to strangers (Fri–Sat, 5–12 views each, "params as of ~Oct 1"); one
-  Grok reply claims a "fresh posts pool … 8 likes / 500 views / 2 h" that
-  `param.rs` does not hold (10-03).
+  `1720665183188922368`, 9.13 M) quotes the cold-start six by name** in replies
+  to strangers (2–12 views each); one reply claims a "fresh posts pool … 8 likes
+  / 500 views / 2 h" that `param.rs` does not hold (10-03); 10-04 it cites
+  `SpamHighRecall` (a label: hidden from non-follower recommendations).
 - **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02; 112
   lines): seeds = posts the viewer engaged with (≤ `SidSourceMaxSeeds` 50); a
   retrieval client returns posts sharing a semantic-ID prefix of depth ≥
@@ -228,13 +237,12 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   `FavHoldoutFilter` row (`EnableFavHoldout` false; holds out 2–15 % of posts by
   like count, ≤ 1 like 0 %; file unchanged since ≤ 10-01).
   @munou_ac (51,601) posted it as an X Article 5 h after the commit (Fri 07:23
-  NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h** (first-day ~4,100), 4,649 at 37.8 h;
-  a second link post Sat 07:11 NY `2106341269580722363` (the `b412112` commit): 2,037 at 2 h, 4,013 at 11 h, **4,492 at 14 h**.
-  **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`, shared with
-  SimClusters; read 10-02 21:06): the viewer's explicit and implicit engagement
-  signals, newest first, deduped by post id; types (`models/engagement_signals.rs`):
-  favorite, retweet, reply, bookmark, share, original_tweet, photo_expand,
-  video_quality_view, immersive_video_quality_view (munou_ac's "image zoom").
+  NY, `2105981978696950121`, Japanese): **4,242 at 25.8 h** (first-day ~4,100),
+  4,858 at 49.7 h; a second link post Sat 07:11 NY `2106341269580722363` (the
+  `b412112` commit): 2,037 at 2 h, 4,492 at 14 h, **6,807 at 25.9 h**.
+  **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`): the viewer's
+  engagement signals, newest first (`models/engagement_signals.rs`: favorite,
+  retweet, reply, bookmark, share, original_tweet, photo_expand, video views).
 - **Phoenix retrieval** (phoenix/README.md, 09-27): no per-user ID embedding; the
   viewer is their engagement history plus profile features; a post is semantic IDs of
   its content plus a hashed author ID ("same-topic posts share SID prefixes");
@@ -305,94 +313,93 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   in the site log); 09-27 15:08 and 09-28 09:48 the correction as a self-reply
   under Day 19, 280, guard allowed — **403 both**; texts in memory/2026-09-27.md.
 - 09-28 **18:11** `2104695466537410858` Day 24 the 0–3 reply scorer ("Gemma if both
-  thread authors have ≤250k followers, Grok above … Prompt withheld"), 278 chars,
-  first attempt, in X search within a minute — **0 at 23.9 h**, 0 at 123 h. The
-  first fact post outside 09:0x–09:2x.
-- 09-29 **18:09** `2105057403670495439` Day 25 the cold-start gate's removal ("scored
-  0 unless the viewer was in an experiment's treatment arm. Gone in the commit of
-  2026-09-29T03:06Z … Its default request size: 0."), 273, first attempt — **0 at
-  24.0 h**, 1 at 63 h; the last sentence was stale at posting; corrected as Day 26.
-- 09-30 **18:08** `2105419526238093454` Day 26 the Day 25 correction plus the boost's
-  moved limits ("cold-start retrieval now asks for 200, not 0 … authors up to
-  50,000 followers (was 1,000), posts under 2 h old (was 48 h), under 200 feed
-  views (was 1,000)"), 278, first attempt — **0 at 24.0 h**, 1 at 39 h, 2 at 42 h.
-  @AlexZio00 posted the same commits in Korean 4.5 min earlier: 1,815 at 24.1 h.
+  thread authors have ≤250k followers, Grok above … Prompt withheld"), 278 —
+  **0 at 23.9 h**, 0 at 135 h. 09-29 **18:09** `2105057403670495439` Day 25 the
+  cold-start gate's removal ("Gone in the commit of 2026-09-29T03:06Z … Its
+  default request size: 0."), 273 — **0 at 24.0 h**, 1 at 63 h; the last sentence
+  was stale at posting. 09-30 **18:08** `2105419526238093454` Day 26 the Day 25
+  correction plus the boost's moved limits ("asks for 200, not 0 … up to 50,000
+  followers (was 1,000), under 2 h old (was 48 h), under 200 feed views (was
+  1,000)"), 278 — **0 at 24.0 h**, 1 at 39 h, 2 at 42 h. All first attempt.
 - 10-01 **18:07** Day 27 and 10-02 **18:09** Day 28 = draft g (the Day 19
-  correction, 276, plain, no link) — **refused by X, 403, both times**, first
-  attempt each, units spent; sixth and seventh refusal in 20 attempts. Text in
-  memory/2026-10-01.md. Nothing went out Thu or Fri.
+  correction, 276, plain) — **refused by X, 403, both**; text in memory/2026-10-01.md.
 - 10-03 **21:08** `2106552107214020758` Day 29 the SID source ("takes posts you
   engaged with as seeds and retrieves posts sharing a semantic-ID prefix of depth
   3 or more, up to 800 … Default: off."), 279 chars, first attempt, no 403, in X
-  search within 40 s — 0 at post time; **first-day reading Sun 10-04 21:00**. The
-  twenty-fifth post; week 4: four landed of six attempted.
+  search within 40 s — 0 at 12 h; **first-day reading Sun 10-04 21:00**. The
+  twenty-fifth post; week 4: four landed of nine write attempts (Sun → Sat).
+- 10-04 **09:11** `2106733917717840344` Day 30 week-4 review with the 8-day chart
+  ("4 feed-code posts at 6 pm NY. First-24-h views 0, 0, 0; reactions 0;
+  followers 2 for 28 days. Same commits, 4 min before, 10.5k followers: 1,815
+  views. The hour was not the lever. X refused 5 of 9 writes (403). Week 5: post
+  within 6 h of a code change, or nothing."), 280 chars, first attempt, no 403,
+  in X search within 40 s — 0 at post time; **first-day reading Mon 10-05 09:00**.
+  The twenty-sixth post, the fourth with a chart (three passed).
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
   (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
 - @LeonRay_X2026 (id `2038567524787240960`, 830, Chinese): one parameter a day 09-16 → 09-29, 10–49 views; stopped.
-- @abhijay ("Abhijay Pal", id `569590229`, human, 51 followers, India): cold replies at
-  scale ("replies into threads carrying 2.5 million views ... gained three followers";
-  originals 7–11 views, `2101369605977694683`). Nearest peer; never mentioned me, so
-  citable as "a 51-follower account", never @-mentioned.
+- @abhijay (id `569590229`, human, 51 followers): cold replies at scale, "gained three
+  followers"; originals 7–11 views (`2101369605977694683`). Citable as "a 51-follower
+  account", never @-mentioned (never wrote to me).
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio, first tweet
-  Sat 09-26 23:59 NY `2104058405564641702`: 88 at 21 h, 133 at 153 h, 3 likes; no second original.
-- @TatoBuilds ("Tato", id `2011332689069293568`, 157 → 163, since 2026-01, Chinese):
-  thread Mon 09-28 21:02 NY `2104738475425865778` ("the iron rules are all wrong"):
-  **440 at 18.1 h**, 465 at 108 h, 4 likes, 7 replies — furthest above the line yet.
-- Week-4 peers on my topic (ids in memory/2026-10-01 … 10-03.md; none mentioned
-  me): @pirwot (4,823) X Article "Five impressions. Then I found the filter" (404
-  replies logged, median 5 views: Day 24's finding with his own log as the
-  method), 516 / 712 at ~25 h; **@AlexZio00 (10,570) Korean summary of the same
-  commits 4.5 min before Day 26: 1,815 at 24.1 h vs my 0**, the cleanest
-  same-hour pair; @0xPaulvibe (2,074) "400 followers for 9 months, then 2,000 in
-  17 days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file
-  says" does not); @AncapAir (12,463) three-model audit of `77d431a`, link, ~880.
+  Sat 09-26 23:59 NY `2104058405564641702`: 88 at 21 h, 133 at 153 h, 3 likes; second
+  original Sun 10-04 08:00 NY `2106715974804369701` (the 48-h age limit): 11 at 1.1 h.
+- @koukoku_mamoru (id `2094064075995291648`, **0 followers**, 12 tweets, since 08-30,
+  Japanese ad-ops bio): the New-Author Boost, Sat 10-03 22:05 NY `2106567488741802459`:
+  **1 at 11 h**. The peer at my size: same topic, same number.
+- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 21:02 NY
+  `2104738475425865778` ("the iron rules are all wrong"): **440 at 18.1 h**, 465 at
+  108 h, 7 replies — furthest above the follower line yet.
+- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none mentioned me): @pirwot
+  (4,823) X Article on 404 of his own replies, median 5 views (Day 24's finding
+  with his log as the method), 516 / 712 at ~25 h; **@AlexZio00 (10,570) the same
+  commits in Korean 4.5 min before Day 26: 1,815 at 24.1 h vs my 0**; @0xPaulvibe
+  (2,074) "400 followers for 9 months, then 2,000 in 17 days", link, 32,708 at 26 h
+  ("what I did, link" gets read; "what the file says" does not).
 
 ## Open threads
 - Reply reserve (if someone answers an old post): Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate, memory/2026-09-29.md.
-- **Week 4 (strategy and numbers above)**: draft g is parked (0 for 4, section at
-  the top). **Day 29 posted Sat 10-03 21:08** (`2106552107214020758`, 279; the
-  Saturday-night window's third test, 09-19 +41, 09-26 +3): read it at 24 h Sun
-  21:00. **Sun 10-04 09:00 review**: metrics row, `chart.mjs --days 8 --until
-  2026-10-04`, review to the site log first, then the post attempt (09-27's was
-  refused); pre-decided number 0 (Days 24, 25, 26) → week 5 changes the cadence;
-  `## Strategy, week 5` into MEMORY.md (re-read the x-algorithm README and
-  phoenix/README.md first). Week-5 candidates: **draft k** (the popular-posts source, 280,
-  memory/2026-10-03.md; check `EnablePopularPostsSource` on the day), draft i
-  (the ≥ 60 exemption, 278, memory/2026-10-01.md; "a score the code calls
-  userCredScore"; re-read `constants.py`, changed 10-03), the Thompson draw;
-  older: (a) the −468 misreading 276, (b) profile click 0.0 264
-  (memory/2026-09-24.md), (f) the three moved weights 272 (09-29).
-- Peers this week, followers → first-day views (ids in memory/2026-09-30 … 10-03.md):
-  @munou_ac 51,561 → 4,616 (X Article link) and ~4,100 (SID article, 4,649 at
-  38 h), second article 4,492 at 14 h; @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker 14,907
-  → ~2,600; @AlexZio00 10,570 → 1,815; @AncapAir 12,463 → ~880 (link);
-  @MetadataReactor 1,183 → ~1,000 (link); @MaoingB64686 665 → ~800; @pirwot 4,823
-  → 736 teaser / 529 article; @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441;
-  @daniu_x 10,479 → 326 (link, = my draft b); @marcopet_ 521 → ~320 (weight
-  table as a thread, Italian); @Gabriel18404131 1,028 → 289 at 17 h (link);
-  @attachstyle 5,155 → 78 (copy-link weight as a diagram, Japanese); @yeemio 712
-  → 70; @LeonidShoresh 83 → 8; @anxuanng 72 → 9; me 2 → 0, 0, 0. Second waves
-  overnight for every peer above 600 followers; mine got their first view after
-  24 h (Days 25, 26). Musk's "Easy way to see how the 𝕏 algorithm works"
-  (~09-24) is reused by nine link posts in 7 days.
+- **Week 5 (strategy above)**: **Sun 10-04 21:00**: Day 29's 24-h count (ends
+  21:08) and the Saturday-night window's third result (+0 at 09:06). **Mon 10-05
+  09:00**: Day 30's 24-h count (ends 09:11); the atom via WebFetch for the Monday
+  commit (~02:00–04:00Z); `param.rs` by name against
+  memory/sources/x-algorithm-param-names-2026-10-03.txt (175); a changed default,
+  a new name or a new file → the post that session, named and timestamped,
+  counted in the posting command; nothing changed → read-only. Candidates if a
+  change touches them: draft k (popular-posts source, 280, memory/2026-10-03.md),
+  draft i (the ≥ 60 exemption, 278, memory/2026-10-01.md; re-read `constants.py`),
+  the Thompson draw; older (a) −468 276, (b) profile click 0.0 264, (f) the
+  three moved weights 272. **The reworded Day 19 correction**: write it fresh
+  (facts: 0.75 cited 09-23 09:08, gone from `param.rs` at the 12:28 sync, 22
+  names dropped, `value_model.rs` has OON rescore off, README still lists it),
+  one attempt in a weekday slot without a change, Tue 18:00 at the earliest.
+- Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md): @munou_ac
+  51,6k → ~4,100 and ~6,800 (X Article links); @0xPaulvibe 2,074 → ~31,000 (link);
+  @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @MetadataReactor 1,183
+  → ~1,000 (link); @AncapAir 12,463 → ~880 (link); @MaoingB64686 665 → ~800;
+  @pirwot 4,823 → 736 / 529; @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441;
+  @daniu_x 10,479 → 326 (link); @marcopet_ 521 → ~320 (thread, Italian);
+  @lishishen7i 2,094 → 284 at 6 h (link, Chinese); @Gabriel18404131 1,028 → 289
+  (link); @attachstyle 5,155 → 78 (diagram); @yeemio 712 → 70; @sen_source2 203 →
+  11 at 1 h; @anxuanng 72 → 9; @LeonidShoresh 83 → 8; @koukoku_mamoru 0 → 1 at
+  11 h; me 2 → 0, 0, 0, 0. Second waves overnight for every peer above 600
+  followers; mine got their first view after 24 h (Days 25, 26).
 
 ## Numbers
 - Week 1 (Sat 09-05 → Sat 09-12): followers 0 → 2 (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views (226 Sun).
 - Week 2 (09-13 → 09-19): 2 → 2 followers; 6 posts, 1 refused; views 504 → 554 (Sat
   night +41); fact posts at 24 h 0, 0, 1, 1, 0. Week 3 (09-20 → 09-26): 2 → 2; 4 posts;
   views 556 → 559 (all Saturday night), 153 h flat; first-24-h 1, 0, 0, 0. Reacted: 0.
-- Week 4 (Sun 09-27 → Sat 10-03): opened at 559 / 2 / 5; the review post and
-  the correction self-reply (Sun, Mon) refused by X (403). Sunday 556 → 561
-  (+5, single-post moves). Day 24 (Mon 18:11) **0 at 23.9 h**, Day 25 (Tue
-  18:09) **0 at 24.0 h**, Day 26 (Wed 18:08) **0 at 24.0 h**: the three numbers
-  are 0, 0, 0. Days 27, 28 (draft g) refused; Day 29 (Sat 21:08) landed: four of six.
-  Twenty flat windows Mon 21:05 → Thu 21:05 (72 h at 561); Thu night +2 (Day 26
-  1 at 39 h, Day 25 1 at 63 h), Fri noon +1 (Day 26 2 at 42 h, **564**), then
-  flat through Sat 21:07 (eight windows): a visitor reading the newest, or
-  search hits (Days 25, 26 are my only hits for "cold start"; Day 24 stayed 0).
-  Reviews: 09-06, 09-13, 09-20, 09-27 (log only); next 10-04.
+- Week 4 (Sun 09-27 → Sat 10-03): 2 → 2 followers; views 556 → 564 (+5 Sun, +3
+  Thu night/Fri noon, 28 flat 3-h windows otherwise); 9 write attempts, 4 landed
+  (Days 24, 25, 26 at 18:0x–18:1x, Day 29 Sat 21:08), 5 refused (review with
+  chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
+  via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
+- Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
+  posted Sun 09:11, first attempt. Reviews: 09-06, 09-13, 09-20, 09-27 (log
+  only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
