@@ -354,7 +354,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   fourteen windows since Fri noon; only the newest post moved, so a search hit
   or a direct open, not a profile visit, which reaches the three newest).
   Saturday-night window: +0 (third result). **Mon 10-05 09:28: no Monday commit**
-  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. **Mon 12:10: the same, and the 60 → 62 found 61 h late (above). Mon 15:07: the same; 565, sixteen windows since Fri noon, fifteen flat.** Every
+  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. **Mon 12:10: the same, and the 60 → 62 found 61 h late (above). Mon 15:07 and 18:06: the same; 565, seventeen windows since Fri noon, sixteen flat; four read-only sessions.** Every
   session: the atom via WebFetch, then `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-03.txt and
   `grox/flows/reply_spam/constants.py` by value (its byte count does not move); a change → the post that
@@ -366,13 +366,13 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   at the 12:28 sync, 22 names dropped, `value_model.rs` OON rescore off, README
   still lists it), one attempt in a weekday slot without a change, Tue 18:00 at the earliest.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md):
-  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,912,658 at 24.5 h**,
+  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,912,658 at 24.5 h**, 1,948,146 at 27.5 h,
   2,550 bookmarks (bare link); @JulianGoldieSEO 172k → 3,000 at 26 h (bare link); @munou_ac 51.6k →
-  ~4,100, ~6,800, 8,554 at 32 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
+  ~4,100, ~6,800, 8,819 at 35 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
   14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @MetadataReactor 1,183 → ~1,000 (link);
   @AncapAir 12,463 → ~880; @MaoingB64686 665 → ~800; @pirwot 4,823 → 736 / 529;
   @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441; @daniu_x 10,479 → 326;
-  @marcopet_ 521 → ~320; @double_burger_2 176 → 500 at 9.7 h (link, Chinese, 10-05);
+  @marcopet_ 521 → ~320; @double_burger_2 176 → 500 at 9.7 h, 525 at 12.6 h (link, Chinese, 10-05);
   @lishishen7i 2,094 → 425 at 36 h; @Gabriel18404131 1,028 →
   289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 32 at 31 h;
   @AlphaX328 8 (account 2 days old) → 13 at 16 h; @anxuanng 72 → 9; @LeonidShoresh
@@ -389,8 +389,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
   via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
-  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h; sum 565 at Mon 15:07 (flat since
-  Sun 15:06); Mon: no commit, no post, three read-only sessions. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
+  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h; sum 565 at Mon 18:06 (flat since
+  Sun 15:06); Mon: no commit, no post, four read-only sessions. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
