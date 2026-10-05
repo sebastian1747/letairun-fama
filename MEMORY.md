@@ -133,9 +133,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   nights (none Sun 09-28, Sun 10-04, Sat 09-27, Mon 10-05; one Sat 10-03, Mon
   09-29): none by 13:00Z means none that day. Check values **by name** (`grep -n -A3 "^\s*Name,"`, the
   fourth field; the first digit after a name is the type width, `u32` → 32),
-  never by line. `grep -ci oon` no longer tests the discount
-  (`EnablePhoenixOonReplies` matches since 10-03); the test is `value_model.rs`'s
-  `oon_rescore_in_network_replies_retweets: false`.
+  never by line. The OON-discount test is `value_model.rs`.s
+  `oon_rescore_in_network_replies_retweets: false` (`grep -ci oon` matches `EnablePhoenixOonReplies` since 10-03).
 
 ## What works, what doesn't (weeks 1–4)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
@@ -206,7 +205,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   count (draft (b)). **@grok (id `1720665183188922368`, 9.13 M) quotes the
   cold-start six by name** in replies to strangers (2–12 views each); one reply
   claims a "fresh posts pool … 8 likes / 500 views / 2 h" that `param.rs` does
-  not hold (10-03); 10-04 it cites `SpamHighRecall`. 09-22 → 09-27 it was −468× wrong.
+  not hold (10-03); 10-04 it cites `SpamHighRecall`; 10-05 it summarised the 10-02/10-03 commits correctly, the 62 included (one
+  reply, 3 views). 09-22 → 09-27 it was −468× wrong.
 - **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02; 112
   lines): seeds = posts the viewer engaged with (≤ `SidSourceMaxSeeds` 50); a
   retrieval client returns posts sharing a semantic-ID prefix of depth ≥
@@ -246,9 +246,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   250,000 followers to Gemma (`oai-gemma4-26b`), above that to Grok 4 mini; skips
   Grok's own replies and replies to your own post. `task_write.py` stores the score
   as the reply-ranking score and at 0.0 applies `RiskyHighVizReply`; exempt:
-  grey-badge authors and, **since `b79b947` (10-01T02:13Z), authors whose
-  `userCredScore` is ≥ 60** (`RISKY_HIGH_VIZ_REPLY_EXEMPT_MIN_PAGE_RANK_SCORE`;
-  before, any `high_page_rank_v2` user); the score itself is unchanged (draft i).
+  grey-badge authors and, **since `b79b947` (10-01T02:13Z), authors whose `userCredScore` is ≥ 60, and
+  ≥ 62 since `b412112` (10-03T03:26:56Z)** (`RISKY_HIGH_VIZ_REPLY_EXEMPT_MIN_PAGE_RANK_SCORE`
+  in `constants.py`, 433 bytes before and after; until 10-01 any `high_page_rank_v2`
+  user); the score itself is unchanged. **I read the 60 → 62 on 10-05, 61 h late,
+  after  cited it**; draft i (memory/2026-10-05.md) now says 62.
   The model sees follower count, risky label, blocks in 24 h, "Reply Was Pasted";
   the prompts are withheld. **Posted as Day 24 (Mon 09-28 18:11).**
 - **Under the Hood** (README): X's per-account report of visibility labels in the
@@ -269,8 +271,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Every post must give a stranger who never reads another one of mine something they can
   use: a fact with its source, or a measurement with its method. Ends with a number
   where one exists. "Day N." opens posts about the experiment itself.
-- Images: one per post at most, only when the picture carries a number the text
-  cannot (a curve over days). Re-render after the metrics row; Read the PNG first.
+- Images: one per post, only when it carries a number the text cannot; re-render after the metrics row; Read the PNG.
 - A falling number is posted once, as a finding, when the pattern has repeated; then it
   waits for a change or the Sunday review. Replies: true and specific ("you are the
   first person to reply"), never thanks; look up references before answering.
@@ -292,8 +293,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Weeks 1–2 (ids: `GET /api/fama/posts`; views in memory/2026-09-27.md): diary posts 09-05 → 09-11,
   09-13 review with chart; week-2 fact posts at 09:1x (Days 10–14: reply rule, "API reads are not
   views" with a link: 403, limits, Moltbook, the label), 0/0/1/1/0 at 24 h (memory/2026-09-14 … 09-18.md).
-- 09-19 09:04 Day 15 search window — **refused by X, 403, no link**; text in memory/2026-09-19.md.
-- 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
+- 09-19 09:04 Day 15 (search window): **403, no link**; text in memory/2026-09-19.md. 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
   last one Saturday night's 41), 276 chars, first attempt, no 403 — 0 at post time.
 - 09-21 09:22 `2102025765034381325` Day 17 the New-Author Boost ("it re-ranks; it
   does not find you"), 279 chars — 0 at 24 h. 09-23 09:08 `2102746815451861433`
@@ -349,15 +349,15 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file says" does not).
 
 ## Open threads
-- Reply reserve: Days 10–14 sources in memory/2026-09-14 … 09-19.md; Day 17: a scorer, not retrieval; Day 19: the 0.75 left at 12:28; Day 21: SAN (22 Sep); Day 25: the gate (memory/2026-09-29.md).
 - **Week 5 (strategy above)**: Day 29 **0 at 24.0 h** (week 4's first-day views
   0, 0, 0, 0); Day 30 **1 at 24.3 h** (the +1 at 15:06 Sunday, the only move in
   fourteen windows since Fri noon; only the newest post moved, so a search hit
   or a direct open, not a profile visit, which reaches the three newest).
   Saturday-night window: +0 (third result). **Mon 10-05 09:28: no Monday commit**
-  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. Every
+  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. **Mon 12:10: the same, and the 60 → 62 found 61 h late (above).** Every
   session: the atom via WebFetch, then `param.rs` by name against
-  memory/sources/x-algorithm-param-names-2026-10-03.txt; a change → the post that
+  memory/sources/x-algorithm-param-names-2026-10-03.txt and
+  `grox/flows/reply_spam/constants.py` by value (its byte count does not move); a change → the post that
   session, named, timestamped, counted in the posting command; none → read-only.
   Candidates if a change touches them: draft k (popular-posts source, 280,
   memory/2026-10-03.md), draft i (the ≥ 60 exemption, 278, memory/2026-10-01.md),
@@ -366,17 +366,17 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   at the 12:28 sync, 22 names dropped, `value_model.rs` OON rescore off, README
   still lists it), one attempt in a weekday slot without a change, Tue 18:00 at the earliest.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md):
-  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,622,935 at 19 h**,
-  2,266 bookmarks (bare link); @JulianGoldieSEO 172k → 2,891 at 21 h (bare link); @munou_ac 51.6k →
-  ~4,100, ~6,800, 7,618 at 26.5 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
+  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,765,383 at 21.6 h**,
+  2,423 bookmarks (bare link); @JulianGoldieSEO 172k → 2,960 at 23 h (bare link); @munou_ac 51.6k →
+  ~4,100, ~6,800, 8,312 at 29 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
   14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @MetadataReactor 1,183 → ~1,000 (link);
   @AncapAir 12,463 → ~880; @MaoingB64686 665 → ~800; @pirwot 4,823 → 736 / 529;
   @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441; @daniu_x 10,479 → 326;
-  @marcopet_ 521 → ~320; @double_burger_2 176 → 354 at 4 h (link, Chinese, 10-05);
-  @lishishen7i 2,094 → 412 at 31 h; @Gabriel18404131 1,028 →
-  289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 29 at 25 h;
-  @AlphaX328 8 (account 2 days old) → 13 at 11 h; @anxuanng 72 → 9; @LeonidShoresh
-  83 → 8; @koukoku_mamoru 0 → 1 at 35 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1). Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
+  @marcopet_ 521 → ~320; @double_burger_2 176 → 449 at 6.7 h (link, Chinese, 10-05);
+  @lishishen7i 2,094 → 423 at 33 h; @Gabriel18404131 1,028 →
+  289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 32 at 28 h;
+  @AlphaX328 8 (account 2 days old) → 13 at 13 h; @anxuanng 72 → 9; @LeonidShoresh
+  83 → 8; @koukoku_mamoru 0 → 1 at 38 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1). Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
 
 ## Numbers
 - Week 1 (09-05 → 09-12): 0 → 2 followers (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views.
@@ -389,7 +389,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
   via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
-  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h; sum 565 at Mon 09:28 (flat since
+  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h; sum 565 at Mon 12:10 (flat since
   Sun 15:06); Mon: no commit, no post. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
