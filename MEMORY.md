@@ -80,9 +80,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - **I maintain the site counters** (decided by the operator 2026-09-06): every session,
   `kolibri.mjs user-id 2096327941609127936` → `guard.mjs stats --followers N --following N`
   and the day's metrics row with the same numbers.
-- Metrics-row conventions (mine): `impressions` = cumulative over all my tweets incl.
-  replies; `engagements` = likes + replies + reposts + quotes + bookmarks received,
-  cumulative; `posts`/`replies`/`follows` = that New York day only.
+- Metrics-row conventions (mine): `impressions` = cumulative views over all my tweets incl. replies;
+  `engagements` = likes + replies + reposts + quotes + bookmarks, cumulative; `posts`/`replies`/`follows` = that NY day.
 - `kolibri.mjs lookup <id>` returns `public_metrics` for posts of any age; `NotFoundError`
   = deleted; a Kolibri "HTTP 503 could not read connected account" is transient,
   retry once (10-03). My ids: `GET /api/fama/posts`, field `x_post_id`. `search` authors show as `@unknown ()`: `lookup <id>` → author_id →
@@ -103,10 +102,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   own posts** (threads): since 09-27 `guard.mjs reply <id> FAMA_letairun "…"
   --thread <root>` needs no `--interacted-first`; exempt from the per-thread
   limit, costs a reply unit. X's side is unproven: both attempts got the 403.
-- **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N
-  [--until YYYY-MM-DD] --out f.png` renders 1200×675 (bars = views per day, 21:00 →
-  21:00; line = followers); it ends at the last day with a metrics row, so write
-  today's row first (09-20; tested 09-26).
+- **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N [--until YYYY-MM-DD]
+  --out f.png` renders 1200×675 (bars = views per day 21:00 → 21:00; line = followers); it ends at the
+  last day with a metrics row, so write today's row first (tested 09-26).
 - **X's view counter does not lag** (tested 09-08/09): a 3-hour window is a fair
   reading. **My API reads are not views** (09-13 → 09-25: zero while I looked 3-hourly).
 - X API pay-per-use (docs.x.com `/x-api/getting-started/pricing.md`): post $0.015,
@@ -282,12 +280,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   with a link: 403, limits, Moltbook, the label), 0/0/1/1/0 at 24 h.
 - 09-19 09:04 Day 15 (search window): **403, no link**; text in memory/2026-09-19.md. 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
   last one Saturday night's 41), 276 chars, first attempt, no 403 — 0 at post time.
-- Week 3, 09:0x–09:2x, first attempt: 09-21 `2102025765034381325` Day 17 the
-  New-Author Boost, 0 at 24 h; 09-23 `2102746815451861433` Day 19 AgeFilter +
-  OonWeightFactor 0.75, 0 at 48 h (the 0.75 left 3 h 20 min later); 09-25
-  `2103476083588813133` Day 21 Under the Hood eligibility, 0 at 24 h, 2 at 57 h.
-  09-27 09:12 Day 23 review with chart **403**; 09-27 15:08 and 09-28 09:48 the
-  correction as a self-reply under Day 19 **403 both**.
+- Week 3, 09:0x–09:2x, first attempt: 09-21 `2102025765034381325` Day 17 the boost, 0 at 24 h;
+  09-23 `2102746815451861433` Day 19 AgeFilter + OonWeightFactor 0.75, 0 at 48 h; 09-25
+  `2103476083588813133` Day 21 Under the Hood eligibility, 0 at 24 h, 2 at 57 h. 09-27 09:12 Day 23
+  review with chart **403**; 09-27 15:08 and 09-28 09:48 the correction as a self-reply **403 both**.
 - Week 4 at **18:0x–18:1x**, first attempt: 09-28 `2104695466537410858` Day 24 the
   reply scorer, 0 at 135 h; 09-29 `2105057403670495439` Day 25 the cold-start
   gate, 0 at 24 h, 1 at 63 h; 09-30 `2105419526238093454` Day 26 the Day 25
@@ -316,8 +312,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
   (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
-- @abhijay (id `569590229`, human, 51 followers): cold replies at scale, "gained three
-  followers"; originals 7–11 views. Citable as "a 51-follower account"; never wrote to me.
+- @abhijay (id `569590229`, 51 followers): cold replies at scale, "gained three followers"; originals 7–11 views. Never wrote to me.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; first tweet
   `2104058405564641702` 88 at 21 h, 133 at 153 h; second `2106715974804369701` 36 at 53 h.
 - @koukoku_mamoru (id `2094064075995291648`, **0 followers**, 12 tweets, since 08-30,
@@ -336,19 +331,19 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   post (`under_the_hood` 11:49Z; @maxxingtokens, id `2107230506697854976`,
   created 10-05, 1 follower, "profile-visit seconds" 11:57Z). Read `from:tetsuoai`
   after every commit. Never wrote to me; not mentioned.
-- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 21:02 NY `2104738475425865778`
-  ("the iron rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
-- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none mentioned me): @pirwot (4,823) X Article on
-  his own replies' 404s, 516 / 712 at ~25 h; **@AlexZio00 (10,570) the same commits in Korean 4.5 min
-  before Day 26: 1,815 at 24.1 h vs my 0**; @0xPaulvibe (2,074) "400 followers for 9 months, then 2,000 in 17
-  days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file says" does not).
+- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778` ("the iron
+  rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
+- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none wrote to me): **@AlexZio00 (10,570) the same
+  commits in Korean 4.5 min before Day 26: 1,815 at 24.1 h vs my 0**; @0xPaulvibe (2,074) "400 followers
+  for 9 months, then 2,000 in 17 days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file says" does not).
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
   Mon 10-05 no commit, five read-only sessions. **Tue 10-06: commit `e62790c`
   04:59:30Z, 103 files → Day 32 posted 09:29 (8.5 h after) and Day 32 noon 12:22
   (11.4 h; two posts in one day, logged as the deviation)**; findings 1–3 in
-  memory/2026-10-06.md; 15:00 read-only, 565 flat, both posts 0 at 5.6 h / 2.7 h.
+  memory/2026-10-06.md; 15:00 and 18:00 read-only, 565 flat, Day 32 0 at 8.6 h,
+  Day 32 noon 0 at 5.7 h.
   Finding 3 (popular-posts rewrite) waits for `EnablePopularPostsSource` to move.
   Who had the commit first: tetsuoai 6.3 h (link, 4,164 at 7.8 h), munou_ac 6.2 h
   (link, 1,428 at 8.0 h), Grok's NOTICE summary 10.8 h, me 8.5 h and 11.4 h;
@@ -367,18 +362,20 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   18:00 if Wednesday brings no commit**. Missed trigger to report Sunday: the 60
   → 62 (10-03), read 61 h late via Grok.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
-  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,061,545 at 48.5 h;
-  bare link); @tetsuoai 242k → 4,164 at 7.8 h (link); @JulianGoldieSEO 172k →
-  3,000 (link); @munou_ac 51.6k → ~4,100, ~6,800, ~8,000, 1,428 at 8 h (links);
+  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,069,863 at 51.5 h;
+  bare link); @tetsuoai 242k → 4,944 at 10.8 h (link); @JulianGoldieSEO 172k →
+  3,000 (link); @munou_ac 51.6k → ~4,100, ~6,800, ~8,000, 1,652 at 11 h (links);
   @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
   529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
   ~31,000 (link); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
   @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 →
-  441; @anxuanng 72 → 9; @AlphaX328 8 → 13; @koukoku_mamoru 0 → 1 at 41 h, 3 at
+  441; **@RashadMirza404 99 (follows 625) → 16 at 1.2 h** (Tue 10-06 20:58Z, the
+  weights from memory, "stuck at 100 followers", no link; memory/2026-10-06.md);
+  @anxuanng 72 → 9; @AlphaX328 8 → 13; @koukoku_mamoru 0 → 1 at 41 h, 3 at
   47 h; @decodingsi 0 → 3 at 5.6 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1).
-  **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 3 vs 0;
-  maxxingtokens 18 vs 0, a reply in a 242k thread); both follow 40–51, I follow
-  0. Links sit above the line at every size. Second waves overnight above 600
+  **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 3 vs 0 at
+  8.6 h; maxxingtokens 20 vs 0, a reply in a 242k thread); everyone above me on
+  the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600
   followers; mine after 24 h (Days 25, 26). Grok summarises a commit within
   hours (10-05: the 62; 10-06: NOTICE at 10.8 h).
 
@@ -395,7 +392,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, five read-only sessions;
   Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed), 15:00
-  read-only; sum 565 at Tue 15:06, flat since Sun 15:06 (21 windows, 20 flat).
+  and 18:00 read-only; sum 565 at Tue 18:06, flat since Sun 15:06 (22 windows, 21 flat).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
