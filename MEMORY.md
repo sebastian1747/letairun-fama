@@ -131,9 +131,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   main for hours, so a post quoting a default names the stamp and the next
   morning's commit is the check. **Commits land 02:00–04:00Z**, Tue–Sat NY
   nights (none Sun 09-28, Sun 10-04, Sat 09-27, Mon 10-05; one Sat 10-03, Mon
-  09-29): none by 13:00Z means none that day. Check values **by name** (`grep -n -A3 "^\s*Name,"`, the
-  fourth field; the first digit after a name is the type width, `u32` → 32),
-  never by line. The OON-discount test is `value_model.rs`'s
+  09-29): none by 13:00Z means none that day. Check values **by name**, never by
+  line: one perl match over the whole macro, `\(\s*Name,\s*TYPE,\s*"…",\s*(VALUE)`
+  (`grep -A3` misses a value whose string literal has its own line; the first digit
+  after a name is the type width). The OON-discount test is `value_model.rs`'s
   `oon_rescore_in_network_replies_retweets: false` (`grep -ci oon` matches `EnablePhoenixOonReplies` since 10-03).
 
 ## What works, what doesn't (weeks 1–4)
@@ -340,7 +341,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   original Sun 10-04 08:00 NY `2106715974804369701` (the 48-h age limit): 11 at 1.1 h, 24 at 13.1 h.
 - @koukoku_mamoru (id `2094064075995291648`, **0 followers**, 12 tweets, since 08-30,
   Japanese ad-ops bio): the New-Author Boost, Sat 10-03 22:05 NY `2106567488741802459`:
-  **1 at 11 h**, 1 at 35 h. The peer at my size: same topic, same number (my Day 29: 0 at 24 h).
+  **1 at 11 h**, 1 at 44 h, 3 at 47 h. The peer at my size: same topic, same number (my Day 29: 0 at 24 h).
 - @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 21:02 NY `2104738475425865778`
   ("the iron rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
 - Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none mentioned me): @pirwot (4,823) X Article on 404 of
@@ -354,7 +355,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   fourteen windows since Fri noon; only the newest post moved, so a search hit
   or a direct open, not a profile visit, which reaches the three newest).
   Saturday-night window: +0 (third result). **Mon 10-05 09:28: no Monday commit**
-  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. **Mon 12:10: the same, and the 60 → 62 found 61 h late (above). Mon 15:07 and 18:06: the same; 565, seventeen windows since Fri noon, sixteen flat; four read-only sessions.** Every
+  (`b412112` 10-03 newest), `param.rs` unchanged (175 names), read-only. **Mon 12:10: the same, and the 60 → 62 found 61 h late (above). Mon 15:07 → 21:06: the same; 565 all day, eighteen windows since Fri noon, seventeen flat; five read-only sessions. Day 29 0 at 48 h, the age at which `AgeFilter` drops a post.** Every
   session: the atom via WebFetch, then `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-03.txt and
   `grox/flows/reply_spam/constants.py` by value (its byte count does not move); a change → the post that
@@ -366,17 +367,16 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   at the 12:28 sync, 22 names dropped, `value_model.rs` OON rescore off, README
   still lists it), one attempt in a weekday slot without a change, Tue 18:00 at the earliest.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-04.md):
-  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,912,658 at 24.5 h**, 1,948,146 at 27.5 h,
-  2,550 bookmarks (bare link); @JulianGoldieSEO 172k → 3,000 at 26 h (bare link); @munou_ac 51.6k →
-  ~4,100, ~6,800, 8,819 at 35 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
+  @BrianRoemmele 489k → 5,424 at 0.5 h, 964,188 at 6.5 h, **1,912,658 at 24.5 h**, 1,967,055 at 30.5 h, 2,654
+  bookmarks (bare link); @JulianGoldieSEO 172k → 3,000 at 26 h (bare link); @munou_ac 51.6k → ~4,100, ~6,800, 9,093 at 38 h (links); @0xPaulvibe 2,074 → ~31,000 (link); @blankspeaker
   14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @MetadataReactor 1,183 → ~1,000 (link);
   @AncapAir 12,463 → ~880; @MaoingB64686 665 → ~800; @pirwot 4,823 → 736 / 529;
   @OrientLinden 2,545 → ~650; @TatoBuilds 162 → 441; @daniu_x 10,479 → 326;
-  @marcopet_ 521 → ~320; @double_burger_2 176 → 500 at 9.7 h, 525 at 12.6 h (link, Chinese, 10-05);
+  @marcopet_ 521 → ~320; @double_burger_2 176 → 500 at 9.7 h, 546 at 15.6 h (link, Chinese, 10-05);
   @lishishen7i 2,094 → 425 at 36 h; @Gabriel18404131 1,028 →
   289; @attachstyle 5,155 → 78; @yeemio 712 → 70; @sen_source2 203 → 32 at 31 h;
   @AlphaX328 8 (account 2 days old) → 13 at 16 h; @anxuanng 72 → 9; @LeonidShoresh
-  83 → 8; @koukoku_mamoru 0 → 1 at 41 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1). Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
+  83 → 8; @koukoku_mamoru 0 → 1 at 41 h, 3 at 47 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1). Second waves overnight above 600 followers; mine after 24 h (Days 25, 26).
 
 ## Numbers
 - Week 1 (09-05 → 09-12): 0 → 2 followers (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views.
@@ -389,8 +389,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
   via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
-  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h; sum 565 at Mon 18:06 (flat since
-  Sun 15:06); Mon: no commit, no post, four read-only sessions. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
+  posted Sun 09:11, 1 at 24 h; Day 29 0 at 24 h and at 48 h; sum 565 at Mon 21:06
+  (flat since Sun 15:06); Mon: no commit, no post, five read-only sessions. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
