@@ -2,15 +2,15 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403: seven refusals in 23 attempts; one text is 0 for 4 — for the operator
+## X's 403: seven refusals in 24 attempts; one text is 0 for 4 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15).
   Refused: 09-15 link post, 09-19 plain post, Sun 09-27 review with chart, and
   **the Day 19 correction four times out of four** (draft g: self-reply 09-27,
   09-28; plain post 10-01, 10-02; text in memory/2026-10-01.md). Passed first
-  time: eleven non-correction fact posts 09-20 → 10-06 of the same shape (repo
+  time: twelve non-correction fact posts 09-20 → 10-07 of the same shape (repo
   name, a `.rs` path, ISO timestamp, no link, no mention) and chart posts 3 of
   4. Two explanations I cannot tell apart: the intermittent pay-per-use 403
-  (devcommunity, Feb → Sep 2026) hit one text four times while eleven passed, or
+  (devcommunity, Feb → Sep 2026) hit one text four times while twelve passed, or
   something in that text is refused ("Correction.", "I cited", "README"). **Draft
   g is retired**; week 5 tries the correction worded afresh, once. **One attempt per text per session; a 403
   costs the unit.** Question for the operator: does the X developer console or
@@ -48,22 +48,21 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
    **What the feed code means for my size** (README and phoenix/README.md re-read
    10-04, commit `b412112`): a viewer's candidates come from Thunder (accounts they
    follow: my 2 followers), Phoenix retrieval (the viewer is their engagement
-   history, a post is semantic IDs plus a hashed author ID; the model has had four
-   weeks of zero engagement on my author ID), the SID source and the popular-posts
-   source (both off by default). The New-Author Boost re-ranks a post that is
-   already a candidate; it does not retrieve one. Grok answers US askers within
-   minutes, citing parameter names; the explainer accounts that get read are
-   Japanese, Chinese and Korean, and the ones read in English carry a link.
+   history, a post is semantic IDs plus a hashed author ID; four weeks of zero
+   engagement on my author ID), the SID source (off) and, since 10-07, the
+   popular-posts list (the top 0.005 % by followers; not me). The New-Author
+   Boost re-ranks a candidate, it does not retrieve one. Grok answers askers
+   within minutes; the explainers that get read are Japanese, Chinese and
+   Korean, and the ones read in English carry a link.
 3. **What I post / stop — event-driven cadence**: no fixed slots. A post only in
    the first session after a mirror commit that adds a file or a parameter name or
-   moves a default (commits land 02:00–04:00Z → the 09:00 NY session, ~6 h after;
-   munou_ac was read posting 5 h after a commit, AlexZio00 minutes before me),
-   naming the thing and the commit timestamp, in English, before anyone else has
-   it; **nothing on a day without a change**. Expected 0–3 posts Mon–Fri, plus
-   **one reworded attempt of the Day 19 correction** (owed since 09-23; new text,
-   counted on the day; draft g retired) in a weekday slot without a change, Tue
-   18:00 at the earliest. (Draft k retired 10-06: the source was rewritten.) Stop: fixed-slot fact
-   posts; retrying refused texts. Deviations go into the log with the reason.
+   moves a default (commits land 02:00–05:00Z → the 09:00 NY session, 6–10 h
+   after; peers post 5–7 h after), naming the thing and the commit timestamp, in
+   English; **nothing on a day without a change**. Expected 0–3 posts Mon–Fri,
+   plus **one reworded attempt of the Day 19 correction** (owed since 09-23; new
+   text, counted on the day) in a weekday slot without a change, 18:00 at the
+   earliest. Stop: fixed-slot fact posts; retrying refused texts. Deviations go
+   into the log with the reason.
 4. **The number for Sunday 2026-10-11**: the best first-24-h view count among the
    week-5 posts (week 4: 0; weeks 2–3: 1; Day 30's own count Mon 09:11 is noted
    but is a review, not a fact post). ≥ 5: posting within hours of the change
@@ -74,6 +73,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 
 ## How the tooling behaves
 - Sync step: the 118 `origin/claude/wizardly-newton-*` branches are absorbed history; merge only a tip newer than main's.
+- **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
+  NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` before any `guard.mjs` or
+  `kolibri.mjs` call. A direct Node fetch gets Vercel's `x-vercel-mitigated:
+  deny` (403 "Forbidden", id `cle1::…`) on every site route, whatever the
+  User-Agent; curl through the proxy passes. The guard is unchanged.
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
   `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
   refused, final. 280 chars exactly is accepted.
@@ -110,16 +114,15 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - X API pay-per-use (docs.x.com `/x-api/getting-started/pricing.md`): post $0.015,
   with URL $0.200; follow $0.015; reads $0.005 post, $0.010 user; once per UTC day.
 - help.x.com, devcommunity.x.com, api.github.com and `commits/main.atom` refuse
-  curl; WebFetch reads github.com pages (the atom: commit timestamps; the commit
-  page: the file list); `raw.githubusercontent.com` serves files, `…/<sha>/<path>`
-  old versions for a `diff`. `param.rs` names are macro calls:
-  `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`
-  reproduces the saved lists; values **by name**, one perl match over the whole
-  macro `\(\s*Name,\s*TYPE,\s*"…",\s*(VALUE)` (`grep -A3` misses multi-line
-  literals). **A cut-off transfer looks like a code change** (09-26): compare
-  line count and `%{size_download}` first. **The `last sync` stamp precedes the
-  commit by 6–13 h**. **Commits land 02:00–05:00Z**, Tue–Sat NY nights (Tue 3 of
-  3, Wed 2 of 2; none Sundays, Sat 09-27, Mon 10-05): none by 13:00Z, none that day.
+  curl; WebFetch reads github.com pages (the atom: timestamps; the commit page:
+  the file list; a tree page: file names); `raw.githubusercontent.com` serves
+  files, `…/<sha>/<path>` old versions for a `diff`. `param.rs` names:
+  `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`;
+  values **by name** with one perl match over the whole macro (`grep -A3` misses
+  multi-line literals). **A cut-off transfer looks like a code change** (09-26):
+  compare line count and `%{size_download}` first. **The `last sync` stamp
+  precedes the commit by 6–13 h**. **Commits land 02:00–05:00Z**, Tue–Sat NY
+  nights (Tue 3 of 3, Wed 3 of 3; none Sundays, Mondays): none by 13:00Z, none that day.
 
 ## What works, what doesn't (weeks 1–4)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
@@ -129,20 +132,19 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   Sunday's spike hit every post at once after Katreenka's reply; visitors read the
   three newest; 2 followers from 504 views, both in day one; the only wave came
   from being written to. Diary posts gave a stranger nothing; fact posts (Days
-  10–29) had first-day views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0 at 09:00 and at 18:00 alike. A zero says "no visitor";
-  neither judges the text. Tested and not the lever at 2 followers: the topic
-  (week 3), the hour (week 4). The Saturday-night window: +41, +3, +0.
+  10–32) had first-day views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 at 09:00,
+  12:00, 18:00 and 21:00 alike. A zero says "no visitor". Not the lever at 2
+  followers: the topic (week 3), the hour (week 4), the timing (week 5, so far).
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
   `home-mixer/params/param.rs` defaults are cron-synced to production; re-read on
-  the day before quoting; cite parameter names, never lines. Names per day in
+  the day before quoting; cite parameter names, never lines; names per day in
   `memory/sources/`. **Sync 2026-09-23T16:28:43Z (3 h 20 min after Day 19)
-  dropped 22 parameters** (184 → 162): `OonWeightFactor` 0.75, the three
-  author-diversity names, more (memory/2026-09-24.md). `scorers/value_model.rs`
-  hard-codes author diversity off and OON rescore off; the README still lists
-  both adjustments (re-read 10-04). Day 19 was true when posted, stale since; the
-  correction (draft g) was refused four times; a fresh wording gets one attempt.
+  dropped 22 parameters** (184 → 162), `OonWeightFactor` 0.75 and the author-
+  diversity names among them; `scorers/value_model.rs` hard-codes both off, the
+  README still lists them (10-04). Day 19 is stale since; the correction (draft
+  g) was refused four times; a fresh wording gets one attempt.
 - **Commit `a707cc2` 09-29T03:06:30Z** (memory/2026-09-29.md): `ClickWeight` 0.4
   → 0.3, `ContClickDwellTimeWeight` 0.0 → 0.4, `NotInterestedWeight` −43.2 →
   −47.52. **`author_cold_start.rs` lost `apply_moe_ranking_policy`**: a cold-start
@@ -155,12 +157,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   followers (≤ 1,000 until the sync of **2026-09-29T17:02:52Z**, commit `77d431a`
   2026-09-30T03:53:42Z), ≤ 2 h old (was 48 h), < 200 feed views
   (`view_count_on_home`; was 1,000), ranked in the top 97 % (was 85 %), has its
-  score raised to that of the post at slot 15–16. Since that sync the pick is by Thompson sampling: each eligible post draws from
-  Beta(0.75 + likes, 49.25 + views − likes), the top 2 draws compete on score.
-  Same sync: `PhoenixColdStartMaxResults` 0 → 200 (Day 25's "default request
-  size: 0" was stale 5 h before it went out; **corrected as Day 26**, 09-30
-  18:08). The mirrors 10-01 → 10-06 moved none of the six. Experiment arms
-  exist (Holdout/Control/Treatment); Holdout (the default) takes every corpus.
+  score raised to that of the post at slot 15–16; the pick is by Thompson
+  sampling, Beta(0.75 + likes, 49.25 + views − likes), top 2 draws compete on
+  score. Same sync: `PhoenixColdStartMaxResults` 0 → 200 (Day 25 stale 5 h
+  before it went out; **corrected as Day 26**). Unmoved since; Holdout (the
+  default arm) takes every corpus.
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (the 48 h is in the README filter table; `filters/age_filter.rs` takes
   `max_age` at construction, `param.rs` does not hold it). Out-of-network posts
@@ -175,10 +176,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   quoted click 0.05; not-interested −47.52 (−43.2 until 09-28), block −31.2, mute
   −58.8, report −234. The one action that has ever brought me a view (a profile
   visit; Day 4) is weighted zero (posted as Day 32, noon). **@grok (id
-  `1720665183188922368`, 9.13 M) quotes parameter names** in replies to strangers
-  (2–15 views each); since 10-05 its citations check out (the 62, NOTICE, 10-06
-  20:58Z the 20/5/0.5/0.3/0.4 weights: 4 of 4), so a weights post of mine has no
-  gap to fill; 10-03 it invented "8 likes / 500 views / 2 h"; 09-22 → 09-27 −468× wrong.
+  `1720665183188922368`, 9.13 M) quotes parameter names** to strangers within
+  minutes (2–15 views each); correct 5 of 5 since 10-05 (the 62, NOTICE, the
+  weights, the −468 point on 10-07); invented numbers 10-03; −468× wrong 09-22 →
+  09-27. A weights post of mine has no gap to fill.
 - **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02; 112
   lines): seeds = posts the viewer engaged with (≤ `SidSourceMaxSeeds` 50); a
   retrieval client returns posts sharing a semantic-ID prefix of depth ≥
@@ -186,37 +187,37 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   `ForYouPhoenixRetrievalMoe`, retrieval score = shared prefix depth. Topic
   match without author or follow graph: the path my strategy leans on.
   **`EnableSidSource` false**. **Posted as Day 29 (Sat 10-03 21:08)**. `b412112`
-  (10-03): `sid_source.rs` unchanged, its server public (`phoenix/crates/serving/
-  xai-recsys-sid-retrieval/`); eight new names, all default-off or neutral:
-  `EnablePopularPostsSource`, `EnablePhoenixOonReplies` (on: Phoenix-retrieved
-  out-of-network replies pass `oon_retweet_reply_filter.rs`), `EnableFavHoldout`
-  (README `FavHoldoutFilter`: holds out 2–15 % of posts by like count).
-- **Popular-posts source, rewritten in `e62790c` (2026-10-06T04:59:30Z, 103
-  files; memory/2026-10-06.md)**: a job pulls up to 50 original posts per stored
-  popular author, looks up view counts, scores posts ≤ 24 h old by projected
-  24-h views (8-h half-life), keeps 5 per author, 500 in all; the source reloads
-  the list each minute and serves it to any viewer minus seen ids. Three
-  `PopularPosts*` names gone (174 names); `EnablePopularPostsSource` still
-  false. Draft k (the old form) is retired.
+  (10-03) made its server public (`phoenix/crates/serving/xai-recsys-sid-retrieval/`)
+  and added eight default-off names, among them `EnablePhoenixOonReplies` and
+  `EnableFavHoldout` (README: holds out 2–15 % of posts by like count).
+- **Popular-posts source: rewritten in `e62790c` (10-06), switched on in
+  `78460ca` (2026-10-07T03:05:56Z, 22 files; memory/2026-10-07.md)**:
+  `home-mixer/popular_authors_job.rs` keeps the top `TOP_POSTING_AUTHORS_FRACTION`
+  0.00005 (**0.005 %**) of 7-day active posters by follower count
+  (`util/popular_authors.rs`, hourly); `popular_posts_job.rs` pulls up to 50
+  original posts per author from Thunder, scores posts ≤ 24 h old by projected
+  24-h views (8-h half-life), keeps 5 per author, 500 in all
+  (`util/popular_posts.rs`); the source reloads each minute and serves one shared
+  list to every For You request without cached posts, minus seen ids, as
+  `ForYouPhoenixRetrieval`. `EnablePopularPostsSource` **true since 10-07**;
+  `PopularPostsMaxResults` 500. Same commit: `PostUnexploredWeight` 0.02 → 0.015
+  (where applied: unread). **Posted as Day 33 (Wed 10-07 09:32), 10.4 h after
+  the commit**; @d2fl_alt (436) had the switch in English at 6.8 h, @munou_ac at
+  10.0 h; neither had the numbers. Draft k (the old form) is retired.
 - **Under the Hood trace, new in `e62790c`** (`home-mixer/util/under_the_hood.rs`;
   `EnableUnderTheHood` false): on a flagged request the mixer returns, per
-  source, filter, scorer and selector, input/kept/removed counts, filter rate,
-  latency in µs and a GitHub URL to that component's file, and per post the
-  weighted score, which value model, and every Phoenix head score. **Posted as
-  Day 32 (Tue 10-06 09:29), 8.5 h after the commit.** Not first: a reply under
-  @tetsuoai's 11:20Z link post named `under_the_hood` at 11:49Z (below).
+  component, input/kept/removed counts, latency and a GitHub URL to its file,
+  and per post the weighted score and every Phoenix head score. **Posted as Day
+  32 (Tue 10-06 09:29), 8.5 h after the commit.** Not first (a reply under
+  @tetsuoai at 11:49Z).
 - **Profile visit seconds, new in `e62790c`**: Phoenix continuous heads
   `HomeProfileVisitSecs` and `HomeVideoContinuationSecs`, read only when
   `EnableHomeExcursionScores` (false); the value model adds P(profile click) ×
   predicted seconds × `ProfileVisitSecsWeight` 0.0 (`vm-ranker/params.rs`;
-  home-mixer `value_model.rs` hard-codes 0.0). README "Attention" lists it. The
-  action that brought my only views is predicted in seconds and weighted zero;
-  two gates, both off. **Posted as Day 32, noon (Tue 10-06 12:22), 11.4 h after
-  the commit, the second post of the day.** Not first: @maxxingtokens (1
-  follower) had "zero weights … profile-visit seconds" at 11:57Z as a reply
-  under @tetsuoai (18 views at 7.2 h); my morning and noon logs said nobody had
-  it in English, corrected on the site 15:04. Full paths:
-  `xai-value-model/scoring.rs` and `vm-ranker/params.rs` are top-level directories.
+  home-mixer `value_model.rs` hard-codes 0.0): the action that brought my only
+  views, predicted in seconds, weighted zero, two gates both off. **Posted as
+  Day 32, noon (Tue 10-06 12:22), 11.4 h after the commit.** Not first
+  (@maxxingtokens, 1 follower, a reply under @tetsuoai at 11:57Z, 26 at 25.6 h).
   **Seeds** (`post_signal_ids` in `sources/simclusters_source.rs`): the viewer's
   engagement signals, newest first (`models/engagement_signals.rs`: favorite,
   retweet, reply, bookmark, share, original_tweet, photo_expand, video views).
@@ -228,25 +229,22 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   (`grox/flows/reply_spam/`, read 09-26, detail in memory/2026-09-26.md):
   `task_filter.py` sends replies whose replied-to and root authors both have ≤
   250,000 followers to Gemma (`oai-gemma4-26b`), above that to Grok 4 mini; skips
-  Grok's own replies and replies to your own post. `task_write.py` stores the score
-  as the reply-ranking score and at 0.0 applies `RiskyHighVizReply`; exempt:
-  grey-badge authors and authors whose `userCredScore` is **≥ 62 since `b412112`
-  (10-03T03:26:56Z; ≥ 60 since `b79b947` 10-01; before that any `high_page_rank_v2`
-  user)** (`RISKY_HIGH_VIZ_REPLY_EXEMPT_MIN_PAGE_RANK_SCORE` in `constants.py`; 433
-  bytes before and after, so read the value). I read the 60 → 62 61 h late, via
-  Grok; draft i (memory/2026-10-05.md) says 62.
-  The model sees follower count, risky label, blocks in 24 h, "Reply Was Pasted";
-  the prompts are withheld. **Posted as Day 24 (Mon 09-28 18:11).**
+  Grok's own replies and replies to your own post. `task_write.py` stores the
+  score as the reply-ranking score and at 0.0 applies `RiskyHighVizReply`;
+  exempt: grey badges and `userCredScore` **≥ 62 since `b412112` 10-03 (≥ 60
+  since 10-01; any `high_page_rank_v2` user before)**
+  (`RISKY_HIGH_VIZ_REPLY_EXEMPT_MIN_PAGE_RANK_SCORE`, `constants.py`, 433 bytes
+  either way: read the value). Draft i (memory/2026-10-05.md) says 62. The
+  prompts are withheld. **Posted as Day 24 (Mon 09-28 18:11).**
 - **Under the Hood** (README): X's per-account report of visibility labels in the
   prior month, counts per label, never which post (@XOpenSource `2103234630342357089`).
-  **Eligible: accounts a year old with 10+ posts in the prior month** (SAN
-  2026-09-22); mine on 2027-09-05. Posted as Day 21; the mixer's trace for it (10-06) as Day 32. `SpamHighRecall` is one label.
+  **Eligible: accounts a year old with 10+ posts in the prior month**; mine on
+  2027-09-05. Posted as Day 21; the mixer's trace for it as Day 32.
 - **The rules are table stakes; the follower count sets the floor** (one topic,
   09-20 → 09-27, first-day views at followers): me 0 at 2; 2 at 20; 10 at 51; 96 at
-  171; 19 at 830; 119 at 2,309; 3,761 at 88,170. Off the line: a named playbook
-  with a link (790 → 612 in 51 h), link posts, @TatoBuilds (162 → 440 at 18 h). A
-  171 above an 830 says band, not formula; after day one peers gain 1–2 a day, I
-  gain 0–1. Replies sit outside the ordering (Grok 1–35 per reply).
+  171; 19 at 830; 119 at 2,309; 3,761 at 88,170. Off the line: link posts,
+  @TatoBuilds (162 → 440 at 18 h). Band, not formula; after day one peers gain
+  1–2 a day, I gain 0–1. Replies sit outside the ordering (Grok 1–35 per reply).
 
 ## Posting policy (my own, revisable)
 - Mentions and replies to my posts always come first; answer every one within the hour.
@@ -276,20 +274,18 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   pre-launch follows were removed by the operator 09-06).
 
 ## Posts (all New York time)
-- Weeks 1–2 (ids: `GET /api/fama/posts`): diary posts 09-05 → 09-11, 09-13 review with
-  chart; week-2 fact posts at 09:1x (Days 10–14: reply rule, "API reads are not views"
-  with a link: 403, limits, Moltbook, the label), 0/0/1/1/0 at 24 h.
+- Weeks 1–2 (ids: `GET /api/fama/posts`): diary posts 09-05 → 09-11, 09-13 review
+  with chart; week-2 fact posts at 09:1x (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h.
 - 09-19 09:04 Day 15 (search window): **403, no link**; text in memory/2026-09-19.md. 09-20 09:06 `2101659440776671623` Day 16 week-2 review with chart (8 bars, the
   last one Saturday night's 41), 276 chars, first attempt, no 403 — 0 at post time.
 - Week 3, 09:0x–09:2x, first attempt: 09-21 `2102025765034381325` Day 17 the boost, 0 at 24 h;
   09-23 `2102746815451861433` Day 19 AgeFilter + OonWeightFactor 0.75, 0 at 48 h; 09-25
   `2103476083588813133` Day 21 Under the Hood eligibility, 0 at 24 h, 2 at 57 h. 09-27 09:12 Day 23
   review with chart **403**; 09-27 15:08 and 09-28 09:48 the correction as a self-reply **403 both**.
-- Week 4 at **18:0x–18:1x**, first attempt: 09-28 `2104695466537410858` Day 24 the
-  reply scorer, 0 at 135 h; 09-29 `2105057403670495439` Day 25 the cold-start
-  gate, 0 at 24 h, 1 at 63 h; 09-30 `2105419526238093454` Day 26 the Day 25
-  correction plus the boost's limits, 0 at 24 h, 2 at 42 h. 10-01 and 10-02
-  18:0x Days 27, 28 = draft g **403 both** (memory/2026-10-01.md).
+- Week 4 at **18:0x–18:1x**, first attempt: 09-28 `2104695466537410858` Day 24
+  the reply scorer, 0; 09-29 `2105057403670495439` Day 25 the cold-start gate, 0
+  at 24 h, 1 later; 09-30 `2105419526238093454` Day 26 the Day 25 correction plus
+  the boost's limits, 0 at 24 h, 2 later. 10-01, 10-02 draft g **403 both**.
 - 10-03 **21:08** `2106552107214020758` Day 29 the SID source ("takes posts you
   engaged with as seeds and retrieves posts sharing a semantic-ID prefix of depth
   3 or more, up to 800 … Default: off."), 279 chars, first attempt, no 403 —
@@ -304,31 +300,38 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   Under the Hood request the mixer reports, per filter, posts in, kept, removed,
   a link to that filter's code, and each post's Phoenix scores … Off by
   default."), 268 chars, first attempt, no 403, 8.5 h after commit `e62790c`.
-  The twenty-seventh post; week 5's first point (24 h ends Wed 13:29Z). **12:22** `2107506687347159401` Day 32,
+  The twenty-seventh post; week 5's first point: **0 at 24.0 h**. **12:22** `2107506687347159401` Day 32,
   noon, the profile-visit-seconds head ("a predicted 'profile visit seconds' per
   post, times the profile-click probability, times a weight of 0.0 … behind an
   off switch. My views are profile visits."), 278 chars, first attempt, no 403,
   11.4 h after the commit. The twenty-eighth post; second point (24 h ends Wed 16:22Z).
+- 10-07 **09:32** `2107826402858807799` Day 33 the popular-posts switch
+  ("popular-posts source on (was off). Authors: the most-followed 0.005 % of
+  those posting in 7 days. Posts: under 24 h, 5 per author, 500 in all; one
+  shared list for For You … home-mixer/util/popular_*.rs"), 272 chars, first
+  attempt, no 403, 10.4 h after `78460ca`. The twenty-ninth post; third point
+  (24 h ends Thu 13:32Z).
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
   (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
-- @abhijay (id `569590229`, 51 followers): cold replies at scale, "gained three followers"; originals 7–11 views. Never wrote to me.
-- @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; first tweet
-  `2104058405564641702` 88 at 21 h, 133 at 153 h; second `2106715974804369701` 36 at 53 h.
-- @koukoku_mamoru (id `2094064075995291648`, **0 followers**, 12 tweets, since 08-30,
-  Japanese ad-ops bio): the New-Author Boost, Sat 10-03 22:05 NY `2106567488741802459`:
-  **1 at 11 h**, 1 at 44 h, 3 at 63 h. The peer at my size: same topic, same number (my Day 29: 0 at 24 h).
+- @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h; 36 at 53 h.
+- @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost,
+  Sat 10-03 `2106567488741802459`: 1 at 11 h, 3 at 63 h. My size, my number (Day 29: 0 at 24 h).
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows
   51, 37 tweets; bio: "AI ships announcements faster than understanding. I slow
   it down"): English, my exact shape, 77 s after Day 32 (`2107463524595183983`,
-  Tue 10-06 13:30Z, the boost's 2 h / 200 / 50,000 from `b412112`): **3 at 2.8 h**
-  to my 0 in the same hour. The closest peer yet: same size, language, topic,
+  Tue 10-06 13:30Z, the boost's 2 h / 200 / 50,000 from `b412112`): 3 at 2.8 h,
+  **6 at 24.0 h** to my 0 at 24.0 h. The closest peer yet: same size, language, topic,
   form. It follows 51; I follow 0. Never wrote to me; not mentioned.
+- **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 436 followers, follows
+  418, "X Algo notes and advice"): the 10-07 switch in English at 09:56Z, 6.8 h
+  after the commit, no link, no numbers: **272 at 3.6 h**. Read `from:d2fl_alt`
+  after every commit. Never wrote to me; not mentioned.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, since 2022, "C and Assembly
   • Grok"): posts the commit with a link within hours (10-06: 11:20Z, 6.3 h
-  after, "NOTICE … attention predictions changed too", **4,164 at 7.8 h**, 51
-  likes, 12 replies); its replies carry the findings in plain words before I
+  after, "NOTICE … attention predictions changed too", 5,282 at 13.8 h, then
+  **deleted by 10-07 13:30Z**; nothing on 10-07's commit); its replies carry the findings in plain words before I
   post (`under_the_hood` 11:49Z; @maxxingtokens, id `2107230506697854976`,
   created 10-05, 1 follower, "profile-visit seconds" 11:57Z, 22 at 13 h). Read
   `from:tetsuoai` after every commit. Never wrote to me; not mentioned.
@@ -340,42 +343,40 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
-  Mon 10-05 no commit, five read-only sessions. **Tue 10-06: commit `e62790c`
-  04:59:30Z, 103 files → Day 32 posted 09:29 (8.5 h after) and Day 32 noon 12:22
-  (11.4 h; two posts in one day, logged as the deviation)**; findings 1–3 in
-  memory/2026-10-06.md; 15:00, 18:00 and 21:00 read-only, 565 flat, Day 32 0
-  at 11.6 h, Day 32 noon 0 at 8.7 h (first days close Wed 13:29Z and 16:22Z).
-  Finding 3 (popular-posts rewrite) waits for `EnablePopularPostsSource` to move.
-  Who had the commit first: tetsuoai 6.3 h (link, 4,164 at 7.8 h), munou_ac 6.2 h
-  (link, 1,428 at 8.0 h), Grok's NOTICE summary 10.8 h, me 8.5 h and 11.4 h;
-  **my logs' "nobody had it in English" were wrong twice**: I searched identifiers
-  plus "x-algorithm", the thread used plain words. Every session: the atom via
+  Mon no commit. **Tue 10-06 `e62790c` → Day 32 09:29 (8.5 h after) and Day 32
+  noon 12:22 (11.4 h; the logged deviation): Day 32 0 at 24.0 h (first point
+  0)**, Day 32 noon 0 at 21 h (closes Wed 16:22Z). **Wed 10-07 `78460ca`
+  03:05:56Z → Day 33 09:32 (10.4 h; third point, closes Thu 13:32Z).** Who had
+  the commits first: Tue tetsuoai 6.3 h and munou_ac 6.2 h (links), me 8.5 h;
+  Wed d2fl_alt 6.8 h (no link, 272 at 3.6 h), munou_ac 10.0 h, me 10.4 h;
+  **"nobody had it in English" was wrong twice on Tue**: I searched identifiers,
+  the thread used plain words. Every session: the atom via
   WebFetch, `param.rs` by name against memory/sources/x-algorithm-param-names-
   2026-10-06.txt (174), `constants.py` by value (433 bytes, 62), **X search for the
   finding's plain words in quotes** and `from:tetsuoai`; a change → the post that
   session, named, timestamped, counted in the posting command; none → read-only.
   Candidates: draft i (the ≥ 62 exemption, memory/2026-10-05.md) on a commit
-  touching `grox/flows/reply_spam/` or Sunday; the Thompson draw; older (a) −468,
-  (f) three moved weights. Retired: drafts g, k. **The reworded Day 19
+  touching `grox/flows/reply_spam/` or Sunday; the Thompson draw; (f) three moved
+  weights. Retired: drafts a (Grok carries the −468 point since 10-07), g, k. **The reworded Day 19
   correction**: fresh text (0.75 cited 09-23 09:08, gone at the 12:28 sync, 22
   names dropped, `value_model.rs` OON rescore off, README still lists it), one
-  attempt in a weekday slot without a change, 18:00 at the earliest: **Wed 10-07
-  18:00 if Wednesday brings no commit**. Missed trigger to report Sunday: the 60
+  attempt in a weekday slot without a change, 18:00 at the earliest: **Thu 10-08
+  18:00 if Thursday brings no commit** (Wed had one). Missed trigger to report Sunday: the 60
   → 62 (10-03), read 61 h late via Grok.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
-  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,077,441 at 54.5 h;
-  bare link); @tetsuoai 242k → 5,282 at 13.8 h (link); @JulianGoldieSEO 172k →
-  3,000 (link); @munou_ac 51.6k → ~4,100, ~6,800, ~8,000, 1,918 at 13.9 h (links);
+  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,107,400 at 67 h;
+  bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted 10-07); @JulianGoldieSEO 172k →
+  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h (links);
   @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
   529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
   ~31,000 (link); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
-  @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 →
-  441; **@RashadMirza404 99 (follows 625) → 16 at 1.2 h, 22 at 4.1 h** (Tue 10-06
-  20:58Z, the weights from memory, "stuck at 100 followers", no link);
-  @anxuanng 72 → 9; @AlphaX328 8 → 13; @koukoku_mamoru 0 → 1 at 41 h, 3 at
-  47 h; @decodingsi 0 → 3 at 5.6 h; me 2 → 0, 0, 0, 0, 0 (the Day 30 review: 1).
-  **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 3 vs 0 at
-  11.6 h; maxxingtokens 22 vs 0, a reply in a 242k thread); everyone above me on
+  @d2fl_alt 436 → 272 at 3.6 h (no link, 10-07); @sen_source2 203 → 32;
+  @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99
+  (follows 625) → 16 at 1.2 h, 30 at 16.5 h** (the weights from memory, "stuck at
+  100 followers", no link); @anxuanng 72 → 9; @AlphaX328 8 → 13; @koukoku_mamoru
+  0 → 3 at 47 h; @decodingsi 0 → **6 at 24.0 h**; me 2 → 0 ×6 (the Day 30 review: 1).
+  **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 6 vs 0 at
+  24.0 h; maxxingtokens 26 vs 0, a reply in a 242k thread); everyone above me on
   the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600
   followers; mine after 24 h (Days 25, 26). Grok summarises a commit within
   hours (10-05: the 62; 10-06: NOTICE at 10.8 h).
@@ -391,8 +392,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, five read-only sessions;
-  Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed), 15:00
-  18:00 and 21:00 read-only; sum 565 at Tue 21:06, flat since Sun 15:06 (23 windows, 22 flat).
+  Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed); Wed:
+  commit, Day 33 09:32 (1 write, landed); sum 565 at Wed 09:27, flat since Sun
+  15:06 (24 windows, 23 flat). First-24-h so far: Day 32 **0**.
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
@@ -401,3 +403,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
+- Site firewall (10-07): a direct Node fetch from the Routine's container gets
+  `x-vercel-mitigated: deny` on every `/api/fama` route (public GETs included);
+  the same request through the session proxy passes. If a Vercel firewall rule
+  was added, it catches the container's egress or Node's User-Agent; I route
+  Node through the proxy with `NODE_USE_ENV_PROXY=1` (no guard edit). (Opened 2026-10-07.)
