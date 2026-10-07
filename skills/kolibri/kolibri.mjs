@@ -195,6 +195,61 @@ async function uploadMedia(filePath) {
   return String(id);
 }
 
+/**
+ * Upload a GIF or video for a tweet (chunked on Composio's side) and wait until X has
+ * processed it. X limits: GIF 15 MB; video 512 MB, 140 s, mp4 (H.264/AAC) preferred.
+ *
+ * @param {string} filePath - .gif, .mp4, .mov or .webm file.
+ * @returns {Promise<string>} The media id, ready to attach.
+ */
+async function uploadVideo(filePath) {
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const crypto = await import("node:crypto");
+  const bytes = fs.readFileSync(filePath);
+  const ext = path.extname(filePath).toLowerCase();
+  const mimetype = { ".gif": "image/gif", ".mp4": "video/mp4", ".mov": "video/quicktime", ".webm": "video/webm" }[ext];
+  if (!mimetype) throw new Error(`Unsupported video type: ${ext || "(none)"} (use .gif, .mp4, .mov or .webm)`);
+  const category = ext === ".gif" ? "tweet_gif" : "tweet_video";
+  if (ext === ".gif" && bytes.length > 15 * 1024 * 1024) throw new Error("GIF larger than 15 MB; X refuses it");
+  if (bytes.length > 512 * 1024 * 1024) throw new Error("Video larger than 512 MB");
+  const md5 = crypto.createHash("md5").update(bytes).digest("hex");
+  const headers = { "x-api-key": API_KEY, "Content-Type": "application/json" };
+  const slotRes = await fetch("https://backend.composio.dev/api/v3/files/upload/request", {
+    method: "POST", headers,
+    body: JSON.stringify({ toolkit_slug: "twitter", tool_slug: "TWITTER_UPLOAD_LARGE_MEDIA", filename: path.basename(filePath), mimetype, md5 }),
+  });
+  if (!slotRes.ok) throw new Error(`Upload slot request failed: HTTP ${slotRes.status}`);
+  const slot = await slotRes.json();
+  const putUrl = slot.new_presigned_url || slot.newPresignedUrl;
+  if (putUrl) {
+    let put = await fetch(putUrl, { method: "PUT", headers: { "Content-Type": mimetype }, body: bytes });
+    if (put.status === 429) { await new Promise((r) => setTimeout(r, 5000)); put = await fetch(putUrl, { method: "PUT", headers: { "Content-Type": mimetype }, body: bytes }); }
+    if (!put.ok) throw new Error(`Upload PUT failed: HTTP ${put.status}`);
+  }
+  const result = await exec("TWITTER_UPLOAD_LARGE_MEDIA", {
+    media: { name: path.basename(filePath), mimetype, s3key: slot.key },
+    media_category: category,
+  }, "20260812_00");
+  const data = result?.data?.data || result?.data;
+  const id = data?.id || data?.media_id || data?.media_id_string;
+  if (!id) throw new Error("Upload succeeded but no media id in response");
+  // Reason: X transcodes GIFs and videos after the upload; a tweet attached before
+  // processing_info.state is "succeeded" is refused. Poll up to 3 minutes.
+  let state = data?.processing_info?.state || "pending";
+  const started = Date.now();
+  while (state !== "succeeded") {
+    if (state === "failed") throw new Error(`X could not process the media (${JSON.stringify(data?.processing_info || {})})`);
+    if (Date.now() - started > 180000) throw new Error(`Media ${id} still ${state} after 3 minutes`);
+    await new Promise((r) => setTimeout(r, 5000));
+    const st = await exec("TWITTER_GET_MEDIA_UPLOAD_STATUS", { media_id: String(id) }, "20260812_00");
+    const sd = st?.data?.data || st?.data;
+    state = sd?.processing_info?.state || "succeeded";
+    if (process.env.KOLIBRI_DEBUG) console.error(`[status] ${id}: ${state}`);
+  }
+  return String(id);
+}
+
 async function main() {
   switch (command) {
     // ============ WRITE ============
@@ -230,6 +285,14 @@ async function main() {
       if (MEDIA_IDS.length) replyArgs.media__media__ids = MEDIA_IDS;
       const result = await exec("TWITTER_CREATION_OF_A_POST", replyArgs);
       printResult(result, "Reply");
+      break;
+    }
+
+    case "upload-video": {
+      const file = args[0];
+      if (!file) { console.error("Usage: kolibri upload-video <gif-or-video-file>"); process.exit(1); }
+      const mediaId = await uploadVideo(file);
+      console.log(`✅ Uploaded: ${mediaId}`);
       break;
     }
 
@@ -443,7 +506,7 @@ async function main() {
 
 WRITE:
   tweet [--media ID,ID] <text>   Post a tweet (max 280 chars), optionally with uploaded media
-  upload <image-file>       Upload an image (png/jpg/webp/gif < 5 MB), prints the media id
+  upload <image-file>       Upload an image (png/jpg/webp < 5 MB), prints the media id\n  upload-video <file>       Upload a GIF (≤15 MB) or video (mp4/mov/webm, ≤140 s), waits for X to process it, prints the media id
   reply <id> <text>         Reply to a tweet
   like <id>                 Like a tweet
   retweet|rt <id>           Retweet

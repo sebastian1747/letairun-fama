@@ -121,6 +121,33 @@ function uploadImage(file) {
 }
 
 /**
+ * Upload a GIF or video through Kolibri (waits for X's processing) and return the media id.
+ *
+ * @param {string} file - Path to a .gif, .mp4, .mov or .webm file.
+ * @returns {string} Media id.
+ */
+function uploadVideo(file) {
+  const out = kolibri(["upload-video", file]);
+  const m = out.match(/✅ Uploaded: (\d+)/);
+  if (!m) throw new Error(`video upload failed: ${out.trim()}`);
+  console.log(`🎞️  uploaded ${file} → media ${m[1]}`);
+  return m[1];
+}
+
+/**
+ * Media arguments for a post or reply: one image or one video, never both.
+ *
+ * @param {object} flags - Parsed flags (image, video).
+ * @returns {string[]} Kolibri `--media` arguments, or [].
+ */
+function mediaArgsFor(flags) {
+  if (flags.image && flags.video) fail("use --image or --video, not both");
+  if (flags.video) return ["--media", uploadVideo(flags.video)];
+  if (flags.image) return ["--media", uploadImage(flags.image)];
+  return [];
+}
+
+/**
  * Extract the tweet id from Kolibri's "✅ Posted: <id>" line.
  *
  * @param {string} out - Kolibri stdout.
@@ -174,8 +201,8 @@ async function log(type, content) {
 const HELP = `x-guard — FAMA writes to X only through here
 
   status                                   mode, remaining quota (public)
-  post "<text>" [--topic t] [--image file.png]      publish a post, optionally with one image
-  reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--topic t] [--image file.png]
+  post "<text>" [--topic t] [--image file.png | --video file.gif]   publish a post, optionally with one image or one GIF/video
+  reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--topic t] [--image file.png | --video file.gif]
                               (author = FAMA_letairun: a reply in your own thread, no flag needed)
   (images: png/jpg/webp/gif under 5 MB; render your own with skills/x-guard/chart.mjs)
   follow <handle> <user_id> --interacted-first
@@ -202,10 +229,11 @@ async function main() {
     case "post": {
       const text = pos.join(" ");
       if (!text) fail('Usage: guard post "<text>"');
-      if (DRY) { console.log(`[dry-run] would post (${text.length} chars)${flags.image ? ` with image ${flags.image}` : ""}:\n${text}`); break; }
+      if (flags.image && flags.video) fail("use --image or --video, not both");
+      if (DRY) { console.log(`[dry-run] would post (${text.length} chars)${flags.image ? ` with image ${flags.image}` : ""}${flags.video ? ` with video ${flags.video}` : ""}:\n${text}`); break; }
       await permit({ kind: "post", text });
       // Reason: upload after the permit so a refused post never uploads anything
-      const mediaArgs = flags.image ? ["--media", uploadImage(flags.image)] : [];
+      const mediaArgs = mediaArgsFor(flags);
       const out = kolibri(["tweet", ...mediaArgs, text]);
       const id = extractId(out);
       console.log(out.trim());
@@ -227,9 +255,10 @@ async function main() {
         console.error("🔴 refused locally: X only accepts API replies to posts whose author mentioned or quoted you. Pass --interacted-first only when that is true. (Replies to your own posts need no flag.)");
         process.exit(2);
       }
-      if (DRY) { console.log(`[dry-run] would reply to @${target} on ${tweetId}${selfReply ? " (own thread)" : ""}${flags.image ? ` with image ${flags.image}` : ""}:\n${text}`); break; }
+      if (flags.image && flags.video) fail("use --image or --video, not both");
+      if (DRY) { console.log(`[dry-run] would reply to @${target} on ${tweetId}${selfReply ? " (own thread)" : ""}${flags.image ? ` with image ${flags.image}` : ""}${flags.video ? ` with video ${flags.video}` : ""}:\n${text}`); break; }
       await permit({ kind: "reply", target, thread_id: flags.thread || tweetId, text, interacted_first: !selfReply });
-      const replyMedia = flags.image ? ["--media", uploadImage(flags.image)] : [];
+      const replyMedia = mediaArgsFor(flags);
       const out = kolibri(["reply", tweetId, ...replyMedia, text]);
       const id = extractId(out);
       console.log(out.trim());

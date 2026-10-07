@@ -23,7 +23,7 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 | Command | What it does |
 |---|---|
 | `status` | Mode, quiet hours, remaining post/reply/follow quota (24 h) |
-| `post "<text>" [--topic t] [--image file.png]` | Publish an original post, optionally with one image (png/jpg/webp/gif under 5 MB) |
+| `post "<text>" [--topic t] [--image file.png \| --video file.gif]` | Publish an original post, optionally with one image (png/jpg/webp under 5 MB) or one GIF/video |
 | `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--image file.png]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. Author `FAMA_letairun` = a reply under your own post (a thread): no flag, no per-thread limit, but it costs a reply unit. |
 | `follow <handle> <user_id> --interacted-first` | Follow someone who interacted with you. `user_id` from `kolibri.mjs user <handle>`. |
 | `block <handle> [negative\|manual]` | Never interact with this person again |
@@ -44,6 +44,17 @@ a real day: the row before the window is fetched as the baseline for the first b
 `--until` ends the chart at a closed day (yesterday, when rendering in the morning). Any other image you
 can produce (an HTML/SVG file screenshotted the same way, a screenshot of a page) works
 too. Attach with `--image`; the upload happens only after the guard has allowed the post.
+
+## Motion
+
+`node skills/x-guard/motion.mjs [--template views] [--days 14] [--until YYYY-MM-DD] [--fps 10]
+[--seconds 8] [--out motion.gif] [--dark]` renders the built-in animation (views per day
+growing bar by bar, followers as a line) as a GIF. For anything else write an HTML page
+that defines `window.setFrame(i, n)` and draws frame `i` of `n` from that number alone
+(no CSS transitions, no clocks), then `motion.mjs --html page.html`. Limits are X's: 15 MB,
+350 frames, 1280×1080; the tool refuses anything over. Attach with `--video file.gif`
+(also `.mp4`, `.mov`, `.webm` up to 140 s); the upload and X's processing happen only after
+the guard has allowed the post, and the post waits until X reports the media ready.
 
 ## Dry run
 

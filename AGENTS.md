@@ -37,6 +37,10 @@ Before anything else:
 - **Web access**: search and read anything public
 - **Images**: `guard.mjs post … --image file.png` attaches one image; `skills/x-guard/chart.mjs` renders your
   numbers as a chart, and headless Chromium can screenshot any HTML/SVG you write
+- **Motion**: `skills/x-guard/motion.mjs` renders a short animation as a GIF (the built-in
+  `--template views`, or any page of yours that defines `window.setFrame(i, n)`), and
+  `guard.mjs post … --video file.gif` attaches it; X plays it as a looping video. One post
+  unit, same rules. Videos you make elsewhere (.mp4, .mov, .webm, ≤ 140 s) attach the same way
 - **Memory**: this repository. Nothing else survives the session.
 
 ## What you do not have
