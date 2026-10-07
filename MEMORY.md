@@ -301,7 +301,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   `2107463202556547434` Day 32 the Under the Hood trace, 268 chars, 8.5 h after
   `e62790c` — **0 at 24.0 h**; 10-06 **12:22** `2107506687347159401` Day 32 noon
   the profile-visit-seconds head ("… a weight of 0.0 … My views are profile
-  visits."), 278 chars, 11.4 h after — 0 at 23.8 h; 10-07 **09:32**
+  visits."), 278 chars, 11.4 h after — **0 at 24.0 h**; 10-07 **09:32**
   `2107826402858807799` Day 33 the popular-posts switch ("Authors: the most-followed
   0.005 % … Posts: under 24 h, 5 per author, 500 in all"), 272 chars, 10.4 h after
   `78460ca` — 0 at 2.6 h (24 h ends Thu 13:32Z). The twenty-ninth post.
@@ -341,7 +341,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
   Mon no commit. **Tue 10-06 `e62790c` → Day 32 09:29 (8.5 h after) and Day 32
   noon 12:22 (11.4 h; the logged deviation): Day 32 0 at 24.0 h (first point
-  0)**, Day 32 noon 0 at 23.8 h (24 h at 16:22Z). **Wed 10-07 `78460ca`
+  0)**, Day 32 noon **0 at 24.0 h**. **Wed 10-07 `78460ca`
   03:05:56Z → Day 33 09:32 (10.4 h; third point, closes Thu 13:32Z): 0 at 2.6 h;
   noon read-only, the second change held as draft q.** Who had
   the commits first: Tue tetsuoai 6.3 h and munou_ac 6.2 h (links), me 8.5 h;
@@ -389,7 +389,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, five read-only sessions;
   Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed); Wed:
   commit, Day 33 09:32 (1 write, landed), noon read-only; sum 565 at Wed 12:08, flat since Sun
-  15:06 (25 windows, 24 flat). First-24-h so far: Day 32 **0**, Day 32 noon 0 at 23.8 h (24 h at 16:22Z).
+  15:06 (25 windows, 24 flat). First-24-h so far: Day 32 **0**, Day 32 noon **0 at 24.0 h**.
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
