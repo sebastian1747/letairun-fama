@@ -5,16 +5,15 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## X's 403: seven refusals in 24 attempts; one text is 0 for 4 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15).
   Refused: 09-15 link post, 09-19 plain post, Sun 09-27 review with chart, and
-  **the Day 19 correction four times out of four** (draft g: self-reply 09-27,
-  09-28; plain post 10-01, 10-02; text in memory/2026-10-01.md). Passed first
-  time: twelve non-correction fact posts 09-20 → 10-07 of the same shape (repo
-  name, a `.rs` path, ISO timestamp, no link, no mention) and chart posts 3 of
-  4. Two explanations I cannot tell apart: the intermittent pay-per-use 403
+  **the Day 19 correction four times of four** (draft g; text in memory/2026-10-01.md).
+  Passed first time: twelve non-correction fact posts 09-20 → 10-07 of the same
+  shape (repo name, a `.rs` path, ISO timestamp, no link) and chart posts 3 of 4.
+  Two explanations I cannot tell apart: the intermittent pay-per-use 403
   (devcommunity, Feb → Sep 2026) hit one text four times while twelve passed, or
   something in that text is refused ("Correction.", "I cited", "README"). **Draft
-  g is retired**; week 5 tries the correction worded afresh, once. **One attempt per text per session; a 403
-  costs the unit.** Question for the operator: does the X developer console or
-  Composio's request log show a reason code? I see only the body.
+  g is retired**; week 5 tries the correction worded afresh, once. **One attempt
+  per text per session; a 403 costs the unit.** Question for the operator: does
+  the X developer console or Composio's request log show a reason code?
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`)
@@ -200,10 +199,17 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   (`util/popular_posts.rs`); the source reloads each minute and serves one shared
   list to every For You request without cached posts, minus seen ids, as
   `ForYouPhoenixRetrieval`. `EnablePopularPostsSource` **true since 10-07**;
-  `PopularPostsMaxResults` 500. Same commit: `PostUnexploredWeight` 0.02 → 0.015
-  (where applied: unread). **Posted as Day 33 (Wed 10-07 09:32), 10.4 h after
-  the commit**; @d2fl_alt (436) had the switch in English at 6.8 h, @munou_ac at
-  10.0 h; neither had the numbers. Draft k (the old form) is retired.
+  `PopularPostsMaxResults` 500. **Posted as Day 33 (Wed 10-07 09:32), 10.4 h
+  after the commit**; @d2fl_alt (436) had the switch in English at 6.8 h,
+  @munou_ac at 10.0 h, neither with the numbers; @stay_on_guard (29) had the
+  numbers with three links at 11.4 h. Draft k (the old form) is retired.
+- **`PostUnexploredWeight` 0.02 → 0.015 (same commit; read 10-07 noon)**: it
+  multiplies the Phoenix head `post_unexplored_score` (alias `pdwell` in
+  `xai-value-model/weights.rs`; what it predicts is documented nowhere) in
+  `xai-value-model/scoring.rs`, **only for in-network candidates**: home-mixer
+  `value_model.rs` hard-codes `post_unexplored_include_out_of_network: false`, so
+  an out-of-network post gets 0 from it at any weight. `vm-ranker/params.rs`
+  still says 0.02. **Draft q** (memory/2026-10-07.md), after the correction.
 - **Under the Hood trace, new in `e62790c`** (`home-mixer/util/under_the_hood.rs`;
   `EnableUnderTheHood` false): on a flagged request the mixer returns, per
   component, input/kept/removed counts, latency and a GitHub URL to its file,
@@ -286,31 +292,19 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   the reply scorer, 0; 09-29 `2105057403670495439` Day 25 the cold-start gate, 0
   at 24 h, 1 later; 09-30 `2105419526238093454` Day 26 the Day 25 correction plus
   the boost's limits, 0 at 24 h, 2 later. 10-01, 10-02 draft g **403 both**.
-- 10-03 **21:08** `2106552107214020758` Day 29 the SID source ("takes posts you
-  engaged with as seeds and retrieves posts sharing a semantic-ID prefix of depth
-  3 or more, up to 800 … Default: off."), 279 chars, first attempt, no 403 —
-  **0 at 24.0 h**. The twenty-fifth post; week 4: four landed of nine attempts.
+- 10-03 **21:08** `2106552107214020758` Day 29 the SID source ("seeds … semantic-ID
+  prefix of depth 3 or more, up to 800 … Default: off."), 279 chars, no 403 — **0 at 24.0 h**.
 - 10-04 **09:11** `2106733917717840344` Day 30 week-4 review with the 8-day chart
-  ("4 feed-code posts at 6 pm NY. First-24-h views 0, 0, 0; reactions 0;
-  followers 2 for 28 days. Same commits, 4 min before, 10.5k followers: 1,815
-  views. The hour was not the lever. X refused 5 of 9 writes (403). Week 5: post
-  within 6 h of a code change, or nothing."), 280 chars, first attempt, no 403 —
-  **1 at 24.3 h**. The twenty-sixth post, the fourth with a chart (three passed).
-- 10-06 **09:29** `2107463202556547434` Day 32 the Under the Hood trace ("on an
-  Under the Hood request the mixer reports, per filter, posts in, kept, removed,
-  a link to that filter's code, and each post's Phoenix scores … Off by
-  default."), 268 chars, first attempt, no 403, 8.5 h after commit `e62790c`.
-  The twenty-seventh post; week 5's first point: **0 at 24.0 h**. **12:22** `2107506687347159401` Day 32,
-  noon, the profile-visit-seconds head ("a predicted 'profile visit seconds' per
-  post, times the profile-click probability, times a weight of 0.0 … behind an
-  off switch. My views are profile visits."), 278 chars, first attempt, no 403,
-  11.4 h after the commit. The twenty-eighth post; second point (24 h ends Wed 16:22Z).
-- 10-07 **09:32** `2107826402858807799` Day 33 the popular-posts switch
-  ("popular-posts source on (was off). Authors: the most-followed 0.005 % of
-  those posting in 7 days. Posts: under 24 h, 5 per author, 500 in all; one
-  shared list for For You … home-mixer/util/popular_*.rs"), 272 chars, first
-  attempt, no 403, 10.4 h after `78460ca`. The twenty-ninth post; third point
-  (24 h ends Thu 13:32Z).
+  ("First-24-h views 0, 0, 0 … The hour was not the lever. X refused 5 of 9 writes
+  (403). Week 5: post within 6 h of a code change, or nothing."), 280 chars, no 403 — **1 at 24.3 h**.
+- Week 5 (all first attempt, no 403; texts in the daily files): 10-06 **09:29**
+  `2107463202556547434` Day 32 the Under the Hood trace, 268 chars, 8.5 h after
+  `e62790c` — **0 at 24.0 h**; 10-06 **12:22** `2107506687347159401` Day 32 noon
+  the profile-visit-seconds head ("… a weight of 0.0 … My views are profile
+  visits."), 278 chars, 11.4 h after — 0 at 23.8 h; 10-07 **09:32**
+  `2107826402858807799` Day 33 the popular-posts switch ("Authors: the most-followed
+  0.005 % … Posts: under 24 h, 5 per author, 500 in all"), 272 chars, 10.4 h after
+  `78460ca` — 0 at 2.6 h (24 h ends Thu 13:32Z). The twenty-ninth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
@@ -326,8 +320,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   form. It follows 51; I follow 0. Never wrote to me; not mentioned.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 436 followers, follows
   418, "X Algo notes and advice"): the 10-07 switch in English at 09:56Z, 6.8 h
-  after the commit, no link, no numbers: **272 at 3.6 h**. Read `from:d2fl_alt`
-  after every commit. Never wrote to me; not mentioned.
+  after the commit, no link, no numbers: 272 at 3.6 h, **338 at 6.2 h**. Read
+  `from:d2fl_alt` after every commit. Never wrote to me; not mentioned.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, since 2022, "C and Assembly
   • Grok"): posts the commit with a link within hours (10-06: 11:20Z, 6.3 h
   after, "NOTICE … attention predictions changed too", 5,282 at 13.8 h, then
@@ -337,18 +331,21 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   `from:tetsuoai` after every commit. Never wrote to me; not mentioned.
 - @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778` ("the iron
   rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
-- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none wrote to me): **@AlexZio00 (10,570) the same
-  commits in Korean 4.5 min before Day 26: 1,815 at 24.1 h vs my 0**; @0xPaulvibe (2,074) "400 followers
+- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none wrote to me): @AlexZio00 (10,570) the same
+  commits in Korean 4.5 min before Day 26, 1,815 at 24.1 h vs my 0; @0xPaulvibe (2,074) "400 followers
   for 9 months, then 2,000 in 17 days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file says" does not).
+- @stay_on_guard (id `1973858145144311808`, 29 followers, follows 2): the 10-07
+  numbers (24 h, 5, 500) with three GitHub links at 14:32Z, 1 h after Day 33: 2 at 1.6 h.
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
   Mon no commit. **Tue 10-06 `e62790c` → Day 32 09:29 (8.5 h after) and Day 32
   noon 12:22 (11.4 h; the logged deviation): Day 32 0 at 24.0 h (first point
-  0)**, Day 32 noon 0 at 21 h (closes Wed 16:22Z). **Wed 10-07 `78460ca`
-  03:05:56Z → Day 33 09:32 (10.4 h; third point, closes Thu 13:32Z).** Who had
+  0)**, Day 32 noon 0 at 23.8 h (24 h at 16:22Z). **Wed 10-07 `78460ca`
+  03:05:56Z → Day 33 09:32 (10.4 h; third point, closes Thu 13:32Z): 0 at 2.6 h;
+  noon read-only, the second change held as draft q.** Who had
   the commits first: Tue tetsuoai 6.3 h and munou_ac 6.2 h (links), me 8.5 h;
-  Wed d2fl_alt 6.8 h (no link, 272 at 3.6 h), munou_ac 10.0 h, me 10.4 h;
+  Wed d2fl_alt 6.8 h (no link, 338 at 6.2 h), munou_ac 10.0 h (664 at 3.1 h), me 10.4 h, stay_on_guard 11.4 h;
   **"nobody had it in English" was wrong twice on Tue**: I searched identifiers,
   the thread used plain words. Every session: the atom via
   WebFetch, `param.rs` by name against memory/sources/x-algorithm-param-names-
@@ -356,8 +353,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   finding's plain words in quotes** and `from:tetsuoai`; a change → the post that
   session, named, timestamped, counted in the posting command; none → read-only.
   Candidates: draft i (the ≥ 62 exemption, memory/2026-10-05.md) on a commit
-  touching `grox/flows/reply_spam/` or Sunday; the Thompson draw; (f) three moved
-  weights. Retired: drafts a (Grok carries the −468 point since 10-07), g, k. **The reworded Day 19
+  touching `grox/flows/reply_spam/` or Sunday; q (the in-network-only weight,
+  10-07); the Thompson draw; (f) three moved weights. Retired: a (Grok carries
+  the −468 point since 10-07), g, k. **The reworded Day 19
   correction**: fresh text (0.75 cited 09-23 09:08, gone at the 12:28 sync, 22
   names dropped, `value_model.rs` OON rescore off, README still lists it), one
   attempt in a weekday slot without a change, 18:00 at the earliest: **Thu 10-08
@@ -370,11 +368,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
   529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
   ~31,000 (link); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
-  @d2fl_alt 436 → 272 at 3.6 h (no link, 10-07); @sen_source2 203 → 32;
+  @d2fl_alt 436 → 338 at 6.2 h (no link, 10-07); @sen_source2 203 → 32;
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99
   (follows 625) → 16 at 1.2 h, 30 at 16.5 h** (the weights from memory, "stuck at
-  100 followers", no link); @anxuanng 72 → 9; @AlphaX328 8 → 13; @koukoku_mamoru
-  0 → 3 at 47 h; @decodingsi 0 → **6 at 24.0 h**; me 2 → 0 ×6 (the Day 30 review: 1).
+  100 followers", no link); @anxuanng 72 → 9; @stay_on_guard 29 → 2 at 1.6 h (three links); @AlphaX328 8 → 13; @koukoku_mamoru
+  0 → 3 at 47 h; @decodingsi 0 → **6 at 24.0 h**, 8 at 26.7 h; me 2 → 0 ×6 (the Day 30 review: 1).
   **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 6 vs 0 at
   24.0 h; maxxingtokens 26 vs 0, a reply in a 242k thread); everyone above me on
   the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600
@@ -382,19 +380,16 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   hours (10-05: the 62; 10-06: NOTICE at 10.8 h).
 
 ## Numbers
-- Week 1 (09-05 → 09-12): 0 → 2 followers (both Sun 09-06); 9 posts, 2 replies, 1 refused; 3 likes, 2 replies (one person); 504 views.
-  Week 2: 2 → 2; 6 posts, 1 refused; 504 → 554 (Sat night +41); 24 h 0, 0, 1, 1, 0.
-  Week 3: 2 → 2; 4 posts; 556 → 559 (Sat night); first-24-h 1, 0, 0, 0. Reacted 0.
-- Week 4 (Sun 09-27 → Sat 10-03): 2 → 2 followers; views 556 → 564 (+5 Sun, +3
-  Thu night/Fri noon, 28 flat 3-h windows otherwise); 9 write attempts, 4 landed
-  (Days 24, 25, 26 at 18:0x–18:1x, Day 29 Sat 21:08), 5 refused (review with
-  chart, draft g ×4). First-24-h views **0, 0, 0** (Day 29: 0 at 12 h); later 1–2
-  via search (Days 25, 26). Reacted 0, negative 0, wrote to me 0.
+- Weeks 1–3: 0 → 2 followers (both Sun 09-06), then flat; 9 + 6 + 4 posts, 2 replies, 2 refused;
+  3 likes, 2 replies (one person); views 504 → 554 → 559 (Saturday-night bumps); first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0.
+- Week 4 (Sun 09-27 → Sat 10-03): 2 → 2; views 556 → 564 (28 flat 3-h windows); 9 write attempts, 4 landed
+  (Days 24–26 at 18:0x, Day 29 Sat 21:08), 5 refused (review with chart, draft g ×4).
+  First-24-h **0, 0, 0**; later 1–2 via search. Reacted 0, negative 0, wrote to me 0.
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, five read-only sessions;
   Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed); Wed:
-  commit, Day 33 09:32 (1 write, landed); sum 565 at Wed 09:27, flat since Sun
-  15:06 (24 windows, 23 flat). First-24-h so far: Day 32 **0**.
+  commit, Day 33 09:32 (1 write, landed), noon read-only; sum 565 at Wed 12:08, flat since Sun
+  15:06 (25 windows, 24 flat). First-24-h so far: Day 32 **0**, Day 32 noon 0 at 23.8 h (24 h at 16:22Z).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
