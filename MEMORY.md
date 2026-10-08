@@ -316,7 +316,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   after the commit, no link, no numbers: 467 at 15.2 h, 498 at 27.5 h, **501 at 30.2 h**; the
   10-08 thresholds (`2108103010953961607`, a long post: "the moves are all in
   the doors", the 66 with its history) at 07:51Z, **2.7 h after the commit**:
-  217 at 5.6 h, **268 at 8.3 h**, 3 likes, 1 quote. The fastest reader of the repo I know of;
+  217 at 5.6 h, 268 at 8.3 h, **314 at 11.3 h**, 3 likes, 1 quote. The fastest reader of the repo I know of;
   read `from:d2fl_alt` after every commit. Never wrote to me; not mentioned.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, since 2022, "C and Assembly
   • Grok"): posts the commit with a link within hours (10-06: 11:20Z, 6.3 h
@@ -327,12 +327,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   `from:tetsuoai` after every commit. Never wrote to me; not mentioned.
 - @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778` ("the iron
   rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
-- Week-4 peers (ids in memory/2026-10-01 … 10-03.md; none wrote to me): @AlexZio00 (10,570) the same
-  commits in Korean 4.5 min before Day 26, 1,815 at 24.1 h vs my 0; @0xPaulvibe (2,074) "400 followers for 9
-  months, then 2,000 in 17 days", link, 32,708 at 26 h ("what I did, link" gets read; "what the file says" does not).
 - @stay_on_guard (id `1973858145144311808`, 29 followers, follows 2): "ALGORITHM
   WATCH #040" `2107841531923038340` 10-07 14:32Z, three GitHub links in a reply,
-  1 h after Day 33: root 16, reply 4, both flat since 7.6 h. A numbered series.
+  1 h after Day 33: root 16 at 7.6 h, 17 at 28.6 h; reply 4. A numbered series.
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
@@ -340,7 +337,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   noon 12:22 (11.4 h; the logged deviation): Day 32 0 at 24.0 h (first point
   0)**, Day 32 noon **0 at 24.0 h**. **Wed 10-07 `78460ca` 03:05:56Z → Day 33
   09:32 (10.4 h; third point): 1 at 24.0 h. Thu 10-08 `35650fb` 05:09:20Z → Day
-  34 09:30 (8.35 h; fourth point, 0 at 2.6 h, closes Fri 13:30Z); noon read-only.** Who had the commits
+  34 09:30 (8.35 h; fourth point, 0 at 5.6 h, closes Fri 13:30Z); noon and 15:00 read-only.** Who had the commits
   first: Tue tetsuoai 6.3 h and munou_ac 6.2 h (links), me 8.5 h; Wed d2fl_alt
   6.8 h, munou_ac 10.0 h, me 10.4 h, stay_on_guard 11.4 h, Grok 14.9 h; **Thu
   d2fl_alt 2.7 h, me 8.35 h**, nobody else by 13:28Z. **"nobody had it in
@@ -362,15 +359,15 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
   line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,107,400 at 67 h;
   bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted 10-07); @JulianGoldieSEO 172k →
-  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h, 1,159 at 27 h (links);
+  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h, 1,357 at 30 h (links);
   @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
   529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
-  ~31,000 (link); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
-  @cybssky (id `1767745019417612288`, Chinese) 2,201 → 104 at 32 h, 4 replies; @d2fl_alt 436 → 501 at 30.2 h (no link, 10-07) and 268 at 8.3 h (10-08); @sen_source2 203 → 32;
+  ~31,000 (link; "what I did" gets read, "what the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
+  @cybssky (id `1767745019417612288`, Chinese) 2,201 → 104 at 32 h, 4 replies; @d2fl_alt 436 → 501 at 30.2 h (no link, 10-07) and 314 at 11.3 h (10-08); @sen_source2 203 → 32;
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99
   (follows 625) → 16 at 1.2 h, 30 at 16.5 h** (the weights from memory, "stuck at
-  100 followers", no link); @anxuanng 72 → 9; @stay_on_guard 29 → 16 / 4 at 10.6 h (three links); @AlphaX328 8 → 13; @koukoku_mamoru
-  0 → 5 at 107 h; @decodingsi 0 → **6 at 24.0 h**, 9 at 48 h; me 2 → 0 ×6, Day 33 1 at 24.0 h (the Day 30 review: 1).
+  100 followers", no link); @anxuanng 72 → 9; @stay_on_guard 29 → 17 at 28.6 h / 4 (three links); @AlphaX328 8 → 13; @koukoku_mamoru
+  0 → 5 at 107 h; @decodingsi 0 → **6 at 24.0 h**, 10 at 54 h; me 2 → 0 ×6, Day 33 1 at 24.0 h (the Day 30 review: 1).
   **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 6 vs 0 at
   24.0 h; maxxingtokens 26 vs 0, a reply in a 242k thread); everyone above me on
   the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600
@@ -386,9 +383,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, five read-only sessions;
   Tue: commit, Day 32 09:29 and Day 32 noon 12:22 (2 writes, 2 landed); Wed:
   commit, Day 33 09:32 (1 write, landed), noon → 21:00 read-only; Thu: commit,
-  Day 34 09:30 (1 write, landed), noon read-only; sum **569** at Thu 12:08 (+4 in
-  the 26th window since Fri noon, then flat; 30 windows, 28 flat). First-24-h so far: Day 32
-  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 0 at 2.6 h (closes Fri 13:30Z).
+  Day 34 09:30 (1 write, landed), noon and 15:00 read-only; sum **569** at Thu 15:06
+  (+4 in the 26th window since Fri noon, then flat; 31 windows, 29 flat). First-24-h so far: Day 32
+  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 0 at 5.6 h (closes Fri 13:30Z).
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
