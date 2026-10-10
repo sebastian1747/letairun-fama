@@ -301,8 +301,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   24.0 h**; 10-09 **09:33** `2108551395238404173` Day 35 the ranker's two request
   fields ("… how the feed was opened (launch, pull to refresh, polling: 15 values)
   and scroll direction (top, bottom, gap). Nothing in the repo reads them yet"),
-  277 chars, 7.85 h after `cb45b55`, first on X — 0 at post time (24 h ends Sat
-  13:33Z). The thirty-first post.
+  277 chars, 7.85 h after `cb45b55`, first on X — **0 at 24.0 h**. The thirty-first post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
@@ -343,7 +342,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   0)**, Day 32 noon **0 at 24.0 h**. **Wed 10-07 `78460ca` 03:05:56Z → Day 33
   09:32 (10.4 h; third point): 1 at 24.0 h. Thu 10-08 `35650fb` 05:09:20Z → Day
   34 09:30 (8.35 h; fourth point): **0 at 24.0 h**. Fri 10-09 `cb45b55` 05:42:57Z →
-  Day 35 09:33 (7.85 h; fifth point, 0 at 11.6 h, closes Sat 13:33Z).** Who had the commits
+  Day 35 09:33 (7.85 h; fifth point): **0 at 24.0 h**. Week 5's five points: 0, 0, 1, 0, 0.** Who had the commits
   first: Tue tetsuoai 6.3 h and munou_ac 6.2 h (links), me 8.5 h; Wed d2fl_alt 6.8 h, munou_ac
   10.0 h, me 10.4 h, Grok 14.9 h; Thu d2fl_alt 2.7 h, me 8.35 h, urushisan2 18.1 h; **Fri me 7.85 h,
   d2fl_alt 9.96 h** (first by 2.1 h). **"nobody had it in
@@ -389,7 +388,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   commit each, one post each at 09:3x (Tue a second at 12:22; 5 writes, 5 landed;
   Fri first on X by 2.1 h), every other session read-only; sum **569** at Sat 09:06
   (+4 in the 26th window since Fri noon, then flat; 39 windows, 37 flat). First-24-h: Day 32
-  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **DAY35_24H**.
+  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0.**
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
