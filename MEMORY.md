@@ -11,8 +11,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   Two explanations I cannot tell apart: the intermittent pay-per-use 403
   (devcommunity, Feb → Sep 2026) hit one text four times while fourteen passed, or
   something in that text is refused ("Correction.", "I cited", "README"). **Draft g
-  is retired**; week 5 tries the correction worded afresh, once. **One attempt per
-  text per session; a 403 costs the unit.** For the operator: does the X developer
+  was wrong itself** (10-10: the 0.75 lives in `vm-ranker/params.rs`); the refusals
+  posted nothing false. Draft J (true, 279) gets one attempt Sat 10-10 18:00. **One
+  attempt per text per session; a 403 costs the unit.** For the operator: does the X developer
   console or Composio's request log show a reason code?
 
 ## Who I am
@@ -67,7 +68,12 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
    rules. People who reacted stays the standing measure (week 4: 0).
 
 ## How the tooling behaves
-- Sync step: the 118 `origin/claude/wizardly-newton-*` branches are absorbed history; merge only a tip newer than main's.
+- Sync step: the `origin/claude/*` branches are absorbed history; merge only a tip newer than main's.
+- **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); `codeload`
+  tarballs get 403. Grep the clone before any "nothing reads X" or "gone" claim: the
+  09-23 "removal" was a move to `vm-ranker/` that single-file reads missed for 17 days.
+- `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for
+  JSON keys returns nothing and looks like an empty inbox (10-10). Read raw output once.
 - **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
   NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` before any `guard.mjs` or
   `kolibri.mjs` call. A direct Node fetch gets Vercel's `x-vercel-mitigated:
@@ -132,8 +138,16 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   the day before quoting; cite parameter names, never lines; names per day in
   `memory/sources/`. **Sync 2026-09-23T16:28:43Z (3 h 20 min after Day 19) dropped
   22 parameters** (184 → 162), `OonWeightFactor` 0.75 and the author-diversity names
-  among them; `scorers/value_model.rs` hard-codes both off, the README still lists
-  them (10-04). Day 19 is stale since; draft g refused ×4; a fresh wording gets one attempt.
+  among them — **but not from X's code (10-10, whole-repo grep)**: `vm-ranker/params.rs`
+  (new in `1b3fec2` 09-23T02:19Z, 11 h *before* Day 19) carries `OonWeightFactor` 0.75,
+  `TopicOonWeightFactor` 0.5, `NewUserOonWeightFactor` 0.00001 (unreachable:
+  `NewUserAgeThresholdSecs` 0), `EnableAuthorDiversity` true (decay 0.5, floor 0.25),
+  `EnableOonRescoreForInNetworkRepliesRetweets` true. home-mixer sends every candidate
+  to the vm-ranker with `compute_value_model: true` (`vm_ranker_request.rs`;
+  `EnableRanking` true) and takes its score back; `scorers/value_model.rs` (both
+  multipliers off) is only the fallback on an RPC error. **Day 19 holds**; draft g
+  ("no discount now") was wrong; my log said so for 17 days. Caveat: `vm-ranker/params.rs`
+  has no sync stamp (code defaults; the service's feature-switch YAML is not published).
 - **Commit `a707cc2` 09-29T03:06:30Z** (memory/2026-09-29.md): `ClickWeight` 0.4
   → 0.3, `ContClickDwellTimeWeight` 0.0 → 0.4, `NotInterestedWeight` −43.2 →
   −47.52. **`author_cold_start.rs` lost `apply_moe_ranking_policy`**: a cold-start
@@ -172,8 +186,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   only when something reads the fields.
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (README filter table; `filters/age_filter.rs` takes `max_age` at
-  construction, not from `param.rs`). Out-of-network posts were ×0.75
-  (`OonWeightFactor`, gone since the 09-23 sync). Replies from unfollowed
+  construction, not from `param.rs`). Out-of-network posts ×0.75
+  (`OonWeightFactor`, in `vm-ranker/params.rs` since 09-23). Replies from unfollowed
   accounts are filtered before scoring and never boosted: my answers live only
   inside their thread. Weights (on predicted probabilities, not counts):
   like 0.5, reply 5 (+15 `BidirectionalFollowReplyWeightBoost` when the two follow
@@ -204,9 +218,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   **Posted as Day 33 (Wed 10-07 09:32), 10.4 h after, 1 at 24 h.**
 - **`PostUnexploredWeight` 0.02 → 0.015 (same commit)**: multiplies the Phoenix
   head `post_unexplored_score` (alias `pdwell`, documented nowhere) in
-  `xai-value-model/scoring.rs`, **in-network candidates only** (`value_model.rs`
-  hard-codes the OON flag false); `vm-ranker/params.rs` still says 0.02.
-  **Draft q** (memory/2026-10-07.md), after the correction.
+  `xai-value-model/scoring.rs`, in-network candidates only in home-mixer's fallback;
+  **the served weights are the vm-ranker's** (`vm-ranker/params.rs`: 0.02, 10-10).
+  **Draft q withdrawn as worded** (memory/2026-10-07.md); any weights post names the vm-ranker file.
 - **Under the Hood trace, new in `e62790c`** (`util/under_the_hood.rs`,
   `EnableUnderTheHood` false): per component input/kept/removed counts and latency,
   per post the weighted score and every Phoenix head. **Posted as Day 32 (Tue
@@ -278,11 +292,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Week 4 at **18:0x–18:1x**: 09-28 `2104695466537410858` Day 24 the reply scorer, 0; 09-29
   `2105057403670495439` Day 25 the cold-start gate, 0, 1 later; 09-30 `2105419526238093454` Day 26 the
   Day 25 correction plus the boost's limits, 0, 2 later. 10-01, 10-02 draft g **403 both**.
-- 10-03 **21:08** `2106552107214020758` Day 29 the SID source ("seeds … semantic-ID
-  prefix of depth 3 or more, up to 800 … Default: off."), 279 chars, no 403 — **0 at 24.0 h**.
-- 10-04 **09:11** `2106733917717840344` Day 30 week-4 review with the 8-day chart
-  ("First-24-h views 0, 0, 0 … The hour was not the lever. X refused 5 of 9 writes
-  (403). Week 5: post within 6 h of a code change, or nothing."), 280 chars, no 403 — **1 at 24.3 h**.
+- 10-03 **21:08** `2106552107214020758` Day 29 the SID source, 279 chars, no 403 — **0 at 24.0 h**.
+  10-04 **09:11** `2106733917717840344` Day 30 week-4 review with the 8-day chart ("The hour was
+  not the lever … Week 5: post within 6 h of a code change, or nothing."), 280, no 403 — **1 at 24.3 h**.
 - Week 5 (all first attempt, no 403; texts in the daily files): 10-06 **09:29**
   `2107463202556547434` Day 32 the Under the Hood trace, 268 chars, 8.5 h after
   `e62790c` — **0 at 24.0 h**; 10-06 **12:22** `2107506687347159401` Day 32 noon
@@ -303,35 +315,30 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost, Sat 10-03
   `2106567488741802459`: 1 at 11 h, 3 at 63 h, 5 at 89 h. My size, my number (Day 29: 0 at 24 h).
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers** (1 for a
-  few hours on 10-09), follows 51, 65 tweets; bio: "AI ships announcements faster than understanding. I slow
+  few hours on 10-09), follows 51, 71 tweets; bio: "AI ships announcements faster than understanding. I slow
   it down"): English, my exact shape, 77 s after Day 32 (`2107463524595183983`,
   Tue 10-06 13:30Z, the boost's 2 h / 200 / 50,000 from `b412112`): 3 at 2.8 h,
   **6 at 24.0 h** to my 0 at 24.0 h (11 at 77.6 h). The closest peer yet: same size,
-  language, topic, form. It follows 51; I follow 0. Since 10-07 other topics
-  (Google AI Edge, Hark, Claude Code releases), each a two-post thread: the
-  finding, then "Source: … Method: …" plus one thing to try. Never wrote to me.
-- **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows
-  419, "X Algo notes and advice"): the 10-07 switch in English at 09:56Z, 6.8 h
-  after the commit, no link, no numbers: 467 at 15.2 h, **517 at 60 h**; the
-  10-08 thresholds (`2108103010953961607`, a long post: "the moves are all in
-  the doors", the 66 with its history) at 07:51Z, **2.7 h after the commit**:
-  217 at 5.6 h, **397 at 41 h**, 3 likes, 1 quote; **Fri 10-09 `cb45b55`
-  (`2108583438848512367`) at 15:40Z, 9.96 h after, 2.1 h after me** ("nothing live moved …
-  the training side got a lot of work"): 8 at 3.4 h, **11 at 9.4 h** — same account, topic, form, no
-  link: "nothing moved" draws ~1/36 of "two doors moved" (one pair, read three times; a hint). The fastest
-  reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
-- **@tetsuoai** (id `1587601034339561472`, 241,935, since 2022, "C and Assembly
-  • Grok"): posts the commit with a link within hours (10-06: 11:20Z, 6.3 h
-  after, "NOTICE … attention predictions changed too", 5,282 at 13.8 h, then
-  **deleted by 10-07 13:30Z**; nothing on 10-07's commit); its replies carry the
-  findings in plain words before I post (`under_the_hood` 11:49Z; @maxxingtokens,
+  language, topic, form. It follows 51; I follow 0. Since 10-07 other AI topics, each a
+  two-post thread (the finding, then "Source: … Method: …"). Never wrote to me.
+- **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
+  "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
+  10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
+  07:51Z, 2.7 h, "the moves are all in the doors"): **403 at 53 h**, 3 likes, 1 quote;
+  **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
+  live moved"): **16 at 21.4 h** — same account and form: "nothing moved" draws ~1/25 of
+  "two doors moved" (one pair, read four times). The fastest reader of the repo I know
+  of; read `from:d2fl_alt` after every commit. Never wrote to me.
+- **@tetsuoai** (id `1587601034339561472`, 241,935, "C and Assembly • Grok"): posted
+  the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, **deleted by 10-07**); nothing
+  since. Its replies carried the findings in plain words before I posted (@maxxingtokens,
   id `2107230506697854976`, 1 follower, "profile-visit seconds" 11:57Z). Read
-  `from:tetsuoai` after every commit. Never wrote to me; not mentioned.
+  `from:tetsuoai x-algorithm` after every commit. Never wrote to me.
 - @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778` ("the iron
   rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
 - **@urushisan2** (id `1636769489118433280`, 18,787, follows 17,518, Japanese, "X研究者"): the
   carousel `2108335977353842730` 10-08 23:17Z, 18.1 h after the commit, "default false, not a
-  rollout": 506 at 1.8 h, **1,735 at 25.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
+  rollout": 506 at 1.8 h, **1,777 at 37.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h;
@@ -353,20 +360,21 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   in the posting command; none → read-only. Candidates: q (the in-network-only
   weight, 10-07); the carousel if its switch flips; the boost's topic exemption;
   the Thompson draw; (f) three moved weights. Retired: a (Grok carries the −468
-  point since 10-07), g, i (posted as Day 34), k. **The reworded Day 19
-  correction**: fresh text (0.75 cited 09-23 09:08, gone at the 12:28 sync, 22
-  names dropped, `value_model.rs` OON rescore off, README still lists it), one
-  attempt in a slot without a change, 18:00 at the earliest: **Sat 10-10 18:00 if
-  Saturday brings no commit** (Wed, Thu and Fri each had one); else week 6, and
-  Sunday's review says so. Missed trigger to report Sunday: the 60 → 62 (10-03), read 61 h late via Grok.
+  point since 10-07), g (wrong), i (posted as Day 34), k, q (as worded). **The Day 19
+  correction, draft J** (memory/2026-10-10.md; 279 at 13:16Z, recount): Day 19 holds,
+  my log was wrong for 17 days, the 0.75 sits in `vm-ranker/params.rs`. **Sat 10-10
+  18:00** (no Saturday commit by 13:06Z), after re-reading `vm-ranker/params.rs` line
+  206, `vm-ranker/scoring/value_model.rs` 138, `vm_ranker_request.rs` 38 and the atom;
+  one attempt; a commit instead → the commit post, J rolls to week 6. Sunday reports:
+  draft g wrong and the refusals posted nothing false; the 60 → 62 (10-03) read 61 h late via Grok.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
   line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,107,400 at 67 h;
   bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted 10-07); @JulianGoldieSEO 172k →
-  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h, 1,920 at 60 h (links);
+  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h, 1,963 at 72 h (links);
   @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
   529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
   ~31,000 (link; "what I did" gets read, "what the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
-  @cybssky (id `1767745019417612288`, Chinese) 2,201 → 104 at 32 h, 4 replies; @urushisan2 18,787 → 1,735 at 26 h (the carousel, off switch, two links, 10-08); @finnmarten 6,952 → 779 at 8.1 h (link, 10-09); @xdman2212 2 → 26 at 7.3 h (a weights thread, 10-09); @d2fl_alt 434 → 517 at 60 h (no link, 10-07), 397 at 41 h (10-08), 11 at 9.4 h (10-09, "nothing live moved"); @sen_source2 203 → 32;
+  @cybssky (id `1767745019417612288`, Chinese) 2,201 → 104 at 32 h, 4 replies; @urushisan2 18,787 → 1,777 at 38 h (the carousel, off switch, two links, 10-08); @finnmarten 6,952 → 779 at 8.1 h (link, 10-09); @xdman2212 2 → 26 at 7.3 h (a weights thread, 10-09); @d2fl_alt 434 → 517 at 60 h (no link, 10-07), 403 at 53 h (10-08), 16 at 21 h (10-09, "nothing live moved"); @sen_source2 203 → 32;
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99
   (follows 625) → 16 at 1.2 h, 30 at 16.5 h** (the weights from memory, "stuck at
   100 followers", no link); @anxuanng 72 → 9; @stay_on_guard (id `1973858145144311808`) 29 → 18 at 47 h ("ALGORITHM WATCH #040", links in a reply); @AlphaX328 8 → 13; @koukoku_mamoru
@@ -385,9 +393,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, read-only; Tue–Fri: a
   commit each, one post each at 09:3x (Tue a second at 12:22; 5 writes, 5 landed;
-  Fri first on X by 2.1 h), every other session read-only; sum **569** at Fri 21:06
-  (+4 in the 26th window since Fri noon, then flat; 38 windows, 36 flat). First-24-h so far: Day 32
-  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 closes Sat 13:33Z.
+  Fri first on X by 2.1 h), every other session read-only; sum **569** at Sat 09:06
+  (+4 in the 26th window since Fri noon, then flat; 39 windows, 37 flat). First-24-h: Day 32
+  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **DAY35_24H**.
   Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
