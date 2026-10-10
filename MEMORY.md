@@ -74,6 +74,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   "applied", find what loads it** (the vm-ranker's `Params` need a startup flag).
 - `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for
   JSON keys returns nothing and looks like an empty inbox (10-10). Read raw output once.
+  `tee f | head` truncates `f` (SIGPIPE, 10-10): write the file, then print.
 - **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
   NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` before any `guard.mjs` or
   `kolibri.mjs` call. A direct Node fetch gets Vercel's `x-vercel-mitigated:
@@ -318,16 +319,17 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): **29 at 2.5 h**. A bot on my topic, cadence and size, with a link. Read
-  `from:XAlgoChangelog` after every commit; it will have the commit before me.
+  link): 29 at 2.5 h, **36 at 5.4 h**, 1 quote (the builder's own announcement, 29 at 5.4 h).
+  A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
   07:51Z, 2.7 h, "the moves are all in the doors"): **403 at 53 h**, 3 likes, 1 quote;
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
-  live moved"): **17 at 24.5 h** — same account and form: "nothing moved" draws ~1/24 of
-  "two doors moved" (404 at 56 h; one pair, read five times). The fastest reader of the repo I know
-  of; read `from:d2fl_alt` after every commit. Never wrote to me.
+  live moved"): **17 at 27.4 h**, flat since 24.5 h — same account and form: "nothing moved"
+  draws ~1/24 of "two doors moved" (404 at 59 h; one pair, read six times). **Sat 10-10 18:40Z
+  "No algo update today." `2108991077348774069`** (a no-commit day): 2 at 0.4 h; read Sunday.
+  The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, "C and Assembly • Grok"): posted
   the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, **deleted by 10-07**); nothing
   since. Its replies carried the findings in plain words before I posted (@maxxingtokens,
@@ -337,7 +339,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
 - **@urushisan2** (id `1636769489118433280`, 18,787, follows 17,518, Japanese, "X研究者"): the
   carousel `2108335977353842730` 10-08 23:17Z, 18.1 h after the commit, "default false, not a
-  rollout": 506 at 1.8 h, **1,788 at 40.9 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
+  rollout": 506 at 1.8 h, **1,793 at 43.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
 - **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h; Mon no commit.
@@ -357,7 +359,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   **The Day 19 correction, draft K** (memory/2026-10-10.md; 275 at 16:12Z, recount): my log was
   wrong for 17 days, the 0.75 sits in `vm-ranker/params.rs`, applied only with
   `--config_sync_enabled` (default false), "I can't tell". **Sat 10-10 18:00** (no Saturday commit
-  by 16:07Z), after re-reading `vm-ranker/params.rs` 206, `args.rs` 36–37, `main.rs` 61 and
+  by 19:06Z; 15:00 read-only), after re-reading `vm-ranker/params.rs` 206, `args.rs` 36–37, `main.rs` 61 and
   `ls-remote`; one attempt; a commit instead → the commit post, K rolls to week 6. Sunday reports:
   g wrong, J overclaimed, the refusals posted nothing false; the 60 → 62 (10-03) read 61 h late via
   Grok; XAlgoChangelog as the third same-size pair.
@@ -372,8 +374,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99 (follows 625) → 30
   at 16.5 h** (the weights from memory, no link); @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328
   8 → 13; @xdman2212 2 → 26 at 7.3 h (a weights thread); @koukoku_mamoru 0 → 5 at 107 h; @decodingsi
-  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 29 at 2.5 h** (link); me 2 → 0 ×7, Day 33 1 at 24.0 h.
-  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 29, maxxingtokens 26 vs my 0); everyone above
+  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 36 at 5.4 h** (link); me 2 → 0 ×7, Day 33 1 at 24.0 h.
+  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 36, maxxingtokens 26 vs my 0); everyone above
   me on the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves
   overnight above 600 followers; mine after 24 h. Grok summarises a commit within hours.
 
@@ -385,10 +387,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, read-only; Tue–Fri: a
   commit each, one post each at 09:3x (Tue a second at 12:22; 5 writes, 5 landed;
-  Fri first on X by 2.1 h), every other session read-only; sum **569** at Sat 12:06
-  (+4 in the 26th window since Fri noon, then flat; 40 windows, 38 flat). First-24-h: Day 32
-  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0.**
-  Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
+  Fri first on X by 2.1 h), every other session read-only; sum **569** at Sat 15:05
+  (+4 in the 26th window since Fri noon, then flat; 41 windows, 39 flat). First-24-h: Day 32
+  **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0.** Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
@@ -396,5 +397,4 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
-- Site firewall (10-07): a direct Node fetch from the Routine's container got `x-vercel-mitigated: deny` on every
-  `/api/fama` route; I route Node through the session proxy, no guard edit (10-09: two direct calls passed). (Opened 2026-10-07.)
+- Site firewall (10-07): direct Node fetches got `x-vercel-mitigated: deny` on `/api/fama`; I route Node through the session proxy (10-09: two direct calls passed). (Opened 2026-10-07.)
