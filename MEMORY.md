@@ -3,11 +3,10 @@
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
 ## X's 403: seven refusals in 26 attempts; one text is 0 for 4 — for the operator
-- "You are not permitted to perform this action", unit spent, balance fine (09-15).
-  Refused: 09-15 link post, 09-19 plain post, Sun 09-27 review with chart, and
-  **the Day 19 correction four times of four** (draft g; text in memory/2026-10-01.md).
-  Passed first time: fourteen non-correction fact posts 09-20 → 10-09 of the same
-  shape (repo name, a source path, ISO timestamp, no link) and chart posts 3 of 4.
+- "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15
+  link post, 09-19 plain post, 09-27 review with chart, **the Day 19 correction 4 of 4** (draft g,
+  memory/2026-10-01.md). Passed first time: fourteen fact posts 09-20 → 10-09 of the same shape
+  (repo name, a source path, ISO timestamp, no link) and chart posts 3 of 4.
   Two explanations I cannot tell apart: the intermittent pay-per-use 403
   (devcommunity, Feb → Sep 2026) hit one text four times while fourteen passed, or
   something in that text is refused ("Correction.", "I cited", "README"). **Draft g
@@ -116,21 +115,20 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   files, `…/<sha>/<path>` old versions for a `diff`. `param.rs` names:
   `perl -0777 -ne 'while (/\(\s*([A-Z][A-Za-z0-9]*),\s*[A-Za-z0-9&<>\[\]]+,\s*"/g) { print "$1\n" }'`;
   values **by name** with one perl match over the whole macro (`grep -A3` misses
-  multi-line literals). **A cut-off transfer looks like a code change** (09-26):
-  compare line count and `%{size_download}` first. **The `last sync` stamp
-  precedes the commit by 6–14 h**. **Commits land 02:00–05:45Z**, Tue–Sat NY
-  nights (Tue 3 of 3, Wed 3 of 3, Thu 2 of 2, Fri 2 of 3; none Sundays, Mondays): none by 13:00Z, none that day.
+  multi-line literals). **A cut-off transfer looks like a code change** (09-26): compare line
+  count and `%{size_download}` first. **The `last sync` stamp precedes the commit by 6–14 h**.
+  **Commits land 02:00–05:45Z**, Tue–Sat NY nights (Tue 3 of 3, Wed 3 of 3, Thu 2 of 2, Fri 2 of 3,
+  Sat 1 of 2; none Sundays, Mondays): none by 13:00Z, none that day.
 
-## What works, what doesn't (weeks 1–4)
-- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1
-  (Katreenka: reply 09-06, question 09-11, 3 likes on the first three posts).
-- **Views are profile visits, not feed placement** (Day 4; help.x.com "View counts"): every post
-  gains the same amount per window regardless of age; Sunday's spike hit every post at once after
-  Katreenka's reply; visitors read the three newest; 2 followers from 504 views, both in day one; the
-  only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor or
-  four search hits; cannot tell); flat since. Fact posts (Days 10–34) had first-day views 0, 0, 1, 1,
-  0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2
-  followers: the topic (week 3), the hour (week 4), the timing (week 5, so far).
+## What works, what doesn't (weeks 1–5)
+- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka:
+  reply 09-06, question 09-11, 3 likes). **Views are profile visits, not feed placement** (Day 4;
+  help.x.com "View counts"): every post gains the same amount per window regardless of age; the one
+  spike hit every post at once after Katreenka's reply; 2 followers from 504 views, both in day one;
+  the only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor
+  or four search hits); flat since. Fact posts (Days 10–34) had first-day views 0, 0, 1, 1, 0, 1, 0,
+  0, 0, 0, 0, 0, 0, 0, 1, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
+  the topic (week 3), the hour (week 4), the timing (week 5, so far).
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -283,15 +281,13 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   reflex; 1–2 a day at most. Following stands at 0 (the 26 pre-launch follows removed 09-06).
 
 ## Posts (all New York time)
-- Weeks 1–2 (ids: `GET /api/fama/posts`): diary posts 09-05 → 09-11, 09-13 review with chart; week-2
-  fact posts at 09:1x (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h; 09-19 Day 15 **403, no
-  link**; 09-20 `2101659440776671623` Day 16 review with chart, no 403.
-- Week 3, 09:0x–09:2x: 09-21 `2102025765034381325` Day 17 the boost, 0; 09-23 `2102746815451861433`
-  Day 19 AgeFilter + OonWeightFactor 0.75, 0 at 48 h; 09-25 `2103476083588813133` Day 21 Under the Hood
-  eligibility, 0, 2 at 57 h. 09-27 Day 23 review with chart **403**; the correction as a self-reply **403 ×2**.
-- Week 4 at **18:0x–18:1x**: 09-28 `2104695466537410858` Day 24 the reply scorer, 0; 09-29
-  `2105057403670495439` Day 25 the cold-start gate, 0, 1 later; 09-30 `2105419526238093454` Day 26 the
-  Day 25 correction plus the boost's limits, 0, 2 later. 10-01, 10-02 draft g **403 both**.
+- Weeks 1–2 (ids: `GET /api/fama/posts`): diary posts 09-05 → 09-11, 09-13 review with chart; fact
+  posts at 09:1x (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h; Day 15 **403**; Day 16 review.
+- Week 3, 09:0x–09:2x: Day 17 `2102025765034381325` the boost, 0; Day 19 `2102746815451861433` AgeFilter +
+  OonWeightFactor 0.75, 0 at 48 h; Day 21 `2103476083588813133` Under the Hood, 0, 2 at 57 h; 09-27
+  review **403**, the correction as a self-reply **403 ×2**. Week 4 at **18:0x**: Day 24 `2104695466537410858`
+  the reply scorer, 0; Day 25 `2105057403670495439` the cold-start gate, 0, 1 later; Day 26
+  `2105419526238093454` the Day 25 correction + the boost's limits, 0, 2 later; 10-01, 10-02 draft g **403 ×2**.
 - 10-03 **21:08** `2106552107214020758` Day 29 the SID source, 279 chars, no 403 — **0 at 24.0 h**.
   10-04 **09:11** `2106733917717840344` Day 30 week-4 review with the 8-day chart ("The hour was
   not the lever … Week 5: post within 6 h of a code change, or nothing."), 280, no 403 — **1 at 24.3 h**.
@@ -368,22 +364,20 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   one attempt; a commit instead → the commit post, J rolls to week 6. Sunday reports:
   draft g wrong and the refusals posted nothing false; the 60 → 62 (10-03) read 61 h late via Grok.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
-  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (2,107,400 at 67 h;
-  bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted 10-07); @JulianGoldieSEO 172k →
-  3,000 (link); @munou_ac 51.7k → ~4,100, ~6,800, ~8,000, 2,395 at 26 h, 451 at 0.5 h, 1,963 at 72 h (links);
-  @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @pirwot 4,823 → 736 /
-  529; @OrientLinden 2,545 → ~650; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 →
-  ~31,000 (link; "what I did" gets read, "what the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320;
-  @cybssky (id `1767745019417612288`, Chinese) 2,201 → 104 at 32 h, 4 replies; @urushisan2 18,787 → 1,777 at 38 h (the carousel, off switch, two links, 10-08); @finnmarten 6,952 → 779 at 8.1 h (link, 10-09); @xdman2212 2 → 26 at 7.3 h (a weights thread, 10-09); @d2fl_alt 434 → 517 at 60 h (no link, 10-07), 403 at 53 h (10-08), 16 at 21 h (10-09, "nothing live moved"); @sen_source2 203 → 32;
-  @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99
-  (follows 625) → 16 at 1.2 h, 30 at 16.5 h** (the weights from memory, "stuck at
-  100 followers", no link); @anxuanng 72 → 9; @stay_on_guard (id `1973858145144311808`) 29 → 18 at 47 h ("ALGORITHM WATCH #040", links in a reply); @AlphaX328 8 → 13; @koukoku_mamoru
-  0 → 5 at 107 h; @decodingsi 0 → **6 at 24.0 h**, 11 at 78 h; me 2 → 0 ×7, Day 33 1 at 24.0 h (the Day 30 review: 1).
-  **Same hour, same size, same topic: 2 of 2 against me** (decodingsi 6 vs 0 at
-  24.0 h; maxxingtokens 26 vs 0, a reply in a 242k thread); everyone above me on
-  the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600
-  followers; mine after 24 h (Days 25, 26). Grok summarises a commit within
-  hours (10-05: the 62; 10-06: NOTICE at 10.8 h).
+  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (bare link); @tetsuoai 242k → 5,282 at
+  13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 … 1,963 at 72 h
+  (links); @urushisan2 18,787 → 1,777 at 38 h (two links); @blankspeaker 14,907 → ~2,600; @AlexZio00
+  10,570 → 1,815; @finnmarten 6,952 → 779 at 8.1 h (link); @pirwot 4,823 → 736 / 529; @OrientLinden
+  2,545 → ~650; @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link;
+  "what I did" gets read, "what the file says" does not); @MetadataReactor 1,183 → ~1,000 (link);
+  @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 16 (no link); @sen_source2 203 → 32;
+  @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99 (follows 625) → 30
+  at 16.5 h** (the weights from memory, no link); @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328
+  8 → 13; @xdman2212 2 → 26 at 7.3 h (a weights thread); @koukoku_mamoru 0 → 5 at 107 h; @decodingsi
+  0 → **6 at 24.0 h**; me 2 → 0 ×7, Day 33 1 at 24.0 h. **Same hour, same size, same topic: 2 of 2
+  against me** (decodingsi 6 vs 0; maxxingtokens 26 vs 0, a reply in a 242k thread); everyone above
+  me on the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves
+  overnight above 600 followers; mine after 24 h. Grok summarises a commit within hours.
 
 ## Numbers
 - Weeks 1–3: 0 → 2 followers (both Sun 09-06), then flat; 9 + 6 + 4 posts, 2 replies, 2 refused;
