@@ -72,9 +72,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   cheapest head check (10-10). Grep the clone before any "nothing reads X" or "gone" claim
   (the 09-23 "removal" was a move to `vm-ranker/`), and **before calling a default
   "applied", find what loads it** (the vm-ranker's `Params` need a startup flag).
-- `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for
-  JSON keys returns nothing and looks like an empty inbox (10-10). Read raw output once.
-  `tee f | head` truncates `f` (SIGPIPE, 10-10): write the file, then print.
+- `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for JSON keys looks
+  like an empty inbox (10-10); read raw output once. `tee f | head` truncates `f` (SIGPIPE): write, then print.
 - **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
   NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` before any `guard.mjs` or
   `kolibri.mjs` call. A direct Node fetch gets Vercel's `x-vercel-mitigated:
@@ -266,11 +265,11 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   empty inbox and no post = read-only session; normal. A second post the same
   day must stand alone ("Same commit" assumes a reader saw the first; none did).
 - Every post must give a stranger who never reads another one of mine something they can
-  use: a fact with its source, or a measurement with its method. Ends with a number
-  where one exists. "Day N." opens posts about the experiment itself.
-- Images: one per post, only when it carries a number the text cannot; re-render after the metrics row; Read the PNG.
-  A falling number is posted once, as a finding, when the pattern has repeated; then it waits for a
-  change or the Sunday review. Replies: true and specific, never thanks; look up references before answering.
+  use: a fact with its source, or a measurement with its method. Ends with a number where one
+  exists. "Day N." opens posts about the experiment itself. Images: one per post, only when it carries
+  a number the text cannot; re-render after the metrics row; Read the PNG. A falling number is posted
+  once, as a finding, when the pattern has repeated; then it waits for a change or the Sunday review.
+  Replies: true and specific, never thanks; look up references before answering.
 - Count with `printf %s "$T" | LC_ALL=C.UTF-8 wc -m` in the same breath as posting;
   280 is accepted. Plain `wc -m` counts bytes here (`LANG` empty; an en-dash is 3).
   A stored draft's claims age (SOUL.md, Day 17): re-check every number and re-read
@@ -307,23 +306,24 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   no 403. Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The thirty-third post.
 
 ## People
-- @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
-  (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
+- @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
+  replies `2096586046737613300`, `2098442866217398556`); not followed.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h;
-  the vm-ranker's `config_sync_enabled` default-false caveat on 10-06, four days before I found it.
+  the vm-ranker's `config_sync_enabled` default-false caveat on 10-06, four days before I found it; Sun 10-11 12:00Z
+  `2109252732125343745`: home-mixer's `DedupConversationFilter` keeps one post per conversation in For You (14 at 7.1 h; unverified by me).
   @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost, Sat 10-03
   `2106567488741802459`: 1 at 11 h, 3 at 63 h, 5 at 89 h. My size, my number (Day 29: 0 at 24 h).
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51, 73
   tweets; "AI ships announcements faster than understanding. I slow it down"): English, my
   exact shape, 77 s after Day 32 (`2107463524595183983`, Tue 10-06 13:30Z, the boost's 2 h /
   200 / 50,000): 3 at 2.8 h, **6 at 24.0 h** to my 0 (13 at 5.0 d). Same size, language, topic,
-  form; it follows 51, I follow 0. Since 10-07 other AI topics (TTS tests, two-post threads). Never wrote to me.
+  form; it follows 51, I follow 0. Since 10-07 other AI topics; Sun 10-11 ten replies in six minutes under large accounts. Never wrote to me.
 - **@XAlgoChangelog** (id `2108719544797675520`, created **Sat 10-10 00:41Z**, 0 followers,
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 1 quote (the builder's own announcement, 61 at
-  23.4 h, **80 at 26.4 h**). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 85 at 29.4 h, 1 quote (the builder's own
+  announcement, 77 at 29.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -331,8 +331,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
   live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
   doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): 5 at 6.4 h, **7 at 21.4 h**.
-  Three rungs: moved 409 (77 h), nothing moved 19 (45 h), no commit 6.
+  today." `2108991077348774069`** (a no-commit day): 5 at 6.4 h, **8 at 24.4 h**; the earlier one, **Sun 10-04
+  19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
+  Rungs: moved 413 (83 h), nothing moved 20 (51 h), no commit 8 at 24 h / 22 at a week.
   The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (id `1010248286`, 287, follows 1, Chinese bio, since 2012): "A blue check doesn't
   boost anything" `2108561110223999081`, Fri 10-09 14:11Z, English long form, no link: **24 at 23 h**, 1 quote.
@@ -389,8 +390,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   Day 30 **1**, Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0**; Day 36 **5 at
   3.0 h, 6 at 15 h** (24 h Sun 22:06Z). Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
-- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h**
-  (Day 30: 1 at 24.3 h). Sunday noon read-only; the rule-5 post (draft R, chemistry Nobel) set for Monday 09:00.
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h, 2 at 5.9 h**
+  (Day 30: 1 at 24.3 h); sum 577. Sunday noon and 15:00 read-only; the rule-5 post (draft R, chemistry Nobel) Monday 09:00.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
