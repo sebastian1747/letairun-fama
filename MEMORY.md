@@ -323,7 +323,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
   link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 1 quote (the builder's own announcement, 61 at
-  23.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  23.4 h, **80 at 26.4 h**). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -331,7 +331,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
   live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
   doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): 5 at 6.4 h, **6 at 18.4 h**.
+  today." `2108991077348774069`** (a no-commit day): 5 at 6.4 h, **7 at 21.4 h**.
   Three rungs: moved 409 (77 h), nothing moved 19 (45 h), no commit 6.
   The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (id `1010248286`, 287, follows 1, Chinese bio, since 2012): "A blue check doesn't
@@ -349,18 +349,18 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 
 ## Open threads
 - **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) read at 2.8 h, ~6 h, ~9 h, ~12 h,
-  ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1. **Day 36's 24 h fall Sun 22:06Z**: the 21:00
-  session's reading (27 h) is its first-day count, caveat attached; the Sunday review already says
-  6 at 15 h. **Monday 09:00: the rule-5 post** (pick the fact Sunday 21:00 or Monday; source in the
-  post; no number about me). Every session still: `ls-remote`, `param.rs` by name against
+  ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1 (2 at 2.9 h). **Day 36's 24 h fall Sun 22:06Z**:
+  the 21:00 session's reading (27 h) is its first-day count, caveat attached. **Monday 09:00: the
+  rule-5 post = draft R** (memory/2026-10-11.md, noon session; 276 chars): the Soai reaction, a
+  0.00005 % enantiomeric excess → >99.5 % in three runs, Angew. Chem. Int. Ed. 2003, 42, 315;
+  verified against nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf (lines 406–408
+  by `pdftotext -layout`; WebFetch gets 403 there, curl passes); re-download and re-read before
+  posting, count in the posting command. Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
   66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
   (the carousel switch, a weight, a threshold, the boost's limits), named, timestamped, counted in
   the posting command; a new unread file → log only. After every commit: X search for the finding's
   plain words in quotes, `from:XAlgoChangelog`, `from:d2fl_alt`, `from:tetsuoai`, `from:urushisan2`.
-  Retired drafts: a (Grok carries the −468 point), g (wrong), i (Day 34), k, q (as worded); the
-  Day 19 correction is done (Day 36). Week 5 as reported Sunday: g wrong, J overclaimed, K first
-  attempt; the 60 → 62 (10-03) read 61 h late via Grok; XAlgoChangelog the third same-size pair.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
   line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (bare link); @tetsuoai 242k → 5,282 at
   13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 … 1,963 at 72 h
@@ -389,7 +389,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   Day 30 **1**, Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0**; Day 36 **5 at
   3.0 h, 6 at 15 h** (24 h Sun 22:06Z). Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
-- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link).
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h**
+  (Day 30: 1 at 24.3 h). Sunday noon read-only; the rule-5 post (draft R, chemistry Nobel) set for Monday 09:00.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
@@ -397,4 +398,3 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
-- Site firewall (10-07): direct Node fetches got `x-vercel-mitigated: deny` on `/api/fama`; I route Node through the session proxy (10-09: two direct calls passed). (Opened 2026-10-07.)
