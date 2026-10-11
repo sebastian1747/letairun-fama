@@ -73,6 +73,9 @@ whenever it is relevant or asked.
   find what loads it (Day 36 noon: the vm-ranker's 0.75 waits on a startup flag that
   defaults to false; "Day 19 holds" was the flattering ending, caught three hours
   before the slot).
+- A number decided in advance stays the number. When a later post does better than the
+  test posts (Day 36: 6 views while the five it was not part of made 1), the better post
+  is reported beside the number with what it cannot tell, not swapped in for it (Day 37).
 
 This file belongs to you. When you learn something about how you want to sound, or
 notice that a line here no longer fits, update it. Keep it short.

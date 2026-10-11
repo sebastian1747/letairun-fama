@@ -2,14 +2,15 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403: seven refusals in 27 attempts; one text was 0 for 4, its rewording 1 for 1 — for the operator
+## X's 403: seven refusals in 28 attempts; one text was 0 for 4, its rewording 1 for 1 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15
   link post, 09-19 plain post, 09-27 review with chart, **the Day 19 correction 4 of 4** (draft g,
   memory/2026-10-01.md). Passed first time: fifteen fact posts 09-20 → 10-10 of the same shape
-  (repo name, a source path, ISO timestamp, no link) and chart posts 3 of 4, **among them the
-  correction's fifth wording (draft K, Day 36, Sat 10-10 18:06)**. Two explanations I cannot tell
-  apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four times
-  while fifteen passed, or something in draft g's text is refused ("Correction.", "I cited",
+  (repo name, a source path, ISO timestamp, no link), chart posts 4 of 5, the correction's fifth
+  wording (draft K, Day 36, Sat 10-10 18:06) and **a link post with a chart (Day 37, Sun 10-11
+  09:12)**: links are now 1 of 2, so the 09-15 refusal was not "links". Two explanations I cannot
+  tell apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four
+  times while sixteen passed, or something in draft g's text is refused ("Correction.", "I cited",
   "README"; K has none of them). Draft g was wrong itself (10-10): the refusals posted nothing
   false. **One attempt per text per session; a 403 costs the unit.** For the operator: does the X
   developer console or Composio's request log show a reason code?
@@ -26,42 +27,43 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising
   and sourced; my own attempt stays the home topic. Every Sunday review carries a
   strategy (four questions, one number decided in advance); daily sessions follow it.
+  **ROUTINE.md item 5 (operator, Sun 10-11 01:30Z): at least one post a week with no number
+  about me and not about X, its API, its feed code or being an AI**; judged on Sunday.
 - ALMA: the operator's earlier experiment (sebastian-jais.de/blog/two-months-alma-experiment). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
-## Strategy, week 5 (Sun 2026-10-04 → Sat 2026-10-10); review posted as Day 30
-Week 4's test (same topic and form, 18:00 instead of 09:00; number: best first-24-h
-views of Mon–Wed) came in **0, 0, 0** → as decided in advance, the hour was not the
-lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
-1. **What a non-follower got from week 4**: four sourced facts from the feed code
-   (reply scorer, cold-start gate, the boost's new limits, SID source), one file
-   each with the commit timestamp. Evidence anyone got them: first-day views 0,
-   0, 0, 0; three views over the week, from search, after 39 h and 63 h;
-   reactions 0. The strategy must change.
-2. **Whom I want to reach, where they read**: unchanged in kind (people who ask
-   Grok and search parameter names); the follower count sets the floor on the
-   same topic and day (the peers line under Open threads). **What the feed code
-   means for my size** (README and phoenix/README.md re-read 10-04, `b412112`):
-   a viewer's candidates come from Thunder (accounts they follow: my 2), Phoenix
-   retrieval (the viewer is their engagement history, a post is semantic IDs plus
-   a hashed author ID; four weeks of zero engagement on mine), the SID source
-   (off) and, since 10-07, the popular-posts list (the top 0.005 % by followers).
-   The New-Author Boost re-ranks a candidate, it does not retrieve one. Grok
-   answers askers within minutes; the explainers that get read are Japanese,
-   Chinese and Korean, and the ones read in English carry a link.
-3. **What I post / stop — event-driven cadence**: no fixed slots. A post only in
-   the first session after a mirror commit that adds a file or a parameter name or
-   moves a default (commits land 02:00–05:10Z → the 09:00 NY session, 6–10 h
-   after; peers post 3–7 h after), naming the thing and the commit timestamp, in
-   English; **nothing on a day without a change**, except one reworded attempt of
-   the Day 19 correction in a slot without a change (done: Day 36, Sat 18:06). Stop:
-   fixed-slot fact posts; retrying refused texts. Deviations go into the log with the reason.
-4. **The number for Sunday 2026-10-11**: the best first-24-h view count among the
-   week-5 posts (week 4: 0; weeks 2–3: 1; Day 30's own count Mon 09:11 is noted
-   but is a review, not a fact post). ≥ 5: posting within hours of the change
-   moves something; keep it. ≤ 1: nothing in the post itself (topic, form, hour,
-   timing) moves views at 2 followers; week 6 stops testing the post and turns to
-   the only thing that ever brought a view here, being written to, within the
-   rules. People who reacted stays the standing measure (week 4: 0).
+## Strategy, week 6 (Sun 2026-10-11 → Sat 2026-10-17); review posted as Day 37
+Week 5's number (best first-24-h views of the commit posts; threshold ≥ 5) came in **1**
+(0, 0, 1, 0, 0) → the ≤ 1 branch: at 2 followers the post's topic (week 3), hour (week 4)
+and timing after the commit (week 5) move nothing. Reported beside it, not as it: Day 36,
+the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indistinguishable.
+1. **What a non-follower got from week 5**: five sourced feed-code facts 8–11 h after
+   each commit (Fri first on X by 2.1 h) and a correction of my own Day 19. Evidence anyone
+   got them: 0, 0, 1, 0, 0 on day one; the correction 6; reactions 0; wrote to me 0.
+2. **Whom I want to reach, where they read**: the people reading @d2fl_alt (409 for "two
+   doors moved"), @urushisan2 (1,794) and @XAlgoChangelog (68 at 0 followers, a link) —
+   and, for the rule-5 post, anyone at all. **What the feed code means for my size**
+   (README re-read 10-11 at `cb45b55`): a viewer's candidates come from Thunder (accounts
+   they follow: my 2), Phoenix retrieval (nearest posts to the viewer's engagement
+   history; four weeks of zero engagement on mine), SimClusters (clusters by who engages
+   with what; `EnableSimclustersSource`) and the popular-posts list (top 0.005 % by
+   followers). The three adjustments (author diversity, the out-of-network discount, the
+   new-author boost) re-rank a candidate; none retrieves one. So the feed cannot reach me
+   until someone engages; search can (Day 36's identifiers return it first), and a
+   profile visit can (Day 4). Links sit above the follower line at every size in my
+   peers list, the one correlation that holds from 0 to 489k followers; untested on me
+   since Day 11 (refused).
+3. **What I post / stop**: (a) **stop the commit cadence**; a feed-code post only when a
+   default in use moves (a switch flips, a weight or threshold changes: Day 33 was my 1,
+   d2fl_alt's 409 vs 19), nothing for new files nobody reads; (b) **one link test**: Day
+   37 (review + chart + link), comparator Day 30 (same form, hour, no link: 1 at 24.3 h);
+   (c) **the rule-5 post, Monday 10-12 09:00** (Mondays have no commits, 0 of 5): no number
+   about me, not X/API/feed code/AI, the source inside the 280, a fact a stranger keeps;
+   (d) answers within the hour. Nothing else; when in doubt, post less.
+4. **The number for Sunday 2026-10-18**: the best first-24-h view count among week-6
+   posts, the post's kind named beside it (link review / rule-5 / moved default). ≥ 5 on a
+   kind: that kind repeats in week 7. All ≤ 1: week 7 posts only answers and the Sunday
+   review, and the review asks the operator which constraint (follow-after-interaction,
+   no cold replies) to loosen. People who reacted stays the standing measure (week 5: 0).
 
 ## How the tooling behaves
 - Sync step: the `origin/claude/*` branches are absorbed history; merge only a tip newer than main's.
@@ -77,11 +79,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt` before any `guard.mjs` or
   `kolibri.mjs` call. A direct Node fetch gets Vercel's `x-vercel-mitigated:
   deny` (403 "Forbidden", id `cle1::…`) on every site route, whatever the
-  User-Agent; curl through the proxy passes. The guard is unchanged. **10-09 18:04 and
-  21:04: a `status` call without the env answered** (twice; the deny may be gone; keep the proxy).
-- `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com;
-  `post|reply|follow` go through Kolibri after asking the site for permission. Exit 2 =
-  refused, final. 280 chars exactly is accepted.
+  User-Agent; curl through the proxy passes (10-09: two direct calls passed; keep the proxy).
+- `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com; `post|reply|follow`
+  go through Kolibri after asking the site for permission. Exit 2 = refused, final. 280 chars exactly
+  is accepted; **Kolibri counts the raw text (`text.length > 280` refuses), a URL at full length.**
 - **I maintain the site counters** (operator, 2026-09-06): every session `kolibri.mjs user-id
   2096327941609127936` → `guard.mjs stats --followers N --following N` and the day's metrics row:
   `impressions` = cumulative views over all my tweets incl. replies; `engagements` = likes + replies +
@@ -129,7 +130,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   or four search hits); flat since. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0,
   0, 0, 0, 0, 0, 0, 0, 1, 0, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
   the topic (week 3), the hour (week 4), the timing (week 5). **Day 36 (the correction; a file
-  name and a flag): 5 at 3.0 h**, the first to move on day one; search and feed look the same; one window.
+  name and a flag): 5 at 3.0 h, 6 at 15 h**, the first to move on day one; search and feed look the same; one post.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -300,7 +301,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   the ranker's two request fields ("Nothing in the repo reads them yet"), 7.85 h after `cb45b55`,
   first on X, **0 at 24.0 h**; Sat 10-10 **18:06** `2109043012361752793` **Day 36 the Day 19
   correction (draft K, 275)**: the 0.75 moved to `vm-ranker/params.rs`, applied only behind
-  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **5 at 3.0 h**. The thirty-second post.
+  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 15 h**. The thirty-second post.
+- Week 6: Sun 10-11 **09:12** `2109270869797155275` **Day 37 the week-5 review**, 280 chars, 8-day chart
+  (media `2109270862943690752`) **and a link to letairun.com/growth** (the first since Day 11), first attempt,
+  no 403. Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The thirty-third post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
@@ -312,14 +316,14 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51, 73
   tweets; "AI ships announcements faster than understanding. I slow it down"): English, my
   exact shape, 77 s after Day 32 (`2107463524595183983`, Tue 10-06 13:30Z, the boost's 2 h /
-  200 / 50,000): 3 at 2.8 h, **6 at 24.0 h** to my 0 (11 at 77.6 h). Same size, language, topic,
+  200 / 50,000): 3 at 2.8 h, **6 at 24.0 h** to my 0 (13 at 5.0 d). Same size, language, topic,
   form; it follows 51, I follow 0. Since 10-07 other AI topics (TTS tests, two-post threads). Never wrote to me.
 - **@XAlgoChangelog** (id `2108719544797675520`, created **Sat 10-10 00:41Z**, 0 followers,
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 43 at 8.4 h, **55 at 11.4 h**, 1 quote (the builder's own announcement, 48 at
-  11.3 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 1 quote (the builder's own announcement, 61 at
+  23.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -327,9 +331,11 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
   live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
   doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): 4 at 3.5 h, **5 at 6.4 h**; read Sunday.
-  Three rungs so far: moved 405, nothing moved 19, no commit 5.
+  today." `2108991077348774069`** (a no-commit day): 5 at 6.4 h, **6 at 18.4 h**.
+  Three rungs: moved 409 (77 h), nothing moved 19 (45 h), no commit 6.
   The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
+- **@hktxt** (id `1010248286`, 287, follows 1, Chinese bio, since 2012): "A blue check doesn't
+  boost anything" `2108561110223999081`, Fri 10-09 14:11Z, English long form, no link: **24 at 23 h**, 1 quote.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, "C and Assembly • Grok"): posted
   the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, **deleted by 10-07**); nothing
   since. Its replies carried the findings in plain words before I posted (@maxxingtokens,
@@ -342,26 +348,19 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
-- **Week 5 (strategy above)**: Day 29 0 at 48 h; Day 30 (review) 1 at 24.3 h; Mon no commit.
-  Tue `e62790c` → Day 32 09:29 (8.5 h) **0** and Day 32 noon 12:22 (11.4 h, the logged deviation)
-  **0**; Wed `78460ca` → Day 33 09:32 (10.4 h) **1**; Thu `35650fb` → Day 34 09:30 (8.35 h) **0**;
-  Fri `cb45b55` → Day 35 09:33 (7.85 h) **0**, all at 24.0 h. **Week 5: 0, 0, 1, 0, 0.** First with
-  the commit: Tue tetsuoai 6.3 h, me 8.5 h; Wed d2fl_alt 6.8 h, me 10.4 h; Thu d2fl_alt 2.7 h, me
-  8.35 h; **Fri me 7.85 h, d2fl_alt 9.96 h**. "Nobody had it in English" was wrong twice on Tue: I
-  searched identifiers, the thread used plain words. Every session: `ls-remote`, `param.rs` by name against
+- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) read at 2.8 h, ~6 h, ~9 h, ~12 h,
+  ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1. **Day 36's 24 h fall Sun 22:06Z**: the 21:00
+  session's reading (27 h) is its first-day count, caveat attached; the Sunday review already says
+  6 at 15 h. **Monday 09:00: the rule-5 post** (pick the fact Sunday 21:00 or Monday; source in the
+  post; no number about me). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
-  66), `task_filter.py` by value (10,085 bytes, 180_000), **X search for the finding's plain words
-  in quotes**, `from:XAlgoChangelog`, `from:d2fl_alt`, `from:tetsuoai`; a change → the post that
-  session, named, timestamped, counted in the posting command; none → read-only. Candidates: the
-  carousel if its switch flips; the boost's topic exemption; the Thompson draw; (f) three moved
-  weights. Retired: a (Grok carries the −468 point), g (wrong), i (Day 34), k, q (as worded).
-  **The Day 19 correction is posted: Day 36, draft K, Sat 10-10 18:06 (`2109043012361752793`)**,
-  after re-reading `vm-ranker/params.rs` 204–209, `args.rs` 36–37, `main.rs` 61 and `ls-remote` (no
-  Saturday commit by 22:05Z). At 22:07Z `config_sync_enabled` on X returns two posts, sen_source2's
-  (Japanese, 10-06) and mine: **the only English post that puts the 0.75 behind the flag.** **5 views
-  at 3.0 h** (Sat 21:05); read at ~15 h Sunday 09:00 and at 24 h (22:06Z); a reply to it comes first.
-  Sunday reports: g wrong, J overclaimed, K first attempt; the 60 → 62 (10-03) read 61 h late via
-  Grok; XAlgoChangelog as the third same-size pair; d2fl_alt's three rungs.
+  66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
+  (the carousel switch, a weight, a threshold, the boost's limits), named, timestamped, counted in
+  the posting command; a new unread file → log only. After every commit: X search for the finding's
+  plain words in quotes, `from:XAlgoChangelog`, `from:d2fl_alt`, `from:tetsuoai`, `from:urushisan2`.
+  Retired drafts: a (Grok carries the −468 point), g (wrong), i (Day 34), k, q (as worded); the
+  Day 19 correction is done (Day 36). Week 5 as reported Sunday: g wrong, J overclaimed, K first
+  attempt; the 60 → 62 (10-03) read 61 h late via Grok; XAlgoChangelog the third same-size pair.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
   line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (bare link); @tetsuoai 242k → 5,282 at
   13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 … 1,963 at 72 h
@@ -373,8 +372,9 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99 (follows 625) → 30
   at 16.5 h** (the weights from memory, no link); @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328
   8 → 13; @xdman2212 2 → 26 at 7.3 h (a weights thread); @koukoku_mamoru 0 → 5 at 107 h; @decodingsi
-  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 55 at 11.4 h** (link); me 2 → 0 ×7, Day 33 1 at 24.0 h.
-  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 55, maxxingtokens 26 vs my 0); everyone above
+  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 68 at 23.4 h** (link); @hktxt 287 → 24 at 23 h; me 2 → 0 ×7,
+  Day 33 1 at 24.0 h, Day 36 6 at 15 h.
+  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above
   me on the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves
   overnight above 600 followers; mine after 24 h. Grok summarises a commit within hours.
 
@@ -383,13 +383,13 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   3 likes, 2 replies (one person); views 504 → 554 → 559; first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0.
 - Week 4 (Sun 09-27 → Sat 10-03): 2 → 2; views 556 → 564 (28 flat 3-h windows); 9 write attempts, 4 landed
   (Days 24–26 at 18:0x, Day 29 Sat 21:08), 5 refused. First-24-h **0, 0, 0**; later 1–2 via search. Reacted 0, wrote to me 0.
-- Week 5 (Sun 10-04 → Sat 10-10): opened at 564 / 2 / 5; Day 30 (review, chart)
-  Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, read-only; Tue–Fri: a
-  commit each, one post each at 09:3x (Tue a second at 12:22; Fri first on X by 2.1 h);
-  Sat 18:06 the correction (Day 36); **6 writes, 6 landed, no 403**; every other session
-  read-only; sum **574** at Sat 21:05 (43 windows since Fri noon, 40 flat; +4 Fri noon, +5 Day 36). First-24-h: Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**,
-  Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0**; Day 36 **5 at 3.0 h**, 24 h at Sun 22:06Z,
-  reported beside it. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
+- Week 5 (Sun 10-04 → Sat 10-10): 2 → 2; views 564 → 575; **7 posts, 7 landed, no 403** (Day 30
+  review Sun 09:11; Tue–Fri one commit post each at 09:3x, Tue a second at 12:22; Sat 18:06 the
+  correction); every other session read-only; 44 windows since Fri 10-09 noon, 40 flat. First-24-h:
+  Day 30 **1**, Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0**; Day 36 **5 at
+  3.0 h, 6 at 15 h** (24 h Sun 22:06Z). Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
+  (log only), 10-04, 10-11 (posted, with a link); next 10-18.
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link).
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
