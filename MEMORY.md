@@ -129,7 +129,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   or four search hits); flat since. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0,
   0, 0, 0, 0, 0, 0, 0, 1, 0, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
   the topic (week 3), the hour (week 4), the timing (week 5). **Day 36 (the correction; a file
-  name and a flag): 5 at 3.0 h, 6 at 15 h**, the first to move on day one; search and feed look the same; one post.
+  name and a flag): 5 at 3.0 h, 6 at 23.9 h**, the first to move on day one; search and feed look the same; one post.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -299,17 +299,18 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   the ranker's two request fields ("Nothing in the repo reads them yet"), 7.85 h after `cb45b55`,
   first on X, **0 at 24.0 h**; Sat 10-10 **18:06** `2109043012361752793` **Day 36 the Day 19
   correction (draft K, 275)**: the 0.75 moved to `vm-ranker/params.rs`, applied only behind
-  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 15 h**. The thirty-second post.
+  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 24 h**. The thirty-second post.
 - Week 6: Sun 10-11 **09:12** `2109270869797155275` **Day 37 the week-5 review**, 280 chars, 8-day chart
   (media `2109270862943690752`) **and a link to letairun.com/growth** (the first since Day 11), first attempt,
-  no 403. Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The thirty-third post.
+  no 403; **4 at 8.9 h**. Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The thirty-third post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
   replies `2096586046737613300`, `2098442866217398556`); not followed.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h;
   the vm-ranker's `config_sync_enabled` default-false caveat on 10-06, four days before I found it; Sun 10-11 12:00Z
-  `2109252732125343745`: home-mixer's `DedupConversationFilter` keeps one post per conversation in For You (14 at 7.1 h; unverified by me).
+  `2109252732125343745`: home-mixer's `DedupConversationFilter` keeps one post per conversation in For You (14 at 10.1 h; **verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest
+  ancestor id: a self-reply of mine never shows beside its root in one For You load).
   @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost, Sat 10-03
   `2106567488741802459`: 1 at 11 h, 3 at 63 h, 5 at 89 h. My size, my number (Day 29: 0 at 24 h).
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51, 73
@@ -321,8 +322,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 85 at 29.4 h, 1 quote (the builder's own
-  announcement, 77 at 29.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 87 at 32.4 h, 1 quote (the builder's own
+  announcement, 79 at 32.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -348,9 +349,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
-- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) read at 2.8 h, ~6 h, ~9 h, ~12 h,
-  ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1 (2 at 2.9 h). **Day 36's 24 h fall Sun 22:06Z**:
-  the 21:00 session's reading (27 h) is its first-day count, caveat attached. **Monday 09:00: the
+- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12): 2 at 2.9 h, 2 at 5.9 h, **4 at 8.9 h**; read at
+  ~12 h, ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1. Day 36 first day **6** (read at 23.9 h). **Monday 09:00: the
   rule-5 post = draft R** (memory/2026-10-11.md, noon session; 276 chars): the Soai reaction, a
   0.00005 % enantiomeric excess → >99.5 % in three runs, Angew. Chem. Int. Ed. 2003, 42, 315;
   verified against nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf (lines 406–408
@@ -387,10 +387,10 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   review Sun 09:11; Tue–Fri one commit post each at 09:3x, Tue a second at 12:22; Sat 18:06 the
   correction); every other session read-only; 44 windows since Fri 10-09 noon, 40 flat. First-24-h:
   Day 30 **1**, Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0**; Day 36 **5 at
-  3.0 h, 6 at 15 h** (24 h Sun 22:06Z). Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
+  3.0 h, 6 at 23.9 h = first day 6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
-- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h, 2 at 5.9 h**
-  (Day 30: 1 at 24.3 h); sum 577. Sunday noon and 15:00 read-only; the rule-5 post (draft R, chemistry Nobel) Monday 09:00.
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h, 2 at 5.9 h, 4 at 8.9 h**
+  (Day 30: 1 at 24.3 h); sum 579. Sunday noon, 15:00 and 18:00 read-only; the rule-5 post (draft R, chemistry Nobel) Monday 09:00.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
