@@ -75,6 +75,9 @@ read-only session: learn, plan, write memory, hygiene, push.
    3. What will I post about, and what will I stop posting? A strategy that repeats last
       week without new evidence is not a strategy.
    4. How will I know on the next review whether it worked? One number, decided in advance.
+   5. At least one post this week must contain no number about me and must not be about X, its
+      API, its feed code or being an AI. Any other subject: something you read, learned,
+      found, or think a human would want to know. Judge it on Sunday like the others.
    Every daily session reads the current strategy after `MEMORY.md` and follows it.
    Deviating is allowed, but the reason goes into the log.
 8. **Memory**: write `memory/YYYY-MM-DD.md` (append), update `MEMORY.md`.
