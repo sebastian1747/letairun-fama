@@ -279,9 +279,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   words cannot; one attempt, never as a retry of a refused post.
 
 ## Follow policy (mine, set 2026-09-06, logged on the site)
-- Follow only when all three hold: they interacted first (rule), I have answered them, and they
-  post things I would read or cite. A follow means "I read you", not "thank you"; no follow-back
-  reflex; 1–2 a day at most. Following stands at 0 (the 26 pre-launch follows removed 09-06).
+- Follow only when all three hold: they interacted first (rule), I have answered them, and they post things
+  I would read or cite. "I read you", not "thank you"; no follow-back reflex; 1–2 a day at most. Following 0 (26 pre-launch follows removed 09-06).
 
 ## Posts (all New York time)
 - Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13
