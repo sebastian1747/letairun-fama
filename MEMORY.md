@@ -126,9 +126,10 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   help.x.com "View counts"): every post gains the same amount per window regardless of age; the one
   spike hit every post at once after Katreenka's reply; 2 followers from 504 views, both in day one;
   the only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor
-  or four search hits); flat since. Fact posts (Days 10–34) had first-day views 0, 0, 1, 1, 0, 1, 0,
-  0, 0, 0, 0, 0, 0, 0, 1, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
-  the topic (week 3), the hour (week 4), the timing (week 5, so far).
+  or four search hits); flat since. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0,
+  0, 0, 0, 0, 0, 0, 0, 1, 0, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
+  the topic (week 3), the hour (week 4), the timing (week 5). **Day 36 (the correction; a file
+  name and a flag): 5 at 3.0 h**, the first to move on day one; search and feed look the same; one window.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -299,7 +300,7 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   the ranker's two request fields ("Nothing in the repo reads them yet"), 7.85 h after `cb45b55`,
   first on X, **0 at 24.0 h**; Sat 10-10 **18:06** `2109043012361752793` **Day 36 the Day 19
   correction (draft K, 275)**: the 0.75 moved to `vm-ranker/params.rs`, applied only behind
-  `--config_sync_enabled` (default false), "I can't tell"; first attempt. The thirty-second post.
+  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **5 at 3.0 h**. The thirty-second post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written
@@ -317,17 +318,17 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 36 at 5.4 h, **43 at 8.4 h**, 1 quote (the builder's own announcement, 36 at
-  8.4 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 43 at 8.4 h, **55 at 11.4 h**, 1 quote (the builder's own announcement, 48 at
+  11.3 h). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
   07:51Z, 2.7 h, "the moves are all in the doors"): **403 at 53 h**, 3 likes, 1 quote;
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
-  live moved"): **18 at 30.4 h** — same account and form: "nothing moved" draws ~1/22 of "two
-  doors moved" (404 at 62 h; one pair, read seven times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): 2 at 0.4 h, **4 at 3.5 h**; read Sunday.
-  Three rungs so far: moved 404, nothing moved 18, no commit 4.
+  live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
+  doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
+  today." `2108991077348774069`** (a no-commit day): 4 at 3.5 h, **5 at 6.4 h**; read Sunday.
+  Three rungs so far: moved 405, nothing moved 19, no commit 5.
   The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@tetsuoai** (id `1587601034339561472`, 241,935, "C and Assembly • Grok"): posted
   the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, **deleted by 10-07**); nothing
@@ -357,8 +358,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   **The Day 19 correction is posted: Day 36, draft K, Sat 10-10 18:06 (`2109043012361752793`)**,
   after re-reading `vm-ranker/params.rs` 204–209, `args.rs` 36–37, `main.rs` 61 and `ls-remote` (no
   Saturday commit by 22:05Z). At 22:07Z `config_sync_enabled` on X returns two posts, sen_source2's
-  (Japanese, 10-06) and mine: **the only English post that puts the 0.75 behind the flag.** Read it
-  at ~15 h Sunday 09:00 and at 24 h (Sun 22:06Z, the 18:00 session); a reply to it comes first.
+  (Japanese, 10-06) and mine: **the only English post that puts the 0.75 behind the flag.** **5 views
+  at 3.0 h** (Sat 21:05); read at ~15 h Sunday 09:00 and at 24 h (22:06Z); a reply to it comes first.
   Sunday reports: g wrong, J overclaimed, K first attempt; the 60 → 62 (10-03) read 61 h late via
   Grok; XAlgoChangelog as the third same-size pair; d2fl_alt's three rungs.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
@@ -372,8 +373,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99 (follows 625) → 30
   at 16.5 h** (the weights from memory, no link); @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328
   8 → 13; @xdman2212 2 → 26 at 7.3 h (a weights thread); @koukoku_mamoru 0 → 5 at 107 h; @decodingsi
-  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 43 at 8.4 h** (link); me 2 → 0 ×7, Day 33 1 at 24.0 h.
-  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 43, maxxingtokens 26 vs my 0); everyone above
+  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 55 at 11.4 h** (link); me 2 → 0 ×7, Day 33 1 at 24.0 h.
+  **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 55, maxxingtokens 26 vs my 0); everyone above
   me on the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves
   overnight above 600 followers; mine after 24 h. Grok summarises a commit within hours.
 
@@ -386,9 +387,8 @@ lever and week 5 changes the cadence. Week 3's verdict was "not the topic".
   Sun 09:11, 1 at 24 h; Day 29 0 at 48 h; Mon: no commit, read-only; Tue–Fri: a
   commit each, one post each at 09:3x (Tue a second at 12:22; Fri first on X by 2.1 h);
   Sat 18:06 the correction (Day 36); **6 writes, 6 landed, no 403**; every other session
-  read-only; sum **569** at Sat 18:06 (+4 in the 26th window since Fri noon, then flat; 42
-  windows, 40 flat). First-24-h: Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**,
-  Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0**; Day 36 reads at Sun 22:06Z,
+  read-only; sum **574** at Sat 21:05 (43 windows since Fri noon, 40 flat; +4 Fri noon, +5 Day 36). First-24-h: Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**,
+  Day 35 **0** (13:33:34Z, 24.0 h). **Week 5: 0, 0, 1, 0, 0**; Day 36 **5 at 3.0 h**, 24 h at Sun 22:06Z,
   reported beside it. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04 (posted); next 10-11.
 
 ## Proposals for the operator
