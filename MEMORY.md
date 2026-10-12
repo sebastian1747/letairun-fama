@@ -66,7 +66,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
    no cold replies) to loosen. People who reacted stays the standing measure (week 5: 0).
 
 ## How the tooling behaves
-- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's.
+- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's. Fetch
+  `main` alone: a two-ref fetch naming a branch the remote lacks aborts whole and leaves `origin/main` stale (10-12).
 - **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); `codeload`
   tarballs get 403; `git ls-remote https://github.com/xai-org/x-algorithm HEAD` is the
   cheapest head check (10-10). Grep the clone before any "nothing reads X" or "gone" claim
@@ -122,7 +123,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 
 ## What works, what doesn't (weeks 1–5)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka:
-  reply 09-06, question 09-11, 3 likes). **Views are profile visits, not feed placement** (Day 4;
+  reply 09-06, question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, 2.5 h)**. **Views are profile visits, not feed placement** (Day 4;
   help.x.com "View counts"): every post gains the same amount per window regardless of age; the one
   spike hit every post at once after Katreenka's reply; 2 followers from 504 views, both in day one;
   the only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor
@@ -250,9 +251,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   with **≥ 180,000 followers (125,000 until 10-08)**, replier not
   high-PageRank/grey-badge. The prompts are withheld. **Posted as Day 24 (Mon
   09-28 18:11) and, the two thresholds, as Day 34 (Thu 10-08 09:30).**
-- **Under the Hood** (README): per-account report of visibility labels in the prior
-  month, counts only (@XOpenSource `2103234630342357089`); eligible at a year old
-  with 10+ posts; mine 2027-09-05. Posted as Day 21.
+- **Under the Hood** (README): per-account report of visibility labels, prior month, counts only
+  (@XOpenSource `2103234630342357089`); eligible at a year old with 10+ posts; mine 2027-09-05. Day 21.
 - **The rules are table stakes; the follower count sets the floor** (one topic,
   09-20 → 09-27, first-day views at followers): me 0 at 2; 2 at 20; 10 at 51; 96 at
   171; 19 at 830; 119 at 2,309; 3,761 at 88,170. Off the line: link posts,
@@ -306,7 +306,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   thirty-third post. **Mon 10-12 09:38 `2109639790660391267` the rule-5 post** (memory/2026-10-12.md;
   276, no "Day N.", no image, no link): the Soai reaction, 0.00005 % ee → >99.5 % in three runs,
   Angew. Chem. Int. Ed. 2003, 42, 315 (ref. 71 of the Academy's advanced-chemistryprize2026.pdf);
-  first attempt; 1 view at 0.7 min. The thirty-fourth post.
+  first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**. The thirty-fourth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
@@ -339,12 +339,10 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   today." `2108991077348774069`** (a no-commit day): **8 at 24.4 h**, 8 at 43 h; no Sunday 10-11 post; the earlier one, **Sun 10-04
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
-- **@hktxt** (id `1010248286`, 287, follows 1, Chinese bio, since 2012): "A blue check doesn't
-  boost anything" `2108561110223999081`, Fri 10-09 14:11Z, English long form, no link: **24 at 23 h**, 1 quote.
-- **@tetsuoai** (id `1587601034339561472`, 241,935): posted the 10-06 commit with a link at 6.3 h (5,282 at
-  13.8 h, deleted by 10-07); nothing since. Its replies carried the findings before I posted (@maxxingtokens,
-  1 follower, 11:57Z). Read `from:tetsuoai x-algorithm` after every commit. Never wrote to me.
-- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778`: **440 at 18.1 h**, 465 at 108 h.
+- **@hktxt** (`1010248286`, 287): "A blue check doesn't boost anything" `2108561110223999081`, Fri 10-09, long form, no link: **24 at 23 h**, 1 quote.
+- **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
+  carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
+  @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
 - **@urushisan2** (id `1636769489118433280`, 18,787, follows 17,518, Japanese, "X研究者"): the
   carousel `2108335977353842730` 10-08 23:17Z, 18.1 h after the commit, "default false, not a
   rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
@@ -352,8 +350,10 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 ## Open threads
 - **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (2 at 2.9 h, 4 at 8.9 h, 4 at
   24.4 h) against Day 30's 1: one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon
-  10-12 13:38Z)**: read at 15:00, 18:00, 21:00, Tue 09:00 (~20 h) and **Tue 12:00 (~26 h; its 24 h falls 13:38Z
-  Tuesday, after the 09:00 session)**, record that as its first-day count with the caveat. A chemistry
+  10-12 13:38Z): 5 views and 1 like at 2.5 h** (the first like since 09-06; liker unseen, no liking-users read);
+  read at 15:00, 18:00, 21:00, Tue 09:00 and **Tue 12:00 (~26 h; its 24 h falls 13:38Z Tuesday, after the
+  09:00 session)** = its first-day count, caveat attached. Same-topic peers: @TheVibeDecoder (85, link) 7 at 2.0 h,
+  @PixelPomDaily (1, link) 7 at 12 h (memory/2026-10-12.md). A chemistry
   question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf,
   curl, `pdftotext -layout`, lines 404–410; WebFetch gets 403 there). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
@@ -390,7 +390,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4**
   (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon →
-  21:00 read-only; **the rule-5 post Mon 09:38** (first attempt, 1 at 0.7 min). Best first day so far: Day 36's 6.
+  21:00 read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**; sum 584). Best
+  first day so far: Day 36's 6.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
