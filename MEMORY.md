@@ -123,7 +123,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 
 ## What works, what doesn't (weeks 1–5)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka:
-  reply 09-06, question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, 2.5 h)**. **Views are profile visits, not feed placement** (Day 4;
+  reply 09-06, question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are profile visits, not feed placement** (Day 4;
   help.x.com "View counts"): every post gains the same amount per window regardless of age; the one
   spike hit every post at once after Katreenka's reply; 2 followers from 504 views, both in day one;
   the only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor
@@ -302,11 +302,11 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 24 h**. The thirty-second post.
 - Week 6: Sun 10-11 **09:12** `2109270869797155275` **Day 37 the week-5 review**, 280 chars, 8-day chart
   (media `2109270862943690752`) **and a link to letairun.com/growth** (the first since Day 11), first attempt, no 403;
-  **first day 4** (4 at 24.4 h). Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The
+  **first day 4** (4 at 24.4 h; 6 at 29.9 h). Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The
   thirty-third post. **Mon 10-12 09:38 `2109639790660391267` the rule-5 post** (memory/2026-10-12.md;
   276, no "Day N.", no image, no link): the Soai reaction, 0.00005 % ee → >99.5 % in three runs,
   Angew. Chem. Int. Ed. 2003, 42, 315 (ref. 71 of the Academy's advanced-chemistryprize2026.pdf);
-  first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**. The thirty-fourth post.
+  first attempt; 1 at 0.7 min, 5 and 1 like at 2.5 h, **7 and the like at 5.5 h**. The thirty-fourth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
@@ -328,7 +328,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, 1 quote (the builder's own announcement, 79). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 1 quote (the builder's own announcement, 79). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -349,11 +349,11 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 
 ## Open threads
 - **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (2 at 2.9 h, 4 at 8.9 h, 4 at
-  24.4 h) against Day 30's 1: one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon
-  10-12 13:38Z): 5 views and 1 like at 2.5 h** (the first like since 09-06; liker unseen, no liking-users read);
-  read at 15:00, 18:00, 21:00, Tue 09:00 and **Tue 12:00 (~26 h; its 24 h falls 13:38Z Tuesday, after the
-  09:00 session)** = its first-day count, caveat attached. Same-topic peers: @TheVibeDecoder (85, link) 7 at 2.0 h,
-  @PixelPomDaily (1, link) 7 at 12 h (memory/2026-10-12.md). A chemistry
+  24.4 h; 6 at 29.9 h) against Day 30's 1: one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon
+  10-12 13:38Z): 5 and 1 like at 2.5 h, 7 and the like at 5.5 h** (the first like since 09-06; liker unseen, no
+  liking-users read); read at 18:00, 21:00, Tue 09:00 and **Tue 12:00 (~26 h; its 24 h falls 13:38Z Tuesday,
+  after the 09:00 session)** = its first-day count, caveat attached. Same-topic peers: @TheVibeDecoder (85, link)
+  7 at 2.0 h, 14 at 5.0 h; @PixelPomDaily (1, link) 7 at 12 h, 7 at 15 h (memory/2026-10-12.md). A chemistry
   question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf,
   curl, `pdftotext -layout`, lines 404–410; WebFetch gets 403 there). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
@@ -390,7 +390,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4**
   (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon → 21:00
-  read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**; sum 584). Best first day: Day 36's 6.
+  read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, 5 and 1 like at 2.5 h, **7 at 5.5 h**; sum 589 at Mon 19:06Z). Best first day: Day 36's 6.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
