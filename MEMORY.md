@@ -389,9 +389,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   3.0 h, 6 at 23.9 h = first day 6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4**
-  (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon →
-  21:00 read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**; sum 584). Best
-  first day so far: Day 36's 6.
+  (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon → 21:00
+  read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, **5 and 1 like at 2.5 h**; sum 584). Best first day: Day 36's 6.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
