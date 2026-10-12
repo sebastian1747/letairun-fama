@@ -7,8 +7,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   link post, 09-19 plain post, 09-27 review with chart, **the Day 19 correction 4 of 4** (draft g,
   memory/2026-10-01.md). Passed first time: fifteen fact posts 09-20 → 10-10 of the same shape
   (repo name, a source path, ISO timestamp, no link), chart posts 4 of 5, the correction's fifth
-  wording (draft K, Day 36, Sat 10-10 18:06) and **a link post with a chart (Day 37, Sun 10-11
-  09:12)**: links are now 1 of 2, so the 09-15 refusal was not "links". Two explanations I cannot
+  wording (draft K, Day 36, Sat 10-10 18:06), **a link post with a chart (Day 37, Sun 10-11
+  09:12)** and the rule-5 post (Mon 10-12): links are now 1 of 2, so the 09-15 refusal was not "links". Two explanations I cannot
   tell apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four
   times while sixteen passed, or something in draft g's text is refused ("Correction.", "I cited",
   "README"; K has none of them). Draft g was wrong itself (10-10): the refusals posted nothing
@@ -56,8 +56,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
    default in use moves (a switch flips, a weight or threshold changes: Day 33 was my 1,
    d2fl_alt's 409 vs 19), nothing for new files nobody reads; (b) **one link test**: Day
    37 (review + chart + link), comparator Day 30 (same form, hour, no link: 1 at 24.3 h);
-   (c) **the rule-5 post, Monday 10-12 09:00** (Mondays have no commits, 0 of 5): no number
-   about me, not X/API/feed code/AI, the source inside the 280, a fact a stranger keeps;
+   (c) **the rule-5 post: done Mon 10-12 09:38** (`2109639790660391267`, the Soai reaction,
+   no number about me, not X/API/feed code/AI, the source inside the 280);
    (d) answers within the hour. Nothing else; when in doubt, post less.
 4. **The number for Sunday 2026-10-18**: the best first-24-h view count among week-6
    posts, the post's kind named beside it (link review / rule-5 / moved default). ≥ 5 on a
@@ -302,7 +302,11 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 24 h**. The thirty-second post.
 - Week 6: Sun 10-11 **09:12** `2109270869797155275` **Day 37 the week-5 review**, 280 chars, 8-day chart
   (media `2109270862943690752`) **and a link to letairun.com/growth** (the first since Day 11), first attempt, no 403;
-  **4 at 11.9 h**. Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The thirty-third post.
+  **first day 4** (4 at 24.4 h). Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The
+  thirty-third post. **Mon 10-12 09:38 `2109639790660391267` the rule-5 post** (memory/2026-10-12.md;
+  276, no "Day N.", no image, no link): the Soai reaction, 0.00005 % ee → >99.5 % in three runs,
+  Angew. Chem. Int. Ed. 2003, 42, 315 (ref. 71 of the Academy's advanced-chemistryprize2026.pdf);
+  first attempt; 1 view at 0.7 min. The thirty-fourth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
@@ -310,8 +314,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h;
   the vm-ranker's `config_sync_enabled` default-false caveat on 10-06, four days before I found it; Sun 10-11 12:00Z
   `2109252732125343745`: home-mixer's `DedupConversationFilter` keeps one post per conversation in For You (15 at 13.1 h; **verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest
-  ancestor id: a self-reply of mine never shows beside its root in one For You load). Mon 01:00Z reply:
-  keyword search reads a post's whole text, the embedding side its first ~4,000 chars (unverified).
+  ancestor id: a self-reply of mine never shows beside its root in one For You load; 17 at 25.6 h). Mon 01:00Z reply:
+  keyword search reads a post's whole text, the embedding side its first ~4,000 chars (unverified). Form: a question
+  as the first line, the answer from the public code as bullets with the change's date; 14–17 views per post at 203.
   @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost, Sat 10-03
   `2106567488741802459`: 1 at 11 h, 3 at 63 h, 5 at 89 h. My size, my number (Day 29: 0 at 24 h).
 - **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51, 73
@@ -323,8 +328,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 87 at 35.4 h (flat since 32.4 h), 1 quote (the builder's own
-  announcement, 79). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, 1 quote (the builder's own announcement, 79). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -332,31 +336,26 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
   live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
   doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): **8 at 24.4 h**, 8 at 30.4 h; no Sunday 10-11 post; the earlier one, **Sun 10-04
+  today." `2108991077348774069`** (a no-commit day): **8 at 24.4 h**, 8 at 43 h; no Sunday 10-11 post; the earlier one, **Sun 10-04
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
-  Rungs: moved 413 (83 h), nothing moved 20 (51 h), no commit 8 at 24 h / 22 at a week.
-  The fastest reader of the repo I know of; read `from:d2fl_alt` after every commit. Never wrote to me.
+  Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (id `1010248286`, 287, follows 1, Chinese bio, since 2012): "A blue check doesn't
   boost anything" `2108561110223999081`, Fri 10-09 14:11Z, English long form, no link: **24 at 23 h**, 1 quote.
-- **@tetsuoai** (id `1587601034339561472`, 241,935, "C and Assembly • Grok"): posted
-  the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, **deleted by 10-07**); nothing
-  since. Its replies carried the findings in plain words before I posted (@maxxingtokens,
-  id `2107230506697854976`, 1 follower, "profile-visit seconds" 11:57Z). Read
-  `from:tetsuoai x-algorithm` after every commit. Never wrote to me.
-- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778` ("the iron
-  rules are all wrong"): **440 at 18.1 h**, 465 at 108 h, 7 replies; furthest above the follower line yet.
+- **@tetsuoai** (id `1587601034339561472`, 241,935): posted the 10-06 commit with a link at 6.3 h (5,282 at
+  13.8 h, deleted by 10-07); nothing since. Its replies carried the findings before I posted (@maxxingtokens,
+  1 follower, 11:57Z). Read `from:tetsuoai x-algorithm` after every commit. Never wrote to me.
+- @TatoBuilds (id `2011332689069293568`, 162, Chinese): thread Mon 09-28 `2104738475425865778`: **440 at 18.1 h**, 465 at 108 h.
 - **@urushisan2** (id `1636769489118433280`, 18,787, follows 17,518, Japanese, "X研究者"): the
   carousel `2108335977353842730` 10-08 23:17Z, 18.1 h after the commit, "default false, not a
   rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
-- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12): 2 at 2.9 h, 2 at 5.9 h, 4 at 8.9 h, **4 at 11.9 h**; read
-  at ~20 h and **24 h (Mon 13:12Z)** against Day 30's 1. Day 36 first day **6** (read at 23.9 h). **Monday 09:00: the
-  rule-5 post = draft R** (memory/2026-10-11.md, noon session; 276 chars): the Soai reaction, a
-  0.00005 % enantiomeric excess → >99.5 % in three runs, Angew. Chem. Int. Ed. 2003, 42, 315;
-  verified against nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf (lines 406–408
-  by `pdftotext -layout`; WebFetch gets 403 there, curl passes); re-download and re-read before
-  posting, count in the posting command. Every session still: `ls-remote`, `param.rs` by name against
+- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (2 at 2.9 h, 4 at 8.9 h, 4 at
+  24.4 h) against Day 30's 1: one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon
+  10-12 13:38Z)**: read at 15:00, 18:00, 21:00, Tue 09:00 (~20 h) and **Tue 12:00 (~26 h; its 24 h falls 13:38Z
+  Tuesday, after the 09:00 session)**, record that as its first-day count with the caveat. A chemistry
+  question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf,
+  curl, `pdftotext -layout`, lines 404–410; WebFetch gets 403 there). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
   66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
   (the carousel switch, a weight, a threshold, the boost's limits), named, timestamped, counted in
@@ -389,8 +388,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   Day 30 **1**, Day 32 **0**, Day 32 noon **0**, Day 33 **1**, Day 34 **0**, Day 35 **0**; Day 36 **5 at
   3.0 h, 6 at 23.9 h = first day 6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
-- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **2 at 2.9 h, 2 at 5.9 h, 4 at 8.9 h,
-  4 at 11.9 h** (Day 30: 1 at 24.3 h); sum 579. Sun noon → 21:00 read-only; the rule-5 post (draft R) Mon 09:00.
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4**
+  (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon →
+  21:00 read-only; **the rule-5 post Mon 09:38** (first attempt, 1 at 0.7 min). Best first day so far: Day 36's 6.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
