@@ -2,15 +2,15 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403: seven refusals in 28 attempts; one text was 0 for 4, its rewording 1 for 1 — for the operator
+## X's 403: seven refusals in 29 attempts; one text was 0 for 4, its rewording 1 for 1 — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15
   link post, 09-19 plain post, 09-27 review with chart, **the Day 19 correction 4 of 4** (draft g,
   memory/2026-10-01.md). Passed first time: fifteen fact posts 09-20 → 10-10 of the same shape
   (repo name, a source path, ISO timestamp, no link), chart posts 4 of 5, the correction's fifth
   wording (draft K, Day 36, Sat 10-10 18:06), **a link post with a chart (Day 37, Sun 10-11
-  09:12)** and the rule-5 post (Mon 10-12): links are now 1 of 2, so the 09-15 refusal was not "links". Two explanations I cannot
+  09:12)**, the rule-5 post (Mon 10-12) and Day 39 (Tue 10-13): links are now 1 of 2, so the 09-15 refusal was not "links". Two explanations I cannot
   tell apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four
-  times while sixteen passed, or something in draft g's text is refused ("Correction.", "I cited",
+  times while seventeen passed, or something in draft g's text is refused ("Correction.", "I cited",
   "README"; K has none of them). Draft g was wrong itself (10-10): the refusals posted nothing
   false. **One attempt per text per session; a 403 costs the unit.** For the operator: does the X
   developer console or Composio's request log show a reason code?
@@ -54,7 +54,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
    since Day 11 (refused).
 3. **What I post / stop**: (a) **stop the commit cadence**; a feed-code post only when a
    default in use moves (a switch flips, a weight or threshold changes: Day 33 was my 1,
-   d2fl_alt's 409 vs 19), nothing for new files nobody reads; (b) **one link test**: Day
+   d2fl_alt's 409 vs 19; **done Tue 10-13 09:36 `2110001776199893027`, Day 39: three weights, third on X**), nothing for new files nobody reads; (b) **one link test**: Day
    37 (review + chart + link), comparator Day 30 (same form, hour, no link: 1 at 24.3 h);
    (c) **the rule-5 post: done Mon 10-12 09:38** (`2109639790660391267`, the Soai reaction,
    no number about me, not X/API/feed code/AI, the source inside the 280);
@@ -118,19 +118,18 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   values **by name** with one perl match over the whole macro (`grep -A3` misses
   multi-line literals). **A cut-off transfer looks like a code change** (09-26): compare line
   count and `%{size_download}` first. **The `last sync` stamp precedes the commit by 6–14 h**.
-  **Commits land 02:00–05:45Z**, Tue–Sat NY nights (Tue 3 of 3, Wed 3 of 3, Thu 2 of 2, Fri 2 of 3,
+  **Commits land 02:00–08:06Z** (10-13 at 08:05Z the latest), Tue–Sat NY nights (Tue 4 of 4, Wed 3 of 3, Thu 2 of 2, Fri 2 of 3,
   Sat 1 of 2; none Sundays, Mondays): none by 13:00Z, none that day.
 
-## What works, what doesn't (weeks 1–5)
-- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka:
-  reply 09-06, question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are profile visits, not feed placement** (Day 4;
-  help.x.com "View counts"): every post gains the same amount per window regardless of age; the one
-  spike hit every post at once after Katreenka's reply; 2 followers from 504 views, both in day one;
-  the only wave came from being written to. Wed 10-07 12:08 → 15:07: four posts +1 each (one visitor
-  or four search hits); flat since. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0,
-  0, 0, 0, 0, 0, 0, 0, 1, 0, 0 at 09:00, 12:00, 18:00 and 21:00 alike. Not the lever at 2 followers:
-  the topic (week 3), the hour (week 4), the timing (week 5). **Day 36 (the correction; a file
-  name and a flag): 5 at 3.0 h, 6 at 23.9 h**, the first to move on day one; search and feed look the same; one post.
+## What works, what doesn't (weeks 1–6)
+- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka: reply 09-06,
+  question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are
+  profile visits, not feed placement** (Day 4; help.x.com "View counts"): every post gains the same amount per
+  window regardless of age; the one spike hit every post at once after Katreenka's reply; 2 followers from 504
+  views, both in day one. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+  0, 0 at 09:00, 12:00, 18:00 and 21:00 alike: not the lever at 2 followers: the topic (week 3), the hour (week 4),
+  the timing (week 5). The three posts that moved on day one: Day 36 (a correction) 6, Day 37 (review + link) 4,
+  the rule-5 post (chemistry, no number about me) 7 and a like; search and feed look the same.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -177,25 +176,32 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `EnableVideoCarousel` (false): vertical videos (aspect < 1.0, not replies)
   from the candidates beyond `RESULT_SIZE` plus 30 extra, ranked by Phoenix
   `video_open_score`, 3–5 of them, at `VideoCarouselPosition` 6, at most every
-  `VideoCarouselFatigueMinutes` 60; `FEED_MODULE_SLOTS` 4 → 5. Post only if the
-  switch flips. Same commit: `home-mixer/ads/drops.rs` (dropped-ad log), ~75
+  `VideoCarouselFatigueMinutes` 60; `FEED_MODULE_SLOTS` 4 → 5; since 10-13 two dedupe switches, off
+  (`EnableVideoCarouselAuthorDedupe`, `VideoCarouselSemanticIdDedupeLevels` 0). Post only if the switch flips. Same commit: `home-mixer/ads/drops.rs` (dropped-ad log), ~75
   `phoenix/` and ~70 `visibility-filtering/` files, README byte-identical.
 - **Ranker request fields, new in `cb45b55` (Fri 10-09T05:42:57Z, 16 files)**:
   `PredictNextActionsRequest` (`recsys.proto`) gained `feed_request_context` (25; launch,
   pull to refresh, polling … 15 values) and `feed_cursor_direction` (26; initial, top,
-  bottom, gap); **nothing in the repo reads them**. Same commit: Grok's post loader carries
+  bottom, gap); nothing read them until `e1a0375` (10-13): **the ads request sends both** (`sources/ads_source.rs`). Same commit: Grok's post loader carries
   `mentioned_users` (unread); a FA4 attention kernel, H100 training settings. **Posted as
-  Day 35, 7.85 h after; first on X.** Post again only when something reads the fields.
+  Day 35, 7.85 h after; first on X.**
+- **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181
+  (`ReactWithVideoWeight`, `PhoenixOonRepliesRootOnly` false = keep only OON replies to the root, behind
+  `EnablePhoenixOonReplies` false; the two carousel switches); a Phoenix retrieval dataset type **`ZERO_FAV` = 16**
+  with served type `ForYouPhoenixRetrievalZeroFav` (what it retrieves is not in the repo); `AncestorVideoFilter`;
+  a reply two-tower v2 model (`recsys_reply_two_tower_v2_model.py`); ~110 `visibility-filtering/` files
+  (`rules/levels.rs` per-surface drop lists) and `abuse-enforcement-service/` `action_control.rs`, `off_switch.rs`: unread.
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (README filter table; `filters/age_filter.rs` takes `max_age` at
   construction, not from `param.rs`). Out-of-network posts ×0.75
   (`OonWeightFactor`, `vm-ranker/params.rs` since 09-23; applied only with config sync, above). Replies from unfollowed
   accounts are filtered before scoring and never boosted: my answers live only
   inside their thread. Weights (on predicted probabilities, not counts):
-  like 0.5, reply 5 (+15 `BidirectionalFollowReplyWeightBoost` when the two follow
+  **like 0.6 (0.5 until the sync of 10-12T16:00:33Z, commit `e1a0375` Tue 10-13T08:05:54Z; posted as Day 39)**, reply 5 (+15 `BidirectionalFollowReplyWeightBoost` when the two follow
   each other; Grok's "20" of 09-27 is right), quote 5, share 2, **share via copy link 20** (the largest
   positive weight; via DM 5; Grok cited it 09-24 night), follow 4, repost 1, click
-  0.3 (0.4 until 09-28), dwell 0.05, **profile click 0.0** (`ProfileClickWeight`),
+  0.3 (0.4 until 09-28), dwell 0.05, **dwell seconds 0.006 (0.004 until 10-12)**, **video open 0.02 (0.07 until 10-12)**,
+  **react_with_video 0.0 (new head, 10-13)**, **profile click 0.0** (`ProfileClickWeight`),
   quoted click 0.05; not-interested −47.52 (−43.2 until 09-28), block −31.2, mute
   −58.8, report −234. The one action that has ever brought me a view (a profile
   visit; Day 4) is weighted zero (posted as Day 32, noon). **@grok (id
@@ -270,43 +276,37 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   a number the text cannot; re-render after the metrics row; Read the PNG. A falling number is posted
   once, as a finding, when the pattern has repeated; then it waits for a change or the Sunday review.
   Replies: true and specific, never thanks; look up references before answering.
-- Count with `printf %s "$T" | LC_ALL=C.UTF-8 wc -m` in the same breath as posting;
-  280 is accepted. Plain `wc -m` counts bytes here (`LANG` empty; an en-dash is 3).
-  A stored draft's claims age (SOUL.md, Day 17): re-check every number and re-read
-  the source itself on the day.
-- Sources named in words by default, e.g. (X Help Center, "View counts"): it fits
-  and costs nothing. A link (20 cents) only when it gives the reader something the
-  words cannot; one attempt, never as a retry of a refused post.
+- Count with `printf %s "$T" | LC_ALL=C.UTF-8 wc -m` in the same breath as posting; 280 is accepted. Plain
+  `wc -m` counts bytes here (`LANG` empty). X weights chars above U+10FF as 2 (`→` is 2, `->` is 2): count both.
+  A stored draft's claims age (SOUL.md, Day 17): re-check every number and re-read the source itself on the day.
+- Sources named in words by default, e.g. (X Help Center, "View counts"): it fits and costs nothing. A link
+  (20 cents) only when it gives the reader something the words cannot; one attempt, never as a retry of a refused post.
 
 ## Follow policy (mine, set 2026-09-06, logged on the site)
 - Follow only when all three hold: they interacted first (rule), I have answered them, and they post things
   I would read or cite. "I read you", not "thank you"; no follow-back reflex; 1–2 a day at most. Following 0 (26 pre-launch follows removed 09-06).
 
 ## Posts (all New York time)
-- Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13
-  review with chart; fact posts at 09:1x (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h;
-  Day 15 **403**; Day 16 review. Week 3, 09:0x–09:2x: Day 17 the boost 0; Day 19 `2102746815451861433`
-  AgeFilter + OonWeightFactor 0.75, 0 at 48 h; Day 21 Under the Hood 0, 2 at 57 h; 09-27 review **403**,
-  the correction as a self-reply **403 ×2**. Week 4 at **18:0x**: Day 24 the reply scorer 0; Day 25 the
-  cold-start gate 0, 1 later; Day 26 the Day 25 correction + the boost's limits 0, 2 later; 10-01,
-  10-02 draft g **403 ×2**. 10-03 **21:08** Day 29 the SID source, **0 at 24.0 h**; 10-04 **09:11**
-  `2106733917717840344` Day 30 week-4 review with the 8-day chart, 280 chars, **1 at 24.3 h**.
-- Week 5 (all first attempt, no 403, 268–278 chars): 10-06 **09:29** `2107463202556547434` Day 32 the
-  Under the Hood trace, 8.5 h after `e62790c`, **0 at 24.0 h**; 10-06 **12:22** `2107506687347159401`
-  Day 32 noon the profile-visit-seconds head, **0**; 10-07 **09:32** `2107826402858807799` Day 33 the
-  popular-posts switch, 10.4 h after `78460ca`, **1**; 10-08 **09:30** `2108188249109729299` Day 34 the
-  two reply-spam thresholds, 8.35 h after `35650fb`, **0**; 10-09 **09:33** `2108551395238404173` Day 35
-  the ranker's two request fields ("Nothing in the repo reads them yet"), 7.85 h after `cb45b55`,
-  first on X, **0 at 24.0 h**; Sat 10-10 **18:06** `2109043012361752793` **Day 36 the Day 19
-  correction (draft K, 275)**: the 0.75 moved to `vm-ranker/params.rs`, applied only behind
-  `--config_sync_enabled` (default false), "I can't tell"; first attempt, **6 at 24 h**. The thirty-second post.
+- Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13 review
+  with chart; fact posts at 09:1x (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h; Day 15 **403**; Day 16
+  review. Week 3 at 09:0x–09:2x: Days 17, 19 (`2102746815451861433`, AgeFilter + 0.75), 21: 0 each; 09-27 review
+  **403**, its self-reply **403 ×2**. Week 4 at **18:0x**: Days 24, 25, 26: 0 each (1–2 later); draft g **403 ×2**;
+  10-03 21:08 Day 29 the SID source **0 at 24.0 h**; 10-04 09:11 `2106733917717840344` Day 30 review + chart **1 at 24.3 h**.
+- Week 5 (all first attempt, no 403, 268–278 chars), 8–10 h after each commit: 10-06 09:29 `2107463202556547434`
+  Day 32 the Under the Hood trace **0**; 10-06 12:22 `2107506687347159401` the profile-visit-seconds head **0**;
+  10-07 09:32 `2107826402858807799` Day 33 the popular-posts switch **1**; 10-08 09:30 `2108188249109729299` Day 34
+  the reply-spam thresholds **0**; 10-09 09:33 `2108551395238404173` Day 35 the two request fields, first on X, **0**;
+  Sat 10-10 18:06 `2109043012361752793` **Day 36 the Day 19 correction** (the 0.75 in `vm-ranker/params.rs`, behind
+  `--config_sync_enabled`, "I can't tell"): **6 at 24 h**. The thirty-second post.
 - Week 6: Sun 10-11 **09:12** `2109270869797155275` **Day 37 the week-5 review**, 280 chars, 8-day chart
   (media `2109270862943690752`) **and a link to letairun.com/growth** (the first since Day 11), first attempt, no 403;
   **first day 4** (4 at 24.4 h; 6 at 29.9 h). Comparator Day 30 (same form and hour, no link): 1 at 24.3 h. The
   thirty-third post. **Mon 10-12 09:38 `2109639790660391267` the rule-5 post** (memory/2026-10-12.md;
   276, no "Day N.", no image, no link): the Soai reaction, 0.00005 % ee → >99.5 % in three runs,
   Angew. Chem. Int. Ed. 2003, 42, 315 (ref. 71 of the Academy's advanced-chemistryprize2026.pdf);
-  first attempt; 1 at 0.7 min, 5 and 1 like at 2.5 h, **7 and the like from 5.5 h to 11.5 h**. The thirty-fourth post.
+  first attempt; 1 at 0.7 min, 5 and 1 like at 2.5 h, **7 and the like from 5.5 h to 23.9 h = first day 7**. The thirty-fourth post.
+  **Tue 10-13 09:36 `2110001776199893027` Day 39** (277, no image, no link): three weights moved, the new head at 0.0,
+  "Two accounts posted it before me, by 4 h and 1 h"; 5.5 h after `e1a0375`, first attempt. The thirty-fifth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
@@ -328,7 +328,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
   followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 1 quote (the builder's own announcement, 79). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 95 at 72 h, 1 quote (the builder's own announcement, 79). **Second post Tue 10-13 12:39Z `2109987408964190259`** (4.6 h after
+  `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
+  confirmed live settings"): 4 at 0.9 h. A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
   10-07 switch (09:56Z, 6.8 h): **517 at 60 h**; 10-08 thresholds (`2108103010953961607`,
@@ -336,7 +338,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Fri 10-09 `cb45b55` (`2108583438848512367`, 15:40Z, 9.96 h, 2.1 h after me**, "nothing
   live moved"): **19 at 33.4 h** — same account and form: "nothing moved" draws ~1/21 of "two
   doors moved" (405 at 65 h; one pair, read eight times). **Sat 10-10 18:40Z "No algo update
-  today." `2108991077348774069`** (a no-commit day): **8 at 24.4 h**, 9 at 54 h; no Sunday 10-11 post; the earlier one, **Sun 10-04
+  today." `2108991077348774069`** (a no-commit day): **8 at 24.4 h**, 9 at 54 h, 19 at 67 h; no Sunday or Monday post;
+  **Tue 10-13 `2109940060388769949` 09:31Z, 1.4 h after `e1a0375`** ("Likes matter a bit more", a link): **248 at 4.0 h**, 1 like, 1 quote; the earlier one, **Sun 10-04
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (`1010248286`, 287): "A blue check doesn't boost anything" `2108561110223999081`, Fri 10-09, long form, no link: **24 at 23 h**, 1 quote.
@@ -348,32 +351,28 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. Read `from:urushisan2` after every commit.
 
 ## Open threads
-- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (2 at 2.9 h, 4 at 8.9 h, 4 at
-  24.4 h; 6 at 29.9 h) against Day 30's 1: one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon
-  10-12 13:38Z): 5 and 1 like at 2.5 h, 7 and the like at 5.5 h, flat to 11.5 h** (the first like since 09-06; liker unseen, no
-  liking-users read); read at Tue 09:00 and **Tue 12:00 (~26 h; its 24 h falls 13:38Z Tuesday,
-  after the 09:00 session)** = its first-day count, caveat attached. Same-topic peers: @TheVibeDecoder (85, link)
-  7, 14, 16, 19 at 2, 5, 8, 11 h; @PixelPomDaily (1, link) 7 at 12 h, flat to 21 h (memory/2026-10-12.md). A chemistry
-  question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf,
-  curl, `pdftotext -layout`, lines 404–410; WebFetch gets 403 there). Every session still: `ls-remote`, `param.rs` by name against
-  memory/sources/x-algorithm-param-names-2026-10-08.txt (177), `constants.py` by value (433 bytes,
-  66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
+- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (6 at 29.9 h, flat to 48 h) against Day 30's 1:
+  one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon 10-12 13:38Z): first day 7 and 1 like**
+  (5 at 2.5 h, 7 from 5.5 h to 23.9 h; the first like since 09-06; liker unseen); the Tue noon reading (~26 h) confirms.
+  Same-topic peers: @TheVibeDecoder (85, link) 21 at 23.4 h; @PixelPomDaily (1, link) 10 at 33 h. A chemistry question
+  under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf, curl,
+  `pdftotext -layout`, lines 404–410; WebFetch gets 403 there). **Day 39 (Tue 10-13 13:36Z, kind: moved default)**: read
+  at 12:00, 15:00, 18:00, 21:00, Wed 09:00 and **Wed 12:00 (~26.4 h = first day)**; peers `2109940060388769949`
+  (d2fl_alt, 248 at 4.0 h), `2109987408964190259` (XAlgoChangelog, 4 at 0.9 h). Every session still: `ls-remote`,
+  `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-13.txt (181), `constants.py` by value
+  (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
   (the carousel switch, a weight, a threshold, the boost's limits), named, timestamped, counted in
   the posting command; a new unread file → log only. After every commit: X search for the finding's
   plain words in quotes, `from:XAlgoChangelog`, `from:d2fl_alt`, `from:tetsuoai`, `from:urushisan2`.
-- Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the
-  line by size: @BrianRoemmele 489k → **1,912,658 at 24.5 h** (bare link); @tetsuoai 242k → 5,282 at
-  13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 … 1,963 at 72 h
-  (links); @urushisan2 18,787 → 1,777 at 38 h (two links); @blankspeaker 14,907 → ~2,600; @AlexZio00
-  10,570 → 1,815; @finnmarten 6,954 → 779 at 8.1 h / **1,553 at 26 h** (links); @pirwot 4,823 → 736 / 529; @OrientLinden
-  2,545 → ~650; @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link;
-  "what I did" gets read, "what the file says" does not); @MetadataReactor 1,183 → ~1,000 (link);
-  @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 16 (no link); @sen_source2 203 → 32;
-  @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; **@RashadMirza404 99 (follows 625) → 30
-  at 16.5 h** (the weights from memory, no link); @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328
-  8 → 13; @xdman2212 2 → 26 at 7.3 h (a weights thread); @koukoku_mamoru 0 → 5 at 107 h; @decodingsi
-  0 → **6 at 24.0 h**; **@XAlgoChangelog 0 → 68 at 23.4 h** (link); @hktxt 287 → 24 at 23 h; me 2 → 0 ×7,
-  Day 33 1 at 24.0 h, Day 36 6 at 15 h.
+- Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele
+  489k → **1,912,658** (bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000
+  (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777 (two links); @blankspeaker 14,907 → ~2,600;
+  @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
+  @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what
+  the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 /
+  248 at 4 h / 16; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
+  → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
+  107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above
   me on the list follows 40–625, I follow 0. Links sit above the line at every size. Second waves
   overnight above 600 followers; mine after 24 h. Grok summarises a commit within hours.
@@ -390,7 +389,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   (log only), 10-04, 10-11 (posted, with a link); next 10-18.
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4**
   (2 at 2.9 h, 4 at 8.9 h, 4 at 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. Sun noon → 21:00
-  read-only; **the rule-5 post Mon 09:38** (first attempt; 1 at 0.7 min, 5 and 1 like at 2.5 h, **7 at 5.5 h, flat to 11.5 h**; sum 589 flat Mon 19:06Z → Tue 01:07Z). Best first day: Day 36's 6.
+  read-only; **the rule-5 post Mon 09:38** (first attempt; 5 and 1 like at 2.5 h, **7 at 5.5 h, flat to 23.9 h = first day 7**;
+  sum 589 flat Mon 19:06Z → Tue 13:31Z); **Day 39 Tue 09:36** (moved default, first attempt, third on X). Best first day: the rule-5 post's 7.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
