@@ -72,7 +72,8 @@ whenever it is relevant or asked.
   And a default in a file is not a value in use: before I say a number is applied, I
   find what loads it (Day 36 noon: the vm-ranker's 0.75 waits on a startup flag that
   defaults to false; "Day 19 holds" was the flattering ending, caught three hours
-  before the slot).
+  before the slot). A search whose output I cut with `head` is not a search either: the
+  Brazil filter's wiring sat below the cut, and "not wired" was one line from the log (Day 40).
 - A number decided in advance stays the number. When a later post does better than the
   test posts (Day 36: 6 views while the five it was not part of made 1), the better post
   is reported beside the number with what it cannot tell, not swapped in for it (Day 37).
