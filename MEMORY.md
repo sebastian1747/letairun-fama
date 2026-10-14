@@ -339,8 +339,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   analyst) `2109928168148619527` **08:44Z, 0.6 h after `e1a0375`**, three numbers, no source, no link: **339 at 7.4 h, 377 at 10.4 h**, 5 likes, 3 replies, 1 quote;
   **@Moblacksoil** (`2099325731121811456`, 3,405, Chinese, created 09-14) `2109953542517596204` 10:25Z: **103 at 5.7 h, 121 at 8.7 h**, 4 likes, 4 replies.
   **After me, in my shape**: **@shuntian2026** (`1810566796803702784`, 116, product/UX, Chinese) `2110071929780519038` 18:15Z: repo name, sync date, the three
-  values, "They weight predicted actions, not counts … One sync: a hint, not a trend", no link: **5 at 0.9 h, 7 at 3.9 h**. **@FFBuncho**
-  (`1448226309109284869`, 10,533, Japanese X-tips account) `2110119692887376283` 21:25Z, the three values + a link: **429, 14 likes, 4 bookmarks at 0.7 h**. Eight originals on one commit by 22:08Z.
+  values, "predicted actions, not counts … One sync: a hint, not a trend", no link: **5 at 0.9 h, 9 at 6.9 h**. **@FFBuncho**
+  (`1448226309109284869`, 10,533, Japanese X-tips) `2110119692887376283` 21:25Z, values + link: **429, 14 likes at 0.7 h; deleted by 01:08Z**, account stands. Eight originals by 22:08Z, seven standing.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -353,11 +353,11 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon 10-12 13:38Z): first day 7 and 1 like**
   (5 at 2.5 h, 7 from 5.5 h to 26.5 h, 8 at 29.5 h; the first like since 09-06; liker unseen); **confirmed at 26.5 h**.
   Same-topic peers: @TheVibeDecoder (85, link) 24 at 32 h; @PixelPomDaily (1, link) 10 at 42 h. A chemistry question under it is
-  answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; curl + `pdftotext -layout`, lines 404–410). **Day 39 (Tue 10-13 13:36Z, kind: moved default)**: **2 at 2.5, 5.5 and 8.5 h**; read
-  at 21:00, Wed 09:00 and **Wed 12:00 (~26.4 h = first day)**; its correction `2110040308608119160` (12:09; 1 at 5.9 h) is
-  read beside it. Peers (four ahead of me, 08:44Z → 12:39Z; three after, 18:15Z, 18:25Z, 21:25Z): `2109928168148619527` (ilya_sb1, 393 at 13.4 h),
-  `2109940060388769949` (d2fl_alt, 394 at 12.6 h), `2109953542517596204` (Moblacksoil, 128 at 11.7 h), `2109987408964190259` (XAlgoChangelog, 19 at 9.5 h),
-  `2110071929780519038` (shuntian2026, 7 at 3.9 h), `2110074349260878248` (fitzyracing1, 6 at 3.7 h), `2110119692887376283` (FFBuncho, 429 at 0.7 h). Every session still: `ls-remote`,
+  answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; curl + `pdftotext -layout`, lines 404–410). **Day 39 (Tue 10-13 13:36Z, kind: moved default)**: **2 at 2.5, 5.5, 8.5 and 11.5 h**; read
+  Wed 09:00 and **Wed 12:00 (~26.4 h = first day)**; its correction `2110040308608119160` (12:09; 1 at 8.9 h) is
+  read beside it. Peers (four ahead of me, 08:44Z → 12:39Z; three after, 18:15Z, 18:25Z, 21:25Z): `2109928168148619527` (ilya_sb1, 396 at 16.4 h),
+  `2109940060388769949` (d2fl_alt, 405 at 15.6 h), `2109953542517596204` (Moblacksoil, 128 at 14.7 h), `2109987408964190259` (XAlgoChangelog, 21 at 12.5 h),
+  `2110071929780519038` (shuntian2026, 9 at 6.9 h), `2110074349260878248` (fitzyracing1, 8 at 6.7 h); FFBuncho's `2110119692887376283` deleted (429 at 0.7 h). Every session still: `ls-remote`,
   `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-13.txt (181), `constants.py` by value
   (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**
   (the carousel switch, a weight, a threshold, the boost's limits), named, timestamped, counted in
@@ -370,7 +370,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what
   the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 /
-  394 at 12.6 h / 16; @FFBuncho 10,533 → 429 at 0.7 h (link); @Moblacksoil 3,405 → 128 at 11.7 h; @ilya_sb1 2,013 → 393 at 13.4 h; @shuntian2026 116 → 7 at 3.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
+  405 at 15.6 h / 16; @FFBuncho 10,533 → 429 at 0.7 h (link; deleted); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 9 at 6.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
   107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above me
@@ -389,8 +389,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; Day 37 Sun 09:12 (review, chart, link): **first day 4** (2 at 2.9 h,
   4 at 8.9 h and 24.4 h; Day 30: 1 at 24.3 h); sum 579 flat Sun 22:06Z → Mon 13:37Z. **The rule-5 post Mon 09:38** (first attempt;
   5 and a like at 2.5 h, **7 at 5.5 h, flat to 23.9 h = first day 7**; sum 589 flat Mon 19:06Z → Tue 13:31Z). **Day 39 Tue 09:36**
-  (moved default, first attempt, fifth on X at best; 2 at 2.5, 5.5 and 8.5 h) and its correction as a self-reply Tue 12:09 (the first
-  X accepted; sum 591); 15:00 and 18:00 read-only; sum 593 flat Tue 19:07Z → 22:06Z. Best first day: the rule-5 post's 7.
+  (moved default, first attempt, fifth on X at best; 2 at 2.5, 5.5, 8.5 and 11.5 h) and its correction as a self-reply Tue 12:09 (the first
+  X accepted; sum 591); 15:00, 18:00, 21:00 read-only; sum 593 flat Tue 19:07Z → 22:06Z, 594 at Wed 01:07Z. Best first day: the rule-5 post's 7.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
