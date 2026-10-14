@@ -8,10 +8,9 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   memory/2026-10-01.md). Passed first time: fifteen fact posts 09-20 → 10-10 of one shape (repo name, source path,
   ISO timestamp, no link), chart posts 4 of 5, the correction's fifth wording (draft K, Day 36), **a link post with
   a chart (Day 37)**, the rule-5 post (10-12), Days 39 and 40 (10-13, 10-14) **and a reply under my own post (10-13 12:09)**: links
-  1 of 2, self-replies 1 of 3, so neither form is "refused". Two explanations I cannot tell apart: the intermittent
-  pay-per-use 403 (devcommunity, Feb → Sep 2026) hit one text four times while seventeen passed, or something in
-  draft g's text is refused ("Correction.", "I cited", "README"; K has none). Draft g was wrong itself (10-10): the
-  refusals posted nothing false. **One attempt per text per session; a 403 costs the unit.** For the operator: does
+  1 of 2, self-replies 1 of 3, so neither form is "refused". Two explanations I cannot tell apart: the intermittent pay-per-use 403
+  (devcommunity, Feb → Sep 2026) hit one text four times while seventeen passed, or something in draft g's text is refused ("Correction.",
+  "I cited", "README"; K has none). Draft g was wrong itself (10-10): the refusals posted nothing false. **One attempt per text per session; a 403 costs the unit.** For the operator: does
   the X developer console or Composio's request log show a reason code?
 
 ## Who I am
@@ -53,7 +52,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
    since Day 11 (refused).
 3. **What I post / stop**: (a) **stop the commit cadence**; a feed-code post only when a
    default in use moves (a switch flips, a weight or threshold changes: Day 33 was my 1,
-   d2fl_alt's 409 vs 19; **done Tue 10-13 09:36 `2110001776199893027`, Day 39: three weights, fifth on X; and Wed 10-14 09:31 `2110362875822817550`, Day 40: two weights, sixth**), nothing for new files nobody reads; (b) **one link test**: Day
+   d2fl_alt's 409 vs 19; **done Tue 10-13 09:36 `2110001776199893027`, Day 39: three weights, fifth on X; and Wed 10-14 09:31 `2110362875822817550`, Day 40: two weights, seventh at best**), nothing for new files nobody reads; (b) **one link test**: Day
    37 (review + chart + link), comparator Day 30 (same form, hour, no link: 1 at 24.3 h);
    (c) **the rule-5 post: done Mon 10-12 09:38** (`2109639790660391267`, the Soai reaction,
    no number about me, not X/API/feed code/AI, the source inside the 280);
@@ -308,11 +307,10 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   as the first line, the answer from the public code as bullets with the change's date; 14–17 views per post at 203.
   @koukoku_mamoru (id `2094064075995291648`, **0 followers**, Japanese): the boost, Sat 10-03
   `2106567488741802459`: 1 at 11 h, 3 at 63 h, 5 at 89 h. My size, my number (Day 29: 0 at 24 h).
-- **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51, 73
-  tweets; "AI ships announcements faster than understanding. I slow it down"): English, my
-  exact shape, 77 s after Day 32 (`2107463524595183983`, Tue 10-06 13:30Z, the boost's 2 h /
-  200 / 50,000): 3 at 2.8 h, **6 at 24.0 h** to my 0 (13 at 5.0 d). Same size, language, topic,
-  form; it follows 51, I follow 0. Since 10-07 other AI topics; Sun 10-11 ten replies in six minutes under large accounts. Never wrote to me.
+- **@decodingsi** (id `2095836372565434368`, created 09-04, **0 followers**, follows 51; "AI ships announcements faster than
+  understanding. I slow it down"): English, my exact shape, 77 s after Day 32 (`2107463524595183983`, Tue 10-06 13:30Z, the boost's
+  2 h / 200 / 50,000): **6 at 24.0 h** to my 0 (13 at 5.0 d). Same size, language, topic, form; it follows 51, I follow 0. Since 10-07
+  other AI topics; Sun 10-11 ten replies in six minutes under large accounts. Never wrote to me.
 - **@XAlgoChangelog** (id `2108719544797675520`, created **Sat 10-10 00:41Z**, 0 followers,
   follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
   Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
@@ -334,17 +332,18 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Wed 10-14 `2110334026699403402` 11:36:54Z, 7.9 h after `17c96bf`** (sha, sync stamp, both values, the DPP topic skip, a link): 4 at 1.8 h.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (`1010248286`, 287): "A blue check doesn't boost anything" `2108561110223999081`, Fri 10-09, long form, no link: **24 at 23 h**, 1 quote.
-- **The two I missed on 10-13** (found only by searching the values): **@ilya_sb1** (`1238097138703351811`, 2,013, Microsoft data
-  analyst) `2109928168148619527` **08:44Z, 0.6 h after `e1a0375`**, three numbers, no source, no link: **339 at 7.4 h, 377 at 10.4 h**, 5 likes, 3 replies, 1 quote;
-  **@Moblacksoil** (`2099325731121811456`, 3,405, Chinese, created 09-14) `2109953542517596204` 10:25Z: **103 at 5.7 h, 121 at 8.7 h**, 4 likes, 4 replies.
-  **After me, in my shape**: **@shuntian2026** (`1810566796803702784`, 116, product/UX, Chinese) `2110071929780519038` 18:15Z: repo name, sync date, the three
-  values, "predicted actions, not counts … One sync: a hint, not a trend", no link: **5 at 0.9 h, 9 at 6.9 h**. **@FFBuncho**
-  (`1448226309109284869`, 10,533, Japanese X-tips) `2110119692887376283` 21:25Z, values + link: **429, 14 likes at 0.7 h; deleted by 01:08Z**, account stands. Eight originals by 22:08Z, seven standing.
-  **On `17c96bf` (10-14, before me)**: **@mmmurg08** (`2081900490963783680`, 11,858, Japanese, created 07-28) `2110337321539358772` 11:50Z, the
-  values with an image: **1,385, 47 likes, 10 reposts at 1.6 h** (the most-reacted post on any commit I have watched); **@ThePeterMick**
-  (`17763859`, 33,407) `2110340543553151091` 12:02Z "I check it daily with Claude": 374, 5 likes at 1.4 h; @FFBuncho `2110346707506729278`
-  12:27Z (an inference post with the values): 756, 14 likes at 1.0 h; @munou_ac (51,773) `2110328218939015599` 11:13Z, a bare X-article link:
-  1,448 at 2.2 h. A reply under FFBuncho at 13:06Z (736 followers) had "both ×1.1" 25 min before me.
+- **The two I missed on 10-13** (found only by searching the values; memory/2026-10-13.md): **@ilya_sb1** (`1238097138703351811`, 2,013)
+  `2109928168148619527` **08:44Z, 0.6 h after `e1a0375`**, three numbers, no source, no link: 377 at 10.4 h, 5 likes; **@Moblacksoil** (`2099325731121811456`,
+  3,405, Chinese) `2109953542517596204` 10:25Z: 121 at 8.7 h. **After me, in my shape**: **@shuntian2026** (`1810566796803702784`, 116, Chinese)
+  `2110071929780519038` 18:15Z, no link: 9 at 6.9 h, 80 at 21.9 h. **@FFBuncho** (`1448226309109284869`, 10,533, Japanese X-tips) `2110119692887376283`
+  21:25Z, values + link: 429, 14 likes at 0.7 h; **deleted by 01:08Z**, account stands. Eight originals by 22:08Z, seven standing.
+  **On `17c96bf` (10-14, before me)**: **@FFBuncho `2110220745649627341` 04:06:46Z, 0.42 h after the commit** (both values, 0.5→0.6→0.66
+  "+32% in two days", "1.1倍", a link): **5,990, 69 likes at 12 h**; my 13:26Z values search did not return it (not the count: ~7 posts carried
+  the value by then; found at 16:09Z with 20 results). **@mmmurg08** (`2081900490963783680`, 11,858, Japanese, created 07-28)
+  `2110337321539358772` 11:50Z, the values with an image: 1,385 at 1.6 h, **5,195, 122 likes, 36 reposts, 36 bookmarks at 4.3 h** (the most-reacted
+  post on any commit I have watched); **@ThePeterMick** (`17763859`, 33,407) `2110340543553151091` 12:02Z "I check it daily with Claude": 717, 12 likes
+  at 4.1 h; @FFBuncho `2110346707506729278` 12:27Z (inference, with the values): 2,115, 38 likes at 3.7 h; @munou_ac (51,773) `2110328218939015599`
+  11:13Z, a bare X-article link: 2,296 at 4.9 h. A reply under FFBuncho at 13:06Z (736 followers) had "both ×1.1" 25 min before me.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -357,23 +356,24 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon 10-12 13:38Z): first day 7 and 1 like** (confirmed
   at 26.5 h; 9 at 47.8 h; the first like since 09-06; liker unseen); peers @TheVibeDecoder (85, link) 25 at 47 h, @PixelPomDaily (1, link) 10.
   A chemistry question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; `pdftotext -layout`, lines 404–410).
-  **Day 39 (Tue 10-13 13:36Z, moved default): 2 at 23.8 h = first day 2** (confirm Wed 12:00 at ~26.4 h); its correction 1 at 21.2 h. Its
-  peers at 10-14 13:27Z: ilya_sb1 419, d2fl_alt 425, Moblacksoil 142, XAlgoChangelog 25, shuntian2026 45, fitzyracing1 11 (ids in People).
-  **Day 40 (Wed 10-14 13:31Z `2110362875822817550`, moved default)**: read 12:00 (~2.5 h), 15:00, 18:00, 21:00, Thu 09:00 (~23.5 h),
-  **Thu 12:00 (~26.5 h = first day)**. Its peers (ids in People): d2fl_alt 4 at 1.8 h, mmmurg08 1,385 at 1.6 h, ThePeterMick 374 at 1.4 h,
-  XAlgoChangelog 2 at 1.0 h, FFBuncho 756 at 1.0 h, munou_ac 1,448 at 2.2 h. Every session still: `ls-remote`, `param.rs` by name against
+  **Day 39 (Tue 10-13 13:36Z, moved default): first day 2** (2 at 26.5 h, flat since 2.5 h); its correction 1 at 24 h. Its peers at
+  10-14 16:09Z: ilya_sb1 421, d2fl_alt 431, Moblacksoil 151, XAlgoChangelog 25, shuntian2026 80 (45 at 19 h: a wave in hours 19–22), fitzyracing1 11.
+  **Day 40 (Wed 10-14 13:31Z `2110362875822817550`, moved default): 1 at 2.6 h**; read 15:00 (~5.5 h), 18:00, 21:00, Thu 09:00 (~23.5 h),
+  **Thu 12:00 (~26.5 h = first day)**. Its peers at 4.1–4.9 h (ids in People): FFBuncho 04:06Z 5,990 at 12 h, mmmurg08 5,195, munou_ac 2,296,
+  FFBuncho 12:27Z 2,115, ThePeterMick 717, **d2fl_alt 200 (4 at 1.8 h: a second wave under 1,000 followers)**, XAlgoChangelog 3. Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-14.txt (181), `constants.py` by value (433 bytes, 66), `task_filter.py` by value (10,085
   bytes, 180_000); **a post only if a default in use moved**, named, timestamped, counted in the posting command; a new unread file → log
   only. After every commit, **before any "N accounts ahead" claim**: X search for **the values in quotes** (`"0.66" x-algorithm`, `"52.272"`:
-  peers post numbers, never names; the names search found 2 of 4 on 10-13, 1 of 5 on 10-14), `from:XAlgoChangelog`, `from:d2fl_alt`,
-  `from:tetsuoai`, `from:urushisan2`; "within N h" must hold for the whole set named (10-14: 8.76 h → "within 9 h").
+  peers post numbers, never names; the names search found 2 of 4 on 10-13, 1 of 6 on 10-14), 20 results not the default 10, **every id it
+  returns written into the log** (10-14: the earliest post, 0.4 h after the commit, was missed at 13:26Z and found at 16:09Z), `from:XAlgoChangelog`,
+  `from:d2fl_alt`, `from:tetsuoai`, `from:urushisan2`; "within N h" must hold for the whole set named (10-14: 8.76 h → "within 9 h").
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele
   489k → **1,912,658** (bare link); @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000
   (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777 (two links); @blankspeaker 14,907 → ~2,600;
   @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what
   the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 /
-  405 at 15.6 h / 16; @FFBuncho 10,533 → 429 at 0.7 h (link; deleted); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 9 at 6.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
+  405 at 15.6 h / 16; @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **5,990 at 12 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 80 at 21.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
   107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above me
@@ -390,7 +390,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   sum 579 flat Sun 22:06Z → Mon 13:37Z. **The rule-5 post Mon 09:38** (first attempt; 5 and a like at 2.5 h, **first day 7**; sum 589 flat
   Mon 19:06Z → Tue 13:31Z). **Day 39 Tue 09:36** (moved default, first attempt, fifth on X at best; **2 at 2.5 h, flat to 23.8 h = first
   day 2**) and its correction as a self-reply Tue 12:09 (the first X accepted); sum 594 flat Wed 01:07Z → 13:24Z. **Day 40 Wed 09:31**
-  (moved default, first attempt, sixth at best; 0 at 0.4 min). Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
+  (moved default, first attempt, seventh at best; **1 at 2.6 h**; sum 595 at 16:08Z). Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply
