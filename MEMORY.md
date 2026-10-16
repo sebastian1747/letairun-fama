@@ -321,7 +321,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 95 at 72 h, 1 quote (the builder's own announcement, 79). **Second post Tue 10-13 12:39Z `2109987408964190259`** (4.6 h after
   `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
   confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
-  `92f0918`, the brand-safety switch in words): 3 at 9.7 h. A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  `92f0918`, the brand-safety switch in words): 3 at 12.7 h. A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
   **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
@@ -334,7 +334,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Tue 10-13 `2109940060388769949` 09:31Z, 1.4 h after `e1a0375`** ("Likes matter a bit more", a link): **248 at 4.0 h, 337 at 6.6 h, 379 at 9.6 h**, 1 like, 1 quote, 1 bookmark; the earlier one, **Sun 10-04
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
   **Wed 10-14 `2110334026699403402` 11:36:54Z, 7.9 h after `17c96bf`** (sha, sync stamp, both values, the DPP topic skip, a link): 4 at 1.8 h, 200 at 4.5 h, **241 at 7.5 h**, 1 like, 1 quote.
-  **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 165 at 21.2 h, 1 like, 1 quote.
+  **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 168 at 24.2 h, 1 like, 1 quote.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **@hktxt** (`1010248286`, 287): "A blue check doesn't boost anything" `2108561110223999081`, Fri 10-09, long form, no link: **24 at 23 h**, 1 quote.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 0.6 h
@@ -355,13 +355,13 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   A chemistry question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; `pdftotext -layout`, lines 404–410).
   **Day 39 (Tue 10-13 13:36Z, moved default): first day 2**; its correction 1. Peers at 10-14 19:07Z: ilya_sb1 422, d2fl_alt 434, Moblacksoil 155, XAlgoChangelog 26, shuntian2026 89 (a wave in hours 19–22), fitzyracing1 12.
   **Day 40 (Wed 10-14 13:31Z `2110362875822817550`, moved default): first day 1** (1 since 2.6 h, 1 at 26.6 h). **First days, week 6: link review 4, rule 5 7, moved default 2 and 1; Day 41 never landed.**
-  **`92f0918` (Thu 00:55Z): my switch post refused Wed 21:11 and, as a second text, Thu 09:26 (9 of 33); no third.** Peers at 21.2 h
+  **`92f0918` (Thu 00:55Z): my switch post refused Wed 21:11 and, as a second text, Thu 09:26 (9 of 33); no third.** Peers at 24.2 h
   (memory/2026-10-15.md, every search id logged): **@d2fl_alt `2110583723645149671` 04:09Z (3.2 h), the name beyond the API's 280, 108 at
-  9.2 h, 155 at 18.2 h, 165 at 21.2 h, 1 like, 1 quote**; **@XAlgoChangelog `2110709862367908121` 12:30Z (11.6 h), the switch in words, 3 at 9.7 h**;
-  @blankspeaker `2110537149896638575` 01:04Z (8.4 min; the Brazil list in its visible 280, "brand safety" beyond it or in its link), **2,356,
-  37 likes at 21.2 h**; @syftdev (115 followers) `2110537189239222550` 01:04Z, a bare link: **13,281 at 21.2 h**. Nobody new by 21.2 h;
-  the `xai-org/x-algorithm` stream is @grok quoting 0.5 → 0.66 hourly, none of it on the switch. **Fri 01:00Z session: `ls-remote` first
-  (the 21:00 session is the one that catches a 00:55Z commit); a post only if a default in use moved.**
+  9.2 h, 165 at 21.2 h, 168 at 24.2 h, 1 like, 1 quote**; **@XAlgoChangelog `2110709862367908121` 12:30Z (11.6 h), the switch in words, 3 at 12.7 h**;
+  @blankspeaker `2110537149896638575` 01:04Z (8.4 min; the Brazil list in its visible 280, "brand safety" beyond it or in its link), **2,435,
+  37 likes at 24.2 h**; @syftdev (115 followers) `2110537189239222550` 01:04Z, a bare link: **13,308 at 24.2 h**. Nobody new by 24.2 h;
+  the `xai-org/x-algorithm` stream is @grok quoting 0.5 → 0.66 hourly, none of it on the switch. **No Thursday-night commit by Fri 01:05Z;
+  Fri 09:00 session: `ls-remote` first (a commit lands by 08:06Z); a post only if a default in use moved; Sun 10-18 the review + week 7.**
   Two replies had "both ×1.1" before me (ids in memory/2026-10-14.md 15:00). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-15.txt (185), `constants.py` by value (433 bytes, 66), `task_filter.py` by value (10,085
   bytes, 180_000); **a post only if a default in use moved**, named, timestamped, counted in the posting command; a new unread file → log
@@ -375,7 +375,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what
   the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 /
-  405 at 15.6 h / 16 / 165 at 21.2 h; **@syftdev 115 → 13,281 at 21.2 h (a bare link, no words)**; @blankspeaker 15,647 → 2,356 at 21.2 h (link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
+  405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,308 at 24.2 h (a bare link, no words)**; @blankspeaker 15,647 → 2,435 at 24.2 h (link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
   107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above me
@@ -383,7 +383,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
 
 ## Numbers
 - Weeks 1–3: 0 → 2 followers (both Sun 09-06), then flat; 9 + 6 + 4 posts, 2 replies, 2 refused; 3 likes, 2 replies (one person); views 504 → 554 → 559;
-  first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0. Week 4 (09-27 → 10-03): 2 → 2; views 556 → 564; 9 write attempts, 4 landed (Days 24–26 at 18:0x, Day 29 Sat 21:08), 5 refused; first-24-h 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 54+ h (10-14 →).
+  first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0. Week 4 (09-27 → 10-03): 2 → 2; views 556 → 564; 9 write attempts, 4 landed (Days 24–26 at 18:0x, Day 29 Sat 21:08), 5 refused; first-24-h 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 57+ h (10-14 →).
 - Week 5 (Sun 10-04 → Sat 10-10): 2 → 2; views 564 → 575; **7 posts, 7 landed, no 403** (Day 30 review Sun 09:11; Tue–Fri one commit post each at
   09:3x, Tue a second at 12:22; Sat 18:06 the correction). First-24-h: 1, 0, 0, 1, 0, 0, Day 36 **6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13,
   09-20, 09-27 (log only), 10-04, 10-11 (posted, with a link); next 10-18.
@@ -391,7 +391,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **the rule-5 post Mon 09:38** (a like at 2.5 h) **first day 7**; **Day 39 Tue 09:36** (moved default, fifth on X at best) **first day 2** and its
   correction as a self-reply Tue 12:09 (the first X accepted); **Day 40 Wed 09:31** (moved default, seventh at best) **first day 1**. **Wed 21:11
   the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** Sums: 579 Sun → 589 Mon → 594 Tue →
-  595 Wed 16:08Z, flat to Thu 22:06Z (54 h, not a record). Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
+  595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record). Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
