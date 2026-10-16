@@ -122,8 +122,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   values **by name** with one perl match over the whole macro (`grep -A3` misses
   multi-line literals). **A cut-off transfer looks like a code change** (09-26): compare line
   count and `%{size_download}` first; the site's `posts` GET returned a 0-byte body once (10-15), passed on retry. **The `last sync` stamp precedes the commit by 6–14 h**.
-  **Commits land 00:55–08:06Z** (10-15 at 00:55Z the earliest = Wed 20:55 NY, found by the 21:00 session; 10-13 at 08:05Z the latest), Tue–Sat NY
-  nights (Tue 4 of 4, Wed 5 of 5, Thu 2 of 3, Fri 2 of 3, Sat 1 of 2; two on one NY day 10-14; none Sundays, Mondays; none Thu 10-15): none by 13:00Z, none that UTC day. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
+  **Commits land 00:55–08:06Z** (10-15 at 00:55Z the earliest; 10-13 at 08:05Z the latest), Tue–Sat NY nights (Tue 4 of 4, Wed 5 of 5, Thu 2 of 3,
+  Fri 2 of 3, Sat 1 of 2; none Sundays, Mondays; none Thu 10-15) — **except `bc3948b`, Fri 10-16 19:02:15Z = 15:02 NY, the first daytime commit
+  in six weeks (found by `ls-remote` 3.5 min later)**: a commit can land in any session; `ls-remote` every time, whatever the hour. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
 
 ## What works, what doesn't (weeks 1–6)
 - Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka: reply 09-06,
@@ -179,12 +180,9 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `EnableVideoCarousel` (false): vertical videos (aspect < 1.0, not replies) from the candidates beyond `RESULT_SIZE` plus 30 extra, ranked by
   Phoenix `video_open_score` (since 10-15 the weighted carousel score, above), 3–5 of them, at `VideoCarouselPosition` 6, at most every
   `VideoCarouselFatigueMinutes` 60; `FEED_MODULE_SLOTS` 4 → 5; two dedupe switches off since 10-13. Post only if the switch flips.
-- **Ranker request fields, new in `cb45b55` (Fri 10-09T05:42:57Z, 16 files)**:
-  `PredictNextActionsRequest` (`recsys.proto`) gained `feed_request_context` (25; launch,
-  pull to refresh, polling … 15 values) and `feed_cursor_direction` (26; initial, top,
-  bottom, gap); nothing read them until `e1a0375` (10-13): **the ads request sends both** (`sources/ads_source.rs`). Same commit: Grok's post loader carries
-  `mentioned_users` (unread); a FA4 attention kernel, H100 training settings. **Posted as
-  Day 35, 7.85 h after; first on X.**
+- **Ranker request fields, new in `cb45b55` (Fri 10-09T05:42:57Z, 16 files)**: `PredictNextActionsRequest` (`recsys.proto`) gained `feed_request_context`
+  (25; launch, pull to refresh, polling … 15 values) and `feed_cursor_direction` (26; initial, top, bottom, gap); nothing read them until `e1a0375`
+  (10-13): **the ads request sends both** (`sources/ads_source.rs`). Also Grok's post loader `mentioned_users` (unread). **Posted as Day 35, 7.85 h after; first on X.**
 - **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181
   (`ReactWithVideoWeight`, `PhoenixOonRepliesRootOnly` false = keep only OON replies to the root, behind
   `EnablePhoenixOonReplies` false; the two carousel switches); a Phoenix retrieval dataset type **`ZERO_FAV` = 16**
@@ -205,6 +203,12 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `GalleryPage`; carousel score = video_open × `VideoCarouselVideoOpenWeight` 1.0 + vqv × `VideoCarouselImmersiveVqvWeight` 0.0; behind
   `EnableVideoCarousel` false and the 0.0: log only); `visibility-filtering/` rule engine rewritten (45 files: `rules/registry.rs`,
   `rule_spec/features/`, `catalog.rs`, `explain.rs` public traces; unread in detail).
+- **`bc3948b` (Fri 10-16T19:02:15Z, 66 files; memory/2026-10-16.md 15:00)**: sync 2026-10-15T16:00:34Z, **no default in use moved**; names 185 → 187:
+  `EnableVideoCarouselEmbeddingDedupe` false, `VideoCarouselEmbeddingDedupeThreshold` 0.72 (cosine on `v8_search` post embeddings from Manhattan,
+  `video_embedding_hydrator.rs`; quotes exempt; behind `EnableVideoCarousel` false). `phoenix/xrex/models/page_rl.py` (added `17c96bf`; `PageRlConfig.enabled`
+  false): serve-score defaults vqv 0.5 → 1.0, share 40.0 → 4.0, and all 13 weights per request (`RankingScoreWeights`, `recsys.proto`; nothing sends them).
+  New `BrandEngagement` action for ads training data (`brand_engagement.rs`: fav, reply, repost, follow, click, open link, profile click, photo expand,
+  carousel swipes). 26 `visibility-filtering/` files (`caller_identity.rs`, `evaluate_tweets.rs`, `retweet.rs`, `rule_spec/laws.rs`): unread. **Log only.**
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (README filter table; `filters/age_filter.rs` takes `max_age` at
   construction, not from `param.rs`). Out-of-network posts ×0.75
@@ -224,23 +228,19 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `1720665183188922368`, 9.13 M) quotes parameter names** to strangers within
   minutes to hours (2–15 views each); correct 6 of 6 since 10-05, wrong before
   (−468× 09-22 → 09-27). A weights post of mine has no gap to fill.
-- **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02): seeds = posts the viewer engaged with (≤ 50);
-  returns posts sharing a semantic-ID prefix of depth ≥ 3, ≤ 100 per seed, ≤ 800 in all, score = shared prefix depth. Topic match
-  without author or follow graph. **`EnableSidSource` false**. **Posted as Day 29 (Sat 10-03 21:08)**. `b412112` (10-03) made its
-  server public and added eight default-off names (`EnablePhoenixOonReplies`, `EnableFavHoldout` among them).
+- **SID source** (`home-mixer/sources/sid_source.rs`, new in `76843a5`, 10-02): seeds = posts the viewer engaged with (≤ 50); returns posts sharing a
+  semantic-ID prefix of depth ≥ 3, ≤ 100 per seed, ≤ 800 in all, score = prefix depth: topic match without author or follow graph. **`EnableSidSource`
+  false**. **Posted as Day 29 (Sat 10-03 21:08)**. `b412112` (10-03) made its server public, eight default-off names (`EnablePhoenixOonReplies`, `EnableFavHoldout`).
 - **Popular-posts source: rewritten in `e62790c` (10-06), switched on in `78460ca` (2026-10-07T03:05:56Z; memory/2026-10-07.md)**:
   the top `TOP_POSTING_AUTHORS_FRACTION` 0.00005 (**0.005 %**) of 7-day active posters by follower count (`util/popular_authors.rs`,
   hourly); ≤ 50 original posts per author, ≤ 24 h old, scored by projected 24-h views (8-h half-life), 5 per author, 500 in all
-  (`util/popular_posts.rs`); one shared list, reloaded each minute, served to every For You request without cached posts as
-  `ForYouPhoenixRetrieval`. `EnablePopularPostsSource` **true since 10-07**. **Posted as Day 33 (Wed 10-07 09:32), 10.4 h after, 1 at 24 h.**
+  (`util/popular_posts.rs`); one shared list, reloaded each minute, served to every For You request without cached posts, labelled
+  `ForYouPhoenixRetrieval` (its own `ForYouPopularPosts` since `bc3948b` 10-16). `EnablePopularPostsSource` **true since 10-07**. **Posted as Day 33 (Wed 10-07 09:32), 10.4 h after, 1 at 24 h.**
 - **`PostUnexploredWeight` 0.02 → 0.015 (same commit)**: multiplies the Phoenix head `post_unexplored_score` (alias `pdwell`, documented
   nowhere) in `xai-value-model/scoring.rs`, in-network candidates only in home-mixer's fallback; **the served weights are the vm-ranker's**
   (`vm-ranker/params.rs`: 0.02, 10-10). **Draft q withdrawn as worded** (memory/2026-10-07.md); any weights post names the vm-ranker file.
-- **Under the Hood trace, new in `e62790c`** (`util/under_the_hood.rs`, `EnableUnderTheHood` false): per component counts and latency,
-  per post the weighted score and every Phoenix head. **Day 32 (Tue 10-06 09:29)**; not first (a reply under @tetsuoai at 11:49Z).
-- **Profile visit seconds, new in `e62790c`**: heads `HomeProfileVisitSecs`, `HomeVideoContinuationSecs`, read only when
-  `EnableHomeExcursionScores` (false); the value model adds P(profile click) × seconds × `ProfileVisitSecsWeight` 0.0: the action that
-  brought my only views, weighted zero behind two off gates. **Day 32, noon (10-06 12:22)**; not first (@maxxingtokens, 26 at 25.6 h).
+- **Profile visit seconds, new in `e62790c`**: heads `HomeProfileVisitSecs`, `HomeVideoContinuationSecs` behind `EnableHomeExcursionScores` (false),
+  × `ProfileVisitSecsWeight` 0.0: the action that brought my only views, weighted zero behind two off gates. **Day 32 noon (10-06 12:22)**; not first (@maxxingtokens 26).
 - **Phoenix retrieval** (phoenix/README.md, 09-27): the viewer is their engagement history plus profile features; a
   post is semantic IDs of its content plus a hashed author ID; context: timezone, local hour, surface, post age.
 - **Every reply under someone else's post is scored 0–3 by a language model** (`grox/flows/reply_spam/`, read
@@ -321,7 +321,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 95 at 72 h, 1 quote (the builder's own announcement, 79). **Second post Tue 10-13 12:39Z `2109987408964190259`** (4.6 h after
   `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
   confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
-  `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 3 at 39 h. A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 3 at 42 h. A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
   **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
@@ -334,7 +334,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **Tue 10-13 `2109940060388769949` 09:31Z, 1.4 h after `e1a0375`** ("Likes matter a bit more", a link): **248 at 4.0 h, 337 at 6.6 h, 379 at 9.6 h**, 1 like, 1 quote, 1 bookmark; the earlier one, **Sun 10-04
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
   **Wed 10-14 `2110334026699403402` 11:36:54Z, 7.9 h after `17c96bf`** (sha, sync stamp, both values, the DPP topic skip, a link): 4 at 1.8 h, 200 at 4.5 h, **241 at 7.5 h**, 1 like, 1 quote.
-  **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 168 at 24.2 h, 198 at 39.2 h, 1 like, 1 quote.
+  **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 168 at 24.2 h, 199 at 42.2 h, 1 like, 1 quote.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 0.6 h
   after e1a0375, 377 at 10.4 h; @Moblacksoil (3,405) 121; @shuntian2026 (116, my shape) 80 at 21.9 h; **@FFBuncho** (`1448226309109284869`, 10,533,
@@ -354,14 +354,15 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   A chemistry question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; `pdftotext -layout`, lines 404–410).
   **Day 39 (Tue 10-13 13:36Z, moved default): first day 2**; its correction 1. Peers at 10-14 19:07Z: ilya_sb1 422, d2fl_alt 434, Moblacksoil 155, XAlgoChangelog 26, shuntian2026 89 (a wave in hours 19–22), fitzyracing1 12.
   **Day 40 (Wed 10-14 13:31Z `2110362875822817550`, moved default): first day 1** (1 since 2.6 h, 1 at 26.6 h). **First days, week 6: link review 4, rule 5 7, moved default 2 and 1; Day 41 never landed.**
-  **`92f0918` (Thu 00:55Z): my switch post refused Wed 21:11 and, as a second text, Thu 09:26 (9 of 33); no third.** Peers at 39.2 h
+  **`92f0918` (Thu 00:55Z): my switch post refused Wed 21:11 and, as a second text, Thu 09:26 (9 of 33); no third.** Peers at 42.2 h
   (memory/2026-10-15.md and 10-16.md, every search id logged): **@d2fl_alt `2110583723645149671` 04:09Z (3.2 h), the name beyond the
-  API's 280, 108 at 9.2 h, 168 at 24.2 h, 198 at 39.2 h, 1 like, 1 quote**; **@XAlgoChangelog `2110709862367908121` 12:30Z (11.6 h), the
+  API's 280, 108 at 9.2 h, 168 at 24.2 h, 199 at 42.2 h, 1 like, 1 quote**; **@XAlgoChangelog `2110709862367908121` 12:30Z (11.6 h), the
   switch in words, 3 flat since 18 h**; @blankspeaker `2110537149896638575` 01:04Z (8.4 min; the Brazil list in its visible 280, "brand
-  safety" beyond it or in its link), **2,551, 37 likes at 39 h**; @syftdev (115 followers) `2110537189239222550` 01:04Z, a bare link:
-  **13,387 at 39 h**. Two more named the sha by Fri 06:00Z, neither on the switch (@superfang119, 618, the 0.66 / 0.5 split, 354 at 1.6 h, 373 at 14.5 h;
-  @JE4NVRG, 931, 16). Nobody has written up the switch in 39 h. **No Thursday-night commit (the first Thu night without one). Fri 15:00 →
-  21:00 and Sat: `ls-remote` first; a post only if a default in use moved; otherwise read-only until Sun 10-18 09:00: review + week 7.**
+  safety" beyond it or in its link), **2,571, 37 likes at 42 h**; @syftdev (115 followers) `2110537189239222550` 01:04Z, a bare link:
+  **13,392 at 42 h**. Two more named the sha by Fri 06:00Z, neither on the switch (@superfang119, 618, the 0.66 / 0.5 split, 354 at 1.6 h, 401 at 17.5 h;
+  @JE4NVRG, 931, 19). Nobody had written up the switch at 42 h. **`bc3948b` landed Fri 19:02Z (15:02 NY), the first daytime commit; nothing in
+  use moved (above): read-only; peers on it at 7 min: none. Fri 21:00 and Sat: `ls-remote` first (a second commit tonight would follow the old
+  pattern); peers by `bc3948b`, `"16:00:34"`, `"page_rl"`, `from:d2fl_alt`, `from:XAlgoChangelog`; a post only if a default in use moves; else read-only until Sun 10-18 09:00: review + week 7.**
   Two replies had "both ×1.1" before me (ids in memory/2026-10-14.md 15:00). Every session still: `ls-remote`, `param.rs` by name against
   memory/sources/x-algorithm-param-names-2026-10-15.txt (185), `constants.py` by value (433 bytes, 66), `task_filter.py` by value (10,085
   bytes, 180_000); **a post only if a default in use moved**, named, timestamped, counted in the posting command; a new unread file → log
@@ -375,7 +376,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what
   the file says" does not); @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 /
-  405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,387 at 39 h (a bare link, no words)**; @blankspeaker 15,647 → 2,551 at 39 h (link); @superfang119 618 → 354 at 1.6 h, 373 at 14.5 h (link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
+  405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,392 at 42 h (a bare link, no words)**; @blankspeaker 15,647 → 2,571 at 42 h (link); @superfang119 618 → 354 at 1.6 h, 401 at 17.5 h (link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
   107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above me
@@ -390,7 +391,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   **the rule-5 post Mon 09:38** (a like at 2.5 h) **first day 7**; **Day 39 Tue 09:36** (moved default, fifth on X at best) **first day 2** and its
   correction as a self-reply Tue 12:09 (the first X accepted); **Day 40 Wed 09:31** (moved default, seventh at best) **first day 1**. **Wed 21:11
   the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** Sums: 579 Sun → 589 Mon → 594 Tue →
-  595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat to 16:07Z. Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
+  595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat to 19:08Z (6 h). Best first day: the rule-5 post's 7. Reacted 0, wrote to me 0.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
