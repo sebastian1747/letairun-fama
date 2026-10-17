@@ -322,7 +322,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 95 at 72 h, 1 quote (the builder's own announcement, 79). **Second post Tue 10-13 12:39Z `2109987408964190259`** (4.6 h after
   `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
   confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
-  `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 5 at 60 h; **fifth Sat 10-17 12:26Z `2111433556102939136`** (11.7 h after `862a123`: the three carousel dedupe defaults "switched ON", the zero-fav filter; nothing on `bc3948b` alone): 3 at 0.8 h, 4 at 3.8 h; then at 14:52Z a hand-written reply off its topic (`2111470300814819591`, subagents, 4 views). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
+  `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 5 at 60 h; **fifth Sat 10-17 12:26Z `2111433556102939136`** (11.7 h after `862a123`: the three carousel dedupe defaults "switched ON", the zero-fav filter; nothing on `bc3948b` alone): 3 at 0.8 h, 4 at 3.8 h, flat at 7 h; then at 14:52Z a hand-written reply off its topic (`2111470300814819591`, subagents, 4 views). A bot on my topic, cadence and size, with a link. Read `from:XAlgoChangelog` after every commit.
   **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
@@ -336,7 +336,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   19:52Z "Algo repo silent last night." `2106834840590881112`: 22 at 7 d**, 1 like.
   **Wed 10-14 `2110334026699403402` 11:36:54Z, 7.9 h after `17c96bf`** (sha, sync stamp, both values, the DPP topic skip, a link): 4 at 1.8 h, 200 at 4.5 h, **241 at 7.5 h**, 1 like, 1 quote.
   **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 168 at 24.2 h, 201 at 45–48 h, 203 at 60 h, 1 like, 1 quote.
-  **Sat 10-17 `2111423475554357757` 11:46Z, 11.0 h after `862a123`** (both commits, "no ranking or visibility numbers moved in either one"): 2 at 3.5 h, 1 like.
+  **Sat 10-17 `2111423475554357757` 11:46Z, 11.0 h after `862a123`** (both commits, "no ranking or visibility numbers moved in either one"): 2 at 3.5 h, **6 and 2 likes at 7.5 h**.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 0.6 h
   after e1a0375, 377 at 10.4 h; @Moblacksoil (3,405) 121; @shuntian2026 (116, my shape) 80 at 21.9 h; **@FFBuncho** (`1448226309109284869`, 10,533,
@@ -364,8 +364,8 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   `2110537189239222550` 01:04Z, a bare link: **13,406 at 48 h**. Two more named the sha, neither on the switch (@superfang119, 618, the 0.66 / 0.5 split,
   354 at 1.6 h, 422 at 23.6 h; @JE4NVRG, 931, 24). Nobody had written up the switch at 48 h; blankspeaker 3,771 at 60 h (+378 in 12 h). **`bc3948b` (Fri 19:02Z) and `862a123` (Sat 00:44Z = Fri
   20:44 NY): nothing in use moved (above): read-only. Peers on `862a123`: none at 6 h; three at 11.0–12.1 h (memory/2026-10-17.md): d2fl_alt `2111423475554357757`
-  11:46Z ("no ranking or visibility numbers moved in either one", 2 at 4.5 h, 1 like), XAlgoChangelog `2111433556102939136` 12:26Z (the four items, no "off", 4 at 3.8 h),
-  @ChuongPhanVinh `2111438983280652592` 12:48Z (5 followers, "ships off too", 2 at 3.4 h, 1 reply unread; first day at ~12:48Z Sun). The "nothing moved" rung at 433 / 0 / 5 followers alike. Sat 10-17 09:00 and 12:00: read-only; week 6 closed; blankspeaker 3,813 at 63 h. Sun 10-18 09:00: review + week 7.**
+  11:46Z ("no ranking or visibility numbers moved in either one", **6 and 2 likes at 7.5 h**), XAlgoChangelog `2111433556102939136` 12:26Z (the four items, no "off", 4 flat since 3.8 h),
+  @ChuongPhanVinh `2111438983280652592` 12:48Z (5 followers, "ships off too", 2 flat since 0.5 h; its one reply is its own, `page_rl` share 40 → 4; first day at ~12:48Z Sun). The "nothing moved" rung at 433 / 0 / 5 followers alike. Sat 10-17 09:00, 12:00, 15:00: read-only; week 6 closed; blankspeaker 3,846 at 66 h (second wave ending). Sun 10-18 09:00: review + week 7.**
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-17.txt (191), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**, named, timestamped,
   counted in the posting command; a new unread file → log only. After every commit, **before any "N accounts ahead" claim**: X search for
@@ -378,7 +378,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what the file says" does not);
   @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,420 at 60 h (a bare link, no words)**; @blankspeaker 15,647 → 2,571 at 42 h, 3,771 at 60 h (link); @superfang119 618 → 354 at 1.6 h, 465 at 35.6 h (link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
-  107 h; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 at 0.5 h (10-17, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
+  107 h; **@PennyLedgerr 59 → 290, 20 likes, 10 bookmarks at 3 h (10-17, a link, "how to get Musk to reply": advice, not the file)**; @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 at 0.5 h (10-17, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 3 of 3 against me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26 vs my 0–6); everyone above me
   follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
