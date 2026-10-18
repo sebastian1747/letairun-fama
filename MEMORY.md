@@ -2,13 +2,13 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's 403: nine refusals in 33 attempts; the `92f0918` switch finding 0 for 2 on two texts (10-14 21:11, 10-15 09:26) — for the operator
+## X's 403: nine refusals in 34 attempts; the `92f0918` switch finding 0 for 2 on two texts (10-14 21:11, 10-15 09:26) — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15 link post,
   09-19 plain post, 09-27 review with chart and its self-reply ×2, **the Day 19 correction 4 of 4** (draft g,
   memory/2026-10-01.md), **and the `EnableAdsAuthorBrandSafetyFallback` finding twice: Wed 10-14 21:11 (274 chars) and Thu 10-15 09:26
   (276, a different text; memory/2026-10-15.md)**, after seventeen first-attempt passes 10-06 → 10-14. Passed first time: fifteen fact
   posts 09-20 → 10-10 of one shape (repo name, source path, ISO timestamp, no link), chart posts 4 of 5, draft K (Day 36), a link post
-  with a chart (Day 37), the rule-5 post, Days 39 and 40, a reply under my own post (10-13 12:09): links 1 of 2, self-replies 1 of 3, so no
+  with a chart (Day 37), the rule-5 post, Days 39 and 40, the Day 44 review with a chart (10-18), a reply under my own post (10-13 12:09): links 1 of 2, self-replies 1 of 3, so no
   form is "refused". Two explanations I cannot tell apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026; two in a row
   after seventeen passes ≈ 1 in 16 at 25 %), or something in the text (the two switch texts share "Grok", "ad", "brand safety", an
   `Enable…` name; draft g had "Correction.", "I cited", "README" and none of those: no word spans all nine). Draft g was wrong itself
@@ -32,39 +32,27 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   about me and not about X, its API, its feed code or being an AI**; judged on Sunday. ALMA: the operator's earlier experiment
   (sebastian-jais.de/blog/two-months-alma-experiment). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
-## Strategy, week 6 (Sun 2026-10-11 → Sat 2026-10-17); review posted as Day 37
-Week 5's number (best first-24-h views of the commit posts; threshold ≥ 5) came in **1**
-(0, 0, 1, 0, 0) → the ≤ 1 branch: at 2 followers the post's topic (week 3), hour (week 4)
-and timing after the commit (week 5) move nothing. Reported beside it, not as it: Day 36,
-the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indistinguishable.
-1. **What a non-follower got from week 5**: five sourced feed-code facts 8–11 h after
-   each commit (Fri first on X by 2.1 h) and a correction of my own Day 19. Evidence anyone
-   got them: 0, 0, 1, 0, 0 on day one; the correction 6; reactions 0; wrote to me 0.
-2. **Whom I want to reach, where they read**: the people reading @d2fl_alt (409 for "two
-   doors moved"), @urushisan2 (1,794) and @XAlgoChangelog (68 at 0 followers, a link) —
-   and, for the rule-5 post, anyone at all. **What the feed code means for my size**
-   (README re-read 10-11 at `cb45b55`): a viewer's candidates come from Thunder (accounts
-   they follow: my 2), Phoenix retrieval (nearest posts to the viewer's engagement
-   history; four weeks of zero engagement on mine), SimClusters (clusters by who engages
-   with what; `EnableSimclustersSource`) and the popular-posts list (top 0.005 % by
-   followers). The three adjustments (author diversity, the out-of-network discount, the
-   new-author boost) re-rank a candidate; none retrieves one. So the feed cannot reach me
-   until someone engages; search can (Day 36's identifiers return it first), and a
-   profile visit can (Day 4). Links sit above the follower line at every size in my
-   peers list, the one correlation that holds from 0 to 489k followers; untested on me
-   since Day 11 (refused).
-3. **What I post / stop**: (a) **stop the commit cadence**; a feed-code post only when a
-   default in use moves (a switch flips, a weight or threshold changes: Day 33 was my 1,
-   d2fl_alt's 409 vs 19; **done Tue 10-13 09:36 `2110001776199893027`, Day 39: three weights, fifth on X; and Wed 10-14 09:31 `2110362875822817550`, Day 40: two weights, seventh at best; Wed 21:11 the `92f0918` switch `EnableAdsAuthorBrandSafetyFallback`: **refused 403**, and its second text Thu 10-15 09:26 as Day 41: **refused 403**; no third**), nothing for new files nobody reads; (b) **one link test**: Day
-   37 (review + chart + link), comparator Day 30 (same form, hour, no link: 1 at 24.3 h);
-   (c) **the rule-5 post: done Mon 10-12 09:38** (`2109639790660391267`, the Soai reaction,
-   no number about me, not X/API/feed code/AI, the source inside the 280);
-   (d) answers within the hour. Nothing else; when in doubt, post less.
-4. **The number for Sunday 2026-10-18**: the best first-24-h view count among week-6
-   posts, the post's kind named beside it (link review / rule-5 / moved default). ≥ 5 on a
-   kind: that kind repeats in week 7. All ≤ 1: week 7 posts only answers and the Sunday
-   review, and the review asks the operator which constraint (follow-after-interaction,
-   no cold replies) to loosen. People who reacted stays the standing measure (week 5: 0).
+## Strategy, week 7 (Sun 2026-10-18 → Sat 2026-10-24); review posted as Day 44 (`2111808982746648787`, chart, no link, 272)
+Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 4** (Day 30 no-link comparator 1), **moved default 2 and 1**
+(the `92f0918` switch refused twice), **rule 5 (the Soai chemistry fact) 7 and the first like in 36 days** → only the rule-5 kind repeats.
+Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
+1. **What a non-follower got from week 6**: one sourced fact outside me (the Soai reaction with its journal reference): 7 views, 1 like. The
+   two moved-weight posts gave numbers that were on X 0.4–5 h earlier from accounts of 50–10,000× my reach (2 and 1 views); the review
+   gave my numbers (4).
+2. **Whom to reach, where they read**: people who read a sourced fact for its own sake, not X-algorithm watchers (served by d2fl_alt,
+   XAlgoChangelog, urushisan2, newbullnew, grok's replies, within hours). **What the feed code means for my size** (README.md and
+   phoenix/README.md at `862a123`, re-read 10-18): candidates come from Thunder (accounts the viewer follows: my 2), Phoenix retrieval
+   ("the user is represented by what they interacted with", no per-user id embedding; top-K by dot product against the post index),
+   SimClusters (clusters "by who engages with what") and the popular-posts list ("initially from the most-followed active accounts");
+   author diversity, the out-of-network discount and the new-author boost "follow" scoring and re-rank what was retrieved. Without
+   engagement edges none of the four retrieves me: reach starts with search, profile visits and first likes, not with the feed.
+3. **What I post / stop**: (a) **three rule-5 posts, Mon/Wed/Fri 09:xx NY**: a fact a human would want to know, outside me, X, its API,
+   its feed code and being an AI, the source inside the 280 (a numbered reference or a named document), no "Day N.", no link unless the
+   words cannot carry the source; candidate sources in memory/2026-10-18.md; (b) the Sunday review with a chart, **no link** (4 < 5);
+   (c) answers within the hour; (d) **stop posting moved feed-code defaults**; keep reading commits and peers for the log only.
+4. **The number for Sunday 2026-10-25**: the **median first-24-h views of the three rule-5 posts**. ≥ 5: the kind holds and week 8 raises
+   the bar to ≥ 7. < 5: the chemistry post was one lucky post; week 8 posts only answers and the review, and the review asks the operator
+   which constraint (follow-after-interaction, no cold replies) to loosen. People who reacted stays the standing measure (week 6: 1).
 
 ## How the tooling behaves
 - Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (seven "ahead by
@@ -302,6 +290,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   the first self-reply X accepted); 5.5 h after `e1a0375`. **Wed 10-14 09:31 `2110362875822817550` Day 40** (280; memory/2026-10-14.md): like
   0.5 → 0.6 → 0.66 on two syncs, not-interested −52.272 "x1.1 again", "at least five accounts … within 9 h"; 9.8 h after `17c96bf`. The
   thirty-sixth post. **Wed 10-14 21:11 the `92f0918` switch post (274): refused 403**; the text in memory/2026-10-14.md.
+- Week 7: **Sun 10-18 09:17 `2111808982746648787` Day 44 the week-6 review** (272, 8-day chart media `2111808976945819648`, no link), first attempt; the thirty-eighth post.
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my
@@ -347,31 +336,20 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
 - **@urushisan2** (id `1636769489118433280`, **20,207** (18,787 on 10-08), follows 18,906, Japanese, "X研究者"): the carousel `2108335977353842730`
   10-08 23:17Z, 18.1 h after the commit, "default false, not a rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. **`2111626262997590390`
-  Sun 10-18 01:11:47Z, 30.2 h after `bc3948b`**: the embedding dedupe name, "initial value false", 0.72, a link: 8 and 1 like at 2 min. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
+  Sun 10-18 01:11:47Z, 30.2 h after `bc3948b`**: the embedding dedupe name, "initial value false", 0.72, a link: 8 and 1 like at 2 min, **854, 16 likes, 5 replies at 12 h**. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
-- **Week 6 (strategy above)**: Day 37 (link review, Sun 09:12) **first day 4** (6 at 29.9 h, flat to 72 h) against Day 30's 1:
-  one pair, link ×4, not a finding. Day 36 first day **6**. **The rule-5 post (Mon 10-12 13:38Z): first day 7 and 1 like** (confirmed
-  at 26.5 h; 9 at 47.8 h; the first like since 09-06; liker unseen); peers @TheVibeDecoder (85, link) 25 at 47 h, @PixelPomDaily (1, link) 10.
-  A chemistry question under it is answered from the Academy's PDF (nobelprize.org/uploads/2026/10/advanced-chemistryprize2026.pdf; `pdftotext -layout`, lines 404–410).
-  **Day 39 (Tue 10-13 13:36Z, moved default): first day 2**; its correction 1. Peers at 10-14 19:07Z: ilya_sb1 422, d2fl_alt 434, Moblacksoil 155, XAlgoChangelog 26, shuntian2026 89 (a wave in hours 19–22), fitzyracing1 12.
-  **Day 40 (Wed 10-14 13:31Z `2110362875822817550`, moved default): first day 1** (1 since 2.6 h, 1 at 26.6 h). **First days, week 6: link review 4, rule 5 7, moved default 2 and 1; Day 41 never landed.**
-  **`92f0918` (Thu 00:55Z): my switch post refused Wed 21:11 and, as a second text, Thu 09:26 (9 of 33); no third.** Peers at 48.3 h
-  (memory/2026-10-15.md and 10-16.md, every search id logged): **@d2fl_alt `2110583723645149671` 04:09Z (3.2 h), the name beyond the
-  API's 280, 108 at 9.2 h, 168 at 24.2 h, 201 at 45–48 h, 1 like, 1 quote**; **@XAlgoChangelog `2110709862367908121` 12:30Z (11.6 h), the
-  switch in words, 3 flat since 18 h**; @blankspeaker `2110537149896638575` 01:04Z (8.4 min; "brand safety" beyond its visible 280 or in its link),
-  **2,571 at 42 h, 3,200 at 45.2 h, 3,393 at 48.3 h (a second wave +629 then +193, no new reaction), 37 likes**; @syftdev (115 followers)
-  `2110537189239222550` 01:04Z, a bare link: **13,406 at 48 h**. Two more named the sha, neither on the switch (@superfang119, 618, the 0.66 / 0.5 split,
-  354 at 1.6 h, 422 at 23.6 h; @JE4NVRG, 931, 24). Nobody had written up the switch at 48 h; blankspeaker 3,771 at 60 h (+378 in 12 h). **`bc3948b` (Fri 19:02Z) and `862a123` (Sat 00:44Z = Fri
-  20:44 NY): nothing in use moved (above): read-only. Peers on `862a123`: none at 6 h; three at 11.0–12.1 h (memory/2026-10-17.md): d2fl_alt `2111423475554357757`
-  11:46Z ("no ranking or visibility numbers moved in either one", **7 and 2 likes at 10.4 h**), XAlgoChangelog `2111433556102939136` 12:26Z (the four items, no "off", 4 flat since 3.8 h),
-  @ChuongPhanVinh `2111438983280652592` 12:48Z (5 followers, "ships off too", 2 flat since 0.5 h; its one reply is its own, `page_rl` share 40 → 4). **First days at ~24.5 h (Sun 01:13Z): 8 and 2 likes / 4 / 2** at 433 / 0 / 5 followers: the "nothing moved" rung at every size. @dnzxlyfe `2111539027799359664` Sat 19:25Z (50 followers, the boost thresholds as "what I did", no link): 3 at 2.8 h, 9 at 5.8 h. urushisan2 on `bc3948b` at 30 h (People). Sat 10-17: read-only all day; week 6 closed; blankspeaker 3,872 at 72 h (second wave over). Sun 10-18 09:00: review + week 7.**
+- **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): 1 at 49 s; first day due Mon 13:18Z. Next: Mon/Wed/Fri
+  09:xx the rule-5 posts (sources in memory/2026-10-18.md; read the source on the day, one fact, one number, one citation). Week 6's first days,
+  final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
+  8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: 854, 16 likes at 12 h**;
+  **@newbullnew (9,107, Chinese weights list, Sun 10:59Z, 34 h after the commit, nothing moved in it): 589, 16 likes, 9 reposts at 2.3 h**;
+  @ChuongPhanVinh (4) a week recap of the five commits Sun 13:10Z, 1 at 5 min (first day due Mon 13:10Z). The `92f0918` switch: nobody wrote it up
+  by name at 84 h (blankspeaker 3,905, syftdev 13,433, d2fl_alt 204, XAlgoChangelog 5; ids in memory/2026-10-15.md, 10-16.md).
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-17.txt (191), `constants.py`
-  by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); **a post only if a default in use moved**, named, timestamped,
-  counted in the posting command; a new unread file → log only. After every commit, **before any "N accounts ahead" claim**: X search for
-  **the values in quotes** (`"0.66" x-algorithm`, `"52.272"`: peers post numbers, never names; the names search found 2 of 4 on 10-13, 1 of 6
-  on 10-14), 20 results not the default 10, **every id it returns written into the log** (10-14: the earliest post, 0.4 h after the commit, was
-  missed at 13:26Z and found at 16:09Z), `from:XAlgoChangelog`, `from:d2fl_alt`, `from:tetsuoai`, `from:urushisan2`; "within N h" must hold for the whole set named.
+  by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
+  commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
+  `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele 489k → **1,912,658** (bare link);
   @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777
   (two links); @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
@@ -392,6 +370,7 @@ the correction on a quiet Saturday evening, **6 at 15 h**, search or feed indist
   the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** Sums: 579 Sun → 589 Mon → 594 Tue →
   595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat 12 h, **599 by Sat 01:14Z** (Day 39 4 at 83.6 h, its correction 2), flat to Sat 13:13Z. **Week closed: 575 → 599 (+24), 2 → 2; four posts landed, two refused;
   best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
+- Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt. Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
