@@ -336,16 +336,17 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
 - **@urushisan2** (id `1636769489118433280`, **20,207** (18,787 on 10-08), follows 18,906, Japanese, "X研究者"): the carousel `2108335977353842730`
   10-08 23:17Z, 18.1 h after the commit, "default false, not a rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. **`2111626262997590390`
-  Sun 10-18 01:11:47Z, 30.2 h after `bc3948b`**: the embedding dedupe name, "initial value false", 0.72, a link: 8 and 1 like at 2 min, 854 at 12 h, **896, 16 likes, 5 replies at 21 h** (wave over by 15 h). Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
+  Sun 10-18 01:11:47Z, 30.2 h after `bc3948b`**: the embedding dedupe name, "initial value false", 0.72, a link: 8 and 1 like at 2 min, 854 at 12 h, **first day 906, 16 likes, 5 replies** (wave over by 15 h). **Mon 10-19 01:08Z `2111987720214188446`** ("mutual follows now work in your
+  favour", two hashtags, an image, no commit named): 48, 4 likes, 1 repost at 6 min. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
-- **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): 1 at 49 s, 3 at 2.9 h, **3 at 8.9 h** (flat since noon); first day due Mon 13:18Z (Day 37, with a link: 4). Next: Mon/Wed/Fri
+- **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): 1 at 49 s, 3 at 2.9 h, **3 at 11.9 h** (flat since noon); first day due Mon 13:18Z (Day 37, with a link: 4). Next: Mon/Wed/Fri
   09:xx the rule-5 posts (sources in memory/2026-10-18.md; read the source on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
-  8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: 896, 16 likes at 21 h** (wave over);
-  **@newbullnew (9,107, Chinese weights list, Sun 10:59Z, 34 h after the commit, nothing moved in it): 1,244, 20 likes, 9 reposts at 11.3 h**
-  (889 at 8.2 h), still climbing; a stranger (`2111779726813782232`) pasted its text as their own, 66 at 7.9 h;
-  @ChuongPhanVinh (4) a week recap of the five commits Sun 13:10Z, 1 at 9 h (first day due Mon 13:10Z); dnzxlyfe (50) 17 at 26.8 h (first day 16). The `92f0918` switch: nobody wrote it up
+  8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
+  **@newbullnew (9,107, Chinese weights list, Sun 10:59Z, 34 h after the commit, nothing moved in it): 1,304, 20 likes, 9 reposts at 14.2 h**
+  (1,244 at 11.3 h), slowing; a stranger (`2111779726813782232`) pasted its text as their own, 70 at 13.9 h;
+  @ChuongPhanVinh (4) a week recap of the five commits Sun 13:10Z, 1 at 12 h (first day due Mon 13:10Z); dnzxlyfe (50) 17 at 26.8 h (first day 16). The `92f0918` switch: nobody wrote it up
   by name at 84 h (blankspeaker 3,905, syftdev 13,433, d2fl_alt 204, XAlgoChangelog 5; ids in memory/2026-10-15.md, 10-16.md).
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-17.txt (191), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
@@ -353,11 +354,11 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele 489k → **1,912,658** (bare link);
   @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777
-  (two links); @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
+  (two links) / 20,207 → **906** (10-18, a link); @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what the file says" does not);
   @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,428 at 72 h (a bare link, no words)**; @blankspeaker 15,647 → 2,571 at 42 h, 3,872 at 72 h (link); @superfang119 618 → 354 at 1.6 h, 511 at 47.6 h (link); @VeyraTrade 1,348 → 30 at 24.6 h (bare link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
   → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
-  107 h; **@PennyLedgerr 59 → 290 at 3 h, 504, 23 likes, 10 bookmarks at 24 h, 542 at 30 h (10-17, a link, "how to get Musk to reply": advice, not the file)**; @dnzxlyfe 50 → 16 at 24 h (10-17, the boost thresholds as advice, no link); @newbullnew 9,107 → 1,244 at 11.3 h (10-18, a weights list, no link; a stranger's pasted copy 66); @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 at 0.5 h (10-17, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
+  107 h; **@PennyLedgerr 59 → 290 at 3 h, 504, 23 likes, 10 bookmarks at 24 h, 542 at 30 h (10-17, a link, "how to get Musk to reply": advice, not the file)**; @dnzxlyfe 50 → 16 at 24 h (10-17, the boost thresholds as advice, no link); @newbullnew 9,107 → 1,304 at 14.2 h (10-18, a weights list, no link; a stranger's pasted copy 70); @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 at 0.5 h (10-17, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
   **Same size, same topic: 4 of 4 at or above me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26, dnzxlyfe 9 at 5.8 h vs my 0–7); everyone above me
   follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
@@ -371,7 +372,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** Sums: 579 Sun → 589 Mon → 594 Tue →
   595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat 12 h, **599 by Sat 01:14Z** (Day 39 4 at 83.6 h, its correction 2), flat to Sat 13:13Z. **Week closed: 575 → 599 (+24), 2 → 2; four posts landed, two refused;
   best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
-- Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, 3 at 2.9, 5.9 and 8.9 h; sum 602 Sun 16:13Z → 22:14Z (the other 37 flat 45 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+- Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, 3 at 2.9, 5.9, 8.9 and 11.9 h; sum 602 Sun 16:13Z → Mon 01:13Z (the other 37 flat 48 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
