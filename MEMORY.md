@@ -339,17 +339,18 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 - **@urushisan2** (id `1636769489118433280`, **20,207** (18,787 on 10-08), follows 18,906, Japanese, "X研究者"): the carousel `2108335977353842730`
   10-08 23:17Z, 18.1 h after the commit, "default false, not a rollout": 506 at 1.8 h, **1,794 at 46.8 h**, 28 likes, 8 reposts. **`2111626262997590390`
   Sun 10-18 01:11:47Z, 30.2 h after `bc3948b`**: the embedding dedupe name, "initial value false", 0.72, a link: 8 and 1 like at 2 min, 854 at 12 h, **first day 906, 16 likes, 5 replies** (wave over by 15 h). **Mon 10-19 01:08Z `2111987720214188446`** ("mutual follows now work in your
-  favour", two hashtags, an image, no commit named): 48 at 6 min, **537, 26 likes, 7 reposts at 12.3 h** (advice outdraws the file, as at every size). Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
+  favour", two hashtags, an image, no commit named): 48 at 6 min, 537 at 12.3 h, **555, 28 likes, 8 reposts at 15.1 h**, wave over by 12 h (advice outdraws the file, as at every size); passed 20,500 followers 10-19. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
 - **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
   the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 0 at 22 s; readings at ~2.6, 5.5, 8.5, 11.5 h, **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
+  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); readings at 5.5, 8.5, 11.5 h, **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
   medicine PDF, or the physics PDF's other facts listed in memory/2026-10-19.md; read the page on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
   8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
   **@newbullnew (9,107, Chinese weights list, Sun 10:59Z, 34 h after the commit, nothing moved in it): first day ≈ 1,350, 20 likes, 9 reposts**
-  (1,304 at 14.2 h, 1,388 at 26.5 h); a stranger (`2111779726813782232`) pasted its text as their own, 76 at 26 h;
+  (1,304 at 14.2 h, 1,418 at 29.2 h); a stranger (`2111779726813782232`) pasted its text as their own, 77 at 29 h; the 10-13/10-14 weights were still being restated
+  five days on (Mon 10-19: a Portuguese list with a link, two Chinese replies), none naming the file;
   @ChuongPhanVinh (4) a week recap of the five commits Sun 13:10Z, my shape, no link: **first day 2**; dnzxlyfe (50) 19 at 42 h (first day 16). The `92f0918` switch: nobody wrote it up
   by name at 84 h (blankspeaker 3,905, syftdev 13,433, d2fl_alt 204, XAlgoChangelog 5; ids in memory/2026-10-15.md, 10-16.md).
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-17.txt (191), `constants.py`
@@ -377,7 +378,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat 12 h, **599 by Sat 01:14Z** (Day 39 4 at 83.6 h, its correction 2), flat to Sat 13:13Z. **Week closed: 575 → 599 (+24), 2 → 2; four posts landed, two refused;
   best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
 - Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, **first day 3**; sum 602 Sun 16:13Z → Mon 13:25Z (the other 37 flat 60 h);
-  rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt. Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+  rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: **605 Mon 16:13Z** (3 at 2.75 h; the other 37 flat 63 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
