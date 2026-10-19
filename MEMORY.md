@@ -2,6 +2,17 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
+## X's API balance is at zero since Mon 10-19 between 16:14Z and 19:11Z — for the operator
+- Every read answers **HTTP 402 "credits depleted"** (`api.x.com/2/problems/credits-depleted`; Composio `successful: false`; Kolibri prints
+  "Twitter API credits depleted … Billing", kolibri.mjs 563). Not a 403, not a restriction: a bill. The 12:00 session read 48 posts and ran 13
+  searches at 16:13Z; the 15:00 session read nothing (memory/2026-10-19.md). **Until credits are added nothing on X can be read or written**:
+  no inbox, no counts, no views, no posts; the site, the repo and memory work. **Each session: one `kolibri.mjs lookup 2112174031889686711`
+  as a probe (a 402 costs nothing); if it passes, the normal session and a note of when it came back; if not, one thought on the site,
+  `ls-remote`, memory, push.** Pricing (docs.x.com/x-api/getting-started/pricing.md, 10-19): post read $0.005, user read $0.010 per resource
+  returned, **charged once per UTC day** ("Deduplication", a soft guarantee); post $0.015, with a URL $0.200. My week-7 sessions: 48–53 lookups,
+  1 user read, 13–16 searches × ≤ 20, five a day: ≤ ~1,700 resources/day ($8.50) without the dedup, ~400 ($2) with it. The console shows which.
+  The IceCube post's first day (closes Tue 13:28Z) is read late if the balance is still empty: an upper bound, reported as such.
+
 ## X's 403: nine refusals in 35 attempts; the `92f0918` switch finding 0 for 2 on two texts (10-14 21:11, 10-15 09:26) — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15 link post,
   09-19 plain post, 09-27 review with chart and its self-reply ×2, **the Day 19 correction 4 of 4** (draft g,
@@ -25,9 +36,8 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   "Automated" label, picture and banner: confirmed by the operator 09-05/09-06. Do not re-verify.
 - Sessions at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h window
   per post: run `guard.mjs status`, never predict it.
-- Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising
-  and sourced; my own attempt stays the home topic. Every Sunday review carries a
-  strategy (four questions, one number decided in advance); daily sessions follow it.
+- Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising and sourced; my own attempt stays the home
+  topic. Every Sunday review carries a strategy (four questions, one number decided in advance); daily sessions follow it.
   **ROUTINE.md item 5 (operator, Sun 10-11 01:30Z): at least one post a week with no number
   about me and not about X, its API, its feed code or being an AI**; judged on Sunday. ALMA: the operator's earlier experiment
   (sebastian-jais.de/blog/two-months-alma-experiment). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
@@ -100,8 +110,9 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   .mp4/.mov/.webm ≤ 140 s) attaches it as a looping video, one post unit. Rendered locally 10-07
   (32 frames, 648 kB, 8 s); never sent to X yet.
 - **X's view counter does not lag** (09-08/09): a 3-hour window is a fair reading. **My API reads
-  are not views** (09-13 → 09-25). Pay-per-use (docs.x.com `/x-api/getting-started/pricing.md`):
-  post $0.015, with URL $0.200; follow $0.015; reads $0.005 post, $0.010 user; once per UTC day.
+  are not views** (09-13 → 09-25). Pay-per-use (docs.x.com `/x-api/getting-started/pricing.md`, re-read 10-19):
+  post $0.015, with URL $0.200; follow $0.015; reads $0.005 post, $0.010 user, per resource returned, once per UTC day. **An empty
+  balance is a 402 on every call (10-19), not a 403.**
 - help.x.com, devcommunity.x.com, api.github.com and `commits/main.atom` refuse
   curl; WebFetch reads github.com pages (the atom: timestamps; the commit page:
   the file list; a tree page: file names); `raw.githubusercontent.com` serves
@@ -168,8 +179,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `EnableVideoCarousel` (false): vertical videos (aspect < 1.0, not replies) from the candidates beyond `RESULT_SIZE` plus 30 extra, ranked by
   Phoenix `video_open_score` (since 10-15 the weighted carousel score, above), 3–5 of them, at `VideoCarouselPosition` 6, at most every
   `VideoCarouselFatigueMinutes` 60; `FEED_MODULE_SLOTS` 4 → 5; the three dedupe defaults (author, semantic-id depth 3, embedding 0.72) on since `862a123` 10-17, still behind the master switch. Post only if it flips.
-- **`cb45b55` (Fri 10-09T05:42:57Z)**: `PredictNextActionsRequest` gained `feed_request_context` (launch, refresh, polling … 15 values) and
-  `feed_cursor_direction`; read by nothing until `e1a0375` (the ads request sends both, `sources/ads_source.rs`). **Posted as Day 35, 7.85 h after; first on X.**
+- **`cb45b55` (Fri 10-09T05:42:57Z)**: `PredictNextActionsRequest` gained `feed_request_context` (15 values) and `feed_cursor_direction`; read by nothing until `e1a0375` (`sources/ads_source.rs`). **Day 35, 7.85 h after; first on X.**
 - **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181
   (`ReactWithVideoWeight`, `PhoenixOonRepliesRootOnly` false = keep only OON replies to the root, behind
   `EnablePhoenixOonReplies` false; the two carousel switches); a Phoenix retrieval dataset type **`ZERO_FAV` = 16**
@@ -191,8 +201,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `EnableVideoCarousel` false and the 0.0: log only); `visibility-filtering/` rule engine rewritten (45 files: `rules/registry.rs`,
   `rule_spec/features/`, `catalog.rs`, `explain.rs` public traces; unread in detail).
 - **`bc3948b` (Fri 10-16T19:02:15Z, 66 files; memory/2026-10-16.md 15:00)**: sync 2026-10-15T16:00:34Z, **no default in use moved**; names 185 → 187
-  (`EnableVideoCarouselEmbeddingDedupe` false, threshold 0.72: cosine on `v8_search` post embeddings, behind `EnableVideoCarousel`). `phoenix/xrex/models/page_rl.py`
-  (`PageRlConfig.enabled` false): vqv 0.5 → 1.0, share 40.0 → 4.0, 13 per-request `RankingScoreWeights` (nothing sends them). `BrandEngagement` ads label. **Log only.**
+  (`EnableVideoCarouselEmbeddingDedupe` false, 0.72 cosine on `v8_search` embeddings); `page_rl.py` (`PageRlConfig.enabled` false) vqv 0.5 → 1.0, share 40 → 4. **Log only.**
 - **`862a123` (Sat 10-17T00:44:30Z = Fri 20:44 NY, 99 files; memory/2026-10-16.md 21:00)**: sync 2026-10-16T16:00:32Z; **three defaults moved, all behind
   `EnableVideoCarousel` false** (`EnableVideoCarouselAuthorDedupe` → true, `VideoCarouselSemanticIdDedupeLevels` 0 → 3, `EnableVideoCarouselEmbeddingDedupe` → true);
   **four new names, all false** (187 → 191): **`EnablePostEngagers`** (new `post_engagers_client.rs` / `_hydrator.rs` / `util/post_engagers.rs`: a Redis cache
@@ -231,10 +240,8 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 - **`PostUnexploredWeight` 0.02 → 0.015 (same commit)**: multiplies the Phoenix head `post_unexplored_score` (alias `pdwell`, documented
   nowhere) in `xai-value-model/scoring.rs`, in-network candidates only in home-mixer's fallback; **the served weights are the vm-ranker's**
   (`vm-ranker/params.rs`: 0.02, 10-10). **Draft q withdrawn as worded** (memory/2026-10-07.md); any weights post names the vm-ranker file.
-- **Profile visit seconds, new in `e62790c`**: heads `HomeProfileVisitSecs`, `HomeVideoContinuationSecs` behind `EnableHomeExcursionScores` (false),
-  × `ProfileVisitSecsWeight` 0.0: the action that brought my only views, weighted zero behind two off gates. **Day 32 noon (10-06 12:22)**; not first (@maxxingtokens 26).
-- **Phoenix retrieval** (phoenix/README.md, 09-27): the viewer is their engagement history plus profile features; a
-  post is semantic IDs of its content plus a hashed author ID; context: timezone, local hour, surface, post age.
+- **Profile visit seconds, new in `e62790c`**: `HomeProfileVisitSecs` behind `EnableHomeExcursionScores` (false) × `ProfileVisitSecsWeight` 0.0: the action that brought my only views, weighted zero behind two off gates. **Day 32 noon**; not first (@maxxingtokens 26).
+- **Phoenix retrieval** (phoenix/README.md, 09-27): the viewer is their engagement history plus profile features; a post is semantic IDs of its content plus a hashed author ID; context: timezone, local hour, surface, post age.
 - **Every reply under someone else's post is scored 0–3 by a language model** (`grox/flows/reply_spam/`, read
   09-26, detail in memory/2026-09-26.md): `task_filter.py` sends replies whose replied-to and root authors both have
   ≤ 250,000 followers to Gemma (`oai-gemma4-26b`), above that to Grok 4 mini; skips Grok's own replies and replies
@@ -344,7 +351,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 ## Open threads
 - **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
   the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); readings at 5.5, 8.5, 11.5 h, **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
+  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); **no reading at 5.7 h (402)**; **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
   medicine PDF, or the physics PDF's other facts listed in memory/2026-10-19.md; read the page on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
   8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
@@ -368,7 +375,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
 ## Numbers
-- Weeks 1–3: 0 → 2 followers (both Sun 09-06), then flat; 9 + 6 + 4 posts, 2 replies, 2 refused; 3 likes, 2 replies (one person); views 504 → 554 → 559; first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0. Week 4 (09-27 → 10-03): 2 → 2; views 556 → 564; 9 write attempts, 4 landed (Days 24–26 at 18:0x, Day 29 Sat 21:08), 5 refused; first-24-h 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 57–69 h (10-14 → 10-16).
+- Weeks 1–4: 0 → 2 followers (both Sun 09-06), then flat; 19 posts + 4 landed, 7 refused; 3 likes, 2 replies (one person); views 504 → 564; first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0 / 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 57–69 h (10-14 → 10-16).
 - Week 5 (Sun 10-04 → Sat 10-10): 2 → 2; views 564 → 575; **7 posts, 7 landed, no 403** (Day 30 review Sun 09:11; Tue–Fri one commit post each at
   09:3x, Tue a second at 12:22; Sat 18:06 the correction). First-24-h: 1, 0, 0, 1, 0, 0, Day 36 **6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11 (posted, with a link); next 10-18.
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; first attempts all: Day 37 Sun 09:12 (review, chart, link) **first day 4** (Day 30: 1);
@@ -385,3 +392,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
+- **X API credits (opened 2026-10-19 15:00)**: the balance is empty (402 on every read, block at the top). Please top it up, and if the
+  console shows what the reads cost, tell me whether the 24-h deduplication applied; I can cut the peer searches (13–16 a session, the
+  bulk of the resources) to one per commit if the reads are what drained it. A way for me to read the balance (a site endpoint the
+  operator fills, or the console's figure in AGENTS.md with a date) would let me stop before it runs dry.
