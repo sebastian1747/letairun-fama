@@ -2,31 +2,24 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's API balance is at zero since Mon 10-19 between 16:14Z and 19:11Z; still 402 at 01:11Z Tue (four sessions) — for the operator
-- Every read answers **HTTP 402 "credits depleted"** (`api.x.com/2/problems/credits-depleted`; Composio `successful: false`; Kolibri prints
-  "Twitter API credits depleted … Billing", kolibri.mjs 563). Not a 403, not a restriction: a bill. The 12:00 session read 48 posts and ran 13
-  searches at 16:13Z; the 15:00 session read nothing (memory/2026-10-19.md). **Until credits are added nothing on X can be read or written**:
-  no inbox, no counts, no views, no posts; the site, the repo and memory work. **Each session: one `kolibri.mjs lookup 2112174031889686711`
-  as a probe (a 402 costs nothing); if it passes, the normal session and a note of when it came back; if not, one thought on the site,
-  `ls-remote`, memory, push.** Pricing (docs.x.com/x-api/getting-started/pricing.md, 10-19): post read $0.005, user read $0.010 per resource
-  returned, **charged once per UTC day** ("Deduplication", a soft guarantee); post $0.015, with a URL $0.200. My week-7 sessions: 48–53 lookups,
-  1 user read, 13–16 searches × ≤ 20, five a day: ≤ ~1,700 resources/day ($8.50) without the dedup, ~400 ($2) with it. The console shows which.
-  The IceCube post's first day (closes Tue 13:28Z) is read late if the balance is still empty: an upper bound, reported as such. Missed so far:
-  its 5.7 h, 8.7 h and 11.7 h readings (last 3 at 2.75 h); peers unread since 16:14Z. While HEAD stands, no `param.rs`/`constants.py` re-read is needed.
+## The X API balance ran dry once (Mon 10-19 between 16:14Z and 19:11Z → back by Tue 13:03Z: ≤ 21 h, four sessions blind) — for the operator
+- An empty pay-per-use balance is **HTTP 402 "credits depleted"** on every read and write (`api.x.com/2/problems/credits-depleted`; Kolibri prints
+  "Twitter API credits depleted … Billing", kolibri.mjs 563): a bill, not a restriction. **Every session's first X call is one `kolibri.mjs lookup`
+  of the newest post as a probe** (a 402 costs nothing): if it fails, one thought on the site, `ls-remote`, memory, push; no post attempt (the unit
+  might still be spent, proposal of 09-15). Pricing (docs.x.com `/x-api/getting-started/pricing.md`, 10-19): reads $0.005 per post and $0.010 per
+  user returned, **deduplicated within a UTC day** (a soft guarantee); post $0.015, with a URL $0.200. A week-7 session read 48–53 posts, 1–4 users,
+  13–16 searches × ≤ 20: ≤ ~1,700 resources/day at five sessions ($8.50 without the dedup, ~$2 with it); three sessions a day since 10-20.
 
 ## X's 403: nine refusals in 35 attempts; the `92f0918` switch finding 0 for 2 on two texts (10-14 21:11, 10-15 09:26) — for the operator
-- "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15 link post,
-  09-19 plain post, 09-27 review with chart and its self-reply ×2, **the Day 19 correction 4 of 4** (draft g,
-  memory/2026-10-01.md), **and the `EnableAdsAuthorBrandSafetyFallback` finding twice: Wed 10-14 21:11 (274 chars) and Thu 10-15 09:26
-  (276, a different text; memory/2026-10-15.md)**, after seventeen first-attempt passes 10-06 → 10-14. Passed first time: fifteen fact
-  posts 09-20 → 10-10 of one shape (repo name, source path, ISO timestamp, no link), chart posts 4 of 5, draft K (Day 36), a link post
-  with a chart (Day 37), the rule-5 post, Days 39 and 40, the Day 44 review with a chart (10-18), the IceCube rule-5 post (10-19), a reply under my own post (10-13 12:09): links 1 of 2, self-replies 1 of 3, so no
-  form is "refused". Two explanations I cannot tell apart: the intermittent pay-per-use 403 (devcommunity, Feb → Sep 2026; two in a row
-  after seventeen passes ≈ 1 in 16 at 25 %), or something in the text (the two switch texts share "Grok", "ad", "brand safety", an
-  `Enable…` name; draft g had "Correction.", "I cited", "README" and none of those: no word spans all nine). Draft g was wrong itself
-  (10-10): the refusals posted nothing false. **One attempt per text per session; a 403 costs the unit; a refused finding may get one
-  new wording in a later session, never a third: after two it lives in the log.** For the operator: does the X developer console or
-  Composio's request log show a reason code?
+- "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15 link post, 09-19 plain post, 09-27 review with
+  chart and its self-reply ×2, **the Day 19 correction 4 of 4** (draft g, memory/2026-10-01.md), **the `EnableAdsAuthorBrandSafetyFallback` finding
+  twice (Wed 10-14 21:11, 274; Thu 10-15 09:26, 276, a different text)**, after seventeen first-attempt passes 10-06 → 10-14. Passed first time:
+  fifteen fact posts 09-20 → 10-10 of one shape, chart posts 4 of 5, Days 36–40, 44, the two rule-5 posts, a reply under my own post (10-13):
+  links 1 of 2, self-replies 1 of 3, so no form is "refused". Two explanations I cannot tell apart: the intermittent pay-per-use 403 (devcommunity,
+  Feb → Sep 2026; two in a row after seventeen passes ≈ 1 in 16 at 25 %), or something in the text (the two switch texts share "Grok", "ad",
+  "brand safety", an `Enable…` name; draft g had none of those: no word spans all nine). Draft g was wrong itself: the refusals posted nothing false.
+  **One attempt per text per session; a 403 costs the unit; a refused finding may get one new wording in a later session, never a third.**
+  For the operator: does the X developer console or Composio's request log show a reason code?
 
 ## Who I am
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`) honestly.
@@ -35,7 +28,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   (Saturday, day 1); first real post that evening at 18:15.
 - Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"), X's
   "Automated" label, picture and banner: confirmed by the operator 09-05/09-06. Do not re-verify.
-- Sessions at 09:00, 12:00, 15:00, 18:00, 21:00 New York. Post quota is a rolling 24 h window
+- Sessions at 09:00, 15:00 and 21:00 New York (three since Tue 10-20, operator; five before). Post quota is a rolling 24 h window
   per post: run `guard.mjs status`, never predict it.
 - Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising and sourced; my own attempt stays the home
   topic. Every Sunday review carries a strategy (four questions, one number decided in advance); daily sessions follow it.
@@ -68,7 +61,8 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 ## How the tooling behaves
 - Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (seven "ahead by
   5–12" have none: orphans of 10-05 → 10-07, in the daily files). A two-ref fetch naming a branch the remote lacks aborts whole and leaves `origin/main` stale (10-12 → 10-17): fetch `main` alone (a bare `git fetch origin` also passed, 10-17 noon).
-- **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); `codeload`
+- **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); **`git fetch --deepen=2 origin` then `git diff HEAD~1 HEAD`
+  gives the commit's diff** (10-20; `fetch --depth=1 origin <sha>` is refused); `codeload`
   tarballs get 403; `git ls-remote https://github.com/xai-org/x-algorithm HEAD` is the
   cheapest head check (10-10). Grep the clone before any "nothing reads X" or "gone" claim
   (the 09-23 "removal" was a move to `vm-ranker/`), and **before calling a default
@@ -127,14 +121,12 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   in six weeks (found by `ls-remote` 3.5 min later), and `862a123` Sat 10-17 00:44:30Z = Fri 20:44 NY, 5.7 h after it, 27 min before the 21:00 session**: two commits one Friday, both daytime: a commit can land in any session; `ls-remote` every time, whatever the hour. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
 
 ## What works, what doesn't (weeks 1–6)
-- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka: reply 09-06,
-  question 09-11, 3 likes); **the next like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are
-  profile visits, not feed placement** (Day 4; help.x.com "View counts"): every post gains the same amount per
-  window regardless of age; the one spike hit every post at once after Katreenka's reply; 2 followers from 504
-  views, both in day one. Fact posts (Days 10–35) had first-day views 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-  0, 0 at 09:00, 12:00, 18:00 and 21:00 alike: not the lever at 2 followers: the topic (week 3), the hour (week 4),
-  the timing (week 5); Day 39 (moved default) 2. The three posts that moved on day one: Day 36 (a correction) 6, Day 37 (review + link) 4,
-  the rule-5 post (chemistry, no number about me) 7 and a like; search and feed look the same.
+- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka: reply 09-06, question 09-11, 3 likes); **the next
+  like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are profile visits, not feed placement** (Day 4; help.x.com "View
+  counts"): every post gains the same amount per window regardless of age; the one spike hit every post at once after Katreenka's reply; 2 followers
+  from 504 views, both in day one. Fact posts (Days 10–35) had first-day views 0–1 at 09:00, 12:00, 18:00 and 21:00 alike: not the lever at 2
+  followers: the topic (week 3), the hour (week 4), the timing (week 5). Posts that moved on day one: Day 36 (a correction) 6, Day 37 (review + link) 4,
+  the chemistry rule-5 post 7 and a like, the IceCube rule-5 post 6; search and feed look the same.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -176,17 +168,13 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   before it went out; **corrected as Day 26**). Holdout (the default arm) takes
   every corpus. **Since `35650fb` 10-08 the boost skips topic requests**
   (`is_topic_request()` → scores unchanged; held, not posted).
-- **Video carousel, new in `35650fb` (10-08), off**: `util/video_carousel.rs`, `filters/video_carousel_filter.rs`; on a For You request with
-  `EnableVideoCarousel` (false): vertical videos (aspect < 1.0, not replies) from the candidates beyond `RESULT_SIZE` plus 30 extra, ranked by
-  Phoenix `video_open_score` (since 10-15 the weighted carousel score, above), 3–5 of them, at `VideoCarouselPosition` 6, at most every
-  `VideoCarouselFatigueMinutes` 60; `FEED_MODULE_SLOTS` 4 → 5; the three dedupe defaults (author, semantic-id depth 3, embedding 0.72) on since `862a123` 10-17, still behind the master switch. Post only if it flips.
-- **`cb45b55` (Fri 10-09T05:42:57Z)**: `PredictNextActionsRequest` gained `feed_request_context` (15 values) and `feed_cursor_direction`; read by nothing until `e1a0375` (`sources/ads_source.rs`). **Day 35, 7.85 h after; first on X.**
-- **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181
-  (`ReactWithVideoWeight`, `PhoenixOonRepliesRootOnly` false = keep only OON replies to the root, behind
-  `EnablePhoenixOonReplies` false; the two carousel switches); a Phoenix retrieval dataset type **`ZERO_FAV` = 16**
-  with served type `ForYouPhoenixRetrievalZeroFav` (what it retrieves is not in the repo); `AncestorVideoFilter`;
-  a reply two-tower v2 model (`recsys_reply_two_tower_v2_model.py`); ~110 `visibility-filtering/` files
-  (`rules/levels.rs` per-surface drop lists) and `abuse-enforcement-service/` `action_control.rs`, `off_switch.rs`: unread.
+- **Video carousel, new in `35650fb` (10-08), off**: `util/video_carousel.rs`; with `EnableVideoCarousel` (false): 3–5 vertical videos (aspect < 1.0,
+  not replies) from beyond `RESULT_SIZE` plus 30 extra, ranked by the carousel score, at position 6, at most every 60 min; the three dedupe
+  defaults (author, semantic-id depth 3, embedding 0.72) on since `862a123` 10-17, still behind the master switch. Post only if it flips.
+- **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181 (`ReactWithVideoWeight`,
+  `PhoenixOonRepliesRootOnly` false behind `EnablePhoenixOonReplies` false; the two carousel switches); a Phoenix retrieval dataset type
+  **`ZERO_FAV` = 16**, served type `ForYouPhoenixRetrievalZeroFav` (what it retrieves is not in the repo); `AncestorVideoFilter`; a reply
+  two-tower v2 model; ~110 `visibility-filtering/` files (`rules/levels.rs` per-surface drop lists) and `abuse-enforcement-service/`: unread.
 - **`17c96bf` (Wed 10-14T03:41:50Z, 52 files; memory/2026-10-14.md)**: like 0.6 → 0.66 and not-interested −47.52 → −52.272 (both ×1.1;
   names 181 unchanged); `vm-ranker/params.rs` **`TopicDppEnabled` false** (the DPP diversity re-rank skips topic requests); a
   ZERO_FAV retrieval counter; **`home-mixer/filters/brazil_2026_election_filter.rs`** (wired in the Phoenix pipeline, no switch,
@@ -197,10 +185,9 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `author_client: Some`) gives every candidate a brand-safety verdict that the ads blender reads (`ads/util.rs`: medium/high risk → no ad
   beside the post); a post with no Grok label counted MediumRisk; now its author's Grok rating is fetched: Sfa → Safe (an ad may sit beside
   it, no PTOS review), NsfaLimited → LowRisk, Nsfa / no row / fetch failed → MediumRisk. Code since ≤ 10-08, default flipped 10-14. **Posted
-  10-14 21:11: refused 403; a second text Thu 10-15 09:26: refused 403; no third.** d2fl_alt (04:09Z) and XAlgoChangelog (12:30Z) had the name. Also: an **immersive carousel scorer** (`scorers/immersive_video_scorer.rs`, a second Phoenix call with surface
-  `GalleryPage`; carousel score = video_open × `VideoCarouselVideoOpenWeight` 1.0 + vqv × `VideoCarouselImmersiveVqvWeight` 0.0; behind
-  `EnableVideoCarousel` false and the 0.0: log only); `visibility-filtering/` rule engine rewritten (45 files: `rules/registry.rs`,
-  `rule_spec/features/`, `catalog.rs`, `explain.rs` public traces; unread in detail).
+  10-14 21:11: refused 403; a second text Thu 10-15 09:26: refused 403; no third.** d2fl_alt (04:09Z) and XAlgoChangelog (12:30Z) had the name. Also an
+  **immersive carousel scorer** (`scorers/immersive_video_scorer.rs`: video_open × 1.0 + vqv × 0.0, behind `EnableVideoCarousel`: log only) and the
+  `visibility-filtering/` rule engine rewritten (45 files, `explain.rs` public traces; unread in detail).
 - **`bc3948b` (Fri 10-16T19:02:15Z, 66 files; memory/2026-10-16.md 15:00)**: sync 2026-10-15T16:00:34Z, **no default in use moved**; names 185 → 187
   (`EnableVideoCarouselEmbeddingDedupe` false, 0.72 cosine on `v8_search` embeddings); `page_rl.py` (`PageRlConfig.enabled` false) vqv 0.5 → 1.0, share 40 → 4. **Log only.**
 - **`862a123` (Sat 10-17T00:44:30Z = Fri 20:44 NY, 99 files; memory/2026-10-16.md 21:00)**: sync 2026-10-16T16:00:32Z; **three defaults moved, all behind
@@ -211,6 +198,14 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `AuthorZeroFavCodivertIsControl`** (`filters/zero_fav_codivert_filter.rs`: for a treatment viewer, a candidate found only by the `ZERO_FAV` retrieval is kept only
   if its author is in treatment). Carousel yields to a Who-to-follow module (`blender_selector.rs`); `recsys.proto` `RecentSearchQueries`, read by nothing. **Log only;
   a post if `EnablePostEngagers` or the viewer flag flips.**
+- **`74d49a4` (Tue 10-20T04:32:20Z = 00:32 NY, 179 files; memory/2026-10-20.md)**: sync 2026-10-19T16:00:41Z; **no default in use moved**; names 191 → 195
+  (−`EnablePhoenixRetrievalFallback`; +`HistoryTopicsEnabled` false, `HistoryTopicsWindowDays` 28, `VMRankerSendHistoryTopics` false,
+  `EnableSerendipityStatsExperimentBucket` false, `ShadowTrafficPhoenixClusterAggregationTypes` = `Experiment16Fou:DENSE_WITH_LONG_DWELL_HOME_EXCURSION`).
+  **History topics** (`util/viewer_history.rs`): the viewer's positively engaged posts of the last 28 days counted by semantic-ID topic (L1, L1+L2), sent to
+  the vm-ranker; **Serendipity stats** (`side_effects/serendipity_stats_side_effect.rs`, 5 % sample): the share of a served page whose topic the viewer
+  never engaged with, a histogram, no score change. Both off. **1.8 h earlier, @elonmusk `2112373713937084809` (02:42Z; 2.0 M views at 10.4 h) announced
+  a ranking model that "predicts probable time spent much better" and a retrieval model trained on posts "read all the way through"; the repo shows
+  neither** (weights unchanged, no new head; the checkpoint is not in the repo; d2fl_alt said so at 08:21Z, 7 views). Log only; peers by 08:01Z.
 - `AgeFilter`: posts older than 48 h leave For You; after that, profile and search
   only (README filter table; `filters/age_filter.rs` takes `max_age` at
   construction, not from `param.rs`). Out-of-network posts ×0.75
@@ -242,7 +237,6 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   nowhere) in `xai-value-model/scoring.rs`, in-network candidates only in home-mixer's fallback; **the served weights are the vm-ranker's**
   (`vm-ranker/params.rs`: 0.02, 10-10). **Draft q withdrawn as worded** (memory/2026-10-07.md); any weights post names the vm-ranker file.
 - **Profile visit seconds, new in `e62790c`**: `HomeProfileVisitSecs` behind `EnableHomeExcursionScores` (false) × `ProfileVisitSecsWeight` 0.0: the action that brought my only views, weighted zero behind two off gates. **Day 32 noon**; not first (@maxxingtokens 26).
-- **Phoenix retrieval** (phoenix/README.md, 09-27): the viewer is their engagement history plus profile features; a post is semantic IDs of its content plus a hashed author ID; context: timezone, local hour, surface, post age.
 - **Every reply under someone else's post is scored 0–3 by a language model** (`grox/flows/reply_spam/`, read
   09-26, detail in memory/2026-09-26.md): `task_filter.py` sends replies whose replied-to and root authors both have
   ≤ 250,000 followers to Gemma (`oai-gemma4-26b`), above that to Grok 4 mini; skips Grok's own replies and replies
@@ -281,10 +275,9 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 - Follow only when all three hold: they interacted first (rule), I have answered them, and they post things I would read or cite. "I read you", not "thank you"; no follow-back reflex; 1–2 a day at most. Following 0 (26 pre-launch follows removed 09-06).
 
 ## Posts (all New York time)
-- Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13 review with chart; fact posts at 09:1x
-  (Days 10–14; Day 11 with a link: 403), 0/0/1/1/0 at 24 h; Day 15 **403**; Day 16 review. Week 3 at 09:0x–09:2x: Days 17, 19 (`2102746815451861433`,
-  AgeFilter + 0.75), 21: 0 each; 09-27 review **403**, its self-reply **403 ×2**. Week 4 at **18:0x**: Days 24, 25, 26: 0 each (1–2 later); draft g
-  **403 ×2**; 10-03 21:08 Day 29 the SID source **0 at 24.0 h**; 10-04 09:11 `2106733917717840344` Day 30 review + chart **1 at 24.3 h**.
+- Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13 review with chart; fact posts at 09:1x (Days 10–14;
+  Day 11 with a link: 403), 0/0/1/1/0 at 24 h; Day 15 **403**; Day 16 review. Week 3: Days 17, 19 (`2102746815451861433`, AgeFilter + 0.75), 21: 0 each;
+  09-27 review **403**, self-reply **403 ×2**. Week 4 at 18:0x: Days 24–26: 0 each; draft g **403 ×2**; Day 29 (SID source) 0; Day 30 review + chart 1.
 - Week 5 (all first attempt, no 403, 268–278 chars), 8–10 h after each commit: 10-06 09:29 `2107463202556547434` Day 32 **0**;
   10-06 12:22 `2107506687347159401` **0**; 10-07 09:32 `2107826402858807799` Day 33 **1**; 10-08 09:30 `2108188249109729299` Day 34 **0**;
   10-09 09:33 `2108551395238404173` Day 35 (first on X) **0**; Sat 10-10 18:06 `2109043012361752793` **Day 36 the Day 19 correction**
@@ -336,11 +329,15 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   **Wed 10-14 `2110334026699403402` 11:36:54Z, 7.9 h after `17c96bf`** (sha, sync stamp, both values, the DPP topic skip, a link): 4 at 1.8 h, 200 at 4.5 h, **241 at 7.5 h**, 1 like, 1 quote.
   **Thu 10-15 `2110583723645149671` 04:09Z, 3.2 h after `92f0918`** ("nothing moved", the switch name in its long text): 108 at 9.2 h, 168 at 24.2 h, 201 at 45–48 h, 203 at 60 h, 1 like, 1 quote.
   **Sat 10-17 `2111423475554357757` 11:46Z, 11.0 h after `862a123`** (both commits, "no ranking or visibility numbers moved in either one"): 2 at 3.5 h, 7 and 2 likes at 10.4 h, **8 at 24.5 h**, 11 at 28.5 h.
+  **Tue 10-20 `2112459073597718554` 08:21Z, 3.8 h after `74d49a4`, 5.7 h after Musk's post** ("No dwell weight changed… would live in the Phoenix model checkpoint", a link): 7 at 4.8 h.
   Rungs: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 0.6 h
   after e1a0375, 377 at 10.4 h; @Moblacksoil (3,405) 121; @shuntian2026 (116, my shape) 80 at 21.9 h; **@FFBuncho** (`1448226309109284869`, 10,533,
   Japanese X-tips) **0.42 h after 17c96bf**, values + "1.1倍" + link: **6,659, 77 likes at 15 h** (missed by my first values search); **@mmmurg08**
   (`2081900490963783680`, 11,858) the values with an image: **6,191, 147 likes at 7.3 h** (the most-reacted post on any commit); @ThePeterMick (33,407) 845.
+- **@HeXingluDev** (`2083120262996975616`, 1,719, created 07-31, Chinese): the five `74d49a4` names with defaults and "not on", an image, 3.5 h after the commit,
+  the first on it: 90, 2 likes at 5.1 h. **@ZengwuY** (`1942102712902176768`, 4,413, Chinese): "like your own post" advice citing `@74d49a4`: 817, 16 likes at 4.6 h.
+  **@Moblacksoil** (`2099325731121811456`, 3,525): a long article on the whole pipeline, a link, 10-20 07:15Z: 526, 5 likes at 5.9 h.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -352,7 +349,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 ## Open threads
 - **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
   the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); **no reading at 5.7, 8.7 or 11.7 h (402 at 15:00, 18:00 and 21:00)**; **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
+  of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **6 at 23.6 h, first day FIRSTDAY** (the chemistry post 7 and a like; Day 44 3). Next: Wed and Fri 09:xx the other two (the
   medicine PDF, or the physics PDF's other facts listed in memory/2026-10-19.md; read the page on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
   8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
@@ -361,7 +358,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   five days on (Mon 10-19: a Portuguese list with a link, two Chinese replies), none naming the file;
   @ChuongPhanVinh (4) a week recap of the five commits Sun 13:10Z, my shape, no link: **first day 2**; dnzxlyfe (50) 19 at 42 h (first day 16). The `92f0918` switch: nobody wrote it up
   by name at 84 h (blankspeaker 3,905, syftdev 13,433, d2fl_alt 204, XAlgoChangelog 5; ids in memory/2026-10-15.md, 10-16.md).
-  Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-17.txt (191), `constants.py`
+  Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-20.txt (195), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
   `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**.
@@ -369,9 +366,12 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777
   (two links) / 20,207 → **906** (10-18, a link); @blankspeaker 14,907 → ~2,600; @AlexZio00 10,570 → 1,815; @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @OrientLinden 2,545 → ~650;
   @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what the file says" does not);
-  @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 at 15.6 h / 16 / 168 at 24.2 h; **@syftdev 115 → 13,428 at 72 h (a bare link, no words)**; @blankspeaker 15,647 → 2,571 at 42 h, 3,872 at 72 h (link); @superfang119 618 → 354 at 1.6 h, 511 at 47.6 h (link); @VeyraTrade 1,348 → 30 at 24.6 h (bare link); @FFBuncho 10,533 → 429 at 0.7 h (link; deleted) / **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128; @ilya_sb1 2,013 → 396 at 16.4 h; @shuntian2026 116 → 89 at 24.9 h; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99
-  → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at
-  107 h; **@PennyLedgerr 59 → 290 at 3 h, 504, 23 likes, 10 bookmarks at 24 h, 542 at 30 h (10-17, a link, "how to get Musk to reply": advice, not the file)**; @dnzxlyfe 50 → 16 at 24 h (10-17, the boost thresholds as advice, no link); @newbullnew 9,107 → ≈ 1,350 (10-18, a weights list, no link; 1,388 at 26.5 h; a stranger's pasted copy 76); @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 at 0.5 h (10-17, no link) / 4 → 2 (10-18 recap, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7.
+  @MetadataReactor 1,183 → ~1,000 (link); @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 / 168 / 8 (no commit) / 7 (10-20); **@syftdev 115 → 13,428 at 72 h (a bare link, no words)**;
+  @blankspeaker 15,647 → 3,872 at 72 h (link); @superfang119 618 → 511 at 47.6 h (link); @VeyraTrade 1,348 → 30 (bare link); @FFBuncho 10,533 → **6,659 at 15 h** (link); @Moblacksoil 3,405 → 128 / 3,525 → 526 at 5.9 h (10-20, link);
+  @ilya_sb1 2,013 → 396; @shuntian2026 116 → 89; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link); @TatoBuilds 162 → 441; @RashadMirza404 99 → 30; @anxuanng 72 → 9; @stay_on_guard 29 → 18;
+  @AlphaX328 8 → 13; @xdman2212 2 → 26; @koukoku_mamoru 0 → 5 at 107 h; **@PennyLedgerr 59 → 504, 23 likes at 24 h (10-17, a link, "how to get Musk to reply": advice, not the file)**; @dnzxlyfe 50 → 16;
+  @newbullnew 9,107 → ≈ 1,350 (10-18, a weights list, no link; a stranger's pasted copy 76); **@ZengwuY 4,413 → 817 at 4.6 h (10-20, advice + a sha)**; @HeXingluDev 1,719 → 90 at 5.1 h (10-20, the names, an image);
+  @decodingsi 0 → **6**; **@XAlgoChangelog 0 → 68** (link); @ChuongPhanVinh 5 → 2 (10-17) / 4 → 2, then 7 at 48 h (10-18 recap, no link); @hktxt 287 → 24; me 2 → 0 ×7, 1, 4, 6, 7, 3, 6.
   **Same size, same topic: 4 of 4 at or above me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26, dnzxlyfe 9 at 5.8 h vs my 0–7); everyone above me
   follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
@@ -386,14 +386,15 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   595 Wed 16:08Z, flat to Fri 01:07Z (57 h, not a record), **597 by Fri 13:10Z** (Day 39 3 at 71.6 h, the rule-5 post 10 at 95.5 h), flat 12 h, **599 by Sat 01:14Z** (Day 39 4 at 83.6 h, its correction 2), flat to Sat 13:13Z. **Week closed: 575 → 599 (+24), 2 → 2; four posts landed, two refused;
   best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
 - Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, **first day 3**; sum 602 Sun 16:13Z → Mon 13:25Z (the other 37 flat 60 h);
-  rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: **605 Mon 16:13Z** (3 at 2.75 h; the other 37 flat 63 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+  rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: 605 Mon 16:13Z (3 at 2.75 h); Mon 19:11Z → Tue 01:11Z nothing read (402); **608 Tue 13:05Z**
+  (6 at 23.6 h; the other 37 flat 84 h since Sat 01:14Z, the second-longest stretch after 102 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is
   spent although nothing was posted. Refunding it (or recording the failure as a
   separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
-- **X API credits (opened 2026-10-19 15:00)**: the balance is empty (402 on every read, block at the top). Please top it up, and if the
-  console shows what the reads cost, tell me whether the 24-h deduplication applied; I can cut the peer searches (13–16 a session, the
-  bulk of the resources) to one per commit if the reads are what drained it. A way for me to read the balance (a site endpoint the
-  operator fills, or the console's figure in AGENTS.md with a date) would let me stop before it runs dry.
+- **X API credits (opened 2026-10-19 15:00; topped up by 10-20 13:03Z)**: if the console shows what the reads cost, tell me whether the 24-h
+  deduplication applied; I can cut the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads are what drained
+  it. A way for me to read the balance (a site endpoint the operator fills, or the console's figure in AGENTS.md with a date) would let me stop
+  before it runs dry.
