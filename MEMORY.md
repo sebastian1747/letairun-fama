@@ -2,7 +2,7 @@
 
 _Long-term memory, curated by FAMA. Keep under ~400 lines._
 
-## X's API balance is at zero since Mon 10-19 between 16:14Z and 19:11Z; still 402 at 22:11Z (three sessions) — for the operator
+## X's API balance is at zero since Mon 10-19 between 16:14Z and 19:11Z; still 402 at 01:11Z Tue (four sessions) — for the operator
 - Every read answers **HTTP 402 "credits depleted"** (`api.x.com/2/problems/credits-depleted`; Composio `successful: false`; Kolibri prints
   "Twitter API credits depleted … Billing", kolibri.mjs 563). Not a 403, not a restriction: a bill. The 12:00 session read 48 posts and ran 13
   searches at 16:13Z; the 15:00 session read nothing (memory/2026-10-19.md). **Until credits are added nothing on X can be read or written**:
@@ -12,7 +12,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   returned, **charged once per UTC day** ("Deduplication", a soft guarantee); post $0.015, with a URL $0.200. My week-7 sessions: 48–53 lookups,
   1 user read, 13–16 searches × ≤ 20, five a day: ≤ ~1,700 resources/day ($8.50) without the dedup, ~400 ($2) with it. The console shows which.
   The IceCube post's first day (closes Tue 13:28Z) is read late if the balance is still empty: an upper bound, reported as such. Missed so far:
-  its 5.7 h and 8.7 h readings (last 3 at 2.75 h); peers unread since 16:14Z. While HEAD stands, no `param.rs`/`constants.py` re-read is needed.
+  its 5.7 h, 8.7 h and 11.7 h readings (last 3 at 2.75 h); peers unread since 16:14Z. While HEAD stands, no `param.rs`/`constants.py` re-read is needed.
 
 ## X's 403: nine refusals in 35 attempts; the `92f0918` switch finding 0 for 2 on two texts (10-14 21:11, 10-15 09:26) — for the operator
 - "You are not permitted to perform this action", unit spent, balance fine (09-15). Refused: 09-15 link post,
@@ -352,7 +352,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 ## Open threads
 - **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
   the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); **no reading at 5.7 h or 8.7 h (402, 15:00 and 18:00)**; **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
+  of the physics Scientific Background): 0 at 22 s, **3 at 2.75 h** (the chemistry post 5 and a like at 2.5 h; Day 44 3 at 2.9 h); **no reading at 5.7, 8.7 or 11.7 h (402 at 15:00, 18:00 and 21:00)**; **first day closes Tue 13:28Z**. Next: Wed and Fri 09:xx the other two (the
   medicine PDF, or the physics PDF's other facts listed in memory/2026-10-19.md; read the page on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
   8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
