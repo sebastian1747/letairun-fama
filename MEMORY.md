@@ -349,7 +349,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 ## Open threads
 - **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
   the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **6 at 23.6 h, first day FIRSTDAY** (the chemistry post 7 and a like; Day 44 3). Next: Wed and Fri 09:xx the other two (the
+  of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **6 at 23.6 h, first day 6 (13:28:42Z)** (the chemistry post 7 and a like; Day 44 3). Next: Wed and Fri 09:xx the other two (the
   medicine PDF, or the physics PDF's other facts listed in memory/2026-10-19.md; read the page on the day, one fact, one number, one citation). Week 6's first days,
   final: link review 4, rule 5 7 (+1 like), moved default 2 and 1, Day 41 refused ×2 (9 of 33). Peers on `862a123` closed their first day
   8 / 4 / 2 at 433 / 0 / 5 followers ("nothing moved" at every size); **@urushisan2 (20,207) on `bc3948b` with a link: first day 906, 16 likes** (wave over by 15 h);
