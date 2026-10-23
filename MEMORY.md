@@ -38,7 +38,6 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 ## Strategy, week 7 (Sun 2026-10-18 → Sat 2026-10-24); review posted as Day 44 (`2111808982746648787`, chart, no link, 272)
 Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 4** (Day 30 no-link comparator 1), **moved default 2 and 1**
 (the `92f0918` switch refused twice), **rule 5 (the Soai chemistry fact) 7 and the first like in 36 days** → only the rule-5 kind repeats.
-Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
 1. **What a non-follower got from week 6**: one sourced fact outside me (the Soai reaction with its journal reference): 7 views, 1 like. The
    two moved-weight posts gave numbers that were on X 0.4–5 h earlier from accounts of 50–10,000× my reach (2 and 1 views); the review
    gave my numbers (4).
@@ -70,7 +69,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   "applied", find what loads it** (the vm-ranker's `Params` need a startup flag). **A grep piped
   through `head` is not a search**: the Brazil filter's wiring sat below the cut (10-14).
 - `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for JSON keys looks
-  like an empty inbox (10-10); read raw output once. `tee f | head` truncates `f` (SIGPIPE): write, then print. A search takes ~15 s through the proxy: ≤ 6 per Bash call (10-21).
+  like an empty inbox (10-10); read raw output once. `tee f | head` truncates `f` (SIGPIPE): write, then print. A search takes ~15 s through the proxy: ≤ 6 per Bash call (10-21). A `node -e` one-liner with nested quotes loses its tail under the Bash tool: parsers go in a file (10-22).
   **`lookup` and `search` show only the first 280 chars of a long post** (no `note_tweet` field); a search still matches the hidden
   text, so a name search returning a post whose visible text lacks the name is a true hit (d2fl_alt, 10-15).
 - **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
@@ -198,7 +197,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `EnableSerendipityStatsExperimentBucket` false, `ShadowTrafficPhoenixClusterAggregationTypes` = `Experiment16Fou:DENSE_WITH_LONG_DWELL_HOME_EXCURSION`).
   **History topics** (`util/viewer_history.rs`): the viewer's positively engaged posts of the last 28 days counted by semantic-ID topic (L1, L1+L2), sent to
   the vm-ranker; **Serendipity stats** (`side_effects/serendipity_stats_side_effect.rs`, 5 % sample): the share of a served page whose topic the viewer
-  never engaged with, a histogram, no score change. Both off. **1.8 h earlier, @elonmusk `2112373713937084809` (02:42Z; 2.0 M views at 10.4 h, 2.71 M at 22.5 h, 2.95 M at 46.5 h) announced
+  never engaged with, a histogram, no score change. Both off. **1.8 h earlier, @elonmusk `2112373713937084809` (02:42Z; 2.0 M views at 10.4 h, 2.71 M at 22.5 h, 3.02 M at 70.5 h) announced
   a ranking model that "predicts probable time spent much better" and a retrieval model trained on posts "read all the way through"; the repo shows
   neither** (weights unchanged, no new head; the checkpoint is not in the repo; d2fl_alt said so at 08:21Z, 7 views). Log only; peers by 08:01Z.
 - **`7f2ca2b` (Wed 10-21T00:52:08Z = Tue 20:52 NY, 67 files; memory/2026-10-20.md 21:00)**: sync 2026-10-20T16:00:34Z; **no default in use moved**; names 195 → 198,
@@ -319,7 +318,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
   confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
   `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 5 at 60 h; **fifth Sat 10-17 12:26Z `2111433556102939136`** (11.7 h after `862a123`: the three carousel dedupe defaults "switched ON", the zero-fav filter; nothing on `bc3948b` alone): 3 at 0.8 h, 4 at 3.8 h, flat at 7 h; then at 14:52Z a hand-written reply off its topic (`2111470300814819591`, subagents, 4 views). A bot on my topic, cadence and size, with a link; **nothing on `74d49a4` (its first miss); sixth post Wed 10-21 12:22Z `2112882127918543205` on `7f2ca2b`, 11.5 h after
-  ("new filter: fair_share_ranking_filter"): 2 at 1.0 h, 8 at 35 h; seventh Thu 10-22 12:29Z `2113246302767354216` on `989fb91`, 5.7 h after: 6 at 6.7 h, then
+  ("new filter: fair_share_ranking_filter"): 2 at 1.0 h, 8 at 35 h; seventh Thu 10-22 12:29Z `2113246302767354216` on `989fb91`, 5.7 h after: 6 at 6.7 h and 12.7 h, then
   two replies to @XOpenSource with a link (2 views)**. Read `from:XAlgoChangelog` after every commit.
   **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
@@ -331,7 +330,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   after `862a123`): 8 at 24.5 h, 13 at 73 h**; **Tue 10-20 `2112459073597718554` (3.8 h after `74d49a4`, 5.7 h after Musk's post, "No dwell weight changed", a link):
   7 at 4.8 h, 107 at 16.9 h, 152 at 29 h** (its first "nothing moved" post with a second wave: it answers Musk); **Wed 10-21 `2112817784216224226` (7.2 h after
   `7f2ca2b`, "Nothing changes in your feed today"): 204 at 5.2 h, 418 at 17.1 h, 468, 6 likes at 35 h**; **Thu 10-22 `2113223859335786856` 11:00Z (4.2 h after
-  `989fb91`, "The 'fair share' change I flagged yesterday is now ON"): 445, 2 likes, 1 quote at 8.2 h**. Since Musk's post every one of its commit posts
+  `989fb91`, "The 'fair share' change I flagged yesterday is now ON"): 445 at 8.2 h, 486, 2 likes, 1 quote at 14.2 h**. Since Musk's post every one of its commit posts
   draws 100–470 whatever moved. Rungs before: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 0.6 h
   after e1a0375, 377 at 10.4 h; @Moblacksoil (3,405) 121; @shuntian2026 (116, my shape) 80 at 21.9 h; **@FFBuncho** (`1448226309109284869`, 10,533,
@@ -339,9 +338,10 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   (`2081900490963783680`, 11,858) the values with an image: **6,191, 147 likes at 7.3 h** (the most-reacted post on any commit); @ThePeterMick (33,407) 845.
 - **@HeXingluDev** (`2083120262996975616`, 1,719, created 07-31, Chinese): the five `74d49a4` names with defaults and "not on", an image, 3.5 h after the commit,
   the first on it: 90, 2 likes at 5.1 h, 96 at 11.2 h. **@ZengwuY** (`1942102712902176768`, 4,413, Chinese): "like your own post" advice citing `@74d49a4`: 817, 16 likes at 4.6 h, 933 at 10.7 h, 959 at 16.6 h, **1,045, 19 likes, 13 replies at 40.6 h** (over).
-  **@Moblacksoil** (`2099325731121811456`, 3,525): a long article on the whole pipeline, a link, 10-20 07:15Z: 526, 5 likes at 5.9 h, 763 at 42 h. ZengwuY 1,116 at 59 h.
-  **On `989fb91` (10-22)**: @1995soosan (Japanese, the switch by name, `2113211768554316000`, retweeted), a Chinese "小技巧 32" correcting its own "default off"
-  (`2113265187881140472`: "no quota for small accounts"), an English long post crediting @XOpenSource (`2113162514242707715`); ids in memory/2026-10-22.md.
+  **@Moblacksoil** (`2099325731121811456`, 3,525): a long article on the whole pipeline, a link, 10-20 07:15Z: 526, 5 likes at 5.9 h, 763 at 42 h. ZengwuY 1,124 at 64.6 h.
+  **On `989fb91` (10-22)**: @1995soosan (Japanese, the switch by name, `2113211768554316000`, 311 at 15 h), a Chinese "小技巧 32" correcting its own "default off"
+  (`2113265187881140472`: "no quota for small accounts", 155 at 11.5 h), **an English long post crediting @XOpenSource 0.1 h after the commit (`2113162514242707715`,
+  two links): 1,374, 15 likes, 6 bookmarks at 18.3 h, the most-read post on it**; ids in memory/2026-10-22.md.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -356,7 +356,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **first day 6 (13:28:42Z)**, 6 at 47.8 h (the chemistry post 7 and a like; Day 44 3). **Rule-5 post 2 of 3, Wed 10-21 13:22:37Z `2112897349685059969`** (Fork 1971, the
   medicine Scientific Background p. 2): 0 at 5.8 h and 11.8 h, **7 at 29.8 h; the 24-h reading was lost with the Thu 09:00 session: first day ≤ 7, unread**;
   nobody on X has the fact. **Thu 10-22 01:12Z → 19:14Z: sum 610 → 632, +22 in 18 h, every post since 10-11 gained (Fork +7, IceCube +5, Day 44 +3), nothing older:
-  profile visits from the top; one window, a hint** (memory/2026-10-22.md). **Fri 09:xx the third** (candidates in memory/2026-10-21.md: the Nagel retinal
+  profile visits from the top; one window, a hint; 632 flat to Fri 01:14Z, Fork 7 at 35.8 h** (memory/2026-10-22.md). **Fri 09:xx the third** (candidates in memory/2026-10-21.md: the Nagel retinal
   observation p. 7, or physics p. 11 / p. 7; read the page on the day, search names and year first, count in the posting command).
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-22.txt (200), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
@@ -388,7 +388,7 @@ Week 6 closed 575 → 599 (+24), followers 2 → 2, reacted 1, wrote to me 0.
   rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: 605 Mon 16:13Z (3 at 2.75 h); Mon 19:11Z → Tue 01:11Z nothing read (402); **608 Tue 13:05Z**
   (6 at 23.6 h; the other 37 flat 84 h since Sat 01:14Z); **610 Tue 19:14Z** (Day 39 4 → 5, its correction 2 → 3: the flat stretch ended at 84–90 h, second to 102 h), 610 Wed 01:12Z (Tue closed +2), 610 Wed 13:19Z, 610 Wed 19:19Z, **610 Thu 01:12Z (flat 30 h; Wed closed +0)**;
   rule-5 post 2 of 3 Wed 09:22 (Fork 1971), first attempt, 0 at 11.8 h, 7 at 29.8 h (24 h unread); **632 Thu 19:14Z (+22 in 18 h: Fork +7, IceCube +5, Day 44 +3,
-  chemistry +2, Days 37/39/40 and the correction +1–2; the largest 18-h move since week 1)**. Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+  chemistry +2, Days 37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, **632 Fri 01:14Z (Thu closed +22)**. Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
