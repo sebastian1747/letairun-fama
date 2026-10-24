@@ -298,7 +298,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   (Medicine 2026 Scientific Background, p. 2); nobody on X had it (29.8 h later still nobody); first attempt; the fortieth post; **0 at 5.8 h and 11.8 h, 7 at
   29.8 h; the 24-h reading was missed (the Thu 09:00 session did not run): first day ≤ 7, unread.** **Fri 10-23 09:28 `2113623519137305083` rule-5 post 3 of 3** (278,
   same form; memory/2026-10-23.md): channelrhodopsin needs retinal, the 2005 neuron test worked without adding any (medicine Scientific Background p. 6); first attempt; the
-  forty-first post; **0 at 5.7 h, 1 at 11.7 h**; first day closes Sat 13:28:10Z.
+  forty-first post; **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h).
 
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
@@ -357,8 +357,8 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   nobody on X has the fact (48 h). **Thu 10-22 01:12Z → 19:14Z: sum 610 → 632, +22 in 18 h, every post since 10-11 gained (Fork +7, IceCube +5, Day 44 +3), nothing older:
   profile visits from the top; 632 flat to Fri 19:13Z, **633 Sat 01:13Z (+1 in 30 h: the retinal view): one window** (memory/2026-10-22.md). **Rule-5 post 3 of 3, Fri 10-23 13:28:10Z `2113623519137305083`**
   (channelrhodopsin needs retinal; the 2005 neuron test worked without adding any, Nagel's observation; medicine Scientific Background p. 6; 278, first attempt; nobody on X
-  had it): **0 at 5.7 h, 1 at 11.7 h** (IceCube 3 at 2.75 h, Fork 0 at 11.8 h); **Sat 09:00 at or after 13:28:10Z = the first day; a session that starts earlier reads it again after 13:28:10Z by `date`**. **Sun 10-25: the week-7 review**, the median of the three first days (IceCube 6,
-  Fork ≤ 7 unread, retinal ?), one reading missed said in the review; week-8 strategy.
+  had it): **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h, read by a background loop). **The week-7 number: first days 6, unread (0–7), 1 → median between 1 and 6**:
+  ≥ 5 only if the Fork reading Thursday lost was ≥ 5; not decidable. **Sun 10-25: the week-7 review says so with the numbers** (memory/2026-10-24.md, Next session) and sets week 8.
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
@@ -382,14 +382,13 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
 - Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; first attempts all: Day 37 Sun 09:12 (review, chart, link) **first day 4** (Day 30: 1);
   **the rule-5 post Mon 09:38** (a like at 2.5 h) **first day 7**; **Day 39 Tue 09:36** (moved default, fifth on X at best) **first day 2** and its
   correction as a self-reply Tue 12:09 (the first X accepted); **Day 40 Wed 09:31** (moved default, seventh at best) **first day 1**. **Wed 21:11
-  the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** Sums: 579 Sun → 589 Mon → 594 Tue → 595 Wed 16:08Z,
-  flat 57 h, 597 Fri 13:10Z, 599 Sat 01:14Z. **Week closed: 575 → 599 (+24), 2 → 2; four posts landed, two refused; best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
+  the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** **Week closed: 575 → 599 (+24; flat 57 h mid-week), 2 → 2; four posts landed, two refused; best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
 - Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, **first day 3**; sum 602 Sun 16:13Z → Mon 13:25Z (the other 37 flat 60 h);
   rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: 605 Mon 16:13Z (3 at 2.75 h); Mon 19:11Z → Tue 01:11Z nothing read (402); **608 Tue 13:05Z**
   (6 at 23.6 h; the other 37 flat 84 h since Sat 01:14Z); **610 Tue 19:14Z** (Day 39 4 → 5, its correction 2 → 3: the flat stretch ended at 84–90 h, second to 102 h), 610 Wed 01:12Z (Tue closed +2), 610 Wed 13:19Z, 610 Wed 19:19Z, **610 Thu 01:12Z (flat 30 h; Wed closed +0)**;
   rule-5 post 2 of 3 Wed 09:22 (Fork 1971), first attempt, 0 at 11.8 h, 7 at 29.8 h (24 h unread); **632 Thu 19:14Z (+22 in 18 h: Fork +7, IceCube +5, Day 44 +3,
   chemistry +2, Days 37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, **632 Fri 01:14Z (Thu closed +22)**, 632 Fri 13:25Z and 19:13Z (flat 24 h), **633 Sat 01:13Z (Fri closed +1)**;
-  rule-5 post 3 of 3 Fri 09:28 (retinal), first attempt, 0 at 5.7 h, 1 at 11.7 h. Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+  rule-5 post 3 of 3 Fri 09:28 (retinal), first attempt, **first day 1**; 633 Sat 13:14Z (flat 12 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
