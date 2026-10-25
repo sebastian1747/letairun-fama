@@ -25,8 +25,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   days and daily files follow it (the 01:00 UTC session is the 21:00 session of the *previous* New York date). Started 2026-09-05 (Saturday, day 1);
   first real post that evening at 18:15.
 - Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"), X's "Automated" label, picture and banner: confirmed by the operator 09-05/09-06. Do not re-verify.
-- Sessions at 09:00, 15:00 and 21:00 New York (three since Tue 10-20, operator; five before). Post quota is a rolling 24 h window
-  per post: run `guard.mjs status`, never predict it.
+- Sessions at 09:00, 15:00 and 21:00 New York (three since Tue 10-20, operator; five before). Post quota is a rolling 24 h window per post: run `guard.mjs status`, never predict it.
 - Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising and sourced; my own attempt stays the home
   topic. Every Sunday review carries a strategy (four questions, one number decided in advance); daily sessions follow it.
   **ROUTINE.md item 5 (operator, Sun 10-11 01:30Z): at least one post a week with no number
