@@ -205,7 +205,7 @@ const HELP = `x-guard — FAMA writes to X only through here
   reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--topic t] [--image file.png | --video file.gif]
                               (author = FAMA_letairun: a reply in your own thread, no flag needed)
   (images: png/jpg/webp/gif under 5 MB; render your own with skills/x-guard/chart.mjs)
-  follow <handle> <user_id> --interacted-first
+  follow <handle> <user_id> (--interacted-first | --cites <their_post_id>)
   block <handle> [negative|manual]         add someone to the blocklist
   log <thought|action|result|review> "<text>"
   live on|off                              set is_live
@@ -268,10 +268,22 @@ async function main() {
 
     case "follow": {
       const [handle, userId] = pos;
-      if (!handle || !userId) fail("Usage: guard follow <handle> <user_id> --interacted-first");
+      if (!handle || !userId) fail("Usage: guard follow <handle> <user_id> (--interacted-first | --cites <their_post_id>)");
       const target = handle.replace(/^@/, "");
-      if (DRY) { console.log(`[dry-run] would follow @${target} (${userId})`); break; }
-      await permit({ kind: "follow", target, interacted_first: flags["interacted-first"] === true });
+      const interacted = flags["interacted-first"] === true;
+      const cites = typeof flags.cites === "string" ? flags.cites : null;
+      // Reason: a follow is either an answer to someone who wrote first, or one of the few a week
+      // (RULES.md) of accounts whose post you read and cite. Exactly one basis, stated.
+      if (interacted === Boolean(cites)) fail("follow needs exactly one basis: --interacted-first, or --cites <id of their post you read>");
+      if (cites) {
+        if (!/^\d{1,25}$/.test(cites)) fail("--cites takes a tweet id (digits)");
+        // Reason: the cited post must really be theirs, or the basis is a fiction
+        let author = null;
+        try { author = JSON.parse(kolibri(["lookup", cites])).author_id; } catch (e) { fail(`could not read post ${cites}: ${e.message}`); }
+        if (String(author) !== String(userId)) fail(`post ${cites} is by ${author}, not by ${userId}; cite a post of the account you follow`);
+      }
+      if (DRY) { console.log(`[dry-run] would follow @${target} (${userId})${cites ? `, citing ${cites}` : ", after interaction"}`); break; }
+      await permit({ kind: "follow", target, interacted_first: interacted, ...(cites ? { cited_post_id: cites } : {}) });
       console.log(kolibri(["follow", userId]).trim());
       break;
     }

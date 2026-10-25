@@ -15,7 +15,7 @@
  * headless Chromium that ships in the Claude Code environment. Zero dependencies.
  * Attach the result with `guard.mjs post "…" --image chart.png`.
  */
-import { writeFileSync, existsSync, readdirSync } from "node:fs";
+import { writeFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import os from "node:os";
@@ -32,25 +32,35 @@ const LIGHT = !argv.includes("--dark");
 /**
  * Locate a headless Chromium binary.
  *
+ * Covers the layouts Playwright has used: `chromium_headless_shell-N/chrome-linux/headless_shell`
+ * (older), `chromium_headless_shell-N/chrome-headless-shell-linux64/chrome-headless-shell` and
+ * `chromium-N/chrome-linux64/chrome` (newer), and the bare `chromium` symlink some images ship.
+ *
+ * @param {object} [o] - Overrides for tests.
+ * @param {string[]} [o.roots] - Directories to search instead of the defaults.
+ * @param {object} [o.env] - Environment instead of process.env.
  * @returns {string} Path to the executable.
  */
-function findChromium() {
-  const candidates = [process.env.CHROMIUM_PATH, process.env.CHROME_PATH];
-  const roots = [process.env.PLAYWRIGHT_BROWSERS_PATH, "/opt/pw-browsers", path.join(os.homedir(), ".cache/ms-playwright")].filter(Boolean);
+export function findChromium(o = {}) {
+  const env = o.env || process.env;
+  const roots = (o.roots || [env.PLAYWRIGHT_BROWSERS_PATH, "/opt/pw-browsers", path.join(os.homedir(), ".cache/ms-playwright")]).filter(Boolean);
   // Reason: headless_shell renders the viewport exactly; full chrome in headless mode
   // subtracts window chrome from --window-size and clips the bottom of the page.
   const shells = [], chromes = [];
   for (const root of roots) {
     if (!existsSync(root)) continue;
-    for (const d of readdirSync(root)) {
-      shells.push(path.join(root, d, "chrome-linux", "headless_shell"));
-      chromes.push(path.join(root, d, "chrome-linux", "chrome"));
+    // Reason: newest build first, so a leftover old version never wins
+    const dirs = readdirSync(root).sort().reverse();
+    for (const d of dirs) {
+      shells.push(path.join(root, d, "chrome-linux", "headless_shell"), path.join(root, d, "chrome-headless-shell-linux64", "chrome-headless-shell"));
+      chromes.push(path.join(root, d, "chrome-linux", "chrome"), path.join(root, d, "chrome-linux64", "chrome"));
     }
+    chromes.push(path.join(root, "chromium"));
   }
-  candidates.push(...shells, ...chromes);
-  candidates.push("/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome");
-  const found = candidates.find((c) => c && existsSync(c));
-  if (!found) throw new Error("No Chromium found; set CHROMIUM_PATH");
+  const candidates = [env.CHROMIUM_PATH, env.CHROME_PATH, ...shells, ...chromes,
+    "/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome"];
+  const found = candidates.find((c) => c && existsSync(c) && !statSync(c).isDirectory());
+  if (!found) throw new Error(`No Chromium found (searched ${roots.join(", ")}); set CHROMIUM_PATH`);
   return found;
 }
 

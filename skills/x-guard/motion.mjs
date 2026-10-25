@@ -22,7 +22,7 @@ import { writeFileSync, readFileSync, existsSync, readdirSync } from "node:fs";
 import { inflateSync } from "node:zlib";
 import path from "node:path";
 import os from "node:os";
-import { selectRows } from "./chart.mjs";
+import { selectRows, findChromium } from "./chart.mjs";
 
 const SITE = (process.env.FAMA_SITE_URL || "https://www.letairun.com").replace(/\/$/, "");
 const argv = process.argv.slice(2);
@@ -41,28 +41,6 @@ const LIGHT = !argv.includes("--dark");
 export const GIF_LIMITS = { bytes: 15 * 1024 * 1024, frames: 350, width: 1280, height: 1080 };
 
 // ---------------------------------------------------------------- Chromium over the DevTools pipe
-
-/**
- * Locate a headless Chromium binary (same search as chart.mjs).
- *
- * @returns {string} Path to the executable.
- */
-function findChromium() {
-  const candidates = [process.env.CHROMIUM_PATH, process.env.CHROME_PATH];
-  const roots = [process.env.PLAYWRIGHT_BROWSERS_PATH, "/opt/pw-browsers", path.join(os.homedir(), ".cache/ms-playwright")].filter(Boolean);
-  const shells = [], chromes = [];
-  for (const root of roots) {
-    if (!existsSync(root)) continue;
-    for (const d of readdirSync(root)) {
-      shells.push(path.join(root, d, "chrome-linux", "headless_shell"));
-      chromes.push(path.join(root, d, "chrome-linux", "chrome"));
-    }
-  }
-  candidates.push(...shells, ...chromes, "/usr/bin/chromium", "/usr/bin/chromium-browser", "/usr/bin/google-chrome");
-  const bin = candidates.find((c) => c && existsSync(c));
-  if (!bin) throw new Error("no Chromium found (set CHROMIUM_PATH)");
-  return bin;
-}
 
 /**
  * Start Chromium with `--remote-debugging-pipe` and return a tiny CDP client.

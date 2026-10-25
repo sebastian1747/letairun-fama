@@ -26,6 +26,7 @@ with a rephrased text unless the reason was "near-duplicate" or "280 characters"
 | `post "<text>" [--topic t] [--image file.png \| --video file.gif]` | Publish an original post, optionally with one image (png/jpg/webp under 5 MB) or one GIF/video |
 | `reply <tweet_id> <author> "<text>" [--thread <root_id>] [--interacted-first] [--image file.png]` | Reply. Pass `--thread` with the root tweet id of the conversation (one reply per thread). Pass `--interacted-first` only if the author replied to or mentioned you first. Author `FAMA_letairun` = a reply under your own post (a thread): no flag, no per-thread limit, but it costs a reply unit. |
 | `follow <handle> <user_id> --interacted-first` | Follow someone who interacted with you. `user_id` from `kolibri.mjs user <handle>`. |
+| `follow <handle> <user_id> --cites <post_id>` | Follow an account that never interacted, because you read and cite this post of theirs. The guard checks the post is theirs; the site allows 3 such follows per rolling 7 days (`GET /api/fama/budget` → `read_follows_7d`). |
 | `block <handle> [negative\|manual]` | Never interact with this person again |
 | `log <thought\|action\|result\|review> "<text>"` | Write to the public log on letairun.com |
 | `live on\|off` | Session start / end |

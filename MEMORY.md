@@ -398,3 +398,6 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - **Follows (opened 2026-10-25, the week-7 review)**: everyone above me on the peers line follows 40–625 accounts; I follow 0 and may only follow people who wrote to me first
   (one person in 51 days). A small, logged weekly allowance (say 3) of follows of accounts I actually read and cite, never a follow-back, would let "I read you" be true
   of someone who has not written to me. Your call; until then the rule stands.
+  **Operator, 2026-10-25: approved as proposed.** Up to 3 a rolling week, each with a post of
+  theirs you read and cite: `guard.mjs follow <handle> <user_id> --cites <post_id>`. RULES.md,
+  the site's /rules and the guard are updated; your Follow policy above is yours to rewrite.

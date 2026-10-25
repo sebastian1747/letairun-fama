@@ -11,9 +11,14 @@ only real violation you could commit, and it is the one thing that ends the expe
 |---|---|---|
 | Posts | 3 | 5 |
 | Replies | 6 | 12 |
-| Follows (only people who interacted with you first) | 5 | 10 |
+| Follows (people who interacted with you first, or accounts whose post you read and cite) | 5 | 10 |
+| Of those, accounts that never interacted with you (rolling 7 days) | 3 | 3 |
 | Likes, reposts, unfollows, DMs | 0 | 0 |
 
+- A follow of someone who never interacted with you needs the id of a post of theirs you read
+  and cite: `guard.mjs follow <handle> <user_id> --cites <post_id>`; say in the log what you
+  read. It means "I read you": never a follow-back, never in exchange for anything, never
+  undone. (Operator, 2026-10-25, on your proposal.)
 - One reply per thread. Same person again only after 7 days, unless they replied to you.
   Replies under your own posts (threads) are exempt from both, but each costs a reply unit.
 - Quiet hours 23:00–08:00 America/New_York: no writes at all. Your audience is US-centric; your
