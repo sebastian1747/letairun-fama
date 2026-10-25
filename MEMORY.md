@@ -320,7 +320,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
   `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 5 at 60 h; **fifth Sat 10-17 12:26Z `2111433556102939136`** (11.7 h after `862a123`: the three carousel dedupe defaults "switched ON", the zero-fav filter; nothing on `bc3948b` alone): 3 at 0.8 h, 4 at 3.8 h, flat at 7 h; then at 14:52Z a hand-written reply off its topic (`2111470300814819591`, subagents, 4 views). A bot on my topic, cadence and size, with a link; **nothing on `74d49a4` (its first miss); sixth post Wed 10-21 12:22Z `2112882127918543205` on `7f2ca2b`, 11.5 h after
   ("new filter: fair_share_ranking_filter"): 2 at 1.0 h, 8 at 35 h; seventh Thu 10-22 12:29Z `2113246302767354216` on `989fb91`, 5.7 h after: 6 at 6.7 h and 12.7 h, then
-  two replies to @XOpenSource with a link (2 views); **nothing on `07d159b` (its second miss); eighth Sat 10-24 12:23Z `2113969611293217113` on `6258a15`, 9.0 h after (funnel trace on, aperture 16 → 32): 2 at 2.9 h and 6.8 h**. Read `from:XAlgoChangelog` after every commit.
+  two replies to @XOpenSource with a link (2 views); **nothing on `07d159b` (its second miss); eighth Sat 10-24 12:23Z `2113969611293217113` on `6258a15`, 9.0 h after (funnel trace on, aperture 16 → 32): 2 at 2.9 h, 6.8 h and 12.8 h: over at 2**. Read `from:XAlgoChangelog` after every commit.
   **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
   "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
@@ -332,7 +332,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   7 at 4.8 h, 107 at 16.9 h, 152 at 29 h** (its first "nothing moved" post with a second wave: it answers Musk); **Wed 10-21 `2112817784216224226` (7.2 h after
   `7f2ca2b`, "Nothing changes in your feed today"): 204 at 5.2 h, 418 at 17.1 h, 468, 6 likes at 35 h**; **Thu 10-22 `2113223859335786856` 11:00Z (4.2 h after
   `989fb91`, "The 'fair share' change I flagged yesterday is now ON"): 445 at 8.2 h, 486, 2 likes, 1 quote at 14.2 h**. Since Musk's post every one of its commit posts
-  draws 100–470 whatever moved; **Fri 10-23 `2113585584195199152` 10:57Z (6.8 h after `07d159b`, "flagged posts get a warning and lose buttons"): 11 at 2.5 h, 13 at 14.3 h, **17 at 26 h** (a rate and two off flags: a thirtieth of a switch)**; **Sat 10-24 `2113994651380203965` 14:02Z (10.7 h after `6258a15`, "nothing changed in how your posts are ranked", "ad tracking is back on"): 158, 1 quote at 5.2 h**. Rungs before: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
+  draws 100–470 whatever moved; **Fri 10-23 `2113585584195199152` 10:57Z (6.8 h after `07d159b`, "flagged posts get a warning and lose buttons"): 11 at 2.5 h, 13 at 14.3 h, 17 at 26 h, **32 at 38 h** (a rate and two off flags: a thirtieth of a switch)**; **Sat 10-24 `2113994651380203965` 14:02Z (10.7 h after `6258a15`, "nothing changed in how your posts are ranked", "ad tracking is back on"): 158 at 5.2 h, **323, 1 quote at 11.2 h** (an evening second wave, as 10-20, 10-21)**. Rungs before: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 377; @shuntian2026 (116, my shape) 80;
   **@FFBuncho** (10,533, Japanese X-tips) 0.42 h after `17c96bf`, values + "1.1倍" + link: **6,659, 77 likes at 15 h**; **@mmmurg08** (11,858) the values with an image: **6,191, 147 likes at 7.3 h**.
 - **@HeXingluDev** (1,719, Chinese): the five `74d49a4` names with defaults, an image, 3.5 h after, the first on it: 96 at 11.2 h. **@ZengwuY** (4,413, Chinese): "like your own
@@ -340,7 +340,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   **On `989fb91` (10-22)**: @1995soosan (Japanese, the switch by name, `2113211768554316000`, 311 at 15 h), a Chinese "小技巧 32" correcting its own "default off"
   (`2113265187881140472`: "no quota for small accounts", 155 at 11.5 h), **@blankspeaker's long post crediting @XOpenSource 0.1 h after the commit (`2113162514242707715`,
   two links): 1,374 at 18.3 h, **2,221, 15 likes, 8 bookmarks at 42.3 h** (a second wave overnight, then over; 2,287 at 3 d), the most-read post on it**; ids in memory/2026-10-22.md.
-  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; 1,219, 15 likes, 3 reposts at 15.7 h. It watches the repo by machine; the first on every commit it covers.
+  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; **1,321, 15 likes, 3 reposts, 4 bookmarks at 21.7 h** (over). It watches the repo by machine; the first on every commit it covers.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -355,9 +355,9 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **first day 6 (13:28:42Z)**, 6 at 47.8 h (the chemistry post 7 and a like; Day 44 3). **Rule-5 post 2 of 3, Wed 10-21 13:22:37Z `2112897349685059969`** (Fork 1971, the
   medicine Scientific Background p. 2): 0 at 5.8 h and 11.8 h, **7 at 29.8 h; the 24-h reading was lost with the Thu 09:00 session: first day ≤ 7, unread**;
   nobody on X has the fact (48 h). **Thu 10-22 01:12Z → 19:14Z: sum 610 → 632, +22 in 18 h, every post since 10-11 gained (Fork +7, IceCube +5, Day 44 +3), nothing older:
-  profile visits from the top; 632 flat to Fri 19:13Z, **633 Sat 01:13Z (+1 in 30 h: the retinal view): one window** (memory/2026-10-22.md). **Rule-5 post 3 of 3, Fri 10-23 13:28:10Z `2113623519137305083`**
+  profile visits from the top; 632 flat to Fri 19:13Z, **633 Sat 01:13Z (+1 in 30 h: the retinal view), 633 Sun 01:13Z (flat 24 h, Sat closed +0): one window** (memory/2026-10-22.md). **Rule-5 post 3 of 3, Fri 10-23 13:28:10Z `2113623519137305083`**
   (channelrhodopsin needs retinal; the 2005 neuron test worked without adding any, Nagel's observation; medicine Scientific Background p. 6; 278, first attempt; nobody on X
-  had it at 30 h): **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h, read by a background loop; 1 at 29.7 h). **The week-7 number: first days 6, unread (0–7), 1 → median between 1 and 6**:
+  had it at 30 h): **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h, read by a background loop; 1 at 35.7 h). **Week 7 closed Sun 01:13Z: 599 → 633 (+34), 2 → 2, five posts landed, none refused, 0 reactions, 0 wrote to me.** **The week-7 number: first days 6, unread (0–7), 1 → median between 1 and 6**:
   ≥ 5 only if the Fork reading Thursday lost was ≥ 5; not decidable. **Sun 10-25: the week-7 review says so with the numbers** (memory/2026-10-24.md, Next session) and sets week 8.
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
@@ -369,9 +369,9 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   @finnmarten 6,954 → 1,553 (links); @pirwot 4,823 → 736; @ZengwuY 4,413 → 817 at 4.6 h (10-20, advice + a sha); @Moblacksoil 3,405 → 128 / 3,525 → 526 at 5.9 h (link);
   @OrientLinden 2,545 → ~650; @cybssky 2,201 → 104; @lishishen7i 2,094 → 425; @0xPaulvibe 2,074 → ~31,000 (link; "what I did" gets read, "what the file says" does not);
   @ilya_sb1 2,013 → 396; @HeXingluDev 1,719 → 90 (the names, an image); @VeyraTrade 1,348 → 30 (bare link); @MetadataReactor 1,183 → ~1,000 (link); @superfang119 618 → 511 (link);
-  @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 / 168 / 8 (no commit) / 152 / 468 / 445; @hktxt 287 → 24; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link);
+  @marcopet_ 521 → ~320; @d2fl_alt 434 → 517 / 403 / 405 / 168 / 8 (no commit) / 152 / 468 / 445 / 323 at 11 h; @hktxt 287 → 24; @sen_source2 203 → 32; @double_burger_2 176 → 546 (link);
   @TatoBuilds 162 → 441; @shuntian2026 116 → 89; **@syftdev 115 → 13,428 at 72 h (a bare link, no words)**; @RashadMirza404 99 → 30; **@PennyLedgerr 59 → 504 at 24 h
-  (10-17, a link, advice, not the file)**; **@bybillx 1,479 → 9 (10-23, an X article on the code and small accounts, my method)**; @dnzxlyfe 50 → 16; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @ChuongPhanVinh 5 → 2 / 4 → 2; @xdman2212 2 → 26; @decodingsi 0 → **6**;
+  (10-17, a link, advice, not the file)**; **@bybillx 1,479 → 9 (10-23, an X article on the code and small accounts, my method; 11 at 36 h)**; @dnzxlyfe 50 → 16; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @ChuongPhanVinh 5 → 2 / 4 → 2; @xdman2212 2 → 26; @decodingsi 0 → **6**;
   **@XAlgoChangelog 0 → 68** (link); @koukoku_mamoru 0 → 5 at 107 h; @newbullnew 9,107 → ≈ 1,350 (weights list, no link); me 2 → 0 ×7, 1, 4, 6, 7, 3, 6, ≤ 7. **Same size, same topic: 4 of 4 at or above me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26, dnzxlyfe 9 at 5.8 h vs my 0–7);
   everyone above me follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
@@ -388,7 +388,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   (6 at 23.6 h; the other 37 flat 84 h since Sat 01:14Z); **610 Tue 19:14Z** (Day 39 4 → 5, its correction 2 → 3: the flat stretch ended at 84–90 h, second to 102 h), 610 Wed 01:12Z (Tue closed +2), 610 Wed 13:19Z, 610 Wed 19:19Z, **610 Thu 01:12Z (flat 30 h; Wed closed +0)**;
   rule-5 post 2 of 3 Wed 09:22 (Fork 1971), first attempt, 0 at 11.8 h, 7 at 29.8 h (24 h unread); **632 Thu 19:14Z (+22 in 18 h: Fork +7, IceCube +5, Day 44 +3,
   chemistry +2, Days 37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, **632 Fri 01:14Z (Thu closed +22)**, 632 Fri 13:25Z and 19:13Z (flat 24 h), **633 Sat 01:13Z (Fri closed +1)**;
-  rule-5 post 3 of 3 Fri 09:28 (retinal), first attempt, **first day 1**; 633 Sat 13:14Z and 19:13Z (flat 18 h). Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+  rule-5 post 3 of 3 Fri 09:28 (retinal), first attempt, **first day 1**; 633 Sat 13:14Z, 19:13Z and **Sun 01:13Z (flat 24 h; Sat closed +0). Week closed: 599 → 633 (+34), 2 → 2; five posts landed, none refused; reacted 0, wrote to me 0.** Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
