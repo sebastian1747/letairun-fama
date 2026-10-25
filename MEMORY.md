@@ -24,8 +24,7 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
 - FAMA, an AI trying to earn followers for @FAMA_letairun (id `2096327941609127936`) honestly. Website: letairun.com. Home time zone: America/New_York;
   days and daily files follow it (the 01:00 UTC session is the 21:00 session of the *previous* New York date). Started 2026-09-05 (Saturday, day 1);
   first real post that evening at 18:15.
-- Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"), X's
-  "Automated" label, picture and banner: confirmed by the operator 09-05/09-06. Do not re-verify.
+- Bio ("An AI trying to earn a following. No tricks. Every decision is logged in public"), X's "Automated" label, picture and banner: confirmed by the operator 09-05/09-06. Do not re-verify.
 - Sessions at 09:00, 15:00 and 21:00 New York (three since Tue 10-20, operator; five before). Post quota is a rolling 24 h window
   per post: run `guard.mjs status`, never predict it.
 - Rules changed 2026-09-13 (operator): any subject, if genuinely useful or surprising and sourced; my own attempt stays the home
@@ -34,26 +33,25 @@ _Long-term memory, curated by FAMA. Keep under ~400 lines._
   about me and not about X, its API, its feed code or being an AI**; judged on Sunday. ALMA: the operator's earlier experiment
   (sebastian-jais.de/blog/two-months-alma-experiment). Reply rule 2026-02-23: @XDevelopers `2026084506822730185`.
 
-## Strategy, week 7 (Sun 2026-10-18 → Sat 2026-10-24); review posted as Day 44 (`2111808982746648787`, chart, no link, 272)
-Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 4** (Day 30 no-link comparator 1), **moved default 2 and 1**
-(the `92f0918` switch refused twice), **rule 5 (the Soai chemistry fact) 7 and the first like in 36 days** → only the rule-5 kind repeats.
-1. **What a non-follower got from week 6**: one sourced fact outside me (the Soai reaction with its journal reference): 7 views, 1 like. The
-   two moved-weight posts gave numbers that were on X 0.4–5 h earlier from accounts of 50–10,000× my reach (2 and 1 views); the review
-   gave my numbers (4).
-2. **Whom to reach, where they read**: people who read a sourced fact for its own sake, not X-algorithm watchers (served by d2fl_alt,
-   XAlgoChangelog, urushisan2, newbullnew, grok's replies, within hours). **What the feed code means for my size** (README.md and
-   phoenix/README.md at `862a123`, re-read 10-18): candidates come from Thunder (accounts the viewer follows: my 2), Phoenix retrieval
-   ("the user is represented by what they interacted with", no per-user id embedding; top-K by dot product against the post index),
-   SimClusters (clusters "by who engages with what") and the popular-posts list ("initially from the most-followed active accounts");
-   author diversity, the out-of-network discount and the new-author boost "follow" scoring and re-rank what was retrieved. Without
-   engagement edges none of the four retrieves me: reach starts with search, profile visits and first likes, not with the feed.
-3. **What I post / stop**: (a) **three rule-5 posts, Mon/Wed/Fri 09:xx NY**: a fact a human would want to know, outside me, X, its API,
-   its feed code and being an AI, the source inside the 280 (a numbered reference or a named document), no "Day N.", no link unless the
-   words cannot carry the source; candidate sources in memory/2026-10-18.md; (b) the Sunday review with a chart, **no link** (4 < 5);
-   (c) answers within the hour; (d) **stop posting moved feed-code defaults**; keep reading commits and peers for the log only.
-4. **The number for Sunday 2026-10-25**: the **median first-24-h views of the three rule-5 posts**. ≥ 5: the kind holds and week 8 raises
-   the bar to ≥ 7. < 5: the chemistry post was one lucky post; week 8 posts only answers and the review, and the review asks the operator
-   which constraint (follow-after-interaction, no cold replies) to loosen. People who reacted stays the standing measure (week 6: 1).
+## Strategy, week 8 (Sun 2026-10-25 → Sat 2026-10-31); review posted as Day 51 (`2114345656420635009`, chart, no link, 274)
+Week 7's number (median first day of three rule-5 posts, pass mark 5): IceCube **6**, Fork **unread** (0 at 11.8 h, 7 at 29.8 h; the Thu 09:00 session did not run),
+retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed, none refused; 599 → 633; 2 → 2; reacted 0; wrote to me 0 (Katreenka26 wrote Sun 10-25, week 8).
+1. **What a non-follower got from week 7**: three sourced facts outside me (IceCube's 100,000 vs 100 neutrinos; Fork's 1971 laser; channelrhodopsin and retinal), seen by
+   about 15 people in all (first days 6, ≤ 7, 1; 12 / 9 / 5 views now). The review gave my numbers (3).
+2. **Whom to reach, where they read**: people who read a sourced fact for its own sake. **The feed code at HEAD `6258a15` (README 496 lines, phoenix/README 449, re-read
+   10-25)**: candidates come from Thunder (accounts the viewer follows), Phoenix retrieval ("the user is represented by what they interacted with", no per-user id embedding,
+   top-K by dot product against the post index), SimClusters ("by who engages with what") and the popular list ("initially from the most-followed active accounts"); author
+   diversity, the out-of-network discount and the new-author boost re-rank what was retrieved; `NewUserMinEngagementFilter` (viewers younger than 1,800 s lose
+   out-of-network posts under a like threshold; `EnableNewUserMinEngagementFilter` false, threshold 0.0) adds nothing at my size. Without engagement edges none of the four
+   retrieves me: reach starts with search, profile visits and first likes. Evidence this week: one commit, three accounts, 1,404 / 413 / 2 views at 15,926 / 434 / 0 followers;
+   my +7 this morning came from the one person who has ever written to me.
+3. **What I post / stop**: (a) **three rule-5 posts, Mon/Wed/Fri 09:xx NY, each from a different document** (week 7's three were all 2026 Nobel Scientific Backgrounds, two
+   from the medicine PDF; the second from that PDF made 1): a fact a human would want to know, outside me, X, its API, its feed code and being an AI, the source inside the
+   280, no "Day N.", no link unless the words cannot carry the source; **every 24-h reading by a background `until date` loop in the session that holds it**; (b) the
+   Sunday review with a chart, no link; (c) answers within the hour; (d) moved feed-code defaults stay in the log.
+4. **The number for Sunday 2026-11-01**: the **median first-24-h views of the three rule-5 posts, pass mark 5; a lost reading counts as 0**. ≥ 5: the kind holds and week 9
+   raises the bar to 7. < 5: the kind ends; week 9 posts only answers and the review, and the review asks the operator which constraint to loosen (the follow proposal
+   below). People who reacted stays the standing measure (week 7: 0).
 
 ## How the tooling behaves
 - Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the 29 "ahead by 1–227" of 10-22
@@ -97,7 +95,7 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   whose reply starts with @FAMA_letairun work. Tried once 09-06: unit spent. Never again. **Replies
   under my own posts**: `guard.mjs reply <id> FAMA_letairun "…" --thread <root>`, no
   `--interacted-first`, exempt from the per-thread limit, costs a reply unit; **X accepted one (10-13, `2110040308608119160`)**, 403 ×2 on 09-27.
-- **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). `chart.mjs --days N [--until YYYY-MM-DD]
+- **Images**: `guard.mjs post|reply … --image f.png` (< 5 MB). **`chart.mjs` needs `CHROMIUM_PATH=/opt/pw-browsers/chromium` (10-25)**. `chart.mjs --days N [--until YYYY-MM-DD]
   --out f.png` renders 1200×675 (bars = views per day 21:00 → 21:00; line = followers); it ends at the
   last day with a metrics row, so write today's row first (tested 09-26). **Motion** (operator,
   10-07 20:46Z): `motion.mjs --template views … --out f.gif` (or `--html page.html` with
@@ -120,12 +118,11 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   Fri 2 of 3, Sat 2 of 3; none Sundays, Mondays; none Thu 10-15) — **except `bc3948b`, Fri 10-16 19:02:15Z = 15:02 NY, the first daytime commit
   in six weeks (found by `ls-remote` 3.5 min later), `862a123` Sat 10-17 00:44:30Z = Fri 20:44 NY, 27 min before the 21:00 session, and `7f2ca2b` Wed 10-21 00:52:08Z = Tue 20:52 NY, 18 min before it**: three evening commits in a week; a commit can land in any session; `ls-remote` every time, whatever the hour. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
 
-## What works, what doesn't (weeks 1–6)
-- Nothing has taken off, nothing has clearly flopped. One person reacted, in week 1 (Katreenka: reply 09-06, question 09-11, 3 likes); **the next
-  like came 36 days later, on the rule-5 post (10-12, by 2.5 h)**. **Views are profile visits, not feed placement** (Day 4; help.x.com "View counts"):
-  the spikes hit every post at once (after Katreenka's reply; **+22 across every post since 10-11 on Thu 10-22**); 2 followers from 504 views, both in day
-  one. Fact posts (Days 10–35) had first-day views 0–1 at every hour: not the lever at 2 followers: the topic (week 3), the hour (week 4), the timing (week 5).
-  Posts that moved on day one: Day 36 (a correction) 6, Day 37 (review + link) 4, the chemistry rule-5 post 7 and a like, the IceCube rule-5 post 6.
+## What works, what doesn't (weeks 1–7)
+- Nothing has taken off, nothing has clearly flopped. One person reacts (Katreenka: 09-06, 09-11, 10-25; 3 likes); the only other like came 36 days in, on the
+  chemistry rule-5 post (10-12). **Views are profile visits, not feed placement** (Day 4; help.x.com "View counts"): the spikes hit every recent post at once (after each
+  of her visits; +22 on Thu 10-22); 2 followers from 504 views, both in day one. Fact posts about X (Days 10–35) made 0–1 at every hour: topic, hour and timing are not
+  the lever at 2 followers. Moved on day one: Day 36 (a correction) 6, Day 37 (review + link) 4, the rule-5 posts 7 (and a like), 6, ≤ 7, 1.
 
 ## What X's own feed code says (github.com/xai-org/x-algorithm, read 2026-09-19)
 - X open-sourced the For You algorithm (Apache 2; TechCrunch 2026-08-13).
@@ -300,8 +297,11 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   same form; memory/2026-10-23.md): channelrhodopsin needs retinal, the 2005 neuron test worked without adding any (medicine Scientific Background p. 6); first attempt; the
   forty-first post; **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h).
 
+- Week 8: **Sun 10-25 09:17 `2114345656420635009` Day 51 the week-7 review** (274, 8-day chart media `2114345650334711808`, no link; "undecided"), first attempt; the forty-third
+  tweet; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me, three times now".
 ## People
-- @Katreenka26 (id `2096563133376495617`, 0 followers): the only person who has written (09-06, 09-11; my replies `2096586046737613300`, `2098442866217398556`); not followed.
+- @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me): the only person who has written (09-06, 09-11, **Sun 10-25 "How are you?"**; my replies
+  `2096586046737613300`, `2098442866217398556`, `2114344832097193994`); each visit lifts every recent post at once. Not followed: nothing of hers to read.
 - @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
   caveat on 10-06, four days before I found it; Sun 10-11 `2109252732125343745`: `DedupConversationFilter` keeps one post per conversation in For You
   (**verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest ancestor id: a self-reply of mine never shows beside its root
@@ -350,17 +350,13 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   favour", two hashtags, an image, no commit named): 48 at 6 min, 537 at 12.3 h, **555, 28 likes, 8 reposts at 15.1 h**, wave over by 12 h (advice outdraws the file, as at every size); passed 20,500 followers 10-19. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
-- **Week 7 (strategy above)**: Day 44 (Sun 10-18 13:17:52Z, review, chart, no link): **first day 3** (3 from 2.9 h on; Day 37 with a link 4, Day 30 without 1: three reviews 1–4,
-  the link does not decide it at this size; one more Sunday before a post says so). **Rule-5 post 1 of 3, Mon 10-19 13:28:24Z `2112174031889686711`** (IceCube, p. 11
-  of the physics Scientific Background): 3 at 2.75 h, no reading 5.7–11.7 h (402), **first day 6 (13:28:42Z)**, 6 at 47.8 h (the chemistry post 7 and a like; Day 44 3). **Rule-5 post 2 of 3, Wed 10-21 13:22:37Z `2112897349685059969`** (Fork 1971, the
-  medicine Scientific Background p. 2): 0 at 5.8 h and 11.8 h, **7 at 29.8 h; the 24-h reading was lost with the Thu 09:00 session: first day ≤ 7, unread**;
-  nobody on X has the fact (48 h). **Thu 10-22 01:12Z → 19:14Z: sum 610 → 632, +22 in 18 h, every post since 10-11 gained (Fork +7, IceCube +5, Day 44 +3), nothing older:
-  profile visits from the top; 632 flat to Fri 19:13Z, **633 Sat 01:13Z (+1 in 30 h: the retinal view), 633 Sun 01:13Z (flat 24 h, Sat closed +0): one window** (memory/2026-10-22.md). **Rule-5 post 3 of 3, Fri 10-23 13:28:10Z `2113623519137305083`**
-  (channelrhodopsin needs retinal; the 2005 neuron test worked without adding any, Nagel's observation; medicine Scientific Background p. 6; 278, first attempt; nobody on X
-  had it at 30 h): **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h, read by a background loop; 1 at 35.7 h). **Week 7 closed Sun 01:13Z: 599 → 633 (+34), 2 → 2, five posts landed, none refused, 0 reactions, 0 wrote to me.** **The week-7 number: first days 6, unread (0–7), 1 → median between 1 and 6**:
-  ≥ 5 only if the Fork reading Thursday lost was ≥ 5; not decidable. **Sun 10-25: the week-7 review says so with the numbers** (memory/2026-10-24.md, Next session) and sets week 8.
+- **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): readings 15:00 (~5.8 h), 21:00 (~11.8 h), **Mon 09:00
+  by loop at or after 13:17:41Z**. Rule-5 posts due Mon, Wed, Fri 09:xx, each from a different document; first days read by loop Tue, Thu, Sat 09:00 sessions.
+  **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`**: watch the thread; one reply per thread is spent.
+  Week 7's record: Day 44 first day 3 (three reviews 1–4: the link does not decide it); IceCube 6; Fork 0 at 11.8 h → 7 at 29.8 h, 24 h lost; retinal 1 (by loop); Thu 10-22
+  +22 in 18 h on every post since 10-11 (profile visits); **closed 599 → 633, 2 → 2, four posts landed (my notes said five until 10-25), 0 reactions, 0 wrote.**
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
-  by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post (week 7). After every
+  by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post. After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
   `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele 489k → **1,912,658** (bare link);
@@ -377,18 +373,20 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
 
 ## Numbers
 - Weeks 1–4: 0 → 2 followers (both Sun 09-06), then flat; 19 posts + 4 landed, 7 refused; 3 likes, 2 replies (one person); views 504 → 564; first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0 / 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 57–69 h (10-14 → 10-16).
-- Week 5 (Sun 10-04 → Sat 10-10): 2 → 2; views 564 → 575; **7 posts, 7 landed, no 403** (Day 30 review Sun 09:11; Tue–Fri one commit post each at
-  09:3x, Tue a second at 12:22; Sat 18:06 the correction). First-24-h: 1, 0, 0, 1, 0, 0, Day 36 **6**. Reacted 0, wrote to me 0. Reviews: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11 (posted, with a link); next 10-18.
-- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; first attempts all: Day 37 Sun 09:12 (review, chart, link) **first day 4** (Day 30: 1);
-  **the rule-5 post Mon 09:38** (a like at 2.5 h) **first day 7**; **Day 39 Tue 09:36** (moved default, fifth on X at best) **first day 2** and its
-  correction as a self-reply Tue 12:09 (the first X accepted); **Day 40 Wed 09:31** (moved default, seventh at best) **first day 1**. **Wed 21:11
-  the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403 (9 of 33).** **Week closed: 575 → 599 (+24; flat 57 h mid-week), 2 → 2; four posts landed, two refused; best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
-- Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link), first attempt, **first day 3**; sum 602 Sun 16:13Z → Mon 13:25Z (the other 37 flat 60 h);
-  rule-5 post 1 of 3 Mon 09:28 (IceCube), first attempt: 605 Mon 16:13Z (3 at 2.75 h); Mon 19:11Z → Tue 01:11Z nothing read (402); **608 Tue 13:05Z**
-  (6 at 23.6 h; the other 37 flat 84 h since Sat 01:14Z); **610 Tue 19:14Z** (Day 39 4 → 5, its correction 2 → 3: the flat stretch ended at 84–90 h, second to 102 h), 610 Wed 01:12Z (Tue closed +2), 610 Wed 13:19Z, 610 Wed 19:19Z, **610 Thu 01:12Z (flat 30 h; Wed closed +0)**;
-  rule-5 post 2 of 3 Wed 09:22 (Fork 1971), first attempt, 0 at 11.8 h, 7 at 29.8 h (24 h unread); **632 Thu 19:14Z (+22 in 18 h: Fork +7, IceCube +5, Day 44 +3,
-  chemistry +2, Days 37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, **632 Fri 01:14Z (Thu closed +22)**, 632 Fri 13:25Z and 19:13Z (flat 24 h), **633 Sat 01:13Z (Fri closed +1)**;
-  rule-5 post 3 of 3 Fri 09:28 (retinal), first attempt, **first day 1**; 633 Sat 13:14Z, 19:13Z and **Sun 01:13Z (flat 24 h; Sat closed +0). Week closed: 599 → 633 (+34), 2 → 2; five posts landed, none refused; reacted 0, wrote to me 0.** Reviews so far: 09-06, 09-13, 09-20, 09-27 (log only), 10-04, 10-11, 10-18; next 10-25.
+- Week 5 (Sun 10-04 → Sat 10-10): 2 → 2; views 564 → 575; **7 posts, 7 landed, no 403** (review Sun 09:11; commit posts Tue–Fri 09:3x, Tue a second 12:22; Sat 18:06 the
+  correction). First-24-h: 1, 0, 0, 1, 0, 0, Day 36 **6**. Reacted 0, wrote to me 0.
+- Week 6 (Sun 10-11 → Sat 10-17): opened at 575 / 2 / 5; first attempts all: Day 37 Sun 09:12 (review, chart, link) **first day 4** (Day 30: 1); **the rule-5 post Mon 09:38**
+  (a like at 2.5 h) **first day 7**; **Day 39 Tue 09:36** (moved default, fifth on X at best) **first day 2** and its correction as a self-reply Tue 12:09 (the first X accepted);
+  **Day 40 Wed 09:31** (moved default, seventh at best) **first day 1**. **Wed 21:11 the `92f0918` switch post: refused 403 (8 of 32); its second text Thu 09:26: refused 403
+  (9 of 33).** **Week closed: 575 → 599 (+24; flat 57 h mid-week), 2 → 2; four posts landed, two refused; best first day the rule-5 post's 7, the only kind ≥ 5.** Reacted 1 like, wrote to me 0.
+- Week 7 (Sun 10-18 → Sat 10-24): opened at 599 / 2 / 6; Day 44 review Sun 09:17 (chart, no link) **first day 3**; rule-5 post 1 of 3 Mon 09:28 (IceCube) **6** (3 at 2.75 h;
+  Mon 19:11Z → Tue 01:11Z nothing read, 402); 610 Tue 19:14Z (Day 39 and its correction +1 each: the flat stretch ended at 84–90 h, second to 102 h); rule-5 post 2 of 3 Wed 09:22
+  (Fork 1971) 0 at 11.8 h, 7 at 29.8 h (**24 h unread: the Thu 09:00 session did not run**); **632 Thu 19:14Z (+22 in 18 h: Fork +7, IceCube +5, Day 44 +3, chemistry +2, Days
+  37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, flat to Fri 19:13Z, 633 Sat 01:13Z; rule-5 post 3 of 3 Fri 09:28 (retinal) **first day 1**; 633 flat
+  to Sun 01:13Z. **Week closed: 599 → 633 (+34), 2 → 2; four posts landed (all first attempt), none refused; reacted 0, wrote to me 0.** Days: Sun +3, Mon +3, Tue +5, Wed +0, Thu +22, Fri +1, Sat +0.
+- Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
+  (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
@@ -398,3 +396,6 @@ Week 6's number (best first-24-h views by kind, threshold ≥ 5): **link review 
   deduplication applied; I can cut the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads are what drained
   it. A way for me to read the balance (a site endpoint the operator fills, or the console's figure in AGENTS.md with a date) would let me stop
   before it runs dry.
+- **Follows (opened 2026-10-25, the week-7 review)**: everyone above me on the peers line follows 40–625 accounts; I follow 0 and may only follow people who wrote to me first
+  (one person in 51 days). A small, logged weekly allowance (say 3) of follows of accounts I actually read and cite, never a follow-back, would let "I read you" be true
+  of someone who has not written to me. Your call; until then the rule stands.
