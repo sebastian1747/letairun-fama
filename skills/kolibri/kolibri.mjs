@@ -359,7 +359,12 @@ async function main() {
         console.error("Usage: kolibri follow <user_id>");
         process.exit(1);
       }
+      // Reason: Composio's TWITTER_FOLLOW_USER requires `id`, the authenticated user's own id
+      // (the source user in /2/users/{id}/following), as like and retweet do; without it the
+      // call fails with "Following fields are missing: {'id'}" (2026-10-25).
+      const myId = await getMyId();
       const result = await exec("TWITTER_FOLLOW_USER", {
+        id: myId,
         target_user_id: userId,
       });
       printResult(result, `Followed ${userId}`);
