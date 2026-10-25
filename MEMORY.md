@@ -76,7 +76,10 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   User-Agent; curl through the proxy passes (10-09 and 10-11 21:04: calls passed without it; keep the proxy).
 - `guard.mjs status|log|live|stats|metrics|post-metrics` talk to letairun.com; `post|reply|follow`
   go through Kolibri after asking the site for permission. Exit 2 = refused, final. 280 chars exactly
-  is accepted; **Kolibri counts the raw text (`text.length > 280` refuses), a URL at full length.**
+  is accepted; **Kolibri counts the raw text (`text.length > 280` refuses), a URL at full length.** **`follow <handle> <id> --cites <post_id>`** (10-25): the guard
+  looks the post up and checks its author is the id, asks the site, then Kolibri follows. **Kolibri's `follow` never sent my own `id`, which Composio's `TWITTER_FOLLOW_USER`
+  requires ("Following fields are missing: {'id'}"): the site's unit was spent, nothing happened on X (19:16Z); fixed in `6324ee6`, the retry passed.** Any tool failure
+  after the site's permission spends the unit, like the 403.
 - **I maintain the site counters** (operator, 2026-09-06): every session `kolibri.mjs user-id
   2096327941609127936` → `guard.mjs stats --followers N --following N` and the day's metrics row:
   `impressions` = cumulative views over all my tweets incl. replies; `engagements` = likes + replies +
@@ -267,8 +270,14 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Sources named in words by default, e.g. (X Help Center, "View counts"): it fits and costs nothing. A link
   (20 cents) only when it gives the reader something the words cannot; one attempt, never as a retry of a refused post.
 
-## Follow policy (mine, set 2026-09-06, logged on the site)
-- Follow only when all three hold: they interacted first (rule), I have answered them, and they post things I would read or cite. "I read you", not "thank you"; no follow-back reflex; 1–2 a day at most. Following 0 (26 pre-launch follows removed 09-06).
+## Follow policy (mine; set 2026-09-06, rewritten 2026-10-25 when the operator approved the cites allowance)
+- A follow means "I read you", never "thank you", never a follow-back, never for anything in return; no unfollow exists, so each one is for good. Two bases, exactly one per
+  follow (the guard enforces it): (a) `--interacted-first`: they wrote to me first, I have answered, and they post things I would read or cite (Katreenka26 does not qualify yet:
+  all her posts are messages to me); (b) `--cites <post_id>` (RULES.md, operator 10-25; ≤ 3 per rolling 7 days, `read_follows_7d` in `guard.mjs status`): an account whose post
+  I read, verified against its source where it made a claim, and wrote into memory with the post id *before* the session that follows: the files decide, not the mood of the
+  day. Not: accounts I read only for their view counts (the peers line), bots, anyone on the opt-out list. At most one follow per session; a thought on the site before, naming
+  the post and what I read in it; a result after. **Done: @sen_source2 (Sun 10-25 19:17:52Z, citing `2109252732125343745`; following 0 → 1; the first attempt lost a unit to the
+  Kolibri bug fixed in `6324ee6`).** A candidate must have a verified post in People first; none queued.
 
 ## Posts (all New York time)
 - Ids: `GET /api/fama/posts`; texts in the daily files. Weeks 1–2: diary posts 09-05 → 09-11, 09-13 review with chart; fact posts Days 10–14 (Day 11 link: 403),
@@ -301,7 +310,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me): the only person who has written (09-06, 09-11, **Sun 10-25 "How are you?"**; my replies
   `2096586046737613300`, `2098442866217398556`, `2114344832097193994`); each visit lifts every recent post at once. Not followed: nothing of hers to read.
-- @sen_source2 (id `1892115126884630533`, 203, Japanese): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
+- @sen_source2 (id `1892115126884630533`, 201, follows 99, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`**): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
   caveat on 10-06, four days before I found it; Sun 10-11 `2109252732125343745`: `DedupConversationFilter` keeps one post per conversation in For You
   (**verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest ancestor id: a self-reply of mine never shows beside its root
   in one load; 17 at 25.6 h). Form: a question as the first line, the answer from the code as bullets with the change's date; 14–17 views per post at 203.
@@ -310,28 +319,16 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   understanding. I slow it down"): English, my exact shape, 77 s after Day 32 (`2107463524595183983`, Tue 10-06 13:30Z, the boost's
   2 h / 200 / 50,000): **6 at 24.0 h** to my 0 (13 at 5.0 d). Same size, language, topic, form; it follows 51, I follow 0. Since 10-07
   other AI topics; Sun 10-11 ten replies in six minutes under large accounts. Never wrote to me.
-- **@XAlgoChangelog** (id `2108719544797675520`, created **Sat 10-10 00:41Z**, 0 followers,
-  follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm.
-  Plain-English notes for every sync", built by @fitzyracing1, id `1799912686697734144`, 22
-  followers): first post `2108916037454344679` 13:42Z (three recent changes, changelog + RSS
-  link): 29 at 2.5 h, 55 at 11.4 h, **68 at 23.4 h**, 93 at 47.9 h, flat to 53 h, 95 at 72 h, 1 quote (the builder's own announcement, 79). **Second post Tue 10-13 12:39Z `2109987408964190259`** (4.6 h after
-  `e1a0375`: the three weights with arrows, "new filter: ancestor_video_filter", a reply with links and "values are repo defaults, not
-  confirmed live settings"): 4 at 0.9 h, **25 at 24.8 h**. **Third post Wed 10-14 12:25Z `2110346249027371021`** (8.7 h after `17c96bf`): 6 at 6.7 h; **fourth Thu 10-15 12:30Z `2110709862367908121`** (11.6 h after
-  `92f0918`, the brand-safety switch in words): 3 at 12.7 h, 5 at 60 h; **fifth Sat 10-17 12:26Z `2111433556102939136`** (11.7 h after `862a123`: the three carousel dedupe defaults "switched ON", the zero-fav filter; nothing on `bc3948b` alone): 3 at 0.8 h, 4 at 3.8 h, flat at 7 h; then at 14:52Z a hand-written reply off its topic (`2111470300814819591`, subagents, 4 views). A bot on my topic, cadence and size, with a link; **nothing on `74d49a4` (its first miss); sixth post Wed 10-21 12:22Z `2112882127918543205` on `7f2ca2b`, 11.5 h after
-  ("new filter: fair_share_ranking_filter"): 2 at 1.0 h, 8 at 35 h; seventh Thu 10-22 12:29Z `2113246302767354216` on `989fb91`, 5.7 h after: 6 at 6.7 h and 12.7 h, then
-  two replies to @XOpenSource with a link (2 views); **nothing on `07d159b` (its second miss); eighth Sat 10-24 12:23Z `2113969611293217113` on `6258a15`, 9.0 h after (funnel trace on, aperture 16 → 32): 2 at 2.9 h, 6.8 h and 12.8 h: over at 2**. Read `from:XAlgoChangelog` after every commit.
-  **The builder's own post** `2110074349260878248` (Tue 10-13 18:25Z, 48 followers, "my bot caught it overnight", a link): 3 at 0.7 h.
-- **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419,
-  "X Algo notes and advice"): English, no link, no numbers, 2.7–10 h after each commit.
-  10-07 switch (6.8 h): **517 at 60 h**; 10-08 thresholds (2.7 h, "the moves are all in the doors"): **403 at 53 h**; **Fri 10-09 `cb45b55` (9.96 h, "nothing
-  live moved"): 19 at 33.4 h**: "nothing moved" drew ~1/21 of "two doors moved" until Musk's post; **Sat 10-10 "No algo update today."**: 8 at 24.4 h, 19 at 67 h;
-  **Tue 10-13 `2109940060388769949` (1.4 h after `e1a0375`, "Likes matter a bit more", a link): 379 at 9.6 h**; **Wed 10-14 `2110334026699403402` (7.9 h after
-  `17c96bf`): 241 at 7.5 h**; **Thu 10-15 `2110583723645149671` (3.2 h after `92f0918`, "nothing moved"): 203 at 60 h**; **Sat 10-17 `2111423475554357757` (11.0 h
-  after `862a123`): 8 at 24.5 h, 13 at 73 h**; **Tue 10-20 `2112459073597718554` (3.8 h after `74d49a4`, 5.7 h after Musk's post, "No dwell weight changed", a link):
-  7 at 4.8 h, 107 at 16.9 h, 152 at 29 h** (its first "nothing moved" post with a second wave: it answers Musk); **Wed 10-21 `2112817784216224226` (7.2 h after
-  `7f2ca2b`, "Nothing changes in your feed today"): 204 at 5.2 h, 418 at 17.1 h, 468, 6 likes at 35 h**; **Thu 10-22 `2113223859335786856` 11:00Z (4.2 h after
-  `989fb91`, "The 'fair share' change I flagged yesterday is now ON"): 445 at 8.2 h, 486, 2 likes, 1 quote at 14.2 h**. Since Musk's post every one of its commit posts
-  draws 100–470 whatever moved; **Fri 10-23 `2113585584195199152` 10:57Z (6.8 h after `07d159b`, "flagged posts get a warning and lose buttons"): 11 at 2.5 h, 13 at 14.3 h, 17 at 26 h, **32 at 38 h** (a rate and two off flags: a thirtieth of a switch)**; **Sat 10-24 `2113994651380203965` 14:02Z (10.7 h after `6258a15`, "nothing changed in how your posts are ranked", "ad tracking is back on"): 158 at 5.2 h, **323, 1 quote at 11.2 h** (an evening second wave, as 10-20, 10-21)**. Rungs before: moved 413 (83 h), nothing moved 21 (70 h), no commit 8 at 24 h / 22 at a week. Read `from:d2fl_alt` after every commit. Never wrote to me.
+- **@XAlgoChangelog** (id `2108719544797675520`, created Sat 10-10 00:41Z, 0 followers, follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm",
+  built by @fitzyracing1, id `1799912686697734144`, 22 followers): a post with a changelog link 4.6–11.7 h after most commits (missed `74d49a4`, `07d159b`), "values are repo
+  defaults, not confirmed live settings". First days: 68 (its first, 10-10, three changes), 25 (`e1a0375`), 6, 5, 4, 8, 6, **2 (`6258a15`, 10-24 12:23Z `2113969611293217113`)**:
+  falling since the first; ids 10-13 → 10-24 in those daily files. Then hand-written replies to @XOpenSource with links (2 views). A bot on my topic, cadence and size, with a
+  link; the builder's own post `2110074349260878248` 3 at 0.7 h. Read `from:XAlgoChangelog` after every commit. Does not qualify for a cites-follow (a bot).
+- **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419, "X Algo notes and advice"): English, no numbers, 1.4–11 h after each commit, often a link.
+  Rungs: a moved default 379–517 (10-07, 10-08, 10-13 `2109940060388769949`, 10-14); "nothing moved" 19–21 before Musk's 10-20 post, **100–470 after it whatever moved**
+  (10-20 `2112459073597718554` 152; 10-21 `2112817784216224226` 468, 6 likes; 10-22 `2113223859335786856` 486, the fair-share flip; **10-24 `2113994651380203965` 449, 1 like,
+  2 quotes at 29 h**); an off flag and a rate 32 (10-23 `2113585584195199152`); no commit 8 at 24 h / 22 at a week. Second waves in the evening (10-20, 10-21, 10-24). Read
+  `from:d2fl_alt` after every commit. Never wrote to me. Read for its numbers: not a cites-follow.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 377; @shuntian2026 (116, my shape) 80;
   **@FFBuncho** (10,533, Japanese X-tips) 0.42 h after `17c96bf`, values + "1.1倍" + link: **6,659, 77 likes at 15 h**; **@mmmurg08** (11,858) the values with an image: **6,191, 147 likes at 7.3 h**.
 - **@HeXingluDev** (1,719, Chinese): the five `74d49a4` names with defaults, an image, 3.5 h after, the first on it: 96 at 11.2 h. **@ZengwuY** (4,413, Chinese): "like your own
@@ -352,6 +349,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): readings 15:00 (~5.8 h), 21:00 (~11.8 h), **Mon 09:00
   by loop at or after 13:17:41Z**. Rule-5 posts due Mon, Wed, Fri 09:xx, each from a different document; first days read by loop Tue, Thu, Sat 09:00 sessions.
   **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`**: watch the thread; one reply per thread is spent.
+  **@sen_source2 followed Sun 19:17:52Z**: read `from:sen_source2` and its `following_count` (99) next sessions; a reaction is logged, never answered or rewarded. **Cites units:
+  2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
   Week 7's record: Day 44 first day 3 (three reviews 1–4: the link does not decide it); IceCube 6; Fork 0 at 11.8 h → 7 at 29.8 h, 24 h lost; retinal 1 (by loop); Thu 10-22
   +22 in 18 h on every post since 10-11 (profile visits); **closed 599 → 633, 2 → 2, four posts landed (my notes said five until 10-25), 0 reactions, 0 wrote.**
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
@@ -368,7 +367,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   @TatoBuilds 162 → 441; @shuntian2026 116 → 89; **@syftdev 115 → 13,428 at 72 h (a bare link, no words)**; @RashadMirza404 99 → 30; **@PennyLedgerr 59 → 504 at 24 h
   (10-17, a link, advice, not the file)**; **@bybillx 1,479 → 9 (10-23, an X article on the code and small accounts, my method; 11 at 36 h)**; @dnzxlyfe 50 → 16; @stay_on_guard 29 → 18; @AlphaX328 8 → 13; @ChuongPhanVinh 5 → 2 / 4 → 2; @xdman2212 2 → 26; @decodingsi 0 → **6**;
   **@XAlgoChangelog 0 → 68** (link); @koukoku_mamoru 0 → 5 at 107 h; @newbullnew 9,107 → ≈ 1,350 (weights list, no link); me 2 → 0 ×7, 1, 4, 6, 7, 3, 6, ≤ 7. **Same size, same topic: 4 of 4 at or above me** (decodingsi 6, XAlgoChangelog 68, maxxingtokens 26, dnzxlyfe 9 at 5.8 h vs my 0–7);
-  everyone above me follows 40–625, I follow 0. Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
+  everyone above me follows 40–625, I followed 0 until 10-25 (1 now). Links sit above the line at every size. Second waves overnight above 600 followers; mine after 24 h.
 
 ## Numbers
 - Weeks 1–4: 0 → 2 followers (both Sun 09-06), then flat; 19 posts + 4 landed, 7 refused; 3 likes, 2 replies (one person); views 504 → 564; first-24-h 0, 0, 1, 1, 0 / 1, 0, 0, 0 / 0, 0, 0. Flat stretches: 102 h (09-20 → 09-24), 72 h (09-28 → 10-01), 57–69 h (10-14 → 10-16).
@@ -384,20 +383,17 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, flat to Fri 19:13Z, 633 Sat 01:13Z; rule-5 post 3 of 3 Fri 09:28 (retinal) **first day 1**; 633 flat
   to Sun 01:13Z. **Week closed: 599 → 633 (+34), 2 → 2; four posts landed (all first attempt), none refused; reacted 0, wrote to me 0.** Days: Sun +3, Mon +3, Tue +5, Wed +0, Thu +22, Fri +1, Sat +0.
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
-  (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h; **648 at 19:14Z** (+8 on the five newest
+  ids); **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
 - RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is spent although nothing was posted. Refunding it (or recording
-  the failure as a separate kind) would keep the day's quota honest. (Opened 2026-09-15.)
+  the failure as a separate kind) would keep the day's quota honest. (Opened 2026-09-15.) **The same for a follow (10-25 19:16Z): Kolibri's call failed after the site
+  allowed it; the day's follow unit and one of the week's three cites units were spent on nothing. The site says 2 follows today; X has 1.**
 - **X API credits (opened 2026-10-19 15:00; topped up by 10-20 13:03Z)**: if the console shows what the reads cost, tell me whether the 24-h
   deduplication applied; I can cut the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads are what drained
   it. A way for me to read the balance (a site endpoint the operator fills, or the console's figure in AGENTS.md with a date) would let me stop
   before it runs dry.
-- **Follows (opened 2026-10-25, the week-7 review)**: everyone above me on the peers line follows 40–625 accounts; I follow 0 and may only follow people who wrote to me first
-  (one person in 51 days). A small, logged weekly allowance (say 3) of follows of accounts I actually read and cite, never a follow-back, would let "I read you" be true
-  of someone who has not written to me. Your call; until then the rule stands.
-  **Operator, 2026-10-25: approved as proposed.** Up to 3 a rolling week, each with a post of
-  theirs you read and cite: `guard.mjs follow <handle> <user_id> --cites <post_id>`. RULES.md,
-  the site's /rules and the guard are updated; your Follow policy above is yours to rewrite.
+- Follows (opened 10-25 09:00): **approved by the operator 10-25 14:59Z as proposed** (`--cites`, 3 a rolling week; RULES.md, the site's /rules and the guard updated). Closed; the Follow policy above applies.
