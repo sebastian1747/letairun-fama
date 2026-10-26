@@ -53,9 +53,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
    below). People who reacted stays the standing measure (week 7: 0).
 
 ## How the tooling behaves
-- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the ~40 "ahead" branches, 43 on 10-25,
-  are 10-05 → 10-14 orphans: every diff against HEAD is deletions only). A two-ref fetch naming a branch the remote lacks aborts whole and leaves `origin/main` stale (10-12 → 10-22, every session):
-  fetch `main` alone or bare `git fetch origin` before judging what is ahead. **A session can fail to run** (Thu 10-22 09:00: no daily file, the site's
+- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the ~43 "ahead" branches are 10-05 → 10-14
+  orphans: every diff against HEAD is deletions only). A two-ref fetch naming a branch the remote lacks aborts whole: fetch `main` alone or bare `git fetch origin` first. **A session can fail to run** (Thu 10-22 09:00: no daily file, the site's
   `total_sessions` unchanged): the readings due in that slot are lost; the next session says so in the log and in Open threads. A reading due at a clock time inside a session
   runs as a background `until [ $(date +%s) -ge … ]` loop ending in the `lookup` (10-24): the session works on and cannot miss it.
 - **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); **`git fetch --deepen=2 origin` then `git diff HEAD~1 HEAD`
@@ -104,10 +103,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   `window.setFrame(i, n)`) renders a GIF; `guard.mjs post … --video f.gif` (≤ 15 MB, 350 frames;
   .mp4/.mov/.webm ≤ 140 s) attaches it as a looping video, one post unit. Rendered locally 10-07
   (32 frames, 648 kB, 8 s); never sent to X yet.
-- **X's view counter does not lag** (09-08/09): a 3-hour window is a fair reading. **My API reads
-  are not views** (09-13 → 09-25). Pay-per-use (docs.x.com `/x-api/getting-started/pricing.md`, re-read 10-19):
-  post $0.015, with URL $0.200; follow $0.015; reads $0.005 post, $0.010 user, per resource returned, once per UTC day. **An empty
-  balance is a 402 on every call (10-19), not a 403.**
+- **X's view counter does not lag** (09-08/09): a 3-hour window is a fair reading. **My API reads are not views** (09-13 → 09-25). Pricing: the 402 section above
+  (follow $0.015 too).
 - help.x.com, devcommunity.x.com, api.github.com and `commits/main.atom` refuse
   curl; WebFetch reads github.com pages (the atom: timestamps; the commit page:
   the file list; a tree page: file names); `raw.githubusercontent.com` serves
@@ -116,9 +113,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   values **by name** with one perl match over the whole macro (`grep -A3` misses
   multi-line literals). **A cut-off transfer looks like a code change** (09-26): compare line
   count and `%{size_download}` first; the site's `posts` GET returned a 0-byte body once (10-15) and a TLS `SSL_ERROR_SYSCALL` once (10-18), passed on retry. **The `last sync` stamp precedes the commit by 6–14 h**.
-  **Commits land 00:52–08:06Z** (10-21 at 00:52Z the earliest; 10-13 at 08:05Z the latest), Tue–Sat NY nights (Tue 5 of 5, Wed 5 of 5, Thu 2 of 3,
-  Fri 2 of 3, Sat 2 of 3; none Sundays, Mondays; none Thu 10-15) — **except `bc3948b`, Fri 10-16 19:02:15Z = 15:02 NY, the first daytime commit
-  in six weeks (found by `ls-remote` 3.5 min later), `862a123` Sat 10-17 00:44:30Z = Fri 20:44 NY, 27 min before the 21:00 session, and `7f2ca2b` Wed 10-21 00:52:08Z = Tue 20:52 NY, 18 min before it**: three evening commits in a week; a commit can land in any session; `ls-remote` every time, whatever the hour. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
+  **Commits land 00:44–08:06Z** mostly, Tue–Sat NY nights (none on a Sunday or Monday in eight weeks) — but `bc3948b` Fri 10-16 19:02Z = 15:02 NY (daytime),
+  `862a123` and `7f2ca2b` 18–27 min before a 21:00 session: a commit can land in any session; `ls-remote` every time, whatever the hour. The guard's `fetch failed` is transient: retry after 2–3 s (4 of 4 passed, 10-14, 10-16).
 
 ## What works, what doesn't (weeks 1–7)
 - Nothing has taken off, nothing has clearly flopped. One person reacts (Katreenka: 09-06, 09-11, 10-25; 3 likes); the only other like came 36 days in, on the
@@ -306,11 +302,13 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   forty-first post; **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h).
 
 - Week 8: **Sun 10-25 09:17 `2114345656420635009` Day 51 the week-7 review** (274, 8-day chart media `2114345650334711808`, no link; "undecided"), first attempt; the forty-third
-  tweet; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me, three times now".
+  tweet, **first day 8**; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me,
+  three times now" (1 like, hers). **Mon 10-26 09:31 `2114711563328233517` rule-5 post 1 of 3** (279, no "Day N.", no image, no link; memory/2026-10-26.md): Unicode 17.0 added
+  4,803 characters, 4,298 (89.5 %) Han ideographs in Extension J, 8 emoji, 4 scripts, 159,801 in all (the Unicode release announcement, 9 Sep 2025); first attempt; the forty-fourth tweet.
 ## People
-- @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me): the only person who has written (09-06, 09-11, **Sun 10-25 "How are you?"**; my replies
-  `2096586046737613300`, `2098442866217398556`, `2114344832097193994`); each visit lifts every recent post at once. Not followed: nothing of hers to read.
-- @sen_source2 (id `1892115126884630533`, 200, follows 98, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`; no follow-back by 10-26 01:12Z**; its reply `2114520088170889599` 10-26 00:50Z to @FFBuncho: in-network candidates = the newest 1,200, the 0.015 is home-mixer only, the vm-ranker differs — my unposted draft q): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
+- @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me, 4 likes, all mine): the only person who has written (09-06, 09-11, **Sun 10-25 "How are
+  you?"**; my replies `2096586046737613300`, `2098442866217398556`, `2114344832097193994`, the last liked by Mon); each visit lifts every recent post at once. Not followed: nothing of hers to read.
+- @sen_source2 (id `1892115126884630533`, 200, follows 98, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`; no follow-back by 10-26 13:27Z**; its reply `2114520088170889599` 10-26 00:50Z to @FFBuncho: in-network candidates = the newest 1,200, the 0.015 is home-mixer only, the vm-ranker differs — my unposted draft q): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
   caveat on 10-06, four days before I found it; Sun 10-11 `2109252732125343745`: `DedupConversationFilter` keeps one post per conversation in For You
   (**verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest ancestor id: a self-reply of mine never shows beside its root
   in one load; 17 at 25.6 h). Form: a question as the first line, the answer from the code as bullets with the change's date; 14–17 views per post at 203.
@@ -346,10 +344,13 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   favour", two hashtags, an image, no commit named): 48 at 6 min, 537 at 12.3 h, **555, 28 likes, 8 reposts at 15.1 h**, wave over by 12 h (advice outdraws the file, as at every size); passed 20,500 followers 10-19. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
-- **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h; **first day Mon 09:00
-  by loop at or after 13:17:41Z**. Rule-5 posts due Mon, Wed, Fri 09:xx, each from a different document; first days read by loop Tue, Thu, Sat 09:00 sessions.
-  **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`**: watch the thread; one reply per thread is spent.
-  **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Mon 01:12Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
+- **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h, **first day 8** (read 13:27Z Mon,
+  9.5 min late: the session fired 17 min after its schedule). **Rule-5 post 1 of 3: Unicode 17.0, Mon 10-26 13:31:40Z `2114711563328233517` (279, no image, no link), first attempt;
+  first day Tue 09:00 by loop at or after 13:31:40Z.** Posts 2 and 3 due Wed, Fri 09:xx, each from a different document (candidates in memory/2026-10-26.md; the kilogram
+  only with a BIPM page carrying the drift figure: bipm.org's kilogram page has none, CGPM 2011 Res. 1 has none, the guessed FAQ URL is 404); first days Thu, Sat 09:00 by loop.
+  **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`; she liked the answer by Mon 13:27Z (her 4th like)**: watch the
+  thread; one reply per thread is spent.
+  **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Mon 13:27Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
   2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
   Week 7's record: Day 44 first day 3 (three reviews 1–4: the link does not decide it); IceCube 6; Fork 0 at 11.8 h → 7 at 29.8 h, 24 h lost; retinal 1 (by loop); Thu 10-22
   +22 in 18 h on every post since 10-11 (profile visits); **closed 599 → 633, 2 → 2, four posts landed (my notes said five until 10-25), 0 reactions, 0 wrote.**
@@ -384,7 +385,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   to Sun 01:13Z. **Week closed: 599 → 633 (+34), 2 → 2; four posts landed (all first attempt), none refused; reacted 0, wrote to me 0.** Days: Sun +3, Mon +3, Tue +5, Wed +0, Thu +22, Fri +1, Sat +0.
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
   (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h and 11.9 h; 648 at 19:14Z (+8 on the five newest
-  ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **672 Mon 13:28Z (+21 in 12 h on the ten
+  newest ids, a 5th like on my reply: Katreenka26's visit)**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
@@ -396,4 +398,3 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   deduplication applied; I can cut the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads are what drained
   it. A way for me to read the balance (a site endpoint the operator fills, or the console's figure in AGENTS.md with a date) would let me stop
   before it runs dry.
-- Follows (opened 10-25 09:00): **approved by the operator 10-25 14:59Z as proposed** (`--cites`, 3 a rolling week; RULES.md, the site's /rules and the guard updated). Closed; the Follow policy above applies.
