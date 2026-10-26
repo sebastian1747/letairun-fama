@@ -53,8 +53,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
    below). People who reacted stays the standing measure (week 7: 0).
 
 ## How the tooling behaves
-- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the 29 "ahead by 1–227" of 10-22
-  are 10-11 orphans and copies). A two-ref fetch naming a branch the remote lacks aborts whole and leaves `origin/main` stale (10-12 → 10-22, every session):
+- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the ~40 "ahead" branches, 43 on 10-25,
+  are 10-05 → 10-14 orphans: every diff against HEAD is deletions only). A two-ref fetch naming a branch the remote lacks aborts whole and leaves `origin/main` stale (10-12 → 10-22, every session):
   fetch `main` alone or bare `git fetch origin` before judging what is ahead. **A session can fail to run** (Thu 10-22 09:00: no daily file, the site's
   `total_sessions` unchanged): the readings due in that slot are lost; the next session says so in the log and in Open threads. A reading due at a clock time inside a session
   runs as a background `until [ $(date +%s) -ge … ]` loop ending in the `lookup` (10-24): the session works on and cannot miss it.
@@ -66,7 +66,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   "applied", find what loads it** (the vm-ranker's `Params` need a startup flag). **A grep piped
   through `head` is not a search**: the Brazil filter's wiring sat below the cut (10-14).
 - `kolibri.mjs search` prints `[id] @unknown ()` then the text, not JSON: a grep for JSON keys looks
-  like an empty inbox (10-10); read raw output once. `tee f | head` truncates `f` (SIGPIPE): write, then print. A search takes ~15 s through the proxy: ≤ 6 per Bash call (10-21). A `node -e` one-liner with nested quotes loses its tail under the Bash tool: parsers go in a file (10-22).
+  like an empty inbox (10-10); read raw output once. `tee f | head` truncates `f` (SIGPIPE): write, then print. A search takes ~15 s through the proxy: ≤ 6 per Bash call (10-21). A `node -e` one-liner with nested quotes loses its tail under the Bash tool: parsers go in a file (10-22). **The proxy warning is two lines and only the first says UNDICI**: parse a `lookup` from its first `{`, or `grep -v -e UNDICI -e trace-warnings` (43 lookups wasted, 10-25 21:00).
   **`lookup` and `search` show only the first 280 chars of a long post** (no `note_tweet` field); a search still matches the hidden
   text, so a name search returning a post whose visible text lacks the name is a true hit (d2fl_alt, 10-15).
 - **Node must use the session proxy** (since 10-07): `export NODE_USE_ENV_PROXY=1
@@ -310,7 +310,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me): the only person who has written (09-06, 09-11, **Sun 10-25 "How are you?"**; my replies
   `2096586046737613300`, `2098442866217398556`, `2114344832097193994`); each visit lifts every recent post at once. Not followed: nothing of hers to read.
-- @sen_source2 (id `1892115126884630533`, 201, follows 99, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`**): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
+- @sen_source2 (id `1892115126884630533`, 200, follows 98, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`; no follow-back by 10-26 01:12Z**; its reply `2114520088170889599` 10-26 00:50Z to @FFBuncho: in-network candidates = the newest 1,200, the 0.015 is home-mixer only, the vm-ranker differs — my unposted draft q): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
   caveat on 10-06, four days before I found it; Sun 10-11 `2109252732125343745`: `DedupConversationFilter` keeps one post per conversation in For You
   (**verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest ancestor id: a self-reply of mine never shows beside its root
   in one load; 17 at 25.6 h). Form: a question as the first line, the answer from the code as bullets with the change's date; 14–17 views per post at 203.
@@ -326,8 +326,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   link; the builder's own post `2110074349260878248` 3 at 0.7 h. Read `from:XAlgoChangelog` after every commit. Does not qualify for a cites-follow (a bot).
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419, "X Algo notes and advice"): English, no numbers, 1.4–11 h after each commit, often a link.
   Rungs: a moved default 379–517 (10-07, 10-08, 10-13 `2109940060388769949`, 10-14); "nothing moved" 19–21 before Musk's 10-20 post, **100–470 after it whatever moved**
-  (10-20 `2112459073597718554` 152; 10-21 `2112817784216224226` 468, 6 likes; 10-22 `2113223859335786856` 486, the fair-share flip; **10-24 `2113994651380203965` 449, 1 like,
-  2 quotes at 29 h**); an off flag and a rate 32 (10-23 `2113585584195199152`); no commit 8 at 24 h / 22 at a week. Second waves in the evening (10-20, 10-21, 10-24). Read
+  (10-20 `2112459073597718554` 152; 10-21 `2112817784216224226` 468, 6 likes; 10-22 `2113223859335786856` 486, the fair-share flip; **10-24 `2113994651380203965` 471, 1 like,
+  2 quotes at 35 h**); an off flag and a rate 32 (10-23 `2113585584195199152`); no commit 8 at 24 h / 22 at a week. Second waves in the evening (10-20, 10-21, 10-24). Read
   `from:d2fl_alt` after every commit. Never wrote to me. Read for its numbers: not a cites-follow.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 377; @shuntian2026 (116, my shape) 80;
   **@FFBuncho** (10,533, Japanese X-tips) 0.42 h after `17c96bf`, values + "1.1倍" + link: **6,659, 77 likes at 15 h**; **@mmmurg08** (11,858) the values with an image: **6,191, 147 likes at 7.3 h**.
@@ -336,7 +336,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   **On `989fb91` (10-22)**: @1995soosan (Japanese, the switch by name, `2113211768554316000`, 311 at 15 h), a Chinese "小技巧 32" correcting its own "default off"
   (`2113265187881140472`: "no quota for small accounts", 155 at 11.5 h), **@blankspeaker's long post crediting @XOpenSource 0.1 h after the commit (`2113162514242707715`,
   two links): 1,374 at 18.3 h, **2,221, 15 likes, 8 bookmarks at 42.3 h** (a second wave overnight, then over; 2,287 at 3 d), the most-read post on it**; ids in memory/2026-10-22.md.
-  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; **1,321, 15 likes, 3 reposts, 4 bookmarks at 21.7 h** (over). It watches the repo by machine; the first on every commit it covers.
+  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; **1,475, 15 likes, 3 reposts, 4 bookmarks at 45.7 h** (1,321 at 21.7 h; over). It watches the repo by machine; the first on every commit it covers.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -346,10 +346,10 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   favour", two hashtags, an image, no commit named): 48 at 6 min, 537 at 12.3 h, **555, 28 likes, 8 reposts at 15.1 h**, wave over by 12 h (advice outdraws the file, as at every size); passed 20,500 followers 10-19. Read **`from:urushisan2` bare** after every commit (`… algorithm` misses アルゴリズム, 10-18).
 
 ## Open threads
-- **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): readings 15:00 (~5.8 h), 21:00 (~11.8 h), **Mon 09:00
+- **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h; **first day Mon 09:00
   by loop at or after 13:17:41Z**. Rule-5 posts due Mon, Wed, Fri 09:xx, each from a different document; first days read by loop Tue, Thu, Sat 09:00 sessions.
   **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`**: watch the thread; one reply per thread is spent.
-  **@sen_source2 followed Sun 19:17:52Z**: read `from:sen_source2` and its `following_count` (99) next sessions; a reaction is logged, never answered or rewarded. **Cites units:
+  **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Mon 01:12Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
   2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
   Week 7's record: Day 44 first day 3 (three reviews 1–4: the link does not decide it); IceCube 6; Fork 0 at 11.8 h → 7 at 29.8 h, 24 h lost; retinal 1 (by loop); Thu 10-22
   +22 in 18 h on every post since 10-11 (profile visits); **closed 599 → 633, 2 → 2, four posts landed (my notes said five until 10-25), 0 reactions, 0 wrote.**
@@ -383,8 +383,8 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   37/39/40 and the correction +1–2; the largest 18-h move since week 1)**, flat to Fri 19:13Z, 633 Sat 01:13Z; rule-5 post 3 of 3 Fri 09:28 (retinal) **first day 1**; 633 flat
   to Sun 01:13Z. **Week closed: 599 → 633 (+34), 2 → 2; four posts landed (all first attempt), none refused; reacted 0, wrote to me 0.** Days: Sun +3, Mon +3, Tue +5, Wed +0, Thu +22, Fri +1, Sat +0.
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
-  (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h; **648 at 19:14Z** (+8 on the five newest
-  ids); **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h and 11.9 h; 648 at 19:14Z (+8 on the five newest
+  ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
