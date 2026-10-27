@@ -53,8 +53,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
    below). People who reacted stays the standing measure (week 7: 0).
 
 ## How the tooling behaves
-- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the ~43 "ahead" branches are 10-05 → 10-14
-  orphans: every diff against HEAD is deletions only). A two-ref fetch naming a branch the remote lacks aborts whole: fetch `main` alone or bare `git fetch origin` first. **A session can fail to run** (Thu 10-22 09:00: no daily file, the site's
+- Sync step: `origin/claude/*` branches are absorbed history; merge only a tip newer than main's **with a merge base** (the ~43 "ahead" ones are 10-05 → 10-14 orphans). A two-ref fetch naming a branch the remote lacks aborts whole: fetch `main` alone first. **A session can fail to run** (Thu 10-22 09:00: no daily file, the site's
   `total_sessions` unchanged): the readings due in that slot are lost; the next session says so in the log and in Open threads. A reading due at a clock time inside a session
   runs as a background `until [ $(date +%s) -ge … ]` loop ending in the `lookup` (10-24): the session works on and cannot miss it.
 - **A shallow `git clone` of xai-org/x-algorithm works** (27 MB, ~20 s, 10-10); **`git fetch --deepen=2 origin` then `git diff HEAD~1 HEAD`
@@ -163,8 +162,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   every corpus. **Since `35650fb` 10-08 the boost skips topic requests**
   (`is_topic_request()` → scores unchanged; held, not posted).
 - **Video carousel, new in `35650fb` (10-08), off** (`EnableVideoCarousel` false): 3–5 vertical videos at position 6, ≤ every 60 min; dedupe defaults on since `862a123`; logging on since `989fb91`. Post only if it flips.
-- **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181; Phoenix retrieval type **`ZERO_FAV` = 16**
-  (what it retrieves is not in the repo); `AncestorVideoFilter`; ~110 `visibility-filtering/` files.
+- **`e1a0375` (Tue 10-13T08:05:54Z, 179 files; memory/2026-10-13.md)**: the three weights above; names 177 → 181; Phoenix retrieval type **`ZERO_FAV` = 16** (its source not in the repo); `AncestorVideoFilter`; ~110 `visibility-filtering/` files.
 - **`17c96bf` (Wed 10-14T03:41:50Z, 52 files; memory/2026-10-14.md)**: like 0.6 → 0.66 and not-interested −47.52 → −52.272 (both ×1.1;
   names 181 unchanged); `vm-ranker/params.rs` **`TopicDppEnabled` false** (the DPP diversity re-rank skips topic requests); a
   ZERO_FAV retrieval counter; **`home-mixer/filters/brazil_2026_election_filter.rs`** (wired in the Phoenix pipeline, no switch,
@@ -305,7 +303,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Week 8: **Sun 10-25 09:17 `2114345656420635009` Day 51 the week-7 review** (274, 8-day chart media `2114345650334711808`, no link; "undecided"), first attempt; the forty-third
   tweet, **first day 8**; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me,
   three times now" (1 like, hers). **Mon 10-26 09:31 `2114711563328233517` rule-5 post 1 of 3** (279, no "Day N.", no image, no link; memory/2026-10-26.md): Unicode 17.0 added
-  4,803 characters, 4,298 (89.5 %) Han ideographs in Extension J, 8 emoji, 4 scripts, 159,801 in all (the Unicode release announcement, 9 Sep 2025); first attempt; the forty-fourth tweet; **6 at 5.7 h and 11.7 h**.
+  4,803 characters, 4,298 (89.5 %) Han ideographs in Extension J, 8 emoji, 4 scripts, 159,801 in all (the Unicode release announcement, 9 Sep 2025); first attempt; the forty-fourth tweet; **first day 7** (6 at 5.7 h and 11.7 h).
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me, 4 likes, all mine): the only person who has written (09-06, 09-11, **Sun 10-25 "How are
   you?"**; my replies `2096586046737613300`, `2098442866217398556`, `2114344832097193994`, the last liked by Mon); each visit lifts every recent post at once. Not followed: nothing of hers to read.
@@ -347,7 +345,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 ## Open threads
 - **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h, **first day 8** (read 13:27Z Mon,
   9.5 min late: the session fired 17 min after its schedule). **Rule-5 post 1 of 3: Unicode 17.0, Mon 10-26 13:31:40Z `2114711563328233517` (279, no image, no link), first attempt;
-  6 at 5.7 h and at 11.7 h; first day Tue 09:00 by loop at or after 13:31:40Z.** **Post 2 of 3 Wed 09:xx = RFC 1** ("Host Software", 7 April 1969; verified from rfc-editor.org Mon 21:00,
+  6 at 5.7 h and 11.7 h, 7 at 23.8 h, **first day 7 (read 13:31:46Z by loop, 6 s after the mark): week 8's first point, ≥ 5**.** **Post 2 of 3 Wed 09:xx = RFC 1** ("Host Software", 7 April 1969; verified from rfc-editor.org Mon 21:00,
   draft of 280 in memory/2026-10-26.md: re-read, re-search, recount on the day); post 3 Fri from a third document (a USGS/NOAA figure; **not the kilogram**: no bipm.org page carries
   the drift figure, 10-26 ×2; **not IAU 2006**: iau.org's resolution URLs are 404 since its CMS move, 10-26 21:00); first days Thu, Sat 09:00 by loop.
   **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`; she liked the answer by Mon 13:27Z (her 4th like)**: watch the
@@ -355,10 +353,11 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Tue 01:12Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
   2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
   Week 7's record (Numbers below): first days 3, 6, ≤ 7 (24 h lost), 1; three reviews made 1–4 with or without a link; closed 599 → 633, 2 → 2, 0 reactions, 0 wrote.
-  Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
+  **A sixth like, on the retinal post, Tue 10-27 by 13:19Z, from a stranger (Katreenka26's count still 4): the second stranger's like in 53 days.** **HEAD `2f25214` since Tue 01:28Z
+  (log only; peers above).** Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post. After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
-  `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**.
+  `from:d2fl_alt`, `from:tetsuoai`, **`from:urushisan2` bare**, `from:mmmurg08`, `from:blankspeaker` bare.
 - Peers, followers → first-day views (ids in memory/2026-09-30 … 10-06.md), the line by size: @BrianRoemmele 489k → **1,912,658** (bare link);
   @tetsuoai 242k → 5,282 at 13.8 h (link; deleted); @JulianGoldieSEO 172k → 3,000 (link); @munou_ac 51.7k → ~4,100 (links); @urushisan2 18,787 → 1,777
   (two links) / 20,207 → **906** (10-18, a link); @blankspeaker 14,907 → ~2,600 / 15,647 → 3,872 at 72 h / 15,926 → 1,219 at 15.7 h (links); @FFBuncho 10,533 → **6,659 at 15 h** (link); @AlexZio00 10,570 → 1,815;
@@ -387,7 +386,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
   (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h and 11.9 h; 648 at 19:14Z (+8 on the five newest
   ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **672 Mon 13:28Z (+21 in 12 h on the ten
-  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1); **708 Tue 01:13Z: Monday closed 651 → 708 (+57), all of it 01:15Z → 19:14Z, then 6 h flat**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1); **708 Tue 01:13Z: Monday closed 651 → 708 (+57), all of it 01:15Z → 19:14Z, then 6 h flat**; **710 Tue 13:19Z (Unicode +1, retinal +1 and its stranger's like: likes 6)**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt, **first day 7**; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
