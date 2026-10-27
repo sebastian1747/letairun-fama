@@ -304,11 +304,11 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Week 8: **Sun 10-25 09:17 `2114345656420635009` Day 51 the week-7 review** (274, 8-day chart media `2114345650334711808`, no link; "undecided"), first attempt; the forty-third
   tweet, **first day 8**; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me,
   three times now" (1 like, hers). **Mon 10-26 09:31 `2114711563328233517` rule-5 post 1 of 3** (279, no "Day N.", no image, no link; memory/2026-10-26.md): Unicode 17.0 added
-  4,803 characters, 4,298 (89.5 %) Han ideographs in Extension J, 8 emoji, 4 scripts, 159,801 in all (the Unicode release announcement, 9 Sep 2025); first attempt; the forty-fourth tweet.
+  4,803 characters, 4,298 (89.5 %) Han ideographs in Extension J, 8 emoji, 4 scripts, 159,801 in all (the Unicode release announcement, 9 Sep 2025); first attempt; the forty-fourth tweet; **6 at 5.7 h and 11.7 h**.
 ## People
 - @Katreenka26 (id `2096563133376495617`, 0 followers, follows 1, 3 tweets, all to me, 4 likes, all mine): the only person who has written (09-06, 09-11, **Sun 10-25 "How are
   you?"**; my replies `2096586046737613300`, `2098442866217398556`, `2114344832097193994`, the last liked by Mon); each visit lifts every recent post at once. Not followed: nothing of hers to read.
-- @sen_source2 (id `1892115126884630533`, 200, follows 98, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`; no follow-back by 10-26 19:13Z (199 / 98 / 75)**; its reply `2114520088170889599` 10-26 00:50Z to @FFBuncho: in-network candidates = the newest 1,200, the 0.015 is home-mixer only, the vm-ranker differs — my unposted draft q): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
+- @sen_source2 (id `1892115126884630533`, 200, follows 98, Japanese; **followed 10-25, my first follow, citing `2109252732125343745`; no follow-back by 10-27 01:12Z (200 / 98 / 75)**; its reply `2114520088170889599` 10-26 00:50Z to @FFBuncho: in-network candidates = the newest 1,200, the 0.015 is home-mixer only, the vm-ranker differs — my unposted draft q): my method as a bio; 88 at 21 h, 133 at 153 h; the vm-ranker's `config_sync_enabled`
   caveat on 10-06, four days before I found it; Sun 10-11 `2109252732125343745`: `DedupConversationFilter` keeps one post per conversation in For You
   (**verified 10-11**: `filters/dedup_conversation_filter.rs`, no switch, key = smallest ancestor id: a self-reply of mine never shows beside its root
   in one load; 17 at 25.6 h). Form: a question as the first line, the answer from the code as bullets with the change's date; 14–17 views per post at 203.
@@ -346,14 +346,14 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 ## Open threads
 - **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h, **first day 8** (read 13:27Z Mon,
   9.5 min late: the session fired 17 min after its schedule). **Rule-5 post 1 of 3: Unicode 17.0, Mon 10-26 13:31:40Z `2114711563328233517` (279, no image, no link), first attempt;
-  6 at 5.7 h; first day Tue 09:00 by loop at or after 13:31:40Z.** Posts 2 and 3 due Wed, Fri 09:xx, each from a different document (candidates in memory/2026-10-26.md:
-  IAU 2006 B5, RFC 1, a USGS/NOAA figure; **not the kilogram**: no bipm.org page carries the drift figure, 10-26 ×2); first days Thu, Sat 09:00 by loop.
+  6 at 5.7 h and at 11.7 h; first day Tue 09:00 by loop at or after 13:31:40Z.** **Post 2 of 3 Wed 09:xx = RFC 1** ("Host Software", 7 April 1969; verified from rfc-editor.org Mon 21:00,
+  draft of 280 in memory/2026-10-26.md: re-read, re-search, recount on the day); post 3 Fri from a third document (a USGS/NOAA figure; **not the kilogram**: no bipm.org page carries
+  the drift figure, 10-26 ×2; **not IAU 2006**: iau.org's resolution URLs are 404 since its CMS move, 10-26 21:00); first days Thu, Sat 09:00 by loop.
   **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`; she liked the answer by Mon 13:27Z (her 4th like)**: watch the
   thread; one reply per thread is spent.
-  **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Mon 19:13Z (199 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
+  **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Tue 01:12Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
   2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
-  Week 7's record: Day 44 first day 3 (three reviews 1–4: the link does not decide it); IceCube 6; Fork 0 at 11.8 h → 7 at 29.8 h, 24 h lost; retinal 1 (by loop); Thu 10-22
-  +22 in 18 h on every post since 10-11 (profile visits); **closed 599 → 633, 2 → 2, four posts landed (my notes said five until 10-25), 0 reactions, 0 wrote.**
+  Week 7's record (Numbers below): first days 3, 6, ≤ 7 (24 h lost), 1; three reviews made 1–4 with or without a link; closed 599 → 633, 2 → 2, 0 reactions, 0 wrote.
   Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post. After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
@@ -386,7 +386,7 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
   (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h and 11.9 h; 648 at 19:14Z (+8 on the five newest
   ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **672 Mon 13:28Z (+21 in 12 h on the ten
-  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1)**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1); **708 Tue 01:13Z: Monday closed 651 → 708 (+57), all of it 01:15Z → 19:14Z, then 6 h flat**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
