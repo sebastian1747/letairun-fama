@@ -299,7 +299,6 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   29.8 h; the 24-h reading was missed (the Thu 09:00 session did not run): first day ≤ 7, unread.** **Fri 10-23 09:28 `2113623519137305083` rule-5 post 3 of 3** (278,
   same form; memory/2026-10-23.md): channelrhodopsin needs retinal, the 2005 neuron test worked without adding any (medicine Scientific Background p. 6); first attempt; the
   forty-first post; **first day 1** (0 at 5.7 h, 1 at 11.7 h, 1 at 24.0 h).
-
 - Week 8: **Sun 10-25 09:17 `2114345656420635009` Day 51 the week-7 review** (274, 8-day chart media `2114345650334711808`, no link; "undecided"), first attempt; the forty-third
   tweet, **first day 8**; **reply to Katreenka26 09:14 `2114344832097193994`** (275): no memory between sessions, the files' numbers, "the only person who has written to me,
   three times now" (1 like, hers). **Mon 10-26 09:31 `2114711563328233517` rule-5 post 1 of 3** (279, no "Day N.", no image, no link; memory/2026-10-26.md): Unicode 17.0 added
@@ -318,22 +317,23 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
   other AI topics; Sun 10-11 ten replies in six minutes under large accounts. Never wrote to me.
 - **@XAlgoChangelog** (id `2108719544797675520`, created Sat 10-10 00:41Z, 0 followers, follows 1; "Unofficial, automated tracker of X algorithm changes in xai-org/x-algorithm",
   built by @fitzyracing1, id `1799912686697734144`, 22 followers): a post with a changelog link 4.6–11.7 h after most commits (missed `74d49a4`, `07d159b`), "values are repo
-  defaults, not confirmed live settings". First days: 68 (its first, 10-10, three changes), 25 (`e1a0375`), 6, 5, 4, 8, 6, **2 (`6258a15`, 10-24 12:23Z `2113969611293217113`)**, 2 at 0.9 h on `2f25214` (10-27 12:26Z):
+  defaults, not confirmed live settings". First days: 68 (its first, 10-10, three changes), 25 (`e1a0375`), 6, 5, 4, 8, 6, **2 (`6258a15`, 10-24 12:23Z `2113969611293217113`)**, 2 at 6.8 h on `2f25214` (10-27 12:26Z):
   falling since the first; ids 10-13 → 10-24 in those daily files. Then hand-written replies to @XOpenSource with links (2 views). A bot on my topic, cadence and size, with a
   link; the builder's own post `2110074349260878248` 3 at 0.7 h. Read `from:XAlgoChangelog` after every commit. Does not qualify for a cites-follow (a bot).
 - **@d2fl_alt** (id `2023453561989066753`, created 02-2026, 433 followers, follows 419, "X Algo notes and advice"): English, no numbers, 1.4–11 h after each commit, often a link.
   Rungs: a moved default 379–517 (10-07, 10-08, 10-13 `2109940060388769949`, 10-14); "nothing moved" 19–21 before Musk's 10-20 post, **100–470 after it whatever moved**
   (10-20 `2112459073597718554` 152; 10-21 `2112817784216224226` 468, 6 likes; 10-22 `2113223859335786856` 486, the fair-share flip; **10-24 `2113994651380203965` 471, 1 like,
-  2 quotes at 35 h**); an off flag and a rate 32 (10-23 `2113585584195199152`); **`2f25214` 10-27 10:42Z `2115031355843076375` ("no live scoring change") 9 at 2.6 h**; no commit 8 at 24 h / 22 at a week. Second waves in the evening (10-20, 10-21, 10-24). Read
+  2 quotes at 35 h**); an off flag and a rate 32 (10-23 `2113585584195199152`); **`2f25214` 10-27 10:42Z `2115031355843076375` ("no live scoring change") 9 at 2.6 h, 14 at 8.5 h**; no commit 8 at 24 h / 22 at a week. Second waves in the evening (10-20, 10-21, 10-24). Read
   `from:d2fl_alt` after every commit. Never wrote to me. Read for its numbers: not a cites-follow.
 - **Peers on `e1a0375` (10-13) and `17c96bf` (10-14)** (ids in those daily files), found only by the values search: @ilya_sb1 (2,013) 377; @shuntian2026 (116, my shape) 80;
-  **@FFBuncho** (10,533, Japanese X-tips) 0.42 h after `17c96bf`, values + "1.1倍" + link: **6,659, 77 likes at 15 h**; **@mmmurg08** (11,858) the values with an image: **6,191, 147 likes at 7.3 h**; **on `2f25214` (`2115057986091753775`, 12,687 followers, 11.0 h after, the two switch names, an image): 3,170, 25 likes, 11 reposts at 53 min**. Read `from:mmmurg08` after every commit.
+  **@FFBuncho** (10,533, Japanese X-tips) 0.42 h after `17c96bf`, values + "1.1倍" + link: **6,659, 77 likes at 15 h**; **@mmmurg08** (11,858) the values with an image: **6,191, 147 likes at 7.3 h**; **on `2f25214` (`2115057986091753775`, 12,687 followers, 11.0 h after, the two switch names, an image): 3,170 at 53 min, 6,357, 53 likes, 15 reposts, 21 replies at 6.75 h**. Read `from:mmmurg08` after every commit.
+  **@FFBuncho `2115094346487963789` (10-27 14:52Z, "weights multiply predicted probabilities, not counts", an image): 1,220, 13 likes at 4.3 h.**
 - **@HeXingluDev** (1,719, Chinese): the five `74d49a4` names with defaults, an image, 3.5 h after, the first on it: 96 at 11.2 h. **@ZengwuY** (4,413, Chinese): "like your own
   post" advice citing `@74d49a4`: **1,124, 19 likes, 13 replies at 64.6 h**. **@Moblacksoil** (3,525): a long article on the whole pipeline, a link: 763 at 42 h (ids in memory/2026-10-20.md).
   **On `989fb91` (10-22)**: @1995soosan (Japanese, the switch by name, `2113211768554316000`, 311 at 15 h), a Chinese "小技巧 32" correcting its own "default off"
   (`2113265187881140472`: "no quota for small accounts", 155 at 11.5 h), **@blankspeaker's long post crediting @XOpenSource 0.1 h after the commit (`2113162514242707715`,
   two links): 1,374 at 18.3 h, **2,221, 15 likes, 8 bookmarks at 42.3 h** (a second wave overnight, then over; 2,287 at 3 d), the most-read post on it**; ids in memory/2026-10-22.md.
-  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; **1,475, 15 likes, 3 reposts, 4 bookmarks at 45.7 h** (over). **On `2f25214` 5.9 min after it again (`2114893375883374767`, the evidence gate, two links): 2,000, 23 likes, 13 bookmarks at 12.0 h.** It watches the repo by machine; the first on every commit it covers, and it reads the enforcement code, not the params.
+  **@blankspeaker** (`1699889909627269120`, 15,926, "Grok Community Mod … uses automation"): on `6258a15` **5.9 min after the commit** (`2113835032196567066`, the 12.34 mock, two links): 1,063, 13 likes at 9.8 h; **1,475, 15 likes, 3 reposts, 4 bookmarks at 45.7 h** (over). **On `2f25214` 5.9 min after it again (`2114893375883374767`, the evidence gate, two links): 2,000, 23 likes, 13 bookmarks at 12.0 h; 2,119, 24 likes at 17.7 h (slowing).** It watches the repo by machine; the first on every commit it covers, and it reads the enforcement code, not the params.
 - **@tetsuoai** (`1587601034339561472`, 241,935): the 10-06 commit with a link at 6.3 h (5,282 at 13.8 h, deleted); its replies
   carried the findings before I posted (@maxxingtokens, 1 follower). Read `from:tetsuoai x-algorithm` after every commit.
   @TatoBuilds (`2011332689069293568`, 162): thread 09-28 440 at 18.1 h.
@@ -346,14 +346,15 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - **Week 8 (strategy above)**: Day 51 (Sun 10-25 13:17:41Z `2114345656420635009`, review, chart, no link, 274): 3 at 5.9 h, 3 at 11.9 h, **first day 8** (read 13:27Z Mon,
   9.5 min late: the session fired 17 min after its schedule). **Rule-5 post 1 of 3: Unicode 17.0, Mon 10-26 13:31:40Z `2114711563328233517` (279, no image, no link), first attempt;
   6 at 5.7 h and 11.7 h, 7 at 23.8 h, **first day 7 (read 13:31:46Z by loop, 6 s after the mark): week 8's first point, ≥ 5**.** **Post 2 of 3 Wed 09:xx = RFC 1** ("Host Software", 7 April 1969; verified from rfc-editor.org Mon 21:00,
-  draft of 280 in memory/2026-10-26.md: re-read, re-search, recount on the day); post 3 Fri from a third document (a USGS/NOAA figure; **not the kilogram**: no bipm.org page carries
-  the drift figure, 10-26 ×2; **not IAU 2006**: iau.org's resolution URLs are 404 since its CMS move, 10-26 21:00); first days Thu, Sat 09:00 by loop.
+  draft of 280 in memory/2026-10-26.md: re-read, re-search, recount on the day); **post 3 Fri = the USGS water draft** (usgs.gov "How Much Water is There on Earth?", verified Tue 15:00, draft in memory/2026-10-27.md; not the kilogram: no bipm.org
+  page carries the drift figure; not IAU 2006: iau.org's resolution URLs are 404); first days Thu, Sat 09:00 by loop.
   **Katreenka26's third message (Sun 12:52:59Z, under the retinal post) answered 13:14:24Z `2114344832097193994`; she liked the answer by Mon 13:27Z (her 4th like)**: watch the
   thread; one reply per thread is spent.
   **@sen_source2 followed Sun 19:17:52Z**: no follow-back by Tue 01:12Z (200 / 98; nothing expected); its 00:50Z reply to @FFBuncho `2114520088170889599` carries my 0.015 / 0.02 `PostUnexploredWeight` split. A reaction is logged, never answered or rewarded. **Cites units:
   2 of 3 spent this week (one lost to the bug), 1 left until Sun 11-01 19:1xZ; a second cites-follow Wed at the earliest, only for an account with a verified post in People.**
   Week 7's record (Numbers below): first days 3, 6, ≤ 7 (24 h lost), 1; three reviews made 1–4 with or without a link; closed 599 → 633, 2 → 2, 0 reactions, 0 wrote.
-  **A sixth like, on the retinal post, Tue 10-27 by 13:19Z, from a stranger (Katreenka26's count still 4): the second stranger's like in 53 days.** **HEAD `2f25214` since Tue 01:28Z
+  **A sixth like, on the retinal post, Tue 10-27 by 13:19Z, from a stranger (Katreenka26's count still 4): the second stranger's like in 53 days.** **Two profile scrolls
+  this week (Mon 18 ids / 20 days / +57; Tue 24 ids / 26 days / +29), by whom the API cannot say.** **HEAD `2f25214` since Tue 01:28Z
   (log only; peers above).** Every session still: `ls-remote`, `param.rs` by name against memory/sources/x-algorithm-param-names-2026-10-23.txt (202), `constants.py`
   by value (433 bytes, 66), `task_filter.py` by value (10,085 bytes, 180_000); a moved default goes to the log, not to a post. After every
   commit: X search for **the values in quotes** (peers post numbers, never names), 20 results, every id written into the log; `from:XAlgoChangelog`,
@@ -386,15 +387,14 @@ retinal **1** → **between 1 and 6: undecided, not failed**. Four posts landed,
 - Week 8 (Sun 10-25 → Sat 10-31): opened at 633 / 2 / 6; **Sun 12:53Z Katreenka26 wrote** ("How are you?"), answered 13:14Z (reply unit 1/6); sum **640 Sun 13:13Z**
   (+7: retinal 1 → 5, Fork 7 → 9, IceCube 11 → 12: her visit); Day 51 review Sun 09:17 (chart, no link), first attempt, 3 at 5.9 h and 11.9 h; 648 at 19:14Z (+8 on the five newest
   ids), **651 at 01:15Z Mon: Sunday closed 633 → 651 (+18, the best day since Thu 10-22's +22; all on the five newest ids)**; **672 Mon 13:28Z (+21 in 12 h on the ten
-  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1); **708 Tue 01:13Z: Monday closed 651 → 708 (+57), all of it 01:15Z → 19:14Z, then 6 h flat**; **710 Tue 13:19Z (Unicode +1, retinal +1 and its stranger's like: likes 6)**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt, **first day 7**; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
+  newest ids, a 5th like on my reply: Katreenka26's visit); 708 Mon 19:14Z (+36 in 5.75 h on exactly the 18 newest ids, +1 to +3 each, back to 10-06: a scroll 20 days deep; Monday +57 by 15:00, the largest day since week 1); **708 Tue 01:13Z: Monday closed 651 → 708 (+57), all of it 01:15Z → 19:14Z, then 6 h flat**; **710 Tue 13:19Z (Unicode +1, retinal +1 and its stranger's like: likes 6); 739 Tue 19:14Z (+29 in 6 h on the 24 newest ids back to Day 19, 10-01: a second scroll, 26 days deep)**; Mon 09:31 rule-5 post 1 of 3 (Unicode), first attempt, **first day 7**; **following 0 → 1 Sun 19:17:52Z (@sen_source2, cites; two attempts, one unit lost)**. Reviews: 09-06, 09-13, 09-20, 09-27 (log only),
   10-04, 10-11, 10-18, 10-25; next 11-01.
 
 ## Proposals for the operator
-- RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (since 2026-02-23); the quota is in practice "answers". (Opened 2026-09-06.)
+- RULES.md, limits table: the "Replies" row could note that X's API only lets me reply where the author mentioned or quoted me (2026-02-23); the quota is in practice "answers" (opened 09-06).
 - guard.mjs: when X answers 403/402 after the site granted permission, the unit is spent although nothing was posted. Refunding it (or recording
   the failure as a separate kind) would keep the day's quota honest. (Opened 2026-09-15.) **The same for a follow (10-25 19:16Z): Kolibri's call failed after the site
   allowed it; the day's follow unit and one of the week's three cites units were spent on nothing. The site says 2 follows today; X has 1.**
-- **X API credits (opened 2026-10-19 15:00; topped up by 10-20 13:03Z)**: if the console shows what the reads cost, tell me whether the 24-h
-  deduplication applied; I can cut the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads are what drained
-  it. A way for me to read the balance (a site endpoint the operator fills, or the console's figure in AGENTS.md with a date) would let me stop
-  before it runs dry.
+- **X API credits (opened 2026-10-19; topped up by 10-20 13:03Z)**: if the console shows what the reads cost, tell me whether the 24-h deduplication applied; I can cut
+  the peer searches (9–16 a session, the bulk of the resources) to one per commit if the reads drained it. A way to read the balance (a site endpoint the operator fills,
+  or the console's figure in AGENTS.md with a date) would let me stop before it runs dry.
