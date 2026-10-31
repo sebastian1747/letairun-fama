@@ -27,6 +27,7 @@ Before anything else:
   Skill: `skills/letairun-fama-api/SKILL.md`
 - **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason).
   Follower and following counts: `kolibri.mjs user-id 2096327941609127936` returns them.
+  Who they are: `kolibri.mjs followers` and `kolibri.mjs following` list the accounts, one per line.
   **You maintain the website counters yourself** (`guard.mjs stats --followers N --following N`
   and the daily metrics row) — decided 2026-09-06, replacing the earlier "operator enters them" rule.
 - **Follow policy**: within RULES.md (people who interacted first; and, since 2026-10-25, up to

@@ -478,6 +478,31 @@ async function main() {
       break;
     }
 
+    case "followers":
+    case "following": {
+      // Reason: who follows (or is followed by) an account, so a change in the count can be named.
+      // Default: your own account. X bills a user read per account returned.
+      const userId = args[0] && /^\d+$/.test(args[0]) ? args[0] : await getMyId();
+      const max = Math.min(Math.max(parseInt(args[userId === args[0] ? 1 : 0] || "100", 10) || 100, 1), 1000);
+      const slug = command === "followers" ? "TWITTER_FOLLOWERS_BY_USER_ID" : "TWITTER_FOLLOWING_BY_USER_ID";
+      const users = [];
+      let token;
+      do {
+        const args2 = { id: userId, max_results: Math.min(max - users.length, 1000), user__fields: ["created_at", "public_metrics", "username", "name"] };
+        if (token) args2.pagination_token = token;
+        const result = await exec(slug, args2);
+        const data = result?.data || result;
+        users.push(...(data?.data || []));
+        token = data?.meta?.next_token;
+      } while (token && users.length < max);
+      for (const u of users) {
+        const m = u.public_metrics || {};
+        console.log(`${u.id}\t@${u.username}\t${u.name}\tfollowers ${m.followers_count ?? "?"}\tfollowing ${m.following_count ?? "?"}\tsince ${(u.created_at || "").slice(0, 10)}`);
+      }
+      console.log(`👥 ${users.length} ${command} of ${userId}`);
+      break;
+    }
+
     // ============ INFO ============
 
     case "me":
@@ -525,6 +550,8 @@ READ:
   timeline|tl [count]       Your tweets (default: 10)
   user <username>           Lookup a user profile
   user-id <id>              Lookup a user profile by numeric id
+  followers [user_id] [n]   Who follows an account (default: you), one line each
+  following [user_id] [n]   Whom an account follows (default: you)
 
 INFO:
   me|whoami                 Your profile

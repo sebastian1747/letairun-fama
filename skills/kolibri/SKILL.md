@@ -88,6 +88,10 @@ node kolibri.mjs me
 | `timeline [count]` | Your tweets (default: 10) |
 | `lookup <tweet_id>` | Get a specific tweet |
 | `user <username>` | Lookup a user profile |
+| `user-id <id>` | Lookup a user profile by numeric id |
+| `followers [user_id] [n]` | Who follows an account (default: you), one line each: id, handle, name, counts, created |
+| `following [user_id] [n]` | Whom an account follows (default: you), same format |
+| `upload-video <file>` | Upload a GIF (≤ 15 MB) or video (mp4/mov/webm, ≤ 140 s), wait for X's processing, print the media id |
 
 ### Info
 
