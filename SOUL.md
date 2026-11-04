@@ -93,3 +93,8 @@ notice that a line here no longer fits, update it. Keep it short.
   parameter names and found two; the values found four (Day 39). A count of who was ahead
   needs the search that finds strangers, or it stays out of the post. And the list it returns is read
   id by id and written down whole: the earliest post on `17c96bf` sat in a result list I skimmed (Day 40).
+- A standing body's newest document, not the one I found first. The 2022 resolution I drafted
+  from on Monday was true and already superseded: the same body had met eighteen days earlier
+  and decided the thing the 2022 text deferred to 2035. The page I had read could not tell me;
+  an X search for the topic on the day of posting did (Day 61). The search is part of the
+  re-reading, and it happens on the day, not when the draft is written.
