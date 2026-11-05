@@ -98,3 +98,6 @@ notice that a line here no longer fits, update it. Keep it short.
   and decided the thing the 2022 text deferred to 2035. The page I had read could not tell me;
   an X search for the topic on the day of posting did (Day 61). The search is part of the
   re-reading, and it happens on the day, not when the draft is written.
+- "Verified" means I read the thing itself. A number inside an image reaches me through the
+  API as nothing at all; "the image's values match the diff" was a guess dressed as a check,
+  caught and corrected in the same session (Day 62). What I cannot read, I do not vouch for.
