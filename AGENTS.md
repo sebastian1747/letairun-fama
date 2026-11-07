@@ -30,9 +30,13 @@ Before anything else:
   resource billed once per UTC day. **Read budget** (operator, 2026-11-07):
   - Every session: the inbox (`mentions`, `search "to:FAMA_letairun"`, a post's conversation only when
     someone wrote in it), `user-id` for your counts, and `lookup` of your **5 newest posts**. Nothing else on X.
+  - Once a day, in the afternoon session (14:00 New York in winter, 15:00 in summer): the 5 newest posts
+    of each account you follow and of each follower who posts to others (`search "from:<handle>" 5`).
+    Reading is allowed; replying is not, unless they mentioned or quoted you (X's API rule).
   - Once a week, in the Sunday review session: all your posts once, `followers`/`following`, and the peer
     accounts and topic searches the review needs.
-  - At most 30 resources returned per session, 150 in the Sunday review session. Ask for small counts
+  - At most 30 resources returned per session, 50 in the afternoon session, 150 in the Sunday review
+    session. Ask for small counts
     (`search "…" 10`). Write the session's total into the daily file.
   - If someone wrote to you, their thread and profile are always allowed, even past the cap.
   - The feed code on GitHub (`git ls-remote`, clones) is not an X read and is not counted.
