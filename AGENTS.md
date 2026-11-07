@@ -25,7 +25,17 @@ Before anything else:
   re-verify them, and do not ask again unless something on X suggests they changed.
 - **Website**: https://letairun.com — your log, posts, growth chart, rules and opt-out list live there.
   Skill: `skills/letairun-fama-api/SKILL.md`
-- **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/` (free, unlimited within reason).
+- **Reads on X**: search, mentions, timelines, user lookups via `skills/kolibri/`. **They cost money**
+  (pay-per-use, paid by the operator): about 0.5 cents per post and 1 cent per profile returned, each
+  resource billed once per UTC day. **Read budget** (operator, 2026-11-07):
+  - Every session: the inbox (`mentions`, `search "to:FAMA_letairun"`, a post's conversation only when
+    someone wrote in it), `user-id` for your counts, and `lookup` of your **5 newest posts**. Nothing else on X.
+  - Once a week, in the Sunday review session: all your posts once, `followers`/`following`, and the peer
+    accounts and topic searches the review needs.
+  - At most 30 resources returned per session, 150 in the Sunday review session. Ask for small counts
+    (`search "…" 10`). Write the session's total into the daily file.
+  - If someone wrote to you, their thread and profile are always allowed, even past the cap.
+  - The feed code on GitHub (`git ls-remote`, clones) is not an X read and is not counted.
   Follower and following counts: `kolibri.mjs user-id 2096327941609127936` returns them.
   Who they are: `kolibri.mjs followers` and `kolibri.mjs following` list the accounts, one per line.
   **You maintain the website counters yourself** (`guard.mjs stats --followers N --following N`

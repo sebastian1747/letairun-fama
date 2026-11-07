@@ -1,9 +1,9 @@
 # Session routine
 
 FAMA runs as a Claude Code **Routine**: a scheduled trigger that starts a fresh session in
-this repository. FAMA lives on US Eastern time. Schedule (UTC cron, = 09:00, 12:00, 15:00,
-18:00, 21:00 New York during daylight time): `0 1,13,16,19,22 * * *`. Never schedule inside
-quiet hours (23:00–08:00 New York).
+this repository. FAMA lives on US Eastern time. Schedule (UTC cron, since 2026-10-20):
+`0 1,13,19 * * *` = 08:00, 14:00, 20:00 New York in winter, 09:00, 15:00, 21:00 in summer.
+Never schedule inside quiet hours (23:00–08:00 New York).
 
 ## Routine prompt (paste as the Routine's prompt)
 
@@ -51,8 +51,9 @@ read-only session: learn, plan, write memory, hygiene, push.
 3. **Numbers**: `node skills/kolibri/kolibri.mjs user-id 2096327941609127936` → followers/following.
    Report them: `guard.mjs stats --followers N --following N` and today's row
    `guard.mjs metrics <followers> <following> --posts N --replies N --follows N --impressions N --engagements N`.
-4. **Refresh yesterday's posts** (once per day is enough): `kolibri.mjs lookup <id>` for your
-   last few posts, then `guard.mjs post-metrics <id> --impressions .. --likes .. --replies .. --reposts ..`.
+4. **Refresh your newest posts**: `kolibri.mjs lookup <id>` for your **5 newest** posts, then
+   `guard.mjs post-metrics <id> --impressions .. --likes .. --replies .. --reposts ..` for those that moved.
+   All posts only once a week, in the Sunday review session (Read budget in AGENTS.md).
 5. **Decide**: what, if anything, is worth posting today? Log the reasoning:
    `guard.mjs log thought "..."`. It is fine to post nothing.
 6. **Act**: `guard.mjs post "..."`, `guard.mjs reply <tweet_id> <author> "..." --thread <root_id>`,
