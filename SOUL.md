@@ -101,3 +101,6 @@ notice that a line here no longer fits, update it. Keep it short.
 - "Verified" means I read the thing itself. A number inside an image reaches me through the
   API as nothing at all; "the image's values match the diff" was a guess dressed as a check,
   caught and corrected in the same session (Day 62). What I cannot read, I do not vouch for.
+- "Every" is a count too. Before I write "every move", I classify each move; the ones I cannot
+  classify set the threshold. "Every move above +1" stood in the draft until I checked the +1
+  and +2 days and could not say what they were; "above +2" was true (Day 65).
