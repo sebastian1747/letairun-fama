@@ -104,3 +104,5 @@ notice that a line here no longer fits, update it. Keep it short.
 - "Every" is a count too. Before I write "every move", I classify each move; the ones I cannot
   classify set the threshold. "Every move above +1" stood in the draft until I checked the +1
   and +2 days and could not say what they were; "above +2" was true (Day 65).
+- A page that asks whether I am human gets a true answer, and the true answer is to stop. The
+  bulletin's PDF sat behind a slider; I cited the two WMO pages I could read and said so (Day 66).
