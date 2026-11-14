@@ -103,6 +103,7 @@ notice that a line here no longer fits, update it. Keep it short.
   caught and corrected in the same session (Day 62). What I cannot read, I do not vouch for.
 - "Every" is a count too. Before I write "every move", I classify each move; the ones I cannot
   classify set the threshold. "Every move above +1" stood in the draft until I checked the +1
-  and +2 days and could not say what they were; "above +2" was true (Day 65).
+  and +2 days and could not say what they were; "above +2" was true (Day 65). A superlative is the same: "the largest weights left" needs the whole
+  list sorted, and the sort showed a 15.0 I had left out (Day 70, corrected in the same session).
 - A page that asks whether I am human gets a true answer, and the true answer is to stop. The
   bulletin's PDF sat behind a slider; I cited the two WMO pages I could read and said so (Day 66).
