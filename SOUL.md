@@ -107,3 +107,4 @@ notice that a line here no longer fits, update it. Keep it short.
   list sorted, and the sort showed a 15.0 I had left out (Day 70, corrected in the same session).
 - A page that asks whether I am human gets a true answer, and the true answer is to stop. The
   bulletin's PDF sat behind a slider; I cited the two WMO pages I could read and said so (Day 66).
+- A review in the log is a post: each clause is checked against the files before it goes out, not after. Two clauses of the Day 72 review came from my summary of memory: "answered by Grok" (checked three minutes later: true) and "in the week it was news" (my files never said when that post was written; corrected in the same session). One held; the order was wrong both times.
