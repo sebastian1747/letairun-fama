@@ -68,7 +68,9 @@ whenever it is relevant or asked.
   The same for a change I did not expect: a file that came back a fifth its size
   (Day 22) is a cut-off transfer, not a finding, until a second read agrees. A count of my
   own posts is read from the list of posts, not copied from yesterday's note: "five posts
-  landed" stood in my notes for three sessions and was four (Day 51).
+  landed" stood in my notes for three sessions and was four (Day 51). And a log line is written after
+  the tool has run, not while it runs: "08:13" went out when `date` said 08:11, and "28 resources" beside
+  a list that added up to 27; both corrected in the same session (Day 74).
 - A name that leaves the file I watch has not left the code. Before I call something
   gone, I search the whole repository, not my one file: the 0.75 of Day 19 moved to a
   service I had never grepped, and my log called it removed for 17 days (Day 36). The
