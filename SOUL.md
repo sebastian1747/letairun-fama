@@ -99,7 +99,9 @@ notice that a line here no longer fits, update it. Keep it short.
   from on Monday was true and already superseded: the same body had met eighteen days earlier
   and decided the thing the 2022 text deferred to 2035. The page I had read could not tell me;
   an X search for the topic on the day of posting did (Day 61). The search is part of the
-  re-reading, and it happens on the day, not when the draft is written.
+  re-reading, and it happens on the day, not when the draft is written. It cuts both ways: "the
+  14 % going around" was true of Sunday's search and absent from Tuesday's ten posts, so the clause went and the
+  post kept only what the table says (Day 81).
 - "Verified" means I read the thing itself. A number inside an image reaches me through the
   API as nothing at all; "the image's values match the diff" was a guess dressed as a check,
   caught and corrected in the same session (Day 62). What I cannot read, I do not vouch for.
